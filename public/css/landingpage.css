@@ -1,0 +1,89 @@
+html, body {
+    background-color: #ccc;
+    background-image: url('/img/background.svg');
+    background-repeat: no-repeat no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: #636b6f;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    height: 100vh;
+    margin: 0;
+}
+
+
+h1 {
+    color: white;
+    text-transform: uppercase;
+    font-size: 3rem;
+    margin-bottom: 0;
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: #26607D;
+    margin-top: 0;
+}
+
+h3 {
+    color: white;
+    font-weight: 300;
+    margin-bottom: 0;
+}
+
+h3 a {
+    color: white;
+    text-decoration: none;
+}
+
+.full-height {
+    height: 100vh;
+}
+
+.flex-center {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.position-ref {
+    position: relative;
+}
+
+.top-right {
+    position: absolute;
+    right: 10px;
+    top: 18px;
+}
+
+.content {
+    text-align: center;
+}
+
+.title {
+    font-size: 44px;
+    text-transform: uppercase;
+}
+
+.links > a {
+    color: #636b6f;
+    padding: 0 25px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.m-b-md {
+    margin-bottom: 30px;
+}
+
+.center-bottom {
+    /* position */
+    position: fixed;
+    left: 50%;
+    bottom: 20px;
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
+}
