@@ -14,3 +14,25 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+use App\Mail\TestMail;
+
+Route::get('/mail', function() {
+    // Mail::to('jsmith@synergenics.ca')->send(new TestMail());
+    Mail::send('email.test', [], function($m) {
+        $m->from('donateable@donateable.ca', 'DonateABLE')->to('jsmith@synergenics.ca');
+    });
+});
+
+Route::get('/charity', function() {
+    return View::make('charity.index');
+});
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/{charity}', 'CharityController@showCharity');
+
+Route::post('/sitestats/join', 'SiteStatsController@join');
+Route::post('/sitestats/leave', 'SiteStatsController@leave');
