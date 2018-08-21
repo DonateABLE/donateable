@@ -8,9 +8,13 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'DonateABLE') }}</title>
 
     <!-- Scripts -->
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
     <script src="{{ asset('js/app.js') }}" defer></script>
 
     <!-- Fonts -->
@@ -64,7 +68,7 @@
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link nav-link-light" href="{{ route('register') }}">{{ __('Sign Up') }}</a>
+                                <a class="nav-link nav-link-light" href="{{ route('login') }}">{{ __('Sign Up') }}</a>
                             </li>
                         @else
                             <li class="nav-item dropdown">

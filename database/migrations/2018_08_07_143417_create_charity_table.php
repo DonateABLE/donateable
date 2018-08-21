@@ -15,13 +15,15 @@ class CreateCharityTable extends Migration
     {
         Schema::create('charity', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('shortName');
+            $table->string('shortName')->default(null);
             $table->string('longName');
+            $table->string('logo');
             $table->text('shortDesc');
             $table->text('longDesc');
             $table->text('tagline');
             $table->text('socialFeed');
             $table->text('websiteUrl');
+            $table->string('siteKey');
             $table->timestamps();
         });
     }

@@ -31,3 +31,8 @@ Route::get('/charity', function() {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/{charity}', 'CharityController@showCharity');
+
+Route::post('/sitestats/join', 'SiteStatsController@join');
+Route::post('/sitestats/leave', 'SiteStatsController@leave');
