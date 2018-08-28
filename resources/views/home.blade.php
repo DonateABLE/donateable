@@ -15,6 +15,11 @@
                     @endif
 
                     You are logged in!
+                    @if (Auth::user()->verified())
+                        And verified!
+                    @else
+                        And not verified!
+                    @endif
                 </div>
             </div>
         </div>

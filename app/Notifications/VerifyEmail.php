@@ -44,6 +44,7 @@ class VerifyEmail extends Notification
     public function toMail($notifiable)
     {
         return (new MailMessage)
+                    ->from('donateABLE@donateABLE.ca', 'donateABLE')
                     ->line('Please verify your email address.')
                     ->action('Verify Email', route('verify', $this->user->email_token))
                     ->line('Welcome to donateABLE!');

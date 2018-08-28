@@ -35,7 +35,7 @@ class User extends Authenticatable
      */
     public function verified() {
 
-        return $this->email_token === null;
+        return $this->email_token === NULL;
     }
 
 
