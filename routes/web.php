@@ -23,6 +23,7 @@ Route::get('/mail', function() {
         $m->from('donateable@donateable.ca', 'DonateABLE')->to('jsmith@synergenics.ca');
     });
 });
+Route::get('/verify/{token}', 'VerifyController@verify')->name('verify');
 
 Route::get('/charity', function() {
     return View::make('charity.index');
