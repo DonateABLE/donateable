@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'DonateABLE') }}</title>
+    <title>{{ config('app.name', 'donateABLE') }}</title>
 
     <!-- Scripts -->
     <script
@@ -29,7 +29,7 @@
         <nav class="navbar navbar-expand-md navbar-light">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    <img border="0", alt="DonateABLE" src="{{ asset('img/donateABLE-long-colour-250.png') }}">
+                    <img border="0", alt="donateABLE" src="{{ asset('img/donateABLE-long-colour-250.png') }}">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>

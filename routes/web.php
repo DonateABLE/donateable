@@ -20,7 +20,7 @@ use App\Mail\TestMail;
 Route::get('/mail', function() {
     // Mail::to('jsmith@synergenics.ca')->send(new TestMail());
     Mail::send('email.test', [], function($m) {
-        $m->from('donateable@donateable.ca', 'DonateABLE')->to('jsmith@synergenics.ca');
+        $m->from('donateable@donateable.ca', 'donateABLE')->to('jsmith@synergenics.ca');
     });
 });
 Route::get('/verify/{token}', 'VerifyController@verify')->name('verify');
