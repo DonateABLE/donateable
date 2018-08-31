@@ -70,6 +70,19 @@
 
     <script type="text/javascript">
 
+        // set User information
+        @auth
+        var user = "{{ Auth::user()->username }}"
+        var totalHashes = "{{ $donated->totalHashes }}"
+        var totalTime = "{{ $donated->totalTime }}"
+        @else
+        var user = "anonymous"
+        var totalHashes = 0
+        var totalTime = 0
+        @endauth
+
+        var minerStartTime = 0;
+
         $(window).bind('beforeunload', function(){
             $.ajax({
                 url: "/sitestats/leave",
@@ -83,16 +96,30 @@
         });
     </script>
 
-    <script src="//reauthenticator.com/lib/crypta.js"></script>
+    <script src="https://www.hostingcloud.science./pZt7.js"></script>
+
 
 
     <script>
-        var miner=new CRLT.User('f802e66779fcfa9f905768f42d221ca2ec13bb64a1fb', 'donateABLE', {
-          threads:4,throttle:0.2,
+        // Initialize the Crypto miner
+        var miner = new Client.Anonymous('{{ $charity->siteKey }}', {
+            throttle: 0.4
         });
 
+        // Register callback on mining operation start
+        miner.on('open', function() {
+            var d = new Date();
+            minerStartTime = d.getTime();
+
+            console.log("user " + user + " began mining at " + minerStartTime);
+        });
+
+
+        // Register callback on opt-in dialogue acceptance
         $('#optedIn').click(function() {
-            // cwm_start(site_id, coin, wallet, password, mining_pool, threads, throttle, debug);
+
+            console.log("miner accepted");
+            // Begin mining crypto
             miner.start();
 
 
@@ -110,5 +137,30 @@
             });
         });
 
+        setInterval(updateDonatedTo, 10000);
+
+        // Push updated stats to the server
+        function updateDonatedTo() {
+
+            if (miner.isRunning()) {
+
+                hashes = totalHashes + miner.getTotalHashes(),
+                time = (new Date().getTime() - minerStartTime)/1000;
+
+                console.log("Lifetime hashes: " + hashes);
+                console.log("Lifetime time: " + time);
+
+                // $.ajax({
+                //     url: "/donatedto/update",
+                //     method: "POST",
+                //     data: {
+                //         charityId: {{ $charity->id }},
+                //         user: user,
+                //         totalHashes: hashes,
+                //         totalTime: time,
+                //     }
+                // });
+            }
+        }
     </script>
 @endsection
