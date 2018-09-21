@@ -3,11 +3,16 @@
 namespace App\Http\Controllers;
 
 use App\Charity;
+use App\DonatedTo;
 use Illuminate\Http\Request;
 use View;
+use Auth;
 
 class CharityController extends Controller
 {
+
+    private $currentUser = null;
+
     /**
      * Display a listing of the resource.
      *
@@ -58,8 +63,26 @@ class CharityController extends Controller
     public function showCharity(String $charityName)
     {
         $charity = Charity::where('longName', $charityName)->firstOrFail();
+        if (Auth::check()) {
+            $this->currentUser = Auth::user();
+            $donationInfo = DonatedTo::where('userId', $this->currentUser->id)->firstOrCreate([
+                'userId' => $this->currentUser->id,
+                'charityId' => $charity->id,
+                'totalHashes' => 0,
+                'totalTime' => 0,
+            ]);
 
-        return View::make('charity.index')->with('charity', $charity);
+            return View::make('charity.index')
+                ->with('charity', $charity)
+                ->with('user', $this->currentUser)
+                ->with('donated', $donationInfo);
+        }
+        else {
+
+
+            return View::make('charity.index')
+                ->with('charity', $charity);
+        }
     }
 
 

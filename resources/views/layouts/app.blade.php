@@ -37,23 +37,23 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('login') }}">{{ __('Home') }}</a>
-                        </li>
+                    <!-- <ul class="navbar-nav mr-auto"> -->
+                        <!-- <li class="nav-item"> -->
+                            <!-- <a class="nav-link" href="{{ route('login') }}">{{ __('Home') }}</a> -->
+                        <!-- </li> -->
 
-                        <li class="nav-item">
-                            <a class="nav-link nav-link-light" href="{{ route('register') }}">{{ __('Charities') }}</a>
-                        </li>
+                        <!-- <li class="nav-item"> -->
+                            <!-- <a class="nav-link nav-link-light" href="{{ route('register') }}">{{ __('Charities') }}</a> -->
+                        <!-- </li> -->
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('login') }}">{{ __('Contact') }}</a>
-                        </li>
+                        <!-- <li class="nav-item"> -->
+                            <!-- <a class="nav-link" href="{{ route('login') }}">{{ __('Contact') }}</a> -->
+                        <!-- </li> -->
 
-                        <li class="nav-item">
-                            <a class="nav-link nav-link-light" href="{{ route('register') }}">{{ __('About') }}</a>
-                        </li>
-                    </ul>
+                        <!-- <li class="nav-item"> -->
+                            <!-- <a class="nav-link nav-link-light" href="{{ route('register') }}">{{ __('About') }}</a> -->
+                        <!-- </li> -->
+                    <!-- </ul> -->
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
