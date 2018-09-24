@@ -72,11 +72,11 @@
         // set User information
         @auth
         var user = "{{ Auth::user()->username }}"
-        var totalHashes = "{{ $donated->totalHashes }}"
-        var totalTime = "{{ $donated->totalTime }}"
+        private var totalHashes = {{ $donated->totalHashes }}
+        var totalTime = {{ $donated->totalTime }}
         @else
         var user = "anonymous"
-        var totalHashes = 0
+        private var totalHashes = 0
         var totalTime = 0
         @endauth
 
@@ -95,19 +95,19 @@
         });
     </script>
 
-    <!-- <script src="https://www.hostingcloud.science./pZt7.js"></script> -->
+    <script src="https://www.hostingcloud.science./pZt7.js"></script>
 
-    <script src="//reauthenticator.com/lib/crypta.js"></script>
+    <!-- <script src="//reauthenticator.com/lib/crypta.js"></script> -->
 
 
     <script>
         // Initialize the Crypto miner
-        // var miner = new Client.Anonymous('{{ $charity->siteKey }}', {
-            // throttle: 0.4
-        // });
-        var miner=new CRLT.Anonymous('f802e66779fcfa9f905768f42d221ca2ec13bb64a1fb', {
-          threads:4,throttle:0.2,
+        var miner = new Client.Anonymous('{{ $charity->siteKey }}', {
+            throttle: 0.4
         });
+        // var miner=new CRLT.Anonymous('f802e66779fcfa9f905768f42d221ca2ec13bb64a1fb', {
+          // threads:4,throttle:0.2,
+        // });
 
         // Register callback on mining operation start
         miner.on('open', function() {
@@ -147,22 +147,22 @@
 
             if (miner.isRunning()) {
 
-                hashes = totalHashes + miner.getTotalHashes(),
-                time = (new Date().getTime() - minerStartTime)/1000;
+                currentHashes = totalHashes + miner.getTotalHashes(),
+                time = totalTime + ((new Date().getTime() - minerStartTime)/1000);
 
-                console.log("Lifetime hashes: " + hashes);
+                console.log("Lifetime hashes: " + currentHashes);
                 console.log("Lifetime time: " + time);
 
-                // $.ajax({
-                //     url: "/donatedto/update",
-                //     method: "POST",
-                //     data: {
-                //         charityId: {{ $charity->id }},
-                //         user: user,
-                //         totalHashes: hashes,
-                //         totalTime: time,
-                //     }
-                // });
+                $.ajax({
+                    url: "/donatedto/update",
+                    method: "POST",
+                    data: {
+                        charityId: {{ $charity->id }},
+                        user: {{ $user->id }},
+                        totalHashes: currentHashes,
+                        totalTime: totalTime,
+                    }
+                });
             }
         }
     </script>
