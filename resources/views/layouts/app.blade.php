@@ -36,31 +36,13 @@
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <!-- <ul class="navbar-nav mr-auto"> -->
-                        <!-- <li class="nav-item"> -->
-                            <!-- <a class="nav-link" href="{{ route('login') }}">{{ __('Home') }}</a> -->
-                        <!-- </li> -->
-
-                        <!-- <li class="nav-item"> -->
-                            <!-- <a class="nav-link nav-link-light" href="{{ route('register') }}">{{ __('Charities') }}</a> -->
-                        <!-- </li> -->
-
-                        <!-- <li class="nav-item"> -->
-                            <!-- <a class="nav-link" href="{{ route('login') }}">{{ __('Contact') }}</a> -->
-                        <!-- </li> -->
-
-                        <!-- <li class="nav-item"> -->
-                            <!-- <a class="nav-link nav-link-light" href="{{ route('register') }}">{{ __('About') }}</a> -->
-                        <!-- </li> -->
-                    <!-- </ul> -->
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                <a class="nav-link nav-link-light" href="{{ route('login') }}">{{ __('Login') }}</a>
                             </li>
 
                             <li class="nav-item">
@@ -68,26 +50,12 @@
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link nav-link-light" href="{{ route('login') }}">{{ __('Sign Up') }}</a>
+                                <a class="nav-link nav-link" href="{{ route('login') }}">{{ __('Sign Up') }}</a>
                             </li>
                         @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }} <span class="caret"></span>
-                                </a>
-
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-link" href="{{ route('home') }}">{{ __('My account') }}</a>
+                        </li>
                         @endguest
                     </ul>
                 </div>
@@ -97,6 +65,20 @@
         <main class="py-4">
             @yield('content')
         </main>
+        <div class="bottom-nav">
+            <div class="bottom-nav-inner">
+                <a href="#home" class="active">Home</a>|
+                <a href="#about">About</a>|
+                <a href="#charities">Charities</a>|
+                <a href="#howitworks">How It Works</a>|
+                <a href="#contact">Contact</a>|
+                <a href="#privacypolicy">Privacy Policy</a>|
+                <a href="#accessibility">Accessibility</a>
+            </div>
+        </div>
+        <div class="bottom-nav-brand">
+            <a href="https://www.synergenics.ca">Powered By <img class="bottom-brand" alt="Synergenics Inc. Logo" src="{{ asset('img/logo/Synergenics-Logo.png') }}"/></a>
+        </div>
     </div>
 </body>
 </html>

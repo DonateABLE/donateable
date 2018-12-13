@@ -64,9 +64,9 @@ a:hover h1 {
 
 .navbar-brand {
     position: absolute;
-    left: 50%;
+    left: 10%;
     top: 30.120px;
-    transform: translate(-50%, -50%);
+    transform: translate(-10%, -50%);
     margin: 0 auto;
 }
 
@@ -101,4 +101,63 @@ a:hover h1 {
     border-radius: 0px;
     padding: 10px 60px;
     text-transform: uppercase;
+}
+.bottom-nav-brand {
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  transform: translateY(-95%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.bottom-brand {
+    height: 25px;
+    width: auto;
+}
+
+.bottom-nav-brand a {
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: $primary !important;
+    font-weight: 500;
+}
+
+.bottom-nav {
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  transform: translateY(-100%);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.bottom-nav a {
+  color: $primary;
+  text-align: center;
+  display: inline-block;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  margin: 0px auto;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/* Change the color of links on hover */
+.bottom-nav a:hover {
+  color: $secondary;
+}
+
+
+/* Add a color to the active/current link */
+.bottom-nav a.active {
+  color: $secondary;
 }
