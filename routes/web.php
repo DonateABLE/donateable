@@ -12,7 +12,14 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $currentDonors = App\SiteStats::getSitewideCurrentDonors();
+    $totalDonors = App\SiteStats::getSitewideTotalDonors();
+    $totalHashes = App\DonatedTo::getSitewideHashes();
+
+    return View::make('welcome')
+        ->with('currentDonors', $currentDonors)
+        ->with('totalDonors', $totalDonors)
+        ->with('totalHashes', $totalHashes);
 });
 
 use App\Mail\TestMail;
@@ -32,8 +39,9 @@ Route::get('/charity', function() {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
+Route::get('/charities', 'CharityController@index');
 Route::get('/{charity}', 'CharityController@showCharity');
 
+Route::get('/{charity}/donate', 'CharityController@showDonate');
 Route::post('/sitestats/join', 'SiteStatsController@join');
 Route::post('/sitestats/leave', 'SiteStatsController@leave');

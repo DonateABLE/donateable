@@ -7,4 +7,16 @@ use Illuminate\Database\Eloquent\Model;
 class SiteStats extends Model
 {
     protected $table = "siteStats";
+
+    /* Utility method to return a count of all current donors stored in the db */
+    public static function getSitewideCurrentDonors() {
+        return SiteStats::all()->sum('currentlyDonating');
+
+    }
+
+    /* Utility method to return a count of all total donors stored in the db */
+    public static function getSitewideTotalDonors() {
+        return SiteStats::all()->sum('totalDonors');
+
+    }
 }

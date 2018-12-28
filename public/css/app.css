@@ -10512,6 +10512,10 @@ a:hover h1 {
   color: #26607d;
 }
 
+.nopad {
+  padding: 0;
+}
+
 .navbar-nav {
   text-transform: uppercase;
   font-size: 1.2rem;
@@ -10542,16 +10546,94 @@ a:hover h1 {
   /* These two lines are counted as one 🙂       */
 }
 
+/**
+ *
+ * Social media icon style for charity page
+ *
+**/
+
 .social-frame {
   margin: 0;
   padding: 10px 10px;
-  border: 5px solid #26607d;
+}
+
+.social-frame > h2 {
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
+.social-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-left: 0px;
+}
+
+.social-icons > p {
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  text-align: left;
+  font-weight: bold;
+  padding-left: 0px;
+  padding-top: 10px !important;
+  font-size: 12px;
+}
+
+.social-icons > li {
+  background-color: #26607d;
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+.social-icons i {
+  color: white;
+}
+
+/**
+ *
+ * End of social media styles
+ *
+**/
+
+.charity-long-description {
+  font-weight: 600;
+  line-height: 18px;
+  font-size: 14px;
 }
 
 .vertical-center {
-  min-height: 90%;
+  min-height: 70%;
   /* Fallback for browsers do NOT support vh unit */
-  min-height: 90vh;
+  min-height: 70vh;
   /* These two lines are counted as one 🙂       */
   display: -webkit-box;
   display: -ms-flexbox;
@@ -10681,16 +10763,18 @@ a:hover h1 {
 
 .site-callout h2 {
   text-transform: uppercase;
-  font-size: 17px;
+  font-size: 32px;
+  font-weight: bold;
 }
 
 .site-callout p {
   margin: 0px;
   padding: 0px;
+  padding-bottom: 15px;
   color: #26607d;
   text-align: center;
   font-weight: bold;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 /* Front page button links and accompanying stat blocks*/
@@ -10765,4 +10849,724 @@ a:hover h1 {
   background-color: #45a6d7;
   border: 2px #45a6d7 solid;
 }
+
+/**
+ *
+ * Login and signup page styles
+ *
+**/
+
+.signup-card {
+  width: 500px;
+  height: 340px;
+}
+
+.card {
+  border: 2px #26607d solid;
+  border-radius: 0px;
+  background-color: white;
+}
+
+.card-header {
+  /*Card Style*/
+  border: none;
+  background-color: white;
+  /*Text Style*/
+  text-align: center;
+  font-size: 32px;
+  color: #45a6d7;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.header-dark {
+  color: #26607d;
+  font-weight: 600;
+}
+
+.form-control {
+  /*Border Style*/
+  border: 1px #26607d solid;
+  border-radius: 0px;
+  /*Text Styles*/
+  color: #26607d;
+  text-transform: uppercase;
+}
+
+/*Change placeholder color across browsers*/
+
+.form-control::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #26607d;
+}
+
+.form-control::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #26607d;
+}
+
+.form-control:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #26607d;
+}
+
+.form-control:-moz-placeholder {
+  /* Firefox 18- */
+  color: #26607d;
+}
+
+.btn-full {
+  width: 100%;
+}
+
+.btn-link {
+  margin: 0;
+  padding: 0;
+  text-align: right;
+  font-size: 12px;
+  color: #45a6d7;
+  font-weight: bold;
+}
+
+.left-signup {
+  border-right: 1px #26607d solid;
+}
+
+.right-signup {
+  border-left: 1px #26607d solid;
+}
+
+/**
+ *
+ * End of login and signup page styles
+ *
+**/
+
+/**
+ *
+ * Style for Modal dialog
+ *
+**/
+
+.howitworks {
+  background-color: #45a6d7;
+  border: none;
+}
+
+.align {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.align-img {
+  margin-top: 10px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+.modal-x {
+  color: white;
+}
+
+#howitworksdialog {
+  width: 98% !important;
+  max-width: 99% !important;
+  min-width: 98% !important;
+  height: 98% !important;
+  max-height: 99% !important;
+  min-height: 98% !important;
+  margin: auto !important;
+  padding: 0 !important;
+}
+
+.modal-header {
+  border: none;
+}
+
+#howitworkscontent {
+  min-height: 100% !important;
+  min-width: 100% !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  border-radius: 0 !important;
+}
+
+.step-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 10px;
+}
+
+.step {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: justify;
+  padding: 5px;
+  width: 450px;
+}
+
+.modal-button-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 50px;
+}
+
+.modal-button {
+  background-color: white;
+  color: #45a6d7;
+  border: 1px white solid;
+  font-weight: 600;
+  width: 490px;
+}
+
+.modal-button:hover {
+  background-color: #45a6d7;
+  color: white;
+  border: 1px white solid;
+}
+
+.modal-h1 {
+  color: white;
+  text-transform: uppercase;
+  font-size: 46px !important;
+  margin-top: 25px;
+}
+
+.modal-h2 {
+  color: #26607d;
+  text-transform: uppercase;
+  font-size: 46px !important;
+  margin-bottom: 35px;
+}
+
+.modal-h3 {
+  color: white;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+.modal-p {
+  color: white;
+  font-size: 14px;
+}
+
+.modal-body-accept {
+  padding-top: 0;
+}
+
+/**
+ *
+ * End of style for Modal dialog
+ *
+**/
+
+/**
+ *
+ * Style for modal acceptance
+ *
+ **/
+
+.acceptance {
+  border: none;
+  border-radius: 0px;
+  width: 600px !important;
+  min-width: 600px !important;
+  max-width: 600px !important;
+}
+
+div.modal-body h1,
+div.modal-body h2 {
+  padding-left: 30px;
+  padding-right: 30px;
+  text-transform: uppercase;
+  font-size: 21px;
+  text-align: center;
+}
+
+div.modal-body p {
+  font-size: 12px;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.modal-backdrop {
+  background-color: #26607d;
+  opacity: 0.9 !important;
+}
+
+/**
+ *
+ * Donation page style
+ *
+ **/
+
+.column {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.column p {
+  padding: 5px 30px 5px 30px;
+  margin: 0;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.column p > span {
+  color: #45a6d7;
+}
+
+.btn-donate {
+  padding-top: 10.585px;
+  padding-bottom: 10.585px;
+}
+
+.btn-donate-left {
+  padding-left: 0px;
+  padding-right: 7.5px;
+}
+
+.btn-donate-left button {
+  background-color: #26607d;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  border: 2px #26607d solid;
+}
+
+.btn-donate-left:hover button {
+  background-color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #26607d;
+  border: 2px #26607d solid;
+}
+
+.btn-donate-mid {
+  padding-left: 7.5px;
+  padding-right: 7.5px;
+}
+
+.btn-donate-mid button {
+  background-color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #26607d;
+  border: 2px #26607d solid;
+}
+
+.btn-donate-mid:hover button {
+  background-color: #26607d;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  border: 2px #26607d solid;
+}
+
+.btn-donate-right {
+  padding-left: 7.5px;
+  padding-right: 0px;
+}
+
+.btn-donate-right button {
+  background-color: #45a6d7;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  border: 2px #45a6d7 solid;
+}
+
+.btn-donate-right:hover button {
+  background-color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #45a6d7;
+  border: 2px #45a6d7 solid;
+}
+
+.milestone i {
+  font-size: 75px;
+  margin-bottom: 8px;
+  color: #26607d;
+}
+
+.milestone h3 {
+  text-transform: uppercase;
+  font-size: 18px;
+  color: black;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.milestone h4 {
+  text-transform: uppercase;
+  font-size: 18px;
+  color: #45a6d7;
+  font-weight: bold;
+}
+
+/**
+ *
+ * Slider CSS generated @ http://danielstern.ca/range.css/#/
+ *
+**/
+
+input[type=range].miner-slider {
+  -webkit-appearance: none;
+  width: 100%;
+  margin: 5px 0;
+}
+
+input[type=range].miner-slider:focus {
+  outline: none;
+}
+
+input[type=range].miner-slider::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 10px;
+  cursor: pointer;
+  -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0), 0px 0px 1px rgba(13, 13, 13, 0);
+          box-shadow: 1px 1px 1px rgba(0, 0, 0, 0), 0px 0px 1px rgba(13, 13, 13, 0);
+  background: #45a6d7;
+  border-radius: 0px;
+  border: 0px solid #45a6d7;
+}
+
+input[type=range].miner-slider::-webkit-slider-thumb {
+  -webkit-box-shadow: 0px 0px 0px rgba(0, 0, 49, 0), 0px 0px 0px rgba(0, 0, 75, 0);
+          box-shadow: 0px 0px 0px rgba(0, 0, 49, 0), 0px 0px 0px rgba(0, 0, 75, 0);
+  border: 0px solid rgba(255, 255, 255, 0);
+  height: 20px;
+  width: 20px;
+  border-radius: 20px;
+  background: #26607d;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -5px;
+}
+
+input[type=range].miner-slider:focus::-webkit-slider-runnable-track {
+  background: #45a6d7;
+}
+
+input[type=range].miner-slider::-moz-range-track {
+  width: 100%;
+  height: 10px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0), 0px 0px 1px rgba(13, 13, 13, 0);
+  background: #45a6d7;
+  border-radius: 0px;
+  border: 0px solid #45a6d7;
+}
+
+input[type=range].miner-slider::-moz-range-thumb {
+  box-shadow: 0px 0px 0px rgba(0, 0, 49, 0), 0px 0px 0px rgba(0, 0, 75, 0);
+  border: 0px solid rgba(255, 255, 255, 0);
+  height: 20px;
+  width: 20px;
+  border-radius: 20px;
+  background: #26607d;
+  cursor: pointer;
+}
+
+input[type=range].miner-slider::-ms-track {
+  width: 100%;
+  height: 10px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+input[type=range].miner-slider::-ms-fill-lower {
+  background: #45a6d7;
+  border: 0px solid #45a6d7;
+  border-radius: 0px;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0), 0px 0px 1px rgba(13, 13, 13, 0);
+}
+
+input[type=range].miner-slider::-ms-fill-upper {
+  background: #45a6d7;
+  border: 0px solid #45a6d7;
+  border-radius: 0px;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0), 0px 0px 1px rgba(13, 13, 13, 0);
+}
+
+input[type=range].miner-slider::-ms-thumb {
+  box-shadow: 0px 0px 0px rgba(0, 0, 49, 0), 0px 0px 0px rgba(0, 0, 75, 0);
+  border: 0px solid rgba(255, 255, 255, 0);
+  height: 20px;
+  width: 20px;
+  border-radius: 20px;
+  background: #26607d;
+  cursor: pointer;
+  height: 10px;
+}
+
+input[type=range].miner-slider:focus::-ms-fill-lower {
+  background: #45a6d7;
+}
+
+input[type=range].miner-slider:focus::-ms-fill-upper {
+  background: #45a6d7;
+}
+
+output {
+  color: #45a6d7;
+  font-weight: 700;
+  padding-top: 10px;
+  font-size: 32px;
+}
+
+/**
+ *
+ * End of slider style
+ *
+ **/
+
+/**
+  *
+  * Style for charities page cards
+  *
+  **/
+
+.card-footer {
+  border: none;
+}
+
+.charity-card h5 {
+  text-align: center;
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
+.charity-card h6 {
+  text-align: center;
+  color: #45a6d7;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.charity-card p {
+  text-align: justify;
+  color: black;
+  font-size: 12px;
+  font-weight: 400;
+  padding: 20px 0px 20px 0px;
+}
+
+.floating-social {
+  background-color: #45a6d7;
+  margin: -10px -10px 10px -10px;
+}
+
+.floating-social-icons {
+  margin-bottom: 0;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  list-style: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.floating-social-icons > li {
+  background-color: none;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 !important;
+}
+
+.floating-social-icons i {
+  color: white;
+}
+
+/**
+  *
+  * End of style ofr charities page cards
+  *
+  **/
+
+/**
+ *
+ * Profile Page stats
+ *
+ **/
+
+.profile-stats {
+  background-color: #26607d;
+}
+
+.profile-stats i {
+  font-size: 75px;
+  margin-top: 24px;
+  margin-bottom: 18px;
+  color: white;
+}
+
+.profile-stats h3 {
+  text-transform: uppercase;
+  font-size: 18px;
+  color: #45a6d7;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.profile-stats h4 {
+  text-transform: uppercase;
+  font-size: 18px;
+  color: white;
+  font-weight: bold;
+}
+
+.profile-image-line {
+  background-color: #45a6d7;
+  margin-top: 50px;
+  padding-left: 100px;
+  margin-bottom: 50px;
+}
+
+.profile-img {
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 160px;
+          flex: 0 0 160px;
+  height: 160px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+  position: relative;
+  width: 160px;
+  margin-top: -20px;
+  margin-bottom: -20px;
+}
+
+.profile-img img {
+  height: 100%;
+}
+
+.img__overlay {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  -webkit-transition: opacity 0.25s;
+  transition: opacity 0.25s;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-transform: uppercase;
+  font-size: 18px;
+  color: white;
+  font-weight: bold;
+}
+
+.img__overlay:hover {
+  opacity: 1;
+}
+
+.profile-name {
+  font-size: 32px;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding-left: 100px;
+}
+
+.optin {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: bold;
+  color: black;
+}
+
+.settings-label {
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #26607d;
+  font-weight: bold;
+}
+
+/**
+ *
+ * End of profile page stats
+ *
+ **/
 

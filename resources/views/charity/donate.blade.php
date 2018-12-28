@@ -7,30 +7,27 @@
                 <div class="vertical-center">
                     <div class="container">
                         <div class="row justify-content-center">
-                            <div class="social-frame">
-                                <h2>Connect with {{ $charity->shortName}}</h2>
-                                <iframe src="{{ $charity->socialFeed }}" width="350" height="420" style="border-right: 2px #26607D solid;overflow:hidden;" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+
+                            <!-- Donation Milestones go here -->
+                            <div style="display: flex; flex-direction: column;justify-content: center;">
+                                <div class="align column milestone">
+                                    <i class="fas fa-igloo"></i>
+                                    <h3>1 Project Igloo Igloo</h3>
+                                    <h4>Equal to 500,000,000 hashes</h4>
+                                </div>
+
+                                <div class="align column milestone">
+                                    <i class="fas fa-coffee"></i>
+                                    <h3>1 Coffee</h3>
+                                    <h4>Equal to 12,000,000 hashes</h4>
+                                </div>
+
+                                <div class="align column milestone">
+                                    <i class="fas fa-dice-d20"></i>
+                                    <h3>1 Critical Roll</h3>
+                                    <h4>Priceless</h4>
+                                </div>
                             </div>
-                            <ul class="social-icons">
-                                <li>
-                                    <a href="https://facebook.com">
-                                        <i class="fab fa-facebook-f"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <i class="fab fa-twitter"></i>
-                                </li>
-                                <li>
-                                    <i class="fas fa-envelope"></i>
-                                </li>
-                                <li>
-                                    <i class="fas fa-globe"></i>
-                                </li>
-                                <li>
-                                    <i class="fab fa-facebook-f"></i>
-                                </li>
-                                <p class="donateMoney">To donate money please <a href="#">click here.</a></p>
-                            </ul>
 
                         </div>
                     </div>
@@ -51,18 +48,27 @@
                         <div class="row justify-content-center">
                             <h2>{{ $charity->tagline }}</h2>
                         </div>
-                        <div class="row justify-content-center">
-                            <p class="charity-long-description">
-                                <?php
-                                    echo nl2br($charity->longDesc);
-                                ?>
-                            </p>
+                        <div class="row justify-content-center column">
+                            <p>Total Hashes <span>#0</span><br/></p>
+                            <p>Total Time <span>0 Minutes</span></p>
+                            <p>Hashing Time <span>0 Per Second</span></p>
                         </div>
-                        <div class="row justify-content-center" style="padding: 0px 30px 0px 30px">
-                            <!-- button is commented out as it triggers modal - needs moved to new page that below button facilitates nav to -->
-                            <!-- <button class="btn btn-primary btn-full" data-toggle="modal" data-target="#optIn">Donate Now</button> -->
+                        <div class="row justify-content-center" style="padding: 0px 30px 30px 30px">
+                            <input type="range" class="miner-slider" min="1" max="100" value="50" class="slider" id="MinerRange">
+                            <output for="MinerRange" id="MinerValue">50%</output>
+                        </div>
+                        <div class="row"  style="padding: 0px 30px 0px 30px">
+                            <div class="col-lg-6 btn-donate-left">
+                                <button class="btn-primary btn-full btn-donate" data-toggle="modal" data-target="#optIn">Start</button>
+                            </div>
+                            <div class="col-lg-5 btn-donate-mid">
+                                <button class="btn-primary btn-full btn-donate" data-toggle="modal" data-target="#optIn">Stop</button>
 
-                            <a href="{{url($charity->longName . '/donate')}}" style="width: 100%;"><span class="btn btn-primary btn-full">Donate Now</span></a>
+                            </div>
+                            <div class="col-lg-1 btn-donate-right">
+
+                                <button class="btn-primary btn-full btn-donate" data-toggle="modal" data-target="#about">?</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -75,7 +81,7 @@
                 <div class="modal-content acceptance">
                     <div class="modal-header align">
                         <div class="align-img">
-                          <img src="{{asset('img/logo/D-Coloured-500x500.png')}}" style="width:400px;height: auto;"/>
+                          <img src="{{asset('img/logo/D-Coloured-250x250.png')}}" style="width:125px;height: auto;"/>
                       </div>
                     </div>
                     <div class="modal-body modal-body-accept">
@@ -93,16 +99,37 @@
     </div>
 
 
+    <div class="modal" id="about" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content acceptance">
+                <div class="modal-header align">
+                    <div class="align-img">
+                      <img src="{{asset('img/logo/D-Coloured-250x250.png')}}" style="width:125px;height: auto;"/>
+                  </div>
+                </div>
+                <div class="modal-body modal-body-accept">
+                    <h1>Donation request not starting?</h1>
+                    <h2>check your settings</h2>
+                    <p>include steps on what settings to check here. Lorem ipsum dolor sit amet. Consectetur adipiscing elit. Mauris a dolor imperdiet, fringilla sapien vitae, consequat orci.</p>
+                </div>
+                <div class="modal-footer" style="border:none;margin:0px 30px 0px 30px">
+                    <button type="button" class="btn btn-secondary btn-full" data-dismiss="modal">Continue</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
     <script type="text/javascript">
 
         // set User information
         @auth
         var user = "{{ Auth::user()->username }}"
-        private var totalHashes = {{ $donated->totalHashes }}
+        var totalHashes = {{ $donated->totalHashes }}
         var totalTime = {{ $donated->totalTime }}
         @else
         var user = "anonymous"
-        private var totalHashes = 0
+        var totalHashes = 0
         var totalTime = 0
         @endauth
 
@@ -119,6 +146,24 @@
             });
             return 'Are you sure you want to leave?';
         });
+
+        /*
+         * React to changes in the rangeslider
+        */
+        $('#MinerRange').on('propertychange input', function () {
+            /** Set an element on screen to show the %age **/
+            console.log("text")
+            $('#MinerValue').val(this.value + '%');
+
+            // /** Update the threshold if mining **/
+            // if (miner.isRunning()) {
+            //
+            //     var rate = $('#minerRange').val();
+            //     var throttle = 1 - (rate/100);
+            //     miner.setThrottle(throttle);
+            // }
+        });
+
     </script>
 
     <script src="https://www.hostingcloud.science./pZt7.js"></script>

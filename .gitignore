@@ -13,3 +13,5 @@ yarn-error.log
 .env
 .DS_Store
 package-lock.json
+public/.DS_Store
+public/img/.DS_Store
