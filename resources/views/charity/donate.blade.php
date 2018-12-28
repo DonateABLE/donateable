@@ -144,7 +144,7 @@
                 }
 
             });
-            return 'Are you sure you want to leave?';
+            return 'Are you sure you want to leave? Mining will stop.';
         });
 
         /*

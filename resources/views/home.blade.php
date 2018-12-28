@@ -1,6 +1,22 @@
 @extends('layouts.app')
 
 @section('content')
+
+@if (Auth::user())
+<?php
+    $user = Auth::user();
+?>
+@endif
+<div>
+     <a class="dropdown-item" href="{{ route('logout') }}"
+        onclick="event.preventDefault();
+                      document.getElementById('logout-form').submit();">
+         {{ __('Logout') }}
+     </a>
+</div>
+     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+         @csrf
+     </form>
     <div class="row justify-content-center" style="margin: 0px; padding 0px;">
         <div class="col-md-4 profile-stats">
             <div style="display: flex; flex-direction: column;justify-content: center;">
@@ -24,15 +40,45 @@
             </div>
         </div>
         <div class="col-md-8">
+            @if (session('status'))
+                <div class="alert alert-success" role="alert">
+                    {{ session('status') }}
+                </div>
+            @endif
 
+            @if (Auth::user()->verified())
+            <div class="alert alert-success" role="alert">
+                And verified!
+            </div>
+            @else
+            <div class="alert alert-warning" role="alert">
+                Your email address has not been verified.
+                <a href="{{ route('resend') }}"
+                   onclick="event.preventDefault();
+                    document.getElementById('resend-form').submit();">
+                    Click Here
+                </a> to resend verification email.
+            </div>
+            <form id="resend-form" action="{{ route('resend') }}" method="POST" style="display: none;">
+                @csrf
+            </form>
+            @endif
             <div class="row jusify-content-center profile-image-line">
 
                 <a class="profile-img" href="#">
                   <div class="img__overlay">EDIT</div>
-                  <img src="https://cdn.business2community.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png"/>
+                  @if($user->avatar == 'default.png')
+                  <div class="img__underlay">{{ substr($user->email, 0, 1)}}</div>
+                  @else
+                  <img src="{{ asset('img/avatar/' . $user->avatar )}}"/>
+                  @endif
                 </a>
 
-                <div class="col align-self-center profile-name">Doug Crew</div>
+                @if($user->firstName == '')
+                <div class="col align-self-center profile-name">Tell us a bit about yourself:</div>
+                @else
+                <div class="col align-self-center profile-name">{{ $user->firstName . ' ' . $user->lastName}}</div>
+                @endif
             </div>
 
             <div class="container">
@@ -76,18 +122,6 @@
                     </div>
 
                     <div class="form-group row">
-                        <div class="col-md-12">
-                            <input placeholder="{{ __('Username') }}" id="username" type="username" class="form-control{{ $errors->has('username') ? ' is-invalid' : '' }}" name="username">
-
-                            @if ($errors->has('username'))
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $errors->first('username') }}</strong>
-                            </span>
-                            @endif
-                        </div>
-                    </div>
-
-                    <div class="form-group row">
 
                         <div class="col-md-6">
                             <input placeholder="{{ __('Password') }}" id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" value="{{ old('password') }}" required autofocus>
@@ -111,7 +145,11 @@
 
                     <div class="form-group row">
                         <div class="col-md-12 optin">
-                            <input type="checkbox" aria-label="Checkbox for media communication opt-in">
+                            <input type="checkbox" aria-label="Checkbox for media communication opt-in"
+                                @if($user->communicationOptIn)
+                                checked="checked"
+                                @endif
+                            >
                             I would like to receive emails from donateable about new features, stats, and other communications.
                         </div>
                     </div>
@@ -119,7 +157,11 @@
 
                     <div class="form-group row">
                         <div class="col-md-12 optin">
-                            <input type="checkbox" aria-label="Checkbox for collection of statistics opt-in">
+                            <input type="checkbox" aria-label="Checkbox for collection of statistics opt-in"
+                                @if($user->publishStatsOptIn)
+                                checked="checked"
+                                @endif
+                            >
                             I agree to allow donateable to post my statistics and keep track of my donations, hashes, and time spent.
                         </div>
                     </div>

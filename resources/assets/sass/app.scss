@@ -955,6 +955,26 @@ output {
   opacity: 1;
 }
 
+.img__underlay {
+    align-items: center;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    opacity: 1;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    //background
+    background-color: $primary;
+
+    // style text
+    text-transform: uppercase;
+    font-size: 72px;
+    color: white;
+    font-weight: bold;
+}
 
 .profile-name {
     font-size: 32px;

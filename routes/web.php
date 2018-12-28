@@ -31,6 +31,11 @@ Route::get('/mail', function() {
     });
 });
 Route::get('/verify/{token}', 'VerifyController@verify')->name('verify');
+Route::get('/info', function() {
+    $gdinfo = gd_info();
+    if($gdinfo['FreeType Support']) echo 'FreeType Support Enabled';
+
+});
 
 Route::get('/charity', function() {
     return View::make('charity.index');
@@ -39,6 +44,11 @@ Route::get('/charity', function() {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::post('/resendVerification', function(Request $request) {
+    $this->middleware('auth');
+    Auth::user()->sendVerificationEmail();
+    return redirect('/home');
+})->name('resend');
 Route::get('/charities', 'CharityController@index');
 Route::get('/{charity}', 'CharityController@showCharity');
 
