@@ -13,13 +13,17 @@ class CreateMilestonesTable extends Migration
      */
     public function up()
     {
-        Schema::create('milestones', function (Blueprint $table) {
+        Schema::create('milestone', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('charity_id');
-            $table->string('img_url');
+            $table->integer('charityId')->unsigned();
+            $table->string('faLink');
             $table->string('title');
-            $table->string('description');            
-            $table->timestamps();
+            $table->string('description');
+
+
+            $table->foreign('charityId')
+              ->references('id')->on('charity')
+              ->onDelete('cascade');
         });
     }
 
@@ -30,6 +34,6 @@ class CreateMilestonesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('milestones');
+        Schema::dropIfExists('milestone');
     }
 }

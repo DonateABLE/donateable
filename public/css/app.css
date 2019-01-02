@@ -10631,9 +10631,9 @@ a:hover h1 {
 }
 
 .vertical-center {
-  min-height: 70%;
+  min-height: 50%;
   /* Fallback for browsers do NOT support vh unit */
-  min-height: 70vh;
+  min-height: 50vh;
   /* These two lines are counted as one 🙂       */
   display: -webkit-box;
   display: -ms-flexbox;
@@ -11368,6 +11368,23 @@ output {
   * Style for charities page cards
   *
   **/
+
+.card-deck {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+.card-deck > .card {
+  max-width: 30%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 30%;
+          flex: 1 0 30%;
+  margin-bottom: 10px;
+}
 
 .card-footer {
   border: none;

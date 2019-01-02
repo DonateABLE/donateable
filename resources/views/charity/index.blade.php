@@ -12,24 +12,14 @@
                                 <iframe src="{{ $charity->socialFeed }}" width="350" height="420" style="border-right: 2px #26607D solid;overflow:hidden;" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
                             </div>
                             <ul class="social-icons">
-                                <li>
-                                    <a href="https://facebook.com">
-                                        <i class="fab fa-facebook-f"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <i class="fab fa-twitter"></i>
-                                </li>
-                                <li>
-                                    <i class="fas fa-envelope"></i>
-                                </li>
-                                <li>
-                                    <i class="fas fa-globe"></i>
-                                </li>
-                                <li>
-                                    <i class="fab fa-facebook-f"></i>
-                                </li>
-                                <p class="donateMoney">To donate money please <a href="#">click here.</a></p>
+                                @foreach($charity->socialLinks as $link)
+                                    <li>
+                                        <a href="{{ $link->socialUrl }}">
+                                            <i class="{{ $link->socialType->faLink }}"></i>
+                                        </a>
+                                    </li>
+                                @endforeach
+                                <p class="donateMoney">To donate money please <a href="{{ $charity->canadaHelpsUrl }}">click here.</a></p>
                             </ul>
 
                         </div>
@@ -40,7 +30,7 @@
                 <div class="vertical-center" style="border-left: 2px #26607D solid">
                     <div class="container">
                         <div class="row justify-content-center">
-                            <img src="{{ asset('img/logo/Synergenics-Logo.png') }}" alt="{{ $charity->longName . ' Logo'}}">
+                            <img src="{{ asset('img/charity/' . $charity->logo) }}" alt="{{ $charity->longName . ' Logo'}}">
                         </div>
                         <div class="row justify-content-center">
                             <?php

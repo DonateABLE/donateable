@@ -23,6 +23,7 @@ class CreateCharityTable extends Migration
             $table->text('tagline');
             $table->text('socialFeed');
             $table->text('websiteUrl');
+            $table->text('canadaHelpsUrl');
             $table->string('siteKey');
             $table->timestamps();
         });
@@ -35,6 +36,8 @@ class CreateCharityTable extends Migration
      */
     public function down()
     {
+        DB::statement('SET FOREIGN_KEY_CHECKS = 0');
         Schema::dropIfExists('charity');
+        DB::statement('SET FOREIGN_KEY_CHECKS = 1');
     }
 }

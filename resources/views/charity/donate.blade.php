@@ -10,23 +10,14 @@
 
                             <!-- Donation Milestones go here -->
                             <div style="display: flex; flex-direction: column;justify-content: center;">
-                                <div class="align column milestone">
-                                    <i class="fas fa-igloo"></i>
-                                    <h3>1 Project Igloo Igloo</h3>
-                                    <h4>Equal to 500,000,000 hashes</h4>
-                                </div>
 
+                                @foreach($charity->milestones as $milestone)
                                 <div class="align column milestone">
-                                    <i class="fas fa-coffee"></i>
-                                    <h3>1 Coffee</h3>
-                                    <h4>Equal to 12,000,000 hashes</h4>
+                                    <i class="{{ $milestone->faLink }}"></i>
+                                    <h3>{{ $milestone->title }}</h3>
+                                    <h4>{{ $milestone->description }}</h4>
                                 </div>
-
-                                <div class="align column milestone">
-                                    <i class="fas fa-dice-d20"></i>
-                                    <h3>1 Critical Roll</h3>
-                                    <h4>Priceless</h4>
-                                </div>
+                                @endforeach
                             </div>
 
                         </div>
@@ -37,7 +28,7 @@
                 <div class="vertical-center" style="border-left: 2px #26607D solid">
                     <div class="container">
                         <div class="row justify-content-center">
-                            <img src="{{ asset('img/logo/Synergenics-Logo.png') }}" alt="{{ $charity->longName . ' Logo'}}">
+                            <img src="{{ asset('img/charity/' . $charity->logo) }}" alt="{{ $charity->longName . ' Logo'}}">
                         </div>
                         <div class="row justify-content-center">
                             <?php

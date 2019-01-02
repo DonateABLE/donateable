@@ -29,24 +29,17 @@
                 </div>
                 <div class="floating-social">
                     <ul class="floating-social-icons">
-                        <li>
-                            <a href="https://facebook.com">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <i class="fab fa-twitter"></i>
-                        </li>
-                        <li>
-                            <i class="fas fa-envelope"></i>
-                        </li>
-                        <li>
-                            <i class="fas fa-globe"></i>
-                        </li>
+                        @foreach($charity->socialLinks as $link)
+                            <li>
+                                <a href="{{ $link->socialUrl }}">
+                                    <i class="{{ $link->socialType->faLink }}"></i>
+                                </a>
+                            </li>
+                        @endforeach
                     </ul>
                 </div>
                 <div class="card-footer nopad">
-                    <button type="button" class="btn btn-primary btn-full">Donate</button>
+                    <a href="{{ url( $charity->longName ) }}" class="btn btn-primary btn-full">Donate</a>
                 </div>
             </div>
             @endforeach

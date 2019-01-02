@@ -158,8 +158,8 @@ a:hover h1 {
 }
 
 .vertical-center {
-  min-height: 70%;  /* Fallback for browsers do NOT support vh unit */
-  min-height: 70vh; /* These two lines are counted as one 🙂       */
+  min-height: 50%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 50vh; /* These two lines are counted as one 🙂       */
   display: flex;
   align-items: center;
   overflow: none;
@@ -805,6 +805,16 @@ output {
   *
   **/
 
+.card-deck {
+    justify-content: space-around;
+    flex-flow: row wrap;
+
+}
+.card-deck > .card  {
+    max-width: 30%;
+    flex: 1 0 30%;
+    margin-bottom: 10px;
+}
 .card-footer {
     border: none;
 }

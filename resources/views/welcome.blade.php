@@ -14,8 +14,8 @@
         </div>
         <div class="site-links">
             <div class="left-link">
-                <a href="#" class="link-box">Select Your Charity</a>
-                <a href="#" class="link-box">How It Works</a>
+                <a href="{{ url('charities') }}" class="link-box">Select Your Charity</a>
+                <a href="#" class="link-box" data-toggle="modal" data-target="#howItWorksModal">How It Works</a>
                 <a href="#" class="link-box">Privacy Policy</a>
             </div>
             <div class="right-link">

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Charity;
 use App\DonatedTo;
+use App\SocialLink;
 use Illuminate\Http\Request;
 use View;
 use Auth;
@@ -20,7 +21,8 @@ class CharityController extends Controller
      */
     public function index()
     {
-        $charities = Charity::all();
+        $charities = Charity::with('SocialLinks.SocialType')->get();
+
         return View::make('charity.list')->with('charities', $charities);
     }
 
@@ -63,7 +65,7 @@ class CharityController extends Controller
      */
     public function showCharity(String $charityName)
     {
-        $charity = Charity::where('longName', $charityName)->firstOrFail();
+        $charity = Charity::with('Milestones')->where('longName', $charityName)->firstOrFail();
         if (Auth::check()) {
             $this->currentUser = Auth::user();
             error_log("UserId: " . $this->currentUser->id);
