@@ -78,4 +78,37 @@ class User extends Authenticatable
         return null;
     }
 
+    // probably not working
+    public function dollarsDonated() {
+        $totalHashes = $this->hashesDonated();
+        try {
+            $api_url = "https://min-api.cryptocompare.com/data/price?fsym=XMR&tsyms=BTC,USD,EUR";
+            $api_json = file_get_contents($api_url);
+            $api_array = json_decode($api_json, true);
+            $monero_exchange = $api_array["USD"];
+            echo ($monero_exchange);
+
+            return floor($monero_exchange * (($totalHashes / 1000000) * 0.00007217));
+        } catch (\Exception $e) {
+            return "We're having trouble calculating your donation right now. Check back later.";
+        }
+    }
+
+    public function hashesDonated() {
+        return $this->DonatedTo()->sum('totalHashes');
+    }
+
+    public function timeDonated() {
+        return $this->secondsToTime($this->DonatedTo()->sum('totalTime'));
+
+    }
+
+    private function secondsToTime($seconds) {
+        if (!$seconds) {
+            return "00:00:00";
+        }
+        $dtF = new \DateTime('@0');
+        $dtT = new \DateTime("@$seconds");
+        return $dtF->diff($dtT)->format('%a:%h:%i:%s');
+    }
 }

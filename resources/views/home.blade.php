@@ -14,19 +14,19 @@
                 <div class="align column">
                     <i class="fas fa-money-bill-alt"></i>
                     <h3>approximate dollars donated</h3>
-                    <h4>Equal to 500,000,000 hashes</h4>
+                    <h4>${{ $user->dollarsDonated() }}</h4>
                 </div>
 
                 <div class="align column">
                     <i class="fas fa-hashtag"></i>
                     <h3>total hashes donated</h3>
-                    <h4>Equal to 12,000,000 hashes</h4>
+                    <h4>{{ $user->hashesDonated() }}</h4>
                 </div>
 
                 <div class="align column">
                     <i class="fas fa-clock"></i>
                     <h3>Total time donated</h3>
-                    <h4>Priceless</h4>
+                    <h4>{{ $user->timeDonated() }}</h4>
                 </div>
             </div>
         </div>
