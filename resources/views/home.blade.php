@@ -5,20 +5,11 @@
 @if (Auth::user())
 <?php
     $user = Auth::user();
+    $topCharity = $user->topCharity();
 ?>
 @endif
-<div>
-     <a class="dropdown-item" href="{{ route('logout') }}"
-        onclick="event.preventDefault();
-                      document.getElementById('logout-form').submit();">
-         {{ __('Logout') }}
-     </a>
-</div>
-     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-         @csrf
-     </form>
     <div class="row justify-content-center" style="margin: 0px; padding 0px;">
-        <div class="col-md-4 profile-stats">
+        <div class="col-md-3 profile-stats">
             <div style="display: flex; flex-direction: column;justify-content: center;">
                 <div class="align column">
                     <i class="fas fa-money-bill-alt"></i>
@@ -39,18 +30,14 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-8">
+        <div class="col-md-9">
             @if (session('status'))
                 <div class="alert alert-success" role="alert">
                     {{ session('status') }}
                 </div>
             @endif
 
-            @if (Auth::user()->verified())
-            <div class="alert alert-success" role="alert">
-                And verified!
-            </div>
-            @else
+            @if (!Auth::user()->verified())
             <div class="alert alert-warning" role="alert">
                 Your email address has not been verified.
                 <a href="{{ route('resend') }}"
@@ -65,23 +52,29 @@
             @endif
             <div class="row jusify-content-center profile-image-line">
 
-                <a class="profile-img" href="#">
-                  <div class="img__overlay">EDIT</div>
+                <div class="profile-img" href="#">
+                  <div class="img__overlay">EDIT
+                      <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" />
+                      <label class="img__overlay clear" for="imageUpload"></label>
+                </div>
                   @if($user->avatar == 'default.png')
-                  <div class="img__underlay">{{ substr($user->email, 0, 1)}}</div>
+                  <div id="imagePreview" class="img__underlay">{{ substr($user->email, 0, 1)}}</div>
                   @else
-                  <img src="{{ asset('img/avatar/' . $user->avatar )}}"/>
+                  <img id="imagePreview" src="{{ asset('img/avatar/' . $user->avatar )}}"/>
+
+                  <div id="imagePreview" class="img__underlay" style="background-image: {{ asset('img/avatar/' . $user->avatar )}}"></div>
+
                   @endif
-                </a>
+              </div>
 
                 @if($user->firstName == '')
-                <div class="col align-self-center profile-name">Tell us a bit about yourself:</div>
+                <div class="col align-self-center profile-name">Tell us a bit about yourself</div>
                 @else
                 <div class="col align-self-center profile-name">{{ $user->firstName . ' ' . $user->lastName}}</div>
                 @endif
             </div>
 
-            <div class="container">
+            <div id="profile-form" class="container">
                 <label for="Account Settings" class="settings-label">Account Settings</label>
 
                 <form method="POST" action="{{ route('login') }}" aria-label="{{ __('Account Settings') }}">
@@ -118,6 +111,21 @@
                                 <strong>{{ $errors->first('email') }}</strong>
                             </span>
                             @endif
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col-md-12">
+                            <input placeholder="{{ __('Username') }}" id="username" type="username" class="form-control{{ $errors->has('username') ? ' is-invalid' : '' }}" name="username" required>
+
+                            @if ($errors->has('username'))
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $errors->first('username') }}</strong>
+                            </span>
+                            @endif
+                            <small id="usernameHelpBlock" class="form-text text-muted">
+                              Your username will be used as an alias if you've chosen to share your contribution stats so we don't have to tell anyone your real name.
+                            </small>
                         </div>
                     </div>
 
@@ -176,7 +184,45 @@
                         </div>
                     </div>
                 </form>
+
+                <label for="TopDonation" class="settings-label">My Top Donated Charity</label>
+                <div class="form-group row">
+                    <div class="col-md-12">
+                        <a class="top-charity" href="{{ $topCharity ? url($topCharity->longName . '/donate') : url('/charities')}}">
+                            @if( $topCharity != NULL )
+                            <img src="{{ asset('img/charity/' . $topCharity->logo) }}"/> {{ $topCharity->longName }}
+                            @else
+                            You haven't made any donations yet. Click here to get started.
+                            </a>
+                            <br/>
+                            <a href="#" class="top-charity" data-toggle="modal" data-target="#howItWorksModal">
+                            Or click here to see what we're all about.
+                            @endif
+                        </a>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
+
+
+    <script>
+
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                $('#imagePreview').css('background-image', 'url('+e.target.result +')');
+                $('#imagePreview').hide();
+                $('#imagePreview').fadeIn(650);
+            }
+            reader.readAsDataURL(input.files[0]);
+        }
+        }
+
+    $("#imageUpload").change(function() {
+        readURL(this);
+    });
+    </script>
 @endsection

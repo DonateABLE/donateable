@@ -8,10 +8,11 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+html { margin-bottom: 200px }
 
 body {
-    height: 100%;
-    height: 100vh;
+    height: 90%;
+    height: 90vh;
     background: linear-gradient(rgb(250, 250, 249), rgb(150, 185, 218));
     background-image: url('/../../../../img/background-40p.png');
     background-position: center;
@@ -176,16 +177,20 @@ a:hover h1 {
   position: fixed;
   bottom: 0;
   width: 100%;
-  transform: translateY(-95%);
+  transform: translateY(-15%);
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: rgba(255, 255, 255, 1);
+
 
 }
 
 .bottom-brand {
     height: 25px;
     width: auto;
+    background-color: rgba(255, 255, 255, 1);
+
 }
 
 .bottom-nav-brand a {
@@ -194,18 +199,20 @@ a:hover h1 {
     font-weight: bold;
     color: $primary !important;
     font-weight: 500;
+    background-color: rgba(255, 255, 255, 1);
+
 }
 
 .bottom-nav {
   overflow: hidden;
   position: fixed;
   bottom: 0;
-  transform: translateY(-100%);
+  transform: translateY(-35%);
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-
+  background-color: rgba(255, 255, 255, 1);
 }
 
 .bottom-nav a {
@@ -279,7 +286,7 @@ a:hover h1 {
     padding-right: 15px;
 }
 
-.left-link a {
+.link-box {
     color: $primary;
     text-align: center;
     display: inline-block;
@@ -296,10 +303,23 @@ a:hover h1 {
 
 }
 
+#highlight {
+    color: white;
+    background-color: $primary;
+
+}
+
+#highlight:hover {
+    color: $primary;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+
 .left-link a:hover {
     background-color: $primary;
     color: white;
 }
+
 
 .right-link {
     display: flex;
@@ -959,12 +979,19 @@ output {
    font-size: 18px;
    color: white;
    font-weight: bold;
+
+   input {
+       display: none;
+   }
  }
 
  .img__overlay:hover {
   opacity: 1;
 }
 
+.clear {
+    opacity: 0 !important;
+}
 .img__underlay {
     align-items: center;
     bottom: 0;
@@ -991,7 +1018,11 @@ output {
     color: white;
     font-weight: bold;
     text-transform: uppercase;
-    padding-left: 100px;
+    padding-left: 75px;
+}
+
+#profile-form {
+    padding: 0px 100px 0px 100px;
 }
 
 .optin {
@@ -1007,6 +1038,78 @@ output {
     color: $primary;
     font-weight: bold;
 }
+
+.avatar-upload {
+    position: relative;
+    max-width: 205px;
+    margin: 50px auto;
+    .avatar-edit {
+        position: absolute;
+        right: 12px;
+        z-index: 1;
+        top: 10px;
+        input {
+            display: none;
+            + label {
+                display: inline-block;
+                width: 34px;
+                height: 34px;
+                margin-bottom: 0;
+                border-radius: 100%;
+                background: #FFFFFF;
+                border: 1px solid transparent;
+                box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+                cursor: pointer;
+                font-weight: normal;
+                transition: all .2s ease-in-out;
+                &:hover {
+                    background: #f1f1f1;
+                    border-color: #d6d6d6;
+                }
+                &:after {
+                    content: "\f040";
+                    font-family: 'FontAwesome';
+                    color: #757575;
+                    position: absolute;
+                    top: 10px;
+                    left: 0;
+                    right: 0;
+                    text-align: center;
+                    margin: auto;
+                }
+            }
+        }
+    }
+    .avatar-preview {
+        width: 192px;
+        height: 192px;
+        position: relative;
+        border-radius: 100%;
+        border: 6px solid #F8F8F8;
+        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+        > div {
+            width: 100%;
+            height: 100%;
+            border-radius: 100%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+}
+
+.top-charity img {
+    width: 100px;
+    height: auto;
+}
+
+.top-charity {
+    color: $primary;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
 /**
  *
  * End of profile page stats

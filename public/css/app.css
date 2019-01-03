@@ -10473,9 +10473,13 @@ a.text-dark:focus {
   }
 }
 
+html {
+  margin-bottom: 200px;
+}
+
 body {
-  height: 100%;
-  height: 100vh;
+  height: 90%;
+  height: 90vh;
   background: -webkit-gradient(linear, left top, left bottom, from(#fafaf9), to(#96b9da));
   background: linear-gradient(#fafaf9, #96b9da);
   background-image: url("/../../../../img/background-40p.png");
@@ -10655,8 +10659,8 @@ a:hover h1 {
   position: fixed;
   bottom: 0;
   width: 100%;
-  -webkit-transform: translateY(-95%);
-          transform: translateY(-95%);
+  -webkit-transform: translateY(-15%);
+          transform: translateY(-15%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -10666,11 +10670,13 @@ a:hover h1 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background-color: white;
 }
 
 .bottom-brand {
   height: 25px;
   width: auto;
+  background-color: white;
 }
 
 .bottom-nav-brand a {
@@ -10679,14 +10685,15 @@ a:hover h1 {
   font-weight: bold;
   color: #26607d !important;
   font-weight: 500;
+  background-color: white;
 }
 
 .bottom-nav {
   overflow: hidden;
   position: fixed;
   bottom: 0;
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
+  -webkit-transform: translateY(-35%);
+          transform: translateY(-35%);
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -10697,6 +10704,7 @@ a:hover h1 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background-color: white;
 }
 
 .bottom-nav a {
@@ -10800,7 +10808,7 @@ a:hover h1 {
   padding-right: 15px;
 }
 
-.left-link a {
+.link-box {
   color: #26607d;
   text-align: center;
   display: inline-block;
@@ -10814,6 +10822,16 @@ a:hover h1 {
   font-weight: bold;
   border: 2px #26607d solid;
   border-right: 2px #26607d solid;
+}
+
+#highlight {
+  color: white;
+  background-color: #26607d;
+}
+
+#highlight:hover {
+  color: #26607d;
+  background-color: rgba(0, 0, 0, 0);
 }
 
 .left-link a:hover {
@@ -11555,8 +11573,16 @@ output {
   font-weight: bold;
 }
 
+.img__overlay input {
+  display: none;
+}
+
 .img__overlay:hover {
   opacity: 1;
+}
+
+.clear {
+  opacity: 0 !important;
 }
 
 .img__underlay {
@@ -11587,7 +11613,11 @@ output {
   color: white;
   font-weight: bold;
   text-transform: uppercase;
-  padding-left: 100px;
+  padding-left: 75px;
+}
+
+#profile-form {
+  padding: 0px 100px 0px 100px;
 }
 
 .optin {
@@ -11602,6 +11632,87 @@ output {
   font-size: 14px;
   color: #26607d;
   font-weight: bold;
+}
+
+.avatar-upload {
+  position: relative;
+  max-width: 205px;
+  margin: 50px auto;
+}
+
+.avatar-upload .avatar-edit {
+  position: absolute;
+  right: 12px;
+  z-index: 1;
+  top: 10px;
+}
+
+.avatar-upload .avatar-edit input {
+  display: none;
+}
+
+.avatar-upload .avatar-edit input + label {
+  display: inline-block;
+  width: 34px;
+  height: 34px;
+  margin-bottom: 0;
+  border-radius: 100%;
+  background: #FFFFFF;
+  border: 1px solid transparent;
+  -webkit-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  font-weight: normal;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.avatar-upload .avatar-edit input + label:hover {
+  background: #f1f1f1;
+  border-color: #d6d6d6;
+}
+
+.avatar-upload .avatar-edit input + label:after {
+  content: "\F040";
+  font-family: 'FontAwesome';
+  color: #757575;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  margin: auto;
+}
+
+.avatar-upload .avatar-preview {
+  width: 192px;
+  height: 192px;
+  position: relative;
+  border-radius: 100%;
+  border: 6px solid #F8F8F8;
+  -webkit-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+}
+
+.avatar-upload .avatar-preview > div {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.top-charity img {
+  width: 100px;
+  height: auto;
+}
+
+.top-charity {
+  color: #26607d;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 /**

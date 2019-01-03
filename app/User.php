@@ -5,6 +5,8 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use App\Notifications\VerifyEmail;
+use App\Charity;
+use App\DonatedTo;
 
 class User extends Authenticatable
 {
@@ -49,4 +51,31 @@ class User extends Authenticatable
         $this->notify(new VerifyEmail($this));
 
     }
+
+    /**
+     * Define a one to many relationship with donatedto
+    **/
+    public function DonatedTo() {
+         return $this->hasMany('App\DonatedTo', 'userId', 'id');
+    }
+
+    /**
+     * Returns a charity object that signifies their top donated to
+     *
+     * @return App\Charity or null
+     */
+    public function topCharity() {
+
+        $donation = $this->DonatedTo()->orderBy('totalHashes')->first();
+        if ($donation) {
+            $charity = Charity::where('id', $donation->charityId)->first();
+
+            if ($charity) {
+                return $charity;
+            }
+        }
+
+        return null;
+    }
+
 }

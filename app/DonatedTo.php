@@ -20,4 +20,20 @@ class DonatedTo extends Model
         return DonatedTo::all()->sum('totalHashes');
     }
 
+    /**
+     * Get the charity that the donation is for.
+     */
+    public function Charity()
+    {
+        return $this->belongsTo('App\Charity', 'charityId', 'id');
+    }
+
+
+    /**
+     * Get the user that owns the donation.
+     */
+    public function User()
+    {
+        return $this->belongsTo('App\User', 'userId', 'id');
+    }
 }
