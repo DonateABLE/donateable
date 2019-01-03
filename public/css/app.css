@@ -10482,7 +10482,7 @@ body {
   height: 90vh;
   background: -webkit-gradient(linear, left top, left bottom, from(#fafaf9), to(#96b9da));
   background: linear-gradient(#fafaf9, #96b9da);
-  background-image: url("/../../../../img/background-40p.png");
+  background-image: url("/../../../../img/donateABLE-background.jpg");
   background-position: center;
   background-repeat: no-repeat no-repeat;
   background-size: cover;
@@ -11601,7 +11601,14 @@ output {
   position: absolute;
   right: 0;
   top: 0;
+  border: none;
   background-color: #26607d;
+  background-position: center;
+  /* Center the image */
+  background-repeat: no-repeat;
+  /* Do not repeat the image */
+  background-size: cover;
+  /* Resize the background image to cover the entire container */
   text-transform: uppercase;
   font-size: 72px;
   color: white;

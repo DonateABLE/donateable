@@ -14,7 +14,7 @@ body {
     height: 90%;
     height: 90vh;
     background: linear-gradient(rgb(250, 250, 249), rgb(150, 185, 218));
-    background-image: url('/../../../../img/background-40p.png');
+    background-image: url('/../../../../img/donateABLE-background.jpg');
     background-position: center;
     background-repeat: no-repeat no-repeat;
     background-size: cover;
@@ -1003,8 +1003,12 @@ output {
     right: 0;
     top: 0;
 
+    border: none;
     //background
     background-color: $primary;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
 
     // style text
     text-transform: uppercase;

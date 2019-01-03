@@ -42,7 +42,7 @@ Route::get('/charity', function() {
 });
 
 Auth::routes();
-
+Route::post('/account-settings', 'UserSettings')->name('settings');
 Route::get('/home', 'HomeController@index')->name('home');
 Route::post('/resendVerification', function(Request $request) {
     $this->middleware('auth');

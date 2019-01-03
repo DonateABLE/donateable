@@ -19,6 +19,6 @@ class VerifyController extends Controller
         User::where('email_token', $token)->firstOrFail()
                     ->update(['email_token' => null]);
 
-        return redirect()->route('home')->with('success', 'Account Verified.');
+        return redirect()->route('home')->withStatus('Your Account has been verified.');
     }
 }

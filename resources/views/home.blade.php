@@ -36,6 +36,11 @@
                     {{ session('status') }}
                 </div>
             @endif
+            @if (session('error'))
+            <div class="alert alert-danger" role="alert">
+                {{ session('error') }}
+            </div>
+            @endif
 
             @if (!Auth::user()->verified())
             <div class="alert alert-warning" role="alert">
@@ -50,19 +55,21 @@
                 @csrf
             </form>
             @endif
+
+        <form id="account-settings-form" enctype="multipart/form-data" method="POST" action="{{ route('settings') }}" aria-label="{{ __('Account Settings') }}">
+            @csrf
             <div class="row jusify-content-center profile-image-line">
 
                 <div class="profile-img" href="#">
                   <div class="img__overlay">EDIT
-                      <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" />
+                      <input type='file' id="imageUpload" name="avatar" accept=".png, .jpg, .jpeg" form="account-settings-form"/>
                       <label class="img__overlay clear" for="imageUpload"></label>
                 </div>
                   @if($user->avatar == 'default.png')
-                  <div id="imagePreview" class="img__underlay">{{ substr($user->email, 0, 1)}}</div>
+                  <div id="imagePreview" class="img__underlay"><span id="placeholderAvatar">{{ substr($user->email, 0, 1)}}</span></div>
                   @else
-                  <img id="imagePreview" src="{{ asset('img/avatar/' . $user->avatar )}}"/>
 
-                  <div id="imagePreview" class="img__underlay" style="background-image: {{ asset('img/avatar/' . $user->avatar )}}"></div>
+                  <div id="imagePreview" class="img__underlay" style="background-image: url({{ asset('img/avatar/' . $user->avatar )}})"></div>
 
                   @endif
               </div>
@@ -75,10 +82,8 @@
             </div>
 
             <div id="profile-form" class="container">
-                <label for="Account Settings" class="settings-label">Account Settings</label>
-
-                <form method="POST" action="{{ route('login') }}" aria-label="{{ __('Account Settings') }}">
-                    @csrf
+                <label for="account-settings-form" class="settings-label">Account Settings</label>
+                    <!-- original location of form -->
 
                     <div class="form-group row">
 
@@ -153,7 +158,7 @@
 
                     <div class="form-group row">
                         <div class="col-md-12 optin">
-                            <input type="checkbox" aria-label="Checkbox for media communication opt-in"
+                            <input type="checkbox" name="communicationOptIn" aria-label="Checkbox for media communication opt-in"
                                 @if($user->communicationOptIn)
                                 checked="checked"
                                 @endif
@@ -165,7 +170,7 @@
 
                     <div class="form-group row">
                         <div class="col-md-12 optin">
-                            <input type="checkbox" aria-label="Checkbox for collection of statistics opt-in"
+                            <input type="checkbox" name="publishStatsOptIn" aria-label="Checkbox for collection of statistics opt-in"
                                 @if($user->publishStatsOptIn)
                                 checked="checked"
                                 @endif
@@ -213,6 +218,7 @@
         if (input.files && input.files[0]) {
             var reader = new FileReader();
             reader.onload = function(e) {
+                $('#placeholderAvatar').remove();
                 $('#imagePreview').css('background-image', 'url('+e.target.result +')');
                 $('#imagePreview').hide();
                 $('#imagePreview').fadeIn(650);
