@@ -1,6 +1,6 @@
 
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Montserrat:300,700');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,700,500,600');
 
 // Variables
 @import 'variables';
@@ -194,11 +194,11 @@ a:hover h1 {
 }
 
 .bottom-nav-brand a {
-    font-size: 12px;
+    font-size: 10px;
     text-transform: uppercase;
     font-weight: bold;
     color: $primary !important;
-    font-weight: 500;
+    font-weight: 600;
     background-color: rgba(255, 255, 255, 1);
 
 }
@@ -221,7 +221,7 @@ a:hover h1 {
   display: inline-block;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 14px;
   margin: 0px auto;
   text-transform: uppercase;
   font-weight: bold;
@@ -557,6 +557,7 @@ a:hover h1 {
 
 .modal-body-accept {
     padding-top: 0;
+
 }
 /**
  *
@@ -591,6 +592,8 @@ a:hover h1 {
      font-size: 12px;
      margin-bottom: 0;
      padding-bottom: 0;
+     font-weight: 600;
+
  }
 
 .modal-backdrop
@@ -628,7 +631,7 @@ a:hover h1 {
     padding-bottom: 10.585px;
 }
 
-.btn-donate-left {
+#startButtonDiv {
     padding-left: 0px;
     padding-right: 7.5px;
 }
@@ -650,7 +653,7 @@ a:hover h1 {
 
 }
 
-.btn-donate-mid {
+#stopButtonDiv {
     padding-left: 7.5px;
     padding-right: 7.5px;
 }
@@ -860,7 +863,7 @@ output {
     text-align: justify;
     color: black;
     font-size: 12px;
-    font-weight: 400;
+    font-weight: 500;
     padding: 20px 0px 20px 0px;
 }
 
@@ -870,12 +873,10 @@ output {
 }
 
 .floating-social-icons {
-    margin-bottom: 0;
-    flex: 1;
+    padding: 0;
     list-style: none;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
+    display: table;   /* Allow the centering to work */
+    margin: auto;
 }
 
 .floating-social-icons > li {
@@ -893,6 +894,10 @@ output {
 
 .floating-social-icons i {
     color: white;
+}
+
+.table {
+
 }
  /**
   *

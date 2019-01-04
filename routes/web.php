@@ -42,6 +42,9 @@ Route::get('/charity', function() {
 });
 
 Auth::routes();
+Route::post('/sitestats/join', 'SiteStatsController@join');
+Route::post('/sitestats/leave', 'SiteStatsController@leave');
+Route::post('/donatedto/update', 'UpdateDonatedTo')->name('donationUpdate');
 Route::post('/account-settings', 'UserSettings')->name('settings');
 Route::get('/home', 'HomeController@index')->name('home');
 Route::post('/resendVerification', function(Request $request) {
@@ -53,5 +56,3 @@ Route::get('/charities', 'CharityController@index');
 Route::get('/{charity}', 'CharityController@showCharity');
 
 Route::get('/{charity}/donate', 'CharityController@showDonate');
-Route::post('/sitestats/join', 'SiteStatsController@join');
-Route::post('/sitestats/leave', 'SiteStatsController@leave');

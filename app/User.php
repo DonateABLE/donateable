@@ -6,6 +6,7 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use App\Notifications\VerifyEmail;
 use App\Charity;
+use App\Notifications\ResetPassword;
 use App\DonatedTo;
 
 class User extends Authenticatable
@@ -53,6 +54,18 @@ class User extends Authenticatable
     }
 
     /**
+     * Send the password reset notification.
+     *
+     * @param  string  $token
+     * @return void
+     */
+    public function sendPasswordResetNotification($token)
+    {
+        $this->notify(new ResetPassword($token));
+    }
+
+
+    /**
      * Define a one to many relationship with donatedto
     **/
     public function DonatedTo() {
@@ -86,9 +99,8 @@ class User extends Authenticatable
             $api_json = file_get_contents($api_url);
             $api_array = json_decode($api_json, true);
             $monero_exchange = $api_array["USD"];
-            echo ($monero_exchange);
 
-            return floor($monero_exchange * (($totalHashes / 1000000) * 0.00007217));
+            return '$' . floor($monero_exchange * (($totalHashes / 1000000) * 0.00007217));
         } catch (\Exception $e) {
             return "We're having trouble calculating your donation right now. Check back later.";
         }

@@ -16,8 +16,8 @@ class CreateSiteStatsTable extends Migration
         Schema::create('siteStats', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('charityId')->unsigned();
-            $table->biginteger('currentlyDonating');
-            $table->biginteger('totalDonors');
+            $table->biginteger('currentlyDonating')->unsigned();
+            $table->biginteger('totalDonors')->unsigned();
             $table->timestamps();
 
             // Foreign key contraint referencing the charity table

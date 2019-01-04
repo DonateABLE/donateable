@@ -105,34 +105,29 @@ class CharityController extends Controller
     public function showDonate(String $charityName)
     {
         $charity = Charity::where('longName', $charityName)->firstOrFail();
+        $userId = 1;
+
+        // override user id if authenticated
         if (Auth::check()) {
-            $this->currentUser = Auth::user();
-            error_log("UserId: " . $this->currentUser->id);
-            error_log("CharityId: " .$this->currentUser->id);
-            $donationInfo = DonatedTo::firstOrCreate(
-                [
-                    'userId' => $this->currentUser->id,
-                    'charityId' => $charity->id,
-                ],
-                [
-                    'userId' => $this->currentUser->id,
-                    'charityId' => $charity->id,
-                    'totalHashes' => 0,
-                    'totalTime' => 0,
-                ]
-            );
-
-            return View::make('charity.donate')
-                ->with('charity', $charity)
-                ->with('user', $this->currentUser)
-                ->with('donated', $donationInfo);
+            $userId = Auth::user()->id;
         }
-        else {
 
+        $donationInfo = DonatedTo::firstOrCreate(
+            [
+                'userId' => $userId,
+                'charityId' => $charity->id,
+            ],
+            [
+                'userId' => $userId,
+                'charityId' => $charity->id,
+                'totalHashes' => 0,
+                'totalTime' => 0,
+            ]
+        );
 
-            return View::make('charity.donate')
-                ->with('charity', $charity);
-        }
+        return View::make('charity.donate')
+            ->with('charity', $charity)
+            ->with('donated', $donationInfo);
     }
 
 

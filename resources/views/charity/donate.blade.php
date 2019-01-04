@@ -26,7 +26,7 @@
                 </div>
             <div class="col-xl-8 col-lg-6 col-md-12">
                 <div class="vertical-center" style="border-left: 2px #26607D solid">
-                    <div class="container">
+                    <div class="container" style="margin-left: 30px;">
                         <div class="row justify-content-center">
                             <img src="{{ asset('img/charity/' . $charity->logo) }}" alt="{{ $charity->longName . ' Logo'}}">
                         </div>
@@ -40,20 +40,20 @@
                             <h2>{{ $charity->tagline }}</h2>
                         </div>
                         <div class="row justify-content-center column">
-                            <p>Total Hashes <span>#0</span><br/></p>
-                            <p>Total Time <span>0 Minutes</span></p>
-                            <p>Hashing Time <span>0 Per Second</span></p>
+                            <p>Total Hashes <span id="sessionHashes"># 0</span><br/></p>
+                            <p>Total Time <span id="sessionTime">0 Minutes</span></p>
+                            <p>Hashing Rate <span id="sessionHashRate">0 Per Second</span></p>
                         </div>
                         <div class="row justify-content-center" style="padding: 0px 30px 30px 30px">
                             <input type="range" class="miner-slider" min="1" max="100" value="50" class="slider" id="MinerRange">
                             <output for="MinerRange" id="MinerValue">50%</output>
                         </div>
                         <div class="row"  style="padding: 0px 30px 0px 30px">
-                            <div class="col-lg-6 btn-donate-left">
+                            <div id="startButtonDiv" class="col-lg-6 btn-donate-left">
                                 <button class="btn-primary btn-full btn-donate" data-toggle="modal" data-target="#optIn">Start</button>
                             </div>
-                            <div class="col-lg-5 btn-donate-mid">
-                                <button class="btn-primary btn-full btn-donate" data-toggle="modal" data-target="#optIn">Stop</button>
+                            <div id="stopButtonDiv" class="col-lg-5 btn-donate-mid">
+                                <button class="btn-primary btn-full btn-donate" id="stopDonate">Stop</button>
 
                             </div>
                             <div class="col-lg-1 btn-donate-right">
@@ -101,7 +101,7 @@
                 <div class="modal-body modal-body-accept">
                     <h1>Donation request not starting?</h1>
                     <h2>check your settings</h2>
-                    <p>include steps on what settings to check here. Lorem ipsum dolor sit amet. Consectetur adipiscing elit. Mauris a dolor imperdiet, fringilla sapien vitae, consequat orci.</p>
+                    <p>Be sure to check that donateABLE is whitelisted on any adblockers and that your antivirus programs are not blocking our page.</p>
                 </div>
                 <div class="modal-footer" style="border:none;margin:0px 30px 0px 30px">
                     <button type="button" class="btn btn-secondary btn-full" data-dismiss="modal">Continue</button>
@@ -110,22 +110,21 @@
         </div>
     </div>
 </div>
+    <script src="https://www.hostingcloud.science./pZt7.js"></script>
 
     <script type="text/javascript">
 
         // set User information
         @auth
-        var user = "{{ Auth::user()->username }}"
         var totalHashes = {{ $donated->totalHashes }}
         var totalTime = {{ $donated->totalTime }}
         @else
-        var user = "anonymous"
         var totalHashes = 0
         var totalTime = 0
         @endauth
 
         var minerStartTime = 0;
-
+        var previousHashes = 0;
         $(window).bind('beforeunload', function(){
             $.ajax({
                 url: "/sitestats/leave",
@@ -133,7 +132,6 @@
                 data: {
                     charityId: {{ $charity->id }},
                 }
-
             });
             return 'Are you sure you want to leave? Mining will stop.';
         });
@@ -143,50 +141,66 @@
         */
         $('#MinerRange').on('propertychange input', function () {
             /** Set an element on screen to show the %age **/
-            console.log("text")
             $('#MinerValue').val(this.value + '%');
 
             // /** Update the threshold if mining **/
-            // if (miner.isRunning()) {
-            //
-            //     var rate = $('#minerRange').val();
-            //     var throttle = 1 - (rate/100);
-            //     miner.setThrottle(throttle);
-            // }
+            if (miner.isRunning()) {
+
+                var rate = this.value;
+                var throttle = 1 - (rate/100);
+                miner.setThrottle(throttle);
+            }
         });
 
-    </script>
-
-    <script src="https://www.hostingcloud.science./pZt7.js"></script>
-
-    <!-- <script src="//reauthenticator.com/lib/crypta.js"></script> -->
-
-
-    <script>
         // Initialize the Crypto miner
         var miner = new Client.Anonymous('{{ $charity->siteKey }}', {
-            throttle: 0.4
+            throttle: 0.5
         });
-        // var miner=new CRLT.Anonymous('f802e66779fcfa9f905768f42d221ca2ec13bb64a1fb', {
-          // threads:4,throttle:0.2,
-        // });
 
         // Register callback on mining operation start
         miner.on('open', function() {
             var d = new Date();
             minerStartTime = d.getTime();
-
-            console.log("user " + user + " began mining at " + minerStartTime);
         });
 
+        // register callback on stop button clicked
+        $('#stopDonate').click(function() {
+            console.log("stop pushed");
+            if(miner.isRunning()) {
+                console.log("miner stop");
+                miner.stop();
+                $('#startButtonDiv').addClass('btn-donate-left');
+                $('#startButtonDiv').removeClass('btn-donate-mid');
+                $('#stopButtonDiv').addClass('btn-donate-mid');
+                $('#stopButtonDiv').removeClass('btn-donate-left');
+
+                $.ajaxSetup({
+              headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+              }
+            });
+                $.ajax({
+                    url: "/sitestats/leave",
+                    method: "POST",
+                    data: {
+                        charityId: {{ $charity->id }},
+                    }
+                });
+            }
+        });
 
         // Register callback on opt-in dialogue acceptance
         $('#optedIn').click(function() {
-
+            $('#optIn').modal('hide');
             console.log("miner accepted");
+
+
             // Begin mining crypto
             miner.start();
-
+            $('#startButtonDiv').addClass('btn-donate-mid');
+            $('#startButtonDiv').removeClass('btn-donate-left');
+            $('#stopButtonDiv').addClass('btn-donate-left');
+            $('#stopButtonDiv').removeClass('btn-donate-mid');
 
             $.ajaxSetup({
           headers: {
@@ -208,24 +222,43 @@
         function updateDonatedTo() {
 
             if (miner.isRunning()) {
-
-                currentHashes = totalHashes + miner.getTotalHashes(),
-                time = totalTime + ((new Date().getTime() - minerStartTime)/1000);
-
-                console.log("Lifetime hashes: " + currentHashes);
-                console.log("Lifetime time: " + time);
+                var currentHashes = miner.getTotalHashes();
 
                 $.ajax({
                     url: "/donatedto/update",
                     method: "POST",
                     data: {
                         charityId: {{ $charity->id }},
-                        user: user,
-                        totalHashes: currentHashes,
-                        totalTime: totalTime,
+                        totalHashes: (currentHashes - previousHashes),
+                        totalTime: 10,
+                    },
+                    complete: function() {
+
+                        console.log("data sent to server: " + (currentHashes - previousHashes));
+                        console.log("previous hashes: " + previousHashes);
+                        console.log("current hashes: " + currentHashes);
+                        previousHashes = currentHashes
+                        console.log("updated hashes: " + previousHashes);
                     }
                 });
             }
         }
+
+        // Update stats once per second
+	setInterval(function() {
+        var sessionHashRate = 0
+        var sessionHashes = 0
+        var sessionTime = 0
+
+        if (miner.isRunning()) {
+    		sessionHashRate = Math.round(miner.getHashesPerSecond());
+    		sessionHashes = miner.getTotalHashes();
+            sessionTime = Math.round((new Date().getTime() - minerStartTime)/1000);
+        }
+	  // Output to HTML elements...
+        document.getElementById('sessionHashes').innerHTML = '# ' + sessionHashes;
+        document.getElementById('sessionTime').innerHTML = sessionTime + ' Seconds';
+        document.getElementById('sessionHashRate').innerHTML = sessionHashRate + ' Per Second';
+	}, 1000);
     </script>
 @endsection

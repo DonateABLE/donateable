@@ -14,7 +14,7 @@
                 <div class="align column">
                     <i class="fas fa-money-bill-alt"></i>
                     <h3>approximate dollars donated</h3>
-                    <h4>${{ $user->dollarsDonated() }}</h4>
+                    <h4>{{ $user->dollarsDonated() }}</h4>
                 </div>
 
                 <div class="align column">
@@ -65,7 +65,7 @@
                       <input type='file' id="imageUpload" name="avatar" accept=".png, .jpg, .jpeg" form="account-settings-form"/>
                       <label class="img__overlay clear" for="imageUpload"></label>
                 </div>
-                  @if($user->avatar == 'default.png')
+                  @if($user->avatar == NULL)
                   <div id="imagePreview" class="img__underlay"><span id="placeholderAvatar">{{ substr($user->email, 0, 1)}}</span></div>
                   @else
 
@@ -74,7 +74,7 @@
                   @endif
               </div>
 
-                @if($user->firstName == '')
+                @if($user->firstName == NULL)
                 <div class="col align-self-center profile-name">Tell us a bit about yourself</div>
                 @else
                 <div class="col align-self-center profile-name">{{ $user->firstName . ' ' . $user->lastName}}</div>
@@ -88,7 +88,7 @@
                     <div class="form-group row">
 
                         <div class="col-md-6">
-                            <input placeholder="{{ __('First Name') }}" id="fname" type="fname" class="form-control{{ $errors->has('fname') ? ' is-invalid' : '' }}" name="fname" value="{{ old('fname') }}" autofocus>
+                            <input placeholder="{{ __('First Name') }}" id="fname" type="fname" class="form-control{{ $errors->has('fname') ? ' is-invalid' : '' }}" name="fname" value="{{ old('fname', $user->firstName) }}" autofocus>
 
                             @if ($errors->has('fname'))
                             <span class="invalid-feedback" role="alert">
@@ -97,7 +97,7 @@
                             @endif
                         </div>
                         <div class="col-md-6">
-                            <input placeholder="{{ __('Last Name') }}" id="lname" type="lname" class="form-control{{ $errors->has('lname') ? ' is-invalid' : '' }}" name="lname" value="{{ old('lname') }}" autofocus>
+                            <input placeholder="{{ __('Last Name') }}" id="lname" type="lname" class="form-control{{ $errors->has('lname') ? ' is-invalid' : '' }}" name="lname" value="{{ old('lname', $user->lastName) }}" autofocus>
 
                             @if ($errors->has('lname'))
                             <span class="invalid-feedback" role="alert">
@@ -109,7 +109,7 @@
 
                     <div class="form-group row">
                         <div class="col-md-12">
-                            <input placeholder="{{ __('Email') }}" id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" required>
+                            <input placeholder="{{ __('Email') }}" id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email', $user->email) }}" required>
 
                             @if ($errors->has('email'))
                             <span class="invalid-feedback" role="alert">
@@ -121,7 +121,7 @@
 
                     <div class="form-group row">
                         <div class="col-md-12">
-                            <input placeholder="{{ __('Username') }}" id="username" type="username" class="form-control{{ $errors->has('username') ? ' is-invalid' : '' }}" name="username" required>
+                            <input placeholder="{{ __('Username') }}" id="username" type="username" class="form-control{{ $errors->has('username') ? ' is-invalid' : '' }}" name="username" value="{{ old('username', $user->username) }}">
 
                             @if ($errors->has('username'))
                             <span class="invalid-feedback" role="alert">
@@ -146,13 +146,9 @@
                             @endif
                         </div>
                         <div class="col-md-6">
-                            <input placeholder="{{ __('Confirm Password') }}" id="password-confirm" type="password" class="form-control{{ $errors->has('password-confirm') ? ' is-invalid' : '' }}" name="password-confirm" value="{{ old('password-confirm') }}" required autofocus>
-
-                            @if ($errors->has('password-confirm'))
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $errors->first('password-confirm') }}</strong>
-                            </span>
-                            @endif
+                            <a href="{{ route('password.request') }}" class="btn btn-primary btn-full" style="height: calc(2.19rem + 2px); padding: 7px 0px;">
+                                {{ __('Reset Password') }}
+                            </a>
                         </div>
                     </div>
 

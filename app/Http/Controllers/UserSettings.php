@@ -17,7 +17,7 @@ class UserSettings extends Controller
             $data = array(
                 'firstName' => $request->input('fname', $user->firstName),
                 'lastName' => $request->input('lname', $user->lastName),
-                // 'username' => $request->input('username', $user->username),
+                'username' => $request->input('username', $user->username),
                 'email' => $request->input('email', $user->email),
                 'communicationOptIn' => $user->communicationOptIn,
                 'publishStatsOptIn' => $user->publishStatsOptIn,
@@ -43,7 +43,7 @@ class UserSettings extends Controller
             $user->update($data);
             return view('home', array('user' => Auth::user()));
         } else {
-            return Redirect::back()->withError('Your password is incorrect. Please enter your current password to make changes to your account.');
+            return Redirect::to('/home')->withError('Your password is incorrect. Please enter your current password to make changes to your account.');
 
         }
 
