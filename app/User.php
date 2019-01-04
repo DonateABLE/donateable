@@ -5,6 +5,9 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use App\Notifications\VerifyEmail;
+use App\Charity;
+use App\Notifications\ResetPassword;
+use App\DonatedTo;
 
 class User extends Authenticatable
 {
@@ -16,7 +19,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'firstName', 'lastName', 'email', 'password', 'username', 'email_token'
+        'firstName', 'lastName', 'email', 'password', 'username', 'email_token', 'avatar', 'communicationOptIn', 'publishStatsOptIn'
     ];
 
     /**
@@ -48,5 +51,76 @@ class User extends Authenticatable
 
         $this->notify(new VerifyEmail($this));
 
+    }
+
+    /**
+     * Send the password reset notification.
+     *
+     * @param  string  $token
+     * @return void
+     */
+    public function sendPasswordResetNotification($token)
+    {
+        $this->notify(new ResetPassword($token));
+    }
+
+
+    /**
+     * Define a one to many relationship with donatedto
+    **/
+    public function DonatedTo() {
+         return $this->hasMany('App\DonatedTo', 'userId', 'id');
+    }
+
+    /**
+     * Returns a charity object that signifies their top donated to
+     *
+     * @return App\Charity or null
+     */
+    public function topCharity() {
+
+        $donation = $this->DonatedTo()->orderBy('totalHashes')->first();
+        if ($donation) {
+            $charity = Charity::where('id', $donation->charityId)->first();
+
+            if ($charity) {
+                return $charity;
+            }
+        }
+
+        return null;
+    }
+
+    // probably not working
+    public function dollarsDonated() {
+        $totalHashes = $this->hashesDonated();
+        try {
+            $api_url = "https://min-api.cryptocompare.com/data/price?fsym=XMR&tsyms=BTC,USD,EUR";
+            $api_json = file_get_contents($api_url);
+            $api_array = json_decode($api_json, true);
+            $monero_exchange = $api_array["USD"];
+
+            return '$' . floor($monero_exchange * (($totalHashes / 1000000) * 0.00007217));
+        } catch (\Exception $e) {
+            return "We're having trouble calculating your donation right now. Check back later.";
+        }
+    }
+
+    public function hashesDonated() {
+        return $this->DonatedTo()->sum('totalHashes');
+    }
+
+    public function timeDonated() {
+        return $this->secondsToTime($this->DonatedTo()->sum('totalTime'));
+
+    }
+
+    private function secondsToTime($seconds) {
+        if (!$seconds) {
+            return "00:00:00";
+        }
+        $dtF = new \DateTime('@0');
+        $dtT = new \DateTime("@$seconds");
+        return $dtF->diff($dtT)->format('%a:%h:%i:%s');
     }
 }

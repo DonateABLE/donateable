@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Charity;
 use App\DonatedTo;
+use App\SocialLink;
 use Illuminate\Http\Request;
 use View;
 use Auth;
@@ -20,7 +21,8 @@ class CharityController extends Controller
      */
     public function index()
     {
-        $charities = Charity::all();
+        $charities = Charity::with('SocialLinks.SocialType')->get();
+
         return View::make('charity.list')->with('charities', $charities);
     }
 
@@ -63,35 +65,10 @@ class CharityController extends Controller
      */
     public function showCharity(String $charityName)
     {
-        $charity = Charity::where('longName', $charityName)->firstOrFail();
-        if (Auth::check()) {
-            $this->currentUser = Auth::user();
-            error_log("UserId: " . $this->currentUser->id);
-            error_log("CharityId: " .$this->currentUser->id);
-            $donationInfo = DonatedTo::firstOrCreate(
-                [
-                    'userId' => $this->currentUser->id,
-                    'charityId' => $charity->id,
-                ],
-                [
-                    'userId' => $this->currentUser->id,
-                    'charityId' => $charity->id,
-                    'totalHashes' => 0,
-                    'totalTime' => 0,
-                ]
-            );
+        $charity = Charity::with('Milestones')->where('longName', $charityName)->firstOrFail();
 
-            return View::make('charity.index')
-                ->with('charity', $charity)
-                ->with('user', $this->currentUser)
-                ->with('donated', $donationInfo);
-        }
-        else {
-
-
-            return View::make('charity.index')
-                ->with('charity', $charity);
-        }
+        return View::make('charity.index')
+            ->with('charity', $charity);
     }
 
     /**
@@ -103,34 +80,29 @@ class CharityController extends Controller
     public function showDonate(String $charityName)
     {
         $charity = Charity::where('longName', $charityName)->firstOrFail();
+        $userId = 1;
+
+        // override user id if authenticated
         if (Auth::check()) {
-            $this->currentUser = Auth::user();
-            error_log("UserId: " . $this->currentUser->id);
-            error_log("CharityId: " .$this->currentUser->id);
-            $donationInfo = DonatedTo::firstOrCreate(
-                [
-                    'userId' => $this->currentUser->id,
-                    'charityId' => $charity->id,
-                ],
-                [
-                    'userId' => $this->currentUser->id,
-                    'charityId' => $charity->id,
-                    'totalHashes' => 0,
-                    'totalTime' => 0,
-                ]
-            );
-
-            return View::make('charity.donate')
-                ->with('charity', $charity)
-                ->with('user', $this->currentUser)
-                ->with('donated', $donationInfo);
+            $userId = Auth::user()->id;
         }
-        else {
 
+        $donationInfo = DonatedTo::firstOrCreate(
+            [
+                'userId' => $userId,
+                'charityId' => $charity->id,
+            ],
+            [
+                'userId' => $userId,
+                'charityId' => $charity->id,
+                'totalHashes' => 0,
+                'totalTime' => 0,
+            ]
+        );
 
-            return View::make('charity.donate')
-                ->with('charity', $charity);
-        }
+        return View::make('charity.donate')
+            ->with('charity', $charity)
+            ->with('donated', $donationInfo);
     }
 
 

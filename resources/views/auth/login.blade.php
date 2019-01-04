@@ -3,13 +3,13 @@
 @section('content')
 <div class="container">
     <div class="site-callout">
-            <img src="{{asset('img/Logo/Synergenics-Logo.png')}}" style="width:400px;height: auto;"/>
+            <img src="{{asset('img/Logo/D-Coloured-250x250.png')}}" style="width:125px;height: auto;"/>
 
             <p style="padding-bottom: 5px;">Simply lend your computer's power to generate real value for the charity of your choice.</br>
             Donate to your favourite charities without opening your wallet.</br>
             It is that easy.</p>
     </div>
-    <div class="row">
+    <div class="row" style="justify-content: center;">
         <div class="vertical-center">
             <div class="container left-signup">
                 <div class="row justify-content-center">
@@ -25,7 +25,7 @@
                                         <!-- <label for="email" class="col-sm-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label> -->
 
                                         <div class="col-md-12">
-                                            <input placeholder="{{ __('username') }}" id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
+                                            <input placeholder="{{ __('email') }}" id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
 
                                             @if ($errors->has('email'))
                                             <span class="invalid-feedback" role="alert">

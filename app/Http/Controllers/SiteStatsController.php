@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\SiteStats;
 use Illuminate\Http\Request;
+use Auth;
 
 class SiteStatsController extends Controller
 {
@@ -90,11 +91,33 @@ class SiteStatsController extends Controller
      * @return \Illuminate\Http\Response
      */
      public function join(Request $request) {
+
+         $userHasDonated = false;
          $charityId = $request->input('charityId');
-         $site = SiteStats::where('charityId', $charityId)->firstOrFail();
+         // Do not count logged in users that have already donated
+         if (Auth::Check()) {
+             // if this record exists, the user has donated
+             if (Auth::User()->DonatedTo()->where('charityId', $charityId)->first()) {
+                 $userHasDonated = true;
+             }
+         }
+
+         $site = SiteStats::where('charityId', $charityId)->firstOrCreate(
+             [
+                 'charityId' => $charityId
+             ],
+             [
+                 'charityId' => $charityId,
+                 'currentlyDonating' => 0,
+                 'totalDonors' => 0
+             ]
+         );
 
          $site->currentlyDonating++;
-         $site->totalDonors++;
+         // only increment the total donors if the user has yet to donate
+         if (!$userHasDonated) {
+             $site->totalDonors++;
+         }
          $site->save();
 
      }

@@ -56,7 +56,22 @@
                         </li>
                         @else
                         <li class="nav-item">
-                            <a class="nav-link nav-link" href="{{ route('home') }}">{{ __('My account') }}</a>
+                            <a class="nav-link nav-link-light" href="{{ route('home') }}">{{ __('My account') }}</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link">/</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link nav-link" href="{{ route('logout') }}"
+                               onclick="event.preventDefault();
+                                             document.getElementById('logout-form').submit();">
+                                {{ __('Logout') }}
+                            </a>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                @csrf
+                            </form>
                         </li>
                         @endguest
                     </ul>
@@ -72,9 +87,9 @@
         <!-- Persistent Nav -->
         <div class="bottom-nav">
             <div class="bottom-nav-inner">
-                <a href="#home" class="active">Home</a>|
+                <a href="{{ url('/') }}">Home</a>|
                 <a href="#about">About</a>|
-                <a href="#charities">Charities</a>|
+                <a href="{{ url('/charities') }}">Charities</a>|
                 <a href="#howitworks" data-toggle="modal" data-target="#howItWorksModal">How It Works</a>|
                 <a href="#contact">Contact</a>|
                 <a href="#privacypolicy">Privacy Policy</a>|

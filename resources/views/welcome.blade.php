@@ -4,7 +4,7 @@
 
     <div class="content">
         <div class="site-callout">
-                <img src="{{asset('img/logo/D-Coloured-500x500.png')}}" style="width:300px;height: auto;"/>
+                <img src="{{asset('img/logo/D-Coloured-250x250.png')}}" style="width:200px;height: auto;"/>
 
                 <h1>Support Local Charities in Guelph</h1>
                 <h2>Without spending a dime</h2>
@@ -14,8 +14,8 @@
         </div>
         <div class="site-links">
             <div class="left-link">
-                <a href="#" class="link-box">Select Your Charity</a>
-                <a href="#" class="link-box">How It Works</a>
+                <a href="{{ url('charities') }}" id="highlight" class="link-box">Select Your Charity</a>
+                <a href="#" class="link-box" data-toggle="modal" data-target="#howItWorksModal">How It Works</a>
                 <a href="#" class="link-box">Privacy Policy</a>
             </div>
             <div class="right-link">
