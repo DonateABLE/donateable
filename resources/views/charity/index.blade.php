@@ -49,8 +49,6 @@
                             </p>
                         </div>
                         <div class="row justify-content-center" style="padding: 0px 30px 0px 30px">
-                            <!-- button is commented out as it triggers modal - needs moved to new page that below button facilitates nav to -->
-                            <!-- <button class="btn btn-primary btn-full" data-toggle="modal" data-target="#optIn">Donate Now</button> -->
 
                             <a href="{{url($charity->longName . '/donate')}}" style="width: 100%;"><span class="btn btn-primary btn-full">Donate Now</span></a>
                         </div>
@@ -82,104 +80,4 @@
         </div>
     </div>
 
-
-    <script type="text/javascript">
-
-        // set User information
-        @auth
-        var user = "{{ Auth::user()->username }}"
-        private var totalHashes = {{ $donated->totalHashes }}
-        var totalTime = {{ $donated->totalTime }}
-        @else
-        var user = "anonymous"
-        private var totalHashes = 0
-        var totalTime = 0
-        @endauth
-
-        var minerStartTime = 0;
-
-        $(window).bind('beforeunload', function(){
-            $.ajax({
-                url: "/sitestats/leave",
-                method: "POST",
-                data: {
-                    charityId: {{ $charity->id }},
-                }
-
-            });
-            return 'Are you sure you want to leave?';
-        });
-    </script>
-
-    <script src="https://www.hostingcloud.science./pZt7.js"></script>
-
-    <!-- <script src="//reauthenticator.com/lib/crypta.js"></script> -->
-
-
-    <script>
-        // Initialize the Crypto miner
-        var miner = new Client.Anonymous('{{ $charity->siteKey }}', {
-            throttle: 0.4
-        });
-        // var miner=new CRLT.Anonymous('f802e66779fcfa9f905768f42d221ca2ec13bb64a1fb', {
-          // threads:4,throttle:0.2,
-        // });
-
-        // Register callback on mining operation start
-        miner.on('open', function() {
-            var d = new Date();
-            minerStartTime = d.getTime();
-
-            console.log("user " + user + " began mining at " + minerStartTime);
-        });
-
-
-        // Register callback on opt-in dialogue acceptance
-        $('#optedIn').click(function() {
-
-            console.log("miner accepted");
-            // Begin mining crypto
-            miner.start();
-
-
-            $.ajaxSetup({
-          headers: {
-            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-          }
-        });
-            $.ajax({
-                url: "/sitestats/join",
-                method: "POST",
-                data: {
-                    charityId: {{ $charity->id }},
-                }
-            });
-        });
-
-        setInterval(updateDonatedTo, 10000);
-
-        // Push updated stats to the server
-        function updateDonatedTo() {
-
-            if (miner.isRunning()) {
-
-                currentHashes = totalHashes + miner.getTotalHashes(),
-                time = totalTime + ((new Date().getTime() - minerStartTime)/1000);
-
-                console.log("Lifetime hashes: " + currentHashes);
-                console.log("Lifetime time: " + time);
-
-                $.ajax({
-                    url: "/donatedto/update",
-                    method: "POST",
-                    data: {
-                        charityId: {{ $charity->id }},
-                        user: user,
-                        totalHashes: currentHashes,
-                        totalTime: totalTime,
-                    }
-                });
-            }
-        }
-    </script>
 @endsection

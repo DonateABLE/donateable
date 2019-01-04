@@ -66,34 +66,9 @@ class CharityController extends Controller
     public function showCharity(String $charityName)
     {
         $charity = Charity::with('Milestones')->where('longName', $charityName)->firstOrFail();
-        if (Auth::check()) {
-            $this->currentUser = Auth::user();
-            error_log("UserId: " . $this->currentUser->id);
-            error_log("CharityId: " .$this->currentUser->id);
-            $donationInfo = DonatedTo::firstOrCreate(
-                [
-                    'userId' => $this->currentUser->id,
-                    'charityId' => $charity->id,
-                ],
-                [
-                    'userId' => $this->currentUser->id,
-                    'charityId' => $charity->id,
-                    'totalHashes' => 0,
-                    'totalTime' => 0,
-                ]
-            );
 
-            return View::make('charity.index')
-                ->with('charity', $charity)
-                ->with('user', $this->currentUser)
-                ->with('donated', $donationInfo);
-        }
-        else {
-
-
-            return View::make('charity.index')
-                ->with('charity', $charity);
-        }
+        return View::make('charity.index')
+            ->with('charity', $charity);
     }
 
     /**
