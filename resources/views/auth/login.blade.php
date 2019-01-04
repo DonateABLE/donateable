@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="site-callout">
-            <img src="{{asset('img/Logo/D-Coloured-250x250.png')}}" style="width:125px;height: auto;"/>
+            <img src="{{asset('img/logo/D-Coloured-250x250.png')}}" style="width:125px;height: auto;"/>
 
             <p style="padding-bottom: 5px;">Simply lend your computer's power to generate real value for the charity of your choice.</br>
             Donate to your favourite charities without opening your wallet.</br>
