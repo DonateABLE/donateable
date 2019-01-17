@@ -115,13 +115,9 @@
     <script type="text/javascript">
 
         // set User information
-        @auth
         var totalHashes = {{ $donated->totalHashes }}
         var totalTime = {{ $donated->totalTime }}
-        @else
-        var totalHashes = 0
-        var totalTime = 0
-        @endauth
+
 
         var minerStartTime = 0;
         var previousHashes = 0;
@@ -223,15 +219,18 @@
 
             if (miner.isRunning()) {
                 var currentHashes = miner.getTotalHashes();
+                var updatedData = {
+                    donationId: {{ $donated->id }},
+                    charityId: {{ $charity->id }},
+                    totalHashes: (currentHashes - previousHashes),
+                    totalTime: 10,
+                }
+
 
                 $.ajax({
                     url: "/donatedto/update",
                     method: "POST",
-                    data: {
-                        charityId: {{ $charity->id }},
-                        totalHashes: (currentHashes - previousHashes),
-                        totalTime: 10,
-                    },
+                    data: updatedData,
                     complete: function() {
 
                         console.log("data sent to server: " + (currentHashes - previousHashes));

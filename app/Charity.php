@@ -33,4 +33,12 @@ class Charity extends Model
     {
         return $this->hasMany('App\DonatedTo', 'charityId', 'id');
     }
+
+    /**
+     * Define a one to many relationship with donatedto
+    **/
+    public function DonationBuffer()
+    {
+        return $this->hasMany('App\DonationBuffer', 'charityId', 'id');
+    }
 }

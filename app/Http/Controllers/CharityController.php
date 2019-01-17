@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Charity;
 use App\DonatedTo;
+use App\DonationBuffer;
 use App\SocialLink;
 use Illuminate\Http\Request;
 use View;
@@ -81,24 +82,35 @@ class CharityController extends Controller
     {
         $charity = Charity::where('longName', $charityName)->firstOrFail();
         $userId = 1;
+        $donationInfo = null;
 
         // override user id if authenticated
         if (Auth::check()) {
             $userId = Auth::user()->id;
+            $donationInfo = DonatedTo::firstOrCreate(
+                [
+                    'userId' => $userId,
+                    'charityId' => $charity->id,
+                ],
+                [
+                    'userId' => $userId,
+                    'charityId' => $charity->id,
+                    'totalHashes' => 0,
+                    'totalTime' => 0,
+                ]
+            );
         }
-
-        $donationInfo = DonatedTo::firstOrCreate(
-            [
-                'userId' => $userId,
-                'charityId' => $charity->id,
-            ],
-            [
-                'userId' => $userId,
+        // If not authenticated, generate a donation buffer
+        // so that the user's contribution can be logged anyway
+        else {
+            $donationInfo = DonationBuffer::create([
                 'charityId' => $charity->id,
                 'totalHashes' => 0,
                 'totalTime' => 0,
-            ]
-        );
+            ]);
+
+        }
+
 
         return View::make('charity.donate')
             ->with('charity', $charity)
