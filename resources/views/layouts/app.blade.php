@@ -88,7 +88,7 @@
         <div class="bottom-nav">
             <div class="bottom-nav-inner">
                 <a href="{{ url('/') }}">Home</a>|
-                <a href="#about">About</a>|
+                <a href="#about" data-toggle="modal" data-target="#aboutUsModal">About</a>|
                 <a href="{{ url('/charities') }}">Charities</a>|
                 <a href="#howitworks" data-toggle="modal" data-target="#howItWorksModal">How It Works</a>|
                 <a href="#contact">Contact</a>|
@@ -148,4 +148,5 @@
     </div>
   </div>
 </div>
+@include('modals.aboutUs')
 </html>
