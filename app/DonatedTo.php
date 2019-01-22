@@ -17,7 +17,10 @@ class DonatedTo extends Model
 
     /* Utility method to return a count of all hashes stored in the db */
     public static function getSitewideHashes() {
-        return DonatedTo::all()->sum('totalHashes');
+        $totalCommittedHashes = DonatedTo::all()->sum('totalHashes');
+        $totalPendingHashes = DonationBuffer::all()->sum('totalHashes');
+        $totalHashes = $totalCommittedHashes + $totalPendingHashes;
+        return number_format($totalHashes, 0, ',', ' ');
     }
 
     /**
