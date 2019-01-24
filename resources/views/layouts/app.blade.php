@@ -89,15 +89,15 @@
             <div class="bottom-nav-inner">
                 <a href="{{ url('/') }}">Home</a>|
                 <a href="#about" data-toggle="modal" data-target="#aboutUsModal">About</a>|
-                <a href="{{ url('/charities') }}">Charities</a>|
                 <a href="#howitworks" data-toggle="modal" data-target="#howItWorksModal">How It Works</a>|
-                <a href="#contact">Contact</a>|
+                <a href="{{ url('/charities') }}">Charities</a>|
+                <a href="#accessibility">Accessibility</a>|
                 <a href="#privacypolicy">Privacy Policy</a>|
-                <a href="#accessibility">Accessibility</a>
+                <a href="#contact">Contact</a>
             </div>
         </div>
         <div class="bottom-nav-brand">
-            <a href="https://www.synergenics.ca">Powered By <img class="bottom-brand" alt="Synergenics Inc. Logo" src="{{ asset('img/logo/Synergenics-Logo.png') }}"/></a>
+            <a href="https://www.synergenics.ca">Powered By <img class="bottom-brand" alt="Synergenics Inc. Logo" src="{{ asset('img/logo/Synergenics-Logo-2008-White.png') }}"/></a>
         </div>
     </div>
 </body>

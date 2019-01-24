@@ -9,14 +9,19 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
+html {
+
+}
 body {
     height: 100%;
     height: 100vh;
-    // background: linear-gradient(rgb(250, 250, 249), rgb(150, 185, 218));
-    // background-image: url('/../../../../img/donateABLE-background1.png');
-    // background-position: center;
-    // background-repeat: no-repeat no-repeat;
-    // background-size: cover;
+    background: linear-gradient(rgb(250, 250, 250), rgb(146, 146, 149));
+    background-image: url('/../../../../img/donateABLE-background1.png');
+    background-position: center;
+    background-repeat: no-repeat no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
 }
 
 h1 {
@@ -47,20 +52,22 @@ a:hover h1 {
     color: $primary;
 }
 
-.parallax {
-  /* The image used */
-  background-image: url('/../../../../img/donateABLE-background1.png');
 
-  /* Set a specific height */
-  height: 100vh;
-  height: 100%;
-
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+//
+// .parallax {
+//   /* The image used */
+//   background-image: url('/../../../../img/donateABLE-background1.png');
+//
+//   /* Set a specific height */
+//   height: 100vh;
+//   height: 100%;
+//
+//   /* Create the parallax scrolling effect */
+//   background-attachment: fixed;
+//   background-position: center;
+//   background-repeat: no-repeat;
+//   background-size: cover;
+// }
 
 .nopad {
     padding: 0;
@@ -194,25 +201,19 @@ a:hover h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(255, 255, 255, 1);
-
-
 }
 
 .bottom-brand {
     height: 25px;
     width: auto;
-    background-color: rgba(255, 255, 255, 1);
-
 }
 
 .bottom-nav-brand a {
     font-size: 10px;
     text-transform: uppercase;
     font-weight: bold;
-    color: $primary !important;
+    color: white !important;
     font-weight: 600;
-    background-color: rgba(255, 255, 255, 1);
 
 }
 
@@ -225,16 +226,15 @@ a:hover h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(255, 255, 255, 1);
 }
 
 .bottom-nav a {
-  color: $primary;
+  color: white;
   text-align: center;
   display: inline-block;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 12px;
   margin: 0px auto;
   text-transform: uppercase;
   font-weight: bold;
@@ -251,6 +251,9 @@ a:hover h1 {
   color: $secondary;
 }
 
+.bottom-nav-inner {
+    color: white;
+}
 
 /** General Styling classes for layout **/
 .content {
@@ -848,8 +851,18 @@ output {
 .card-deck {
     justify-content: space-around;
     flex-flow: row wrap;
-
 }
+
+@media (max-height: 1000px) {
+    .card-deck {
+        margin-bottom: 50px;
+
+    }
+    .profile-stats {
+        padding-bottom: 75px;
+    }
+}
+
 .card-deck > .card  {
     max-width: 30%;
     flex: 1 0 30%;
@@ -929,6 +942,7 @@ output {
  **/
  .profile-stats {
      background-color: $primary;
+     margin-bottom: -24px;
  }
 
 

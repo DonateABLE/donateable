@@ -10476,6 +10476,13 @@ a.text-dark:focus {
 body {
   height: 100%;
   height: 100vh;
+  background: -webkit-gradient(linear, left top, left bottom, from(#fafafa), to(#929295));
+  background: linear-gradient(#fafafa, #929295);
+  background-image: url("/../../../../img/donateABLE-background1.png");
+  background-position: center;
+  background-repeat: no-repeat no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 h1 {
@@ -10504,19 +10511,6 @@ a:hover {
 
 a:hover h1 {
   color: #26607d;
-}
-
-.parallax {
-  /* The image used */
-  background-image: url("/../../../../img/donateABLE-background1.png");
-  /* Set a specific height */
-  height: 100vh;
-  height: 100%;
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .nopad {
@@ -10673,22 +10667,19 @@ a:hover h1 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: white;
 }
 
 .bottom-brand {
   height: 25px;
   width: auto;
-  background-color: white;
 }
 
 .bottom-nav-brand a {
   font-size: 10px;
   text-transform: uppercase;
   font-weight: bold;
-  color: #26607d !important;
+  color: white !important;
   font-weight: 600;
-  background-color: white;
 }
 
 .bottom-nav {
@@ -10707,16 +10698,15 @@ a:hover h1 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: white;
 }
 
 .bottom-nav a {
-  color: #26607d;
+  color: white;
   text-align: center;
   display: inline-block;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 12px;
   margin: 0px auto;
   text-transform: uppercase;
   font-weight: bold;
@@ -10732,6 +10722,10 @@ a:hover h1 {
 
 .bottom-nav a.active {
   color: #45a6d7;
+}
+
+.bottom-nav-inner {
+  color: white;
 }
 
 /** General Styling classes for layout **/
@@ -11404,6 +11398,16 @@ output {
           flex-flow: row wrap;
 }
 
+@media (max-height: 1000px) {
+  .card-deck {
+    margin-bottom: 50px;
+  }
+
+  .profile-stats {
+    padding-bottom: 75px;
+  }
+}
+
 .card-deck > .card {
   max-width: 30%;
   -webkit-box-flex: 1;
@@ -11493,6 +11497,7 @@ output {
 
 .profile-stats {
   background-color: #26607d;
+  margin-bottom: -24px;
 }
 
 .profile-stats i {
