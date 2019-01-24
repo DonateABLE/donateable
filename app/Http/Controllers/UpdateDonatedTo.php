@@ -38,9 +38,8 @@ class UpdateDonatedTo extends Controller
         }
 
         if ($donationRecord) {
-            $data['totalHashes'] += $donationRecord->totalHashes;
-            $data['totalTime'] += $donationRecord->totalTime;
-            $donationRecord->update($data);
+            $donationRecord->increment('totalTime', $data['totalTime']);
+            $donationRecord->increment('totalHashes', $data['totalHashes']);
         }
         return;
 
