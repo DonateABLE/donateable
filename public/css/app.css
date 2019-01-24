@@ -10473,19 +10473,9 @@ a.text-dark:focus {
   }
 }
 
-html {
-  margin-bottom: 200px;
-}
-
 body {
-  height: 90%;
-  height: 90vh;
-  background: -webkit-gradient(linear, left top, left bottom, from(#fafaf9), to(#96b9da));
-  background: linear-gradient(#fafaf9, #96b9da);
-  background-image: url("/../../../../img/donateABLE-background1.png");
-  background-position: center;
-  background-repeat: no-repeat no-repeat;
-  background-size: cover;
+  height: 100%;
+  height: 100vh;
 }
 
 h1 {
@@ -10516,14 +10506,27 @@ a:hover h1 {
   color: #26607d;
 }
 
+.parallax {
+  /* The image used */
+  background-image: url("/../../../../img/donateABLE-background1.png");
+  /* Set a specific height */
+  height: 100vh;
+  height: 100%;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .nopad {
   padding: 0;
 }
 
 .navbar-nav {
   text-transform: uppercase;
-  font-size: 1.2rem;
-  font-weight: 300;
+  font-size: 1.0rem;
+  font-weight: 400;
 }
 
 .nav-link {
@@ -10824,6 +10827,10 @@ a:hover h1 {
   border-right: 2px #26607d solid;
 }
 
+.link-box.light {
+  background-color: white;
+}
+
 #highlight {
   color: white;
   background-color: #26607d;
@@ -10831,7 +10838,7 @@ a:hover h1 {
 
 #highlight:hover {
   color: #26607d;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: white;
 }
 
 .left-link a:hover {

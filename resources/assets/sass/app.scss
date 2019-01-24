@@ -8,16 +8,15 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
-html { margin-bottom: 200px }
 
 body {
-    height: 90%;
-    height: 90vh;
-    background: linear-gradient(rgb(250, 250, 249), rgb(150, 185, 218));
-    background-image: url('/../../../../img/donateABLE-background1.png');
-    background-position: center;
-    background-repeat: no-repeat no-repeat;
-    background-size: cover;
+    height: 100%;
+    height: 100vh;
+    // background: linear-gradient(rgb(250, 250, 249), rgb(150, 185, 218));
+    // background-image: url('/../../../../img/donateABLE-background1.png');
+    // background-position: center;
+    // background-repeat: no-repeat no-repeat;
+    // background-size: cover;
 }
 
 h1 {
@@ -48,6 +47,20 @@ a:hover h1 {
     color: $primary;
 }
 
+.parallax {
+  /* The image used */
+  background-image: url('/../../../../img/donateABLE-background1.png');
+
+  /* Set a specific height */
+  height: 100vh;
+  height: 100%;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 .nopad {
     padding: 0;
@@ -55,8 +68,8 @@ a:hover h1 {
 
 .navbar-nav {
     text-transform: uppercase;
-    font-size: 1.2rem;
-    font-weight: 300;
+    font-size: 1.0rem;
+    font-weight: 400;
 }
 
 .nav-link {
@@ -303,6 +316,10 @@ a:hover h1 {
 
 }
 
+.link-box.light {
+        background-color: white;
+}
+
 #highlight {
     color: white;
     background-color: $primary;
@@ -311,7 +328,7 @@ a:hover h1 {
 
 #highlight:hover {
     color: $primary;
-    background-color: rgba(0, 0, 0, 0);
+    background-color: white;
 }
 
 

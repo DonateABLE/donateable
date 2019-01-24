@@ -22,6 +22,7 @@ Route::get('/', function () {
         ->with('totalHashes', $totalHashes);
 });
 
+
 Route::get('/verify/{token}', 'VerifyController@verify')->name('verify');
 
 
