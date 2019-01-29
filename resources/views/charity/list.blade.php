@@ -3,13 +3,10 @@
 @section('content')
 
 <div class="content">
-    <div class="site-callout">
+    <div class="site-callout" style="padding-bottom: 25px;">
 
         <h1>Support Local Charities in Guelph</h1>
-        <h2>Without spending a dime</h2>
-        <p>Simply lend your computer's power to generate real value for the charity of your choice.</br>
-            Donate to your favourite charities without opening your wallet.</br>
-            It is that easy.</p>
+        <h2>Without opening your wallet</h2>
     </div>
     <div class="container">
         <div class="card-deck">
@@ -31,7 +28,7 @@
                     <ul class="floating-social-icons">
                         @foreach($charity->socialLinks as $link)
                             <li>
-                                <a href="{{ $link->socialUrl }}">
+                                <a href="{{ $link->socialUrl }}" target="_blank">
                                     <i class="{{ $link->socialType->faLink }}"></i>
                                 </a>
                             </li>

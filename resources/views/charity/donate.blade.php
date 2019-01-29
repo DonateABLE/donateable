@@ -3,7 +3,7 @@
 @section('content')
     <div class="container">
         <div class="row row-80">
-            <div class="col-xl-4 col-lg-6 col-md-12">
+            <div class="col-xl-4 col-lg-6 col-md-12" style="display: flex; align-content: center; justify-content: center;">
                 <div class="vertical-center">
                     <div class="container">
                         <div class="row justify-content-center">
@@ -24,9 +24,9 @@
                     </div>
                     </div>
                 </div>
-            <div class="col-xl-8 col-lg-6 col-md-12">
-                <div class="vertical-center" style="border-left: 2px #26607D solid">
-                    <div class="container" style="margin-left: 30px;">
+            <div class="col-xl-8 col-lg-6 col-md-12"  style="display: flex; align-content: center; justify-content: center;">
+                <div class="vertical-center">
+                    <div class="container" style="padding-left: 45px;border-left: 2px #26607D solid">
                         <div class="row justify-content-center">
                             <img src="{{ asset('img/charity/' . $charity->logo) }}" alt="{{ $charity->longName . ' Logo'}}">
                         </div>

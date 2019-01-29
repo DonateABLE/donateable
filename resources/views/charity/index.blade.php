@@ -3,7 +3,7 @@
 @section('content')
     <div class="container">
         <div class="row">
-            <div class="col-xl-4 col-lg-6 col-md-12">
+            <div class="col-xl-4 col-lg-6 col-md-12"  style="display: flex; align-content: center; justify-content: center;">
                 <div class="vertical-center" style="padding-right: 30px">
                     <div class="container">
                         <div class="row justify-content-center">
@@ -32,7 +32,7 @@
                     </div>
                     </div>
                 </div>
-            <div class="col-xl-8 col-lg-6 col-md-12" style="border-left: 2px #26607D solid;">
+            <div class="col-xl-8 col-lg-6 col-md-12" style="border-left: 2px #26607D solid; display: flex; align-content: center; justify-content: center;">
                 <div class="vertical-center">
                     <div class="container nopad">
                         <div class="row justify-content-center">
