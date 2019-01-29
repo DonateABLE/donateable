@@ -13,7 +13,7 @@
             <div class="left-link">
                 <a href="{{ url('charities') }}" id="highlight" class="link-box">Select Your Charity</a>
                 <a href="#" class="link-box light" data-toggle="modal" data-target="#howItWorksModal">How It Works</a>
-                <a href="#" class="link-box light" style="border-color: white;">Privacy Policy</a>
+                <a href="#" class="link-box light">Privacy Policy</a>
             </div>
             <div class="right-link">
                 <a class="stat-box">Currently Donating {{ $currentDonors }}</a>
