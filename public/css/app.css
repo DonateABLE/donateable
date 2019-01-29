@@ -10534,6 +10534,7 @@ a:hover h1 {
   text-transform: uppercase;
   font-size: 1.0rem;
   font-weight: 400;
+  padding-right: 4.0rem;
 }
 
 .nav-link {
@@ -10553,6 +10554,7 @@ a:hover h1 {
   -webkit-transform: translate(-1%, -50%);
           transform: translate(-1%, -50%);
   margin: 0 auto;
+  padding-left: 4.0rem;
 }
 
 .row-80 {
