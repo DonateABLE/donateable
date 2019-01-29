@@ -10513,6 +10513,19 @@ a:hover h1 {
   color: #26607d;
 }
 
+.parallax {
+  /* The image used */
+  background-image: url("/../../../../img/donateABLE-background1.png");
+  /* Set a specific height */
+  height: 100vh;
+  height: 100%;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .nopad {
   padding: 0;
 }
@@ -10525,6 +10538,8 @@ a:hover h1 {
 
 .nav-link {
   color: #26607d !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 
 .nav-link-light {
@@ -10533,10 +10548,10 @@ a:hover h1 {
 
 .navbar-brand {
   position: absolute;
-  left: 10%;
+  left: 1%;
   top: 30.120px;
-  -webkit-transform: translate(-10%, -50%);
-          transform: translate(-10%, -50%);
+  -webkit-transform: translate(-1%, -50%);
+          transform: translate(-1%, -50%);
   margin: 0 auto;
 }
 
@@ -10670,7 +10685,7 @@ a:hover h1 {
 }
 
 .bottom-brand {
-  height: 25px;
+  height: 20px;
   width: auto;
 }
 

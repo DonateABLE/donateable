@@ -29,7 +29,7 @@
 
     <div id="app" class="parallax">
         <nav class="navbar navbar-expand-md navbar-light">
-            <div class="container">
+            <!-- <div class="container"> -->
                 <a class="navbar-brand" href="{{ url('/') }}">
                     <img border="0", alt="donateABLE" src="{{ asset('img/logo/donateABLE-long-colour-250.png') }}">
                 </a>
@@ -48,7 +48,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link">/</a>
+                            <a class="nav-link">&nbsp;/&nbsp;</a>
                         </li>
 
                         <li class="nav-item">
@@ -76,7 +76,7 @@
                         @endguest
                     </ul>
                 </div>
-            </div>
+            <!-- </div> -->
         </nav>
 
         <main class="py-4">
@@ -97,7 +97,7 @@
             </div>
         </div>
         <div class="bottom-nav-brand">
-            <a href="https://www.synergenics.ca">Powered By <img class="bottom-brand" alt="Synergenics Inc. Logo" src="{{ asset('img/logo/Synergenics-Logo-2008-White.png') }}"/></a>
+            <a href="https://www.synergenics.ca" target="_blank">Powered By <img class="bottom-brand" alt="Synergenics Inc. Logo" src="{{ asset('img/logo/Synergenics-Logo-2008-White.png') }}"/></a>
         </div>
     </div>
 </body>
