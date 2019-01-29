@@ -10592,15 +10592,16 @@ a:hover h1 {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   padding-left: 0px;
+  margin-top: 25px;
 }
 
 .social-icons > p {
@@ -10886,6 +10887,19 @@ a:hover h1 {
   border: 2px #45a6d7 solid;
 }
 
+.right-link.charity {
+  padding: 0 !important;
+  border: none !important;
+}
+
+.right-link.charity a {
+  width: 350px !important;
+}
+
+.site-link.charity {
+  margin-bottom: 25px;
+}
+
 /**
  *
  * Login and signup page styles
@@ -10953,6 +10967,7 @@ a:hover h1 {
 
 .btn-full {
   width: 100%;
+  font-weight: bold;
 }
 
 .btn-link {

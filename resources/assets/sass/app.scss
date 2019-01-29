@@ -148,10 +148,11 @@ a:hover h1 {
     display: flex;
     flex: 1;
     flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
+    align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
     padding-left: 0px;
+    margin-top: 25px;
 }
 
 
@@ -384,6 +385,18 @@ a:hover h1 {
     border: 2px $secondary solid;
 }
 
+.right-link.charity {
+    padding: 0 !important;
+    border: none !important;
+}
+
+.right-link.charity a{
+    width: 350px !important;
+}
+
+.site-link.charity {
+    margin-bottom: 25px;
+}
 
 /**
  *
@@ -453,7 +466,9 @@ a:hover h1 {
 
 .btn-full {
     width: 100%;
+    font-weight: bold;
 }
+
 
 .btn-link {
     margin: 0;

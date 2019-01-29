@@ -2,33 +2,39 @@
 
 @section('content')
     <div class="container">
-        <div class="row row-80">
+        <div class="row">
             <div class="col-xl-4 col-lg-6 col-md-12">
-                <div class="vertical-center">
+                <div class="vertical-center" style="padding-right: 30px">
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="social-frame">
                                 <h2>Connect with {{ $charity->shortName}}</h2>
-                                <iframe src="{{ $charity->socialFeed }}" width="350" height="420" style="border-right: 2px #26607D solid;overflow:hidden;" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+                                <iframe src="{{ $charity->socialFeed }}" width="350" height="500" style="border-right: 2px #26607D solid;overflow:hidden;" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+                            </div>
+                            <div class="site-links charity">
+                                <div class="right-link charity">
+                                    <a class="stat-box">Currently Donating {{ $charity->getCurrentDonors() }}</a>
+                                    <a class="stat-box">Donators to date {{ $charity->getTotalDonors() }}</a>
+                                    <a class="stat-box">Total Hashes {{ $charity->getTotalHashes() }}</a>
+                                </div>
                             </div>
                             <ul class="social-icons">
                                 @foreach($charity->socialLinks as $link)
                                     <li>
-                                        <a href="{{ $link->socialUrl }}">
+                                        <a href="{{ $link->socialUrl }}" target="_blank">
                                             <i class="{{ $link->socialType->faLink }}"></i>
                                         </a>
                                     </li>
                                 @endforeach
-                                <p class="donateMoney">To donate money please <a href="{{ $charity->canadaHelpsUrl }}">click here.</a></p>
+                                <p class="donateMoney">To make a monetary donation <a href="{{ $charity->canadaHelpsUrl }}" target="_blank">click here.</a></p>
                             </ul>
-
                         </div>
                     </div>
                     </div>
                 </div>
-            <div class="col-xl-8 col-lg-6 col-md-12">
-                <div class="vertical-center" style="border-left: 2px #26607D solid">
-                    <div class="container">
+            <div class="col-xl-8 col-lg-6 col-md-12" style="border-left: 2px #26607D solid;">
+                <div class="vertical-center">
+                    <div class="container nopad">
                         <div class="row justify-content-center">
                             <img src="{{ asset('img/charity/' . $charity->logo) }}" alt="{{ $charity->longName . ' Logo'}}">
                         </div>
@@ -36,7 +42,7 @@
                             <?php
                                 $shortName = ($charity->shortName != null) ? ' (' . $charity->shortName . ')' : '';
                             ?>
-                            <a href="{{ $charity->websiteUrl }}"><h1>{{ $charity->longName . '' . $shortName }}</h1></a>
+                            <a href="{{ $charity->websiteUrl }}" target="_blank"><h1>{{ $charity->longName . '' . $shortName }}</h1></a>
                         </div>
                         <div class="row justify-content-center">
                             <h2>{{ $charity->tagline }}</h2>
