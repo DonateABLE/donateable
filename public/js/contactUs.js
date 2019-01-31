@@ -10,7 +10,8 @@ $(document).ready(function() {
        $.ajax({
            type: 'POST',
            cache: false,
-           url: '/form/technicalSupportForm',
+           url: '/form/joinProgramForm',
+
            data: $(this).serialize(),
            success: function(msg) {
                $("#FormContainer").html("<h1 class=\"modal-h1\">Thank you for submitting.</h1><h2 class=\"modal-h2\">We will be in touch with you as soon as possible.</h2>");
