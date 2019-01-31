@@ -16,6 +16,7 @@
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('js/contactUs.js') }}"></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
@@ -24,6 +25,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    @stack('scripts')
 </head>
 <body>
 
@@ -93,7 +95,7 @@
                 <a href="{{ url('/charities') }}">Charities</a>|
                 <a href="#accessibility">Accessibility</a>|
                 <a href="#privacypolicy">Privacy Policy</a>|
-                <a href="#contact">Contact</a>
+                <a href="#contact" data-toggle="modal" data-target="#contactUsModal">Contact</a>
             </div>
         </div>
         <div class="bottom-nav-brand">
@@ -149,4 +151,5 @@
   </div>
 </div>
 @include('modals.aboutUs')
+@include('modals.contactUs')
 </html>

@@ -29,6 +29,9 @@ Route::get('/verify/{token}', 'VerifyController@verify')->name('verify');
 Auth::routes();
 Route::post('/sitestats/join', 'SiteStatsController@join');
 Route::post('/sitestats/leave', 'SiteStatsController@leave');
+Route::post('/form/joinProgramForm', 'ContactFormController@handleJoinProgramForm')->name('JoinProgram');
+Route::post('/form/technicalSupportForm', 'ContactFormController@handleTechnicalSupportForm')->name('TechnicalSupport');
+
 Route::post('/donatedto/update', 'UpdateDonatedTo')->name('donationUpdate');
 Route::post('/account-settings', 'UserSettings')->name('settings');
 Route::get('/home', 'HomeController@index')->name('home');
