@@ -94,7 +94,7 @@
                 <a href="#howitworks" data-toggle="modal" data-target="#howItWorksModal">How It Works</a>|
                 <a href="{{ url('/charities') }}">Charities</a>|
                 <a href="#accessibility">Accessibility</a>|
-                <a href="#privacypolicy">Privacy Policy</a>|
+                <a href="#privacypolicy" data-toggle="modal" data-target="#privacyPolicyModal">Privacy Policy</a>|
                 <a href="#contact" data-toggle="modal" data-target="#contactUsModal">Contact</a>
             </div>
         </div>
@@ -152,4 +152,5 @@
 </div>
 @include('modals.aboutUs')
 @include('modals.contactUs')
+@include('modals.privacypolicy')
 </html>
