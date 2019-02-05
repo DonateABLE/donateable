@@ -95,7 +95,8 @@
                 <a href="{{ url('/charities') }}">Charities</a>|
                 <a href="#accessibility">Accessibility</a>|
                 <a href="#privacypolicy" data-toggle="modal" data-target="#privacyPolicyModal">Privacy Policy</a>|
-                <a href="#contact" data-toggle="modal" data-target="#contactUsModal">Contact</a>
+                <a href="#contact" data-toggle="modal" data-target="#contactUsModal">Contact</a>|
+                <a href="#contact" data-toggle="modal" data-target="#faqModal">FAQ</a>
             </div>
         </div>
         <div class="bottom-nav-brand">
@@ -153,4 +154,5 @@
 @include('modals.aboutUs')
 @include('modals.contactUs')
 @include('modals.privacypolicy')
+@include('modals.faq')
 </html>

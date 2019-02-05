@@ -1197,3 +1197,59 @@ output {
  * End of profile page stats
  *
  **/
+
+ /**
+  *
+  * FAQ styles
+  *
+ **/
+
+.accordion > .card {
+    margin-bottom: 10px;
+    border: none;
+}
+
+.accordion > .card > .card-header {
+    background-color: $primary;
+    text-align: left;
+    border-radius: 0px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 0px;
+}
+
+.accordion > .card > .card-header > h5 {
+    text-transform: none;
+    color: white;
+    text-align: center;
+    align-self: center;
+    padding: 15px 25px;
+}
+
+.accordion > .card > .card-header > .icon {
+    height: 100%;
+    width: 4%;
+    float: right;
+    padding: 7px 0px;
+    border-left: 2px $secondary solid;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+.accordion > .card > .collapse > .card-body {
+    border-left: 5px $secondary solid;
+    border-right: 5px $secondary solid;
+}
+
+.accordion > .card > .collapsing > .card-body {
+    border-left: 5px $secondary solid;
+    border-right: 5px $secondary solid;
+}
+
+ /**
+  *
+  * END FAQ styles
+  *
+ **/
