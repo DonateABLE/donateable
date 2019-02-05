@@ -153,6 +153,6 @@
 </div>
 @include('modals.aboutUs')
 @include('modals.contactUs')
-@include('modals.privacypolicy')
+@include('modals.privacyPolicy')
 @include('modals.faq')
 </html>
