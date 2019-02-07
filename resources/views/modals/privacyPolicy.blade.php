@@ -17,32 +17,43 @@
 
           </div>
           <div class="container" style="background-color: white; overflow-y: scroll; height: 400px; padding: 25px 50px;">
-              Sample Text. Lens flare.
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet tortor pharetra, vestibulum leo vel, accumsan orci. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis leo magna, sodales in nulla et, mollis ornare diam. Proin nec arcu vitae elit mattis lobortis quis sit amet massa. Ut at nisl sit amet ex finibus dapibus. Nam commodo mi tempor lorem pretium bibendum. Suspendisse interdum nisi eu sapien porta, in maximus nunc finibus. Fusce vitae eros suscipit, dignissim massa non, blandit nisi. Etiam non lacinia felis, non iaculis libero. Nulla euismod enim enim, eu eleifend urna finibus ac. Vestibulum id sagittis odio, ut laoreet purus. Suspendisse non lorem ut ex commodo mollis. Nulla lectus est, commodo ut venenatis in, volutpat nec dui.
+            Effective Date:  January 1st, 2019
 
-In mattis sit amet metus ut iaculis. Mauris bibendum placerat consequat. Nunc faucibus diam vitae gravida dapibus. Pellentesque sodales velit vel erat faucibus lacinia. Suspendisse gravida tellus ut finibus imperdiet. Vivamus tincidunt scelerisque ullamcorper. Donec eleifend efficitur urna, luctus vestibulum nisi gravida at. Phasellus eget risus eget sem pulvinar ultricies ac a odio. Aenean vel sapien quam. Vivamus in dignissim dolor. Vivamus consequat diam et erat porttitor lacinia. Donec viverra ornare vulputate. Quisque laoreet velit at nibh eleifend porttitor. Fusce in lacinia eros. Maecenas id risus mauris.
+This privacy notice discloses the privacy practices for donateABLE and our website; https://www.donateable.ca. This privacy notice applies solely to information collected by this website, except where stated otherwise. It will notify you of the following:
+•	What information we collect;
+•	With whom it is shared;
+•	How it can be corrected;
+•	How it is secured;
+•	How policy changes will be communicated; and
+•	How to address concerns over misuse of personal data.
 
-Nam vestibulum, sem vitae convallis pretium, erat ante vulputate erat, in lacinia neque ante at dolor. Proin porttitor posuere mi ut scelerisque. Nulla ac eros sit amet neque semper vehicula tincidunt quis tortor. Etiam velit leo, suscipit vel mi at, malesuada pellentesque felis. Aliquam sit amet commodo sapien, vitae posuere lectus. Suspendisse egestas nulla eget sapien luctus, nec aliquam magna rhoncus. Nam velit nulla, aliquam in condimentum id, vestibulum at leo. Nunc dictum ullamcorper urna. Nam ac neque ac nibh rutrum ullamcorper porttitor eu metus. Morbi tincidunt non libero a auctor. Curabitur porttitor neque ex.
+Information Collection, Use, and Sharing
+We are the sole owners of the information collected on this site. We only have access to/collect information that you voluntarily give us via email or other direct contact from you. We will not sell or rent this information to anyone.
+We will use your information to respond to you, regarding the reason you contacted us. We will not share your information with any third party outside of our organization.
+Unless you ask us not to, we may contact you via email in the future to tell you about statistics, new charities or features, or changes to this privacy policy.
+Your Access to and Control Over Information
+You may opt out of any future contacts from us at any time. You can do the following at any time by contacting us via the contact form provided on our website:
+•	See what data we have about you, if any.
+•	Change/correct any data we have about you.
+•	Have us delete any data we have about you.
+•	Express any concern you have about our use of your data
 
-Donec elementum dui eu nisi euismod cursus. Curabitur ac tellus semper, accumsan massa nec, pharetra nisi. Phasellus in est scelerisque, faucibus dui vel, mattis erat. Vivamus eu lectus suscipit, luctus massa commodo, varius mauris. Donec id mattis nibh, pulvinar bibendum enim. Nam nulla augue, varius at bibendum ac, suscipit eget velit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Maecenas suscipit fringilla orci et ullamcorper. Mauris eu purus bibendum, lobortis metus in, laoreet ligula.
+Security
+We take precautions to protect your information. When you submit sensitive information via the website, your information is protected both online and offline.
+While we use encryption to protect sensitive information transmitted online, we also protect your information offline. Only employees who need the information to perform a specific job (e.g. billing or customer service) are granted access to personally identifiable information. The computers/servers on which we store personally identifiable information are kept in a secure environment.
+Cookies
+We use “cookies” on this site. A cookie is a piece of data stored on a site visitor’s hard drive to help us improve your access to our site and identify repeat visitors to our site. For instance, when we use a cookie to identify you, you would not have to log in a password more than once, thereby saving time while on our site. Cookies can also enable us to track and target the interests of our users to enhance their experience on our site. Usage of a cookie is in no way linked to any personally identifiable information on our site.
+Some of our business partners may use cookies on our site (e.g., advertisers). However, we have no access to or control over these cookies.
+Links
+This web site contains links to other sites. Please be aware that we are not responsible for the content or privacy practices of such other sites. We encourage our users to be aware when they leave our site and to read the privacy statements of any other site that collects personally identifiable information.
+If you feel that we are not abiding by this privacy policy, you should contact us immediately via email at support@donateable.ca.
 
-Proin malesuada ullamcorper urna, commodo tincidunt metus porttitor non. Suspendisse gravida ultrices lectus eget ultrices. Ut orci elit, ornare eu nulla nec, volutpat eleifend tortor. Sed iaculis maximus purus, a sollicitudin dolor. Cras ut justo finibus, malesuada nibh at, consequat nisi. Nulla porttitor urna sit amet nunc aliquam, a laoreet ipsum tempus. Donec tincidunt lectus et lacus elementum, at semper diam maximus. Vivamus sit amet lacus est. Nullam fermentum convallis ante in cursus. Vivamus convallis fermentum dui eu placerat. Donec varius pretium est molestie efficitur.
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet tortor pharetra, vestibulum leo vel, accumsan orci. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis leo magna, sodales in nulla et, mollis ornare diam. Proin nec arcu vitae elit mattis lobortis quis sit amet massa. Ut at nisl sit amet ex finibus dapibus. Nam commodo mi tempor lorem pretium bibendum. Suspendisse interdum nisi eu sapien porta, in maximus nunc finibus. Fusce vitae eros suscipit, dignissim massa non, blandit nisi. Etiam non lacinia felis, non iaculis libero. Nulla euismod enim enim, eu eleifend urna finibus ac. Vestibulum id sagittis odio, ut laoreet purus. Suspendisse non lorem ut ex commodo mollis. Nulla lectus est, commodo ut venenatis in, volutpat nec dui.
-
-In mattis sit amet metus ut iaculis. Mauris bibendum placerat consequat. Nunc faucibus diam vitae gravida dapibus. Pellentesque sodales velit vel erat faucibus lacinia. Suspendisse gravida tellus ut finibus imperdiet. Vivamus tincidunt scelerisque ullamcorper. Donec eleifend efficitur urna, luctus vestibulum nisi gravida at. Phasellus eget risus eget sem pulvinar ultricies ac a odio. Aenean vel sapien quam. Vivamus in dignissim dolor. Vivamus consequat diam et erat porttitor lacinia. Donec viverra ornare vulputate. Quisque laoreet velit at nibh eleifend porttitor. Fusce in lacinia eros. Maecenas id risus mauris.
-
-Nam vestibulum, sem vitae convallis pretium, erat ante vulputate erat, in lacinia neque ante at dolor. Proin porttitor posuere mi ut scelerisque. Nulla ac eros sit amet neque semper vehicula tincidunt quis tortor. Etiam velit leo, suscipit vel mi at, malesuada pellentesque felis. Aliquam sit amet commodo sapien, vitae posuere lectus. Suspendisse egestas nulla eget sapien luctus, nec aliquam magna rhoncus. Nam velit nulla, aliquam in condimentum id, vestibulum at leo. Nunc dictum ullamcorper urna. Nam ac neque ac nibh rutrum ullamcorper porttitor eu metus. Morbi tincidunt non libero a auctor. Curabitur porttitor neque ex.
-
-Donec elementum dui eu nisi euismod cursus. Curabitur ac tellus semper, accumsan massa nec, pharetra nisi. Phasellus in est scelerisque, faucibus dui vel, mattis erat. Vivamus eu lectus suscipit, luctus massa commodo, varius mauris. Donec id mattis nibh, pulvinar bibendum enim. Nam nulla augue, varius at bibendum ac, suscipit eget velit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Maecenas suscipit fringilla orci et ullamcorper. Mauris eu purus bibendum, lobortis metus in, laoreet ligula.
-
-Proin malesuada ullamcorper urna, commodo tincidunt metus porttitor non. Suspendisse gravida ultrices lectus eget ultrices. Ut orci elit, ornare eu nulla nec, volutpat eleifend tortor. Sed iaculis maximus purus, a sollicitudin dolor. Cras ut justo finibus, malesuada nibh at, consequat nisi. Nulla porttitor urna sit amet nunc aliquam, a laoreet ipsum tempus. Donec tincidunt lectus et lacus elementum, at semper diam maximus. Vivamus sit amet lacus est. Nullam fermentum convallis ante in cursus. Vivamus convallis fermentum dui eu placerat. Donec varius pretium est molestie efficitur.
 
 
           </div>
 
           <div class="modal-button-wrap" style="margin-top:20px">
-          <button style="align-self: center" data-dismiss="modal" class="btn btn-primary modal-button">
+          <button style="align-self: center" data-toggle="modal" data-target="#contactUsModal">
               {{ __('Have Questions? Contact us') }}
           </button>
         </div>
