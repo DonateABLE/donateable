@@ -31,7 +31,7 @@
 
     <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
       <div class="card-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+        Absolutely not. One of the goals of donateABLE is to make donating simply and convenient for all users. By eliminating the need for software to be installed we have enabled users to be able to donate from any of their devices at anytime, anywhere. donateABLE uses scripting language inside your web browser of choice to perform all of the complex hashing algorithms. Simply closing the browser, or the tab associated with the donating, will stop the process entirely, and nothing will be left behind on your system.
       </div>
     </div>
   </div>
@@ -48,7 +48,7 @@
     </div>
     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
       <div class="card-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+        The overall mission and purpose of donateABLE is to give back to the local community. The project in it's entirety was funded solely by Synergenics, for all of the development and implementation of this new technology. Going forward, 85% of all donated CPU power will go directly to your charity of choice. The remaining 15% will be kept back to help fund infrastructure and management costs related to running this endeavour.
       </div>
     </div>
   </div>
@@ -65,7 +65,7 @@
     </div>
     <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
       <div class="card-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+        The current digital currency being mined by this project is an open source Cryptocurrency, founded in April 2014, called MONERO (XMR). This specific currency is being used due to the fact that it uses the CryptoNight hash algorithms, which are geared to work best with CPU’s and are deliberately made to be resilient towards ASIC mining to keep the currency safer and available to the masses.
       </div>
     </div>
   </div>
@@ -82,7 +82,7 @@
     </div>
     <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
       <div class="card-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+        There could be a few different factors preventing you from being able to donate. Certain browsers, pop up blockers and anti virus packages have the potential of stop the mining process from being invoked. If you are not prompted with a pop up after pressing the START button on your selected charity to begin donating, you may need to add an exception for the donateABLE website in any of those three solutions. If adding the exception does not resolve the issue, feel free to contact our support staff from the Technical Support form on the Contact Us Page.
       </div>
     </div>
   </div>
@@ -99,7 +99,7 @@
     </div>
     <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
       <div class="card-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+        A cheque for all the proceeds will be given directly to the charities on a yearly basis. Synergenics will handle the process of converting the digital assets raised for the charities, and turning them into FIAT currency.
       </div>
     </div>
   </div>
