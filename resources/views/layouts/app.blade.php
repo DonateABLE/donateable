@@ -8,6 +8,15 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
+    <!-- You can use Open Graph tags to customize link previews.
+    Learn more: https://developers.facebook.com/docs/sharing/webmasters -->
+  <meta property="og:url"           content="https://donateable.ca" />
+  <meta property="og:type"          content="website" />
+  <meta property="og:title"         content="{{ config('app.name', 'donateABLE') }}" />
+  <meta property="og:description"   content="donateABLE description" />
+  <meta property="og:image"         content="{{ asset('img/logo/donateABLE-long-colour-250.png') }}" />
+
+
     <title>{{ config('app.name', 'donateABLE') }}</title>
 
     <!-- Scripts -->
@@ -25,6 +34,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    @stack('style')
     @stack('scripts')
 </head>
 <body>

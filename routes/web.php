@@ -41,6 +41,6 @@ Route::post('/resendVerification', function(Request $request) {
     return redirect('/home');
 })->name('resend');
 Route::get('/charities', 'CharityController@index');
-Route::get('/{charity}', 'CharityController@showCharity');
+// Route::get('/{charity}', 'CharityController@showCharity');
 
-Route::get('/{charity}/donate', 'CharityController@showDonate');
+Route::get('/{charity}', 'CharityController@showDonate');

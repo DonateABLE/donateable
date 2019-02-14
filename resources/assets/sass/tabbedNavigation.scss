@@ -1,0 +1,309 @@
+// Variables
+@import 'variables';
+
+* {box-sizing: border-box}
+
+
+/* Style for top bar */
+.top {
+    float:right;
+    width: 80%;
+    height: 100px;
+    background-color: $secondary;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.top h1 {
+    color: white;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.top h2 {
+    color: white;
+    font-weight: 200;
+}
+
+.logospace {
+    float: left;
+    width: 20%;
+    height: 100px;
+    background-color: $secondary;
+
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+.logospace img {
+    position: absolute;
+    min-width: 8%;
+    max-width: 12%;
+    height: auto;
+    margin-top: -2%;
+    }
+
+.social {
+    display: flex;
+    width: 100%;
+    height: 50px;
+    padding-left: 20%;
+    background-color: $primary;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-icons > li {
+    background-color: $secondary;
+}
+
+/* Style the tab */
+.tab {
+  float: left;
+  background-color: $secondary;
+  width: 20%;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  display: flex;
+  flex-direction: column;
+  background-color: $primary;
+  color: white;
+  padding: 22px 16px;
+  width: 100%;
+  border: none;
+  border-top: 1px solid $secondary;
+  outline: none;
+  text-align: center;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: $secondary;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+  background-color: white;
+  color: $primary;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  float: left;
+  padding: 0px;
+  background-color: white;
+  border: 2px solid $primary;
+  width: 80%;
+  border-left: none;
+  height: 424px;
+  margin-top:38px;
+}
+
+.tablinks {
+    display: flex;
+    align-items: center;
+}
+
+i {
+    padding-bottom: 3px;
+}
+
+.tabcontainer {
+    overflow-y: scroll !important;
+    overflow-x: hidden !important;
+    align-items: center;
+    justify-content: center;
+    padding: 3% 6%;
+    width: 100%;
+}
+
+.tabcontainer > .row {
+    margin: 0px;
+}
+
+.column {
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.left p {
+    text-align: right;
+    padding-right: 5px;
+}
+
+.right p {
+    text-align: left;
+    padding-left: 5px;
+}
+
+
+.row {
+    width: 100%;
+}
+
+
+.stat-container {
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+    border: none;
+}
+
+.stat-box {
+    color: white !important;
+    text-align: center;
+    display: inline-block;
+    width: 325px;
+    height: 50px;
+    line-height: 50px;
+    text-decoration: none;
+    font-size: 14px;
+    margin: 4px auto;
+    text-transform: uppercase;
+    font-weight: 400;
+    background-color: $secondary;
+    border: 2px $secondary solid;
+}
+
+.stat-box.dark {
+    background-color: $primary;
+    border: 2px $primary solid;
+}
+
+.stat-box > span {
+    font-weight: bold;
+}
+
+.stat-container img {
+    width: 200px;
+    height: 100px;
+    align-self: center;
+}
+
+.stat-container h5 {
+    font-size: 0.8rem;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.stat-container.left {
+    padding-right: 10px;
+}
+
+.stat-container.right {
+    padding-left: 10px;
+}
+.container.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tabcontainer.connect {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    height: 100%;
+    padding: 3% 3%;
+}
+
+.tabcontainer > .connect-content {
+
+    flex-basis: auto;
+    flex-grow: 1;
+    min-width: 425px;
+    max-width: 425px;
+    padding-bottom: 25px;
+}
+
+.tabcontainer > .connect-content h1 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+.social-feed {
+    order: 2;
+    display: flex;
+    justify-content: center;
+    min-width: 350px !important;
+    padding-bottom: 0px;
+}
+
+@media only screen and (min-width : 1025px) {
+    .social-feed {
+        margin-top: 125px;
+    }
+}
+
+
+.social-icons-sp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px;
+
+}
+
+.social-icons-sp {
+    margin-bottom: 0px;
+}
+.social-icons-sp.light > li > a {
+        background-color: $secondary;
+}
+
+.social-icons-sp.small > li > a {
+    width: 25px;
+    height: 25px;
+    border-radius: 12.5px;
+}
+
+.social-icons-sp > li {
+    list-style: none;
+    padding: 0px 5px;
+
+}
+
+.social-icons-sp > li > label{
+    color: white;
+    text-transform: uppercase;
+    font-weight: 200;
+    font-size: 0.6rem;
+    padding-left: 10px;
+    padding-right: 20px;
+}
+
+
+.social-icons-sp > li > a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: $primary;
+    color: white;
+}

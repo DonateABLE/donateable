@@ -112,7 +112,7 @@ class CharityController extends Controller
         }
 
 
-        return View::make('charity.donate')
+        return View::make('charity.singlepage')
             ->with('charity', $charity)
             ->with('donated', $donationInfo);
     }
