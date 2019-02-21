@@ -15,5 +15,7 @@ mix.react('resources/assets/js/app.js', 'public/js')
     .babel('resources/assets/js/donate.js', 'public/js/donate.js')
     .babel('resources/assets/js/contactUs.js', 'public/js/contactUs.js')
     .babel('resources/assets/js/singlepage.js', 'public/js/singlepage.js')
+    .babel('resources/assets/js/profilePage.js', 'public/js/profilePage.js')
     .sass('resources/assets/sass/app.scss', 'public/css')
-    .sass('resources/assets/sass/tabbedNavigation.scss', 'public/css');
+    .sass('resources/assets/sass/tabbedNavigation.scss', 'public/css')
+    .sass('resources/assets/sass/profilePage.scss', 'public/css');

@@ -97,4 +97,9 @@ class Charity extends Model
         return number_format(($donatedToHashes + $donationBufferHashes), 0, ',', ' ');
 
     }
+
+
+    public function smallLogo() {
+        echo "<img src=" . asset('img/charity/small/' . $this->logo) . " alt=" . $this->longName . " Logo>";
+    }
 }

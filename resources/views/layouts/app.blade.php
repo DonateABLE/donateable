@@ -68,7 +68,7 @@
                         </li>
                         @else
                         <li class="nav-item">
-                            <a class="nav-link nav-link-light" href="{{ route('home') }}">{{ __('My account') }}</a>
+                            <a class="nav-link nav-link-light" href="{{ route('home') }}">{{ __('Account') }}</a>
                         </li>
 
                         <li class="nav-item">

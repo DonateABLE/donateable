@@ -91,6 +91,16 @@ class User extends Authenticatable
         return null;
     }
 
+    /**
+     * Returns an array of charity objects that signifies the user's top donations
+     *
+     * @return Array(App\Charity) or null
+     */
+    public function topDonations() {
+        return $this->DonatedTo()->orderBy('totalHashes')->take(3)->get();
+    }
+
+
     // probably not working
     public function dollarsDonated() {
         $totalHashes = $this->hashesDonated();
@@ -115,6 +125,10 @@ class User extends Authenticatable
 
     }
 
+    public function totalCharitiesDonatedTo() {
+        return $this->DonatedTo()->count();
+    }
+
     private function secondsToTime($seconds) {
         if (!$seconds) {
             return "00:00:00";
@@ -123,4 +137,10 @@ class User extends Authenticatable
         $dtT = new \DateTime("@$seconds");
         return $dtF->diff($dtT)->format('%a:%h:%i:%s');
     }
+
+    public function name() {
+        return $this->firstName . ' ' . $this->lastName;
+    }
+
+
 }
