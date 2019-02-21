@@ -2,12 +2,9 @@
     "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css",
     "/css/tabbedNavigation.css": "/css/tabbedNavigation.css",
+    "/css/profilePage.css": "/css/profilePage.css",
     "/js/donate.js": "/js/donate.js",
     "/js/contactUs.js": "/js/contactUs.js",
-<<<<<<< HEAD
-    "/js/singlepage.js": "/js/singlepage.js"
-=======
     "/js/singlepage.js": "/js/singlepage.js",
     "/js/profilepage.js": "/js/profilepage.js"
->>>>>>> f85af1e... Filename cleanup and fix username validation
 }

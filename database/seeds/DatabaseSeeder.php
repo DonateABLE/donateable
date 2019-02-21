@@ -15,5 +15,7 @@ class DatabaseSeeder extends Seeder
         $this->call(AnonymousUserSeeder::class);
         $this->call(SocialTypeSeeder::class);
         $this->call(CharitySeeder::class);
+        $this->call(GHSCharitySeeder::class);
+        $this->call(DonateABLECharitySeeder::class);
     }
 }

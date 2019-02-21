@@ -34,6 +34,8 @@ Route::post('/form/technicalSupportForm', 'ContactFormController@handleTechnical
 
 Route::post('/donatedto/update', 'UpdateDonatedTo')->name('donationUpdate');
 Route::post('/account-settings', 'UserSettings')->name('settings');
+Route::post('/account-avatar', 'HandleAvatarUpload')->name('avatar');
+Route::post('/change-password', 'Auth\ChangePasswordController@changePassword')->name('changePassword');
 Route::get('/home', 'HomeController@index')->name('home');
 Route::post('/resendVerification', function(Request $request) {
     $this->middleware('auth');
