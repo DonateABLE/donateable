@@ -16,7 +16,7 @@ class UserSettings extends Controller
 
            $validator = Validator::make($request->all(),[
              'email' => ['required', 'email', Rule::unique('users')->ignore($user->id)],
-             'username' => [Rule::unique('users')->ignore($user->id), nullable],
+             'username' => [Rule::unique('users')->ignore($user->id), 'nullable'],
 
          ]);
 
