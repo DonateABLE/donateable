@@ -103,10 +103,9 @@
                 <a href="#about" data-toggle="modal" data-target="#aboutUsModal">About</a>|
                 <a href="#howitworks" data-toggle="modal" data-target="#howItWorksModal">How It Works</a>|
                 <a href="{{ url('/charities') }}">Charities</a>|
-                <a href="#accessibility">Accessibility</a>|
                 <a href="#privacypolicy" data-toggle="modal" data-target="#privacyPolicyModal">Privacy Policy</a>|
                 <a href="#contact" data-toggle="modal" data-target="#contactUsModal">Contact</a>|
-                <a href="#contact" data-toggle="modal" data-target="#faqModal">FAQ</a>
+                <a href="#faq" data-toggle="modal" data-target="#faqModal">FAQ</a>
             </div>
         </div>
         <div class="bottom-nav-brand">
@@ -152,9 +151,9 @@
           </div>
 
           <div class="modal-button-wrap">
-          <button style="align-self: center" data-dismiss="modal" class="btn btn-primary modal-button">
+          <a style="align-self: center" href="{{ url('/charities') }}"class="btn btn-primary modal-button">
               {{ __('Start Donating') }}
-          </button>
+          </a>
         </div>
       </div>
 

@@ -106,7 +106,7 @@
 </div>
 
           <div class="modal-button-wrap" style="margin-top:20px">
-          <button style="align-self: center" data-dismiss="modal" class="btn btn-primary modal-button">
+          <button style="align-self: center" data-dismiss="modal" data-toggle="modal" href="#contactUsModal" class="btn btn-primary modal-button">
               {{ __('More questions? Contact us') }}
           </button>
         </div>

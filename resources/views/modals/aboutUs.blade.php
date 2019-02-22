@@ -36,7 +36,7 @@
           </div>
 
           <div class="modal-button-wrap" style="margin-top:20px">
-          <button style="align-self: center" data-dismiss="modal" class="btn btn-primary modal-button">
+          <button style="align-self: center" data-dismiss="modal" data-toggle="modal" href="#howItWorksModal" class="btn btn-primary modal-button">
               {{ __('Learn how donateABLE works') }}
           </button>
         </div>
