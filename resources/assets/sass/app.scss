@@ -620,20 +620,33 @@ a:hover h1 {
   border: 1px white solid;
 }
 
+.modal-button-style {
+  background-color: white;
+  color: $secondary;
+  border: 1px white solid;
+  font-weight: 600;
+}
+
+.modal-button-style:hover {
+  background-color: $secondary;
+  color: white;
+  border: 1px white solid;
+}
+
 .modal-h1 {
   color: white;
   text-transform: uppercase;
   @include tablet {
     font-size: 23px !important;
-    margin-top: 16px;
+    margin-top: 16px !important;
   }
   @include desktop {
     font-size: 23px !important;
-    margin-top: 16px;
+    margin-top: 16px !important;
   }
   @include desktop-lg {
     font-size: 38px !important;
-    margin-top: 25px;
+    margin-top: 25px !important;
   }
 }
 
@@ -687,6 +700,14 @@ a:hover h1 {
 
 .modal-body-accept {
   padding-top: 0;
+}
+
+.f-name-field {
+  padding-right: 7.5px;
+}
+
+.l-name-field {
+  padding-left: 7.5px;
 }
 /**
  *

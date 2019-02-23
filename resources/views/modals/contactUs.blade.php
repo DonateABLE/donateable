@@ -8,7 +8,7 @@
             <div class="site-callout" id="FormHeader">
 
                 <h1 class="modal-h1" style="margin-top:0">Thank you for visiting</h1>
-                <h2 class="modal-h2" style="margin-bottom:0">We'd love to hear from you</h2>
+                <h2 class="modal-h2" style="margin-bottom:0">We would love to hear from you</h2>
 
             </div>
         </div>
@@ -24,7 +24,7 @@
                   <p class="modal-p">Are you a local, Guelph and Wellington County, non-profit charity that would like to be featured on donateABLE? Simply fill out the form below and a member of our team will be in touch with the next steps.</p>
                           @include('forms.joinProgramForm')
               </div>
-              <div class="step" style="width:10px;background-color:white"></div>
+              <div class="step" style="width:7.5px;background-color:white"></div>
               <div class="step form" style="width:100%;">
                   <img src="{{asset('img/contactus/Contact-Us-Technical-Support.png')}}" style="align-self: flex-start;padding-left:22px"/>
                   <p class="modal-p">If  you  are  having  any  problems  with  the  site  functionality  or  have  a  technical  question please fill out the form below to submit a ticket. A member of our team will get back to you within 48 business hours.</p>
