@@ -974,6 +974,21 @@ output {
   font-size: 12px;
   font-weight: 500;
   padding: 20px 0px 20px 0px;
+  @include tablet {
+    height: 100px;
+    overflow-y: scroll;
+    max-width: 200ch;
+  }
+  @include desktop {
+    height: 150px;
+    overflow-y: scroll;
+    max-width: 200ch;
+  }
+  @include desktop-lg {
+    height: 200px;
+    overflow-y: scroll;
+    max-width: 400ch;
+  }
 }
 
 .floating-social {
