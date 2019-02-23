@@ -320,6 +320,9 @@ a:hover h1 {
 .site-links {
   display: flex;
   justify-content: space-around;
+  @include tablet {
+    flex-direction: column;
+  }
 }
 
 .left-link {
@@ -328,6 +331,11 @@ a:hover h1 {
   border-right: 1px $primary solid;
   margin-left: auto;
   padding-right: 15px;
+  @include tablet {
+    border: none;
+    margin: 0px !important;
+    padding: 0px !important;
+  }
 }
 
 .link-box {
@@ -371,6 +379,11 @@ a:hover h1 {
   border-left: 1px $primary solid;
   margin-right: auto;
   padding-left: 15px;
+  @include tablet {
+    border: none;
+    margin: 0px !important;
+    padding: 0px !important;
+  }
 }
 
 .right-link a {

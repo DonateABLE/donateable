@@ -1,3 +1,5 @@
+<div class="tabcontainer">
+
 <div class="container center">
 
 <div class="site-links">
@@ -15,5 +17,6 @@
         <a class="stat-box">Donators to date <span>{{ App\SiteStats::getSitewideTotalDonors() }}</span></a>
         <a class="stat-box">Total Hashes <span>{{ App\DonatedTo::getSitewideHashes() }}</span></a>
     </div>
+</div>
 </div>
 </div>

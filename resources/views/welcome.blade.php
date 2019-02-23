@@ -16,9 +16,9 @@
                 <a href="#" class="link-box light">Privacy Policy</a>
             </div>
             <div class="right-link">
-                <a class="stat-box">Currently Donating {{ $currentDonors }}</a>
-                <a class="stat-box">Donators to date {{ $totalDonors }}</a>
-                <a class="stat-box">Total Hashes {{ $totalHashes }}</a>
+                <a class="stat-box">Currently Donating 	&nbsp;	&nbsp;{{ $currentDonors }}</a>
+                <a class="stat-box">Donators to date 	&nbsp;	&nbsp;{{ $totalDonors }}</a>
+                <a class="stat-box">Total Hashes 	&nbsp;	&nbsp;{{ $totalHashes }}</a>
             </div>
         </div>
       </div>
