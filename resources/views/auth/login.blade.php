@@ -25,7 +25,7 @@
                                         <!-- <label for="email" class="col-sm-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label> -->
 
                                         <div class="col-md-12">
-                                            <input placeholder="{{ __('email') }}" id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
+                                            <input placeholder="{{ __('EMAIL') }}" id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
 
                                             @if ($errors->has('email'))
                                             <span class="invalid-feedback" role="alert">
@@ -39,7 +39,7 @@
                                         <!-- <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label> -->
 
                                         <div class="col-md-12">
-                                            <input placeholder="{{ __('Password') }}" id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
+                                            <input placeholder="{{ __('PASSWORD') }}" id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
 
                                             @if ($errors->has('password'))
                                             <span class="invalid-feedback" role="alert">
@@ -91,7 +91,7 @@
                                     <div class="form-group row">
 
                                         <div class="col-md-12">
-                                            <input placeholder="{{ __('Email') }}" id="registrationEmail" type="registrationEmail" class="form-control{{ $errors->has('registrationEmail') ? ' is-invalid' : '' }}" name="registrationEmail" value="{{ old('registrationEmail') }}" required>
+                                            <input placeholder="{{ __('EMAIL') }}" id="registrationEmail" type="registrationEmail" class="form-control{{ $errors->has('registrationEmail') ? ' is-invalid' : '' }}" name="registrationEmail" value="{{ old('registrationEmail') }}" required>
 
                                             @if ($errors->has('registrationEmail'))
                                             <span class="invalid-feedback" role="alert">
@@ -104,7 +104,7 @@
                                     <div class="form-group row">
 
                                         <div class="col-md-12">
-                                            <input placeholder="{{ __('Password') }}" id="registrationPassword" type="password" class="form-control{{ $errors->has('registrationPassword') ? ' is-invalid' : '' }}" name="registrationPassword" required>
+                                            <input placeholder="{{ __('PASSWORD') }}" id="registrationPassword" type="password" class="form-control{{ $errors->has('registrationPassword') ? ' is-invalid' : '' }}" name="registrationPassword" required>
 
                                             @if ($errors->has('registrationPassword'))
                                             <span class="invalid-feedback" role="alert">
@@ -117,7 +117,7 @@
                                     <div class="form-group row">
 
                                         <div class="col-md-12">
-                                            <input placeholder="{{ __('Confirm Password') }}" id="password-confirm" type="password" class="form-control" name="registrationPassword_confirmation" required>
+                                            <input placeholder="{{ __('CONFIRM PASSWORD') }}" id="password-confirm" type="password" class="form-control" name="registrationPassword_confirmation" required>
                                         </div>
                                     </div>
 

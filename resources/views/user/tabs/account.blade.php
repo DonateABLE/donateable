@@ -9,7 +9,7 @@
 
                 <div class="col-md-6" style="padding-right: 7.5px">
                     <label for="fname">First Name</label>
-                    <input disabled="disabled" placeholder="{{ __('First Name') }}" id="fname" type="fname" class="form-control{{ $errors->has('fname') ? ' is-invalid' : '' }}" name="fname" value="{{ old('fname', $user->firstName) }}" autofocus>
+                    <input disabled="disabled" placeholder="{{ __('FIRST NAME') }}" id="fname" type="fname" class="form-control{{ $errors->has('fname') ? ' is-invalid' : '' }}" name="fname" value="{{ old('fname', $user->firstName) }}" autofocus>
 
                     @if ($errors->has('fname'))
                     <span class="invalid-feedback" role="alert">
@@ -19,7 +19,7 @@
                 </div>
                 <div class="col-md-6" style="padding-left: 7.5px">
                     <label for="lname">Last Name</label>
-                    <input disabled="disabled" placeholder="{{ __('Last Name') }}" id="lname" type="lname" class="form-control{{ $errors->has('lname') ? ' is-invalid' : '' }}" name="lname" value="{{ old('lname', $user->lastName) }}" autofocus>
+                    <input disabled="disabled" placeholder="{{ __('LAST NAME') }}" id="lname" type="lname" class="form-control{{ $errors->has('lname') ? ' is-invalid' : '' }}" name="lname" value="{{ old('lname', $user->lastName) }}" autofocus>
 
                     @if ($errors->has('lname'))
                     <span class="invalid-feedback" role="alert">
@@ -32,7 +32,7 @@
             <div class="form-group row">
                 <div class="col-md-12">
                     <label for="email">Email Address</label>
-                    <input disabled="disabled" placeholder="{{ __('Email') }}" id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email', $user->email) }}" required>
+                    <input disabled="disabled" placeholder="{{ __('EMAIL') }}" id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email', $user->email) }}" required>
 
                     <span id="emailError" class="invalid-feedback" role="alert">
                         <strong>{{ $errors->first('email') }}</strong>
@@ -43,7 +43,7 @@
             <div class="form-group row">
                 <div class="col-md-12">
                     <label for="username">Username</label>
-                    <input disabled="disabled" placeholder="{{ __('Username') }}" id="username" type="username" class="form-control{{ $errors->has('username') ? ' is-invalid' : '' }}" name="username" value="{{ old('username', $user->username) }}">
+                    <input disabled="disabled" placeholder="{{ __('USERNAME') }}" id="username" type="username" class="form-control{{ $errors->has('username') ? ' is-invalid' : '' }}" name="username" value="{{ old('username', $user->username) }}">
 
                     @if ($errors->has('username'))
                     <span class="invalid-feedback" role="alert">
