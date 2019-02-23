@@ -43,6 +43,16 @@ class SiteStats extends Model
 
     /* Utility method to return a count of all total donors stored in the db */
     public static function getSitewideTotalDonors() {
+        // Proposed future algo:
+        // Tally all DonatedTo records
+        // Each record is worth one donor (+ the anonymous donor)
+
+        // Tally all DonationBuffer records
+        // Each record is worth one anonymous donor,
+        //but this will shrink as they are removed..
+
+
+        // current is just a count that is not necessarily dependable
         $totalDonorsLifetime = SiteStats::all()->sum('totalDonors');
         return number_format($totalDonorsLifetime, 0, ',', ' ');
 

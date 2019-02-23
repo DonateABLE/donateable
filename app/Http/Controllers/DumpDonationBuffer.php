@@ -18,17 +18,25 @@ class DumpDonationBuffer extends Controller
      */
     public function __invoke()
     {
-        // ORM object to retrieve records from before midnight of the current day
-        $staleDonations = DonationBuffer::whereDate('updated_at', '<', Carbon::today()->toDateString());
+        // Get a date object for today (midnight)
+        $today = Carbon::today();
+        // format a time string of 00:00:00 (midnight)
+        $timeThreshold = $today->format('H:i:s');
+        // create a datestring of today
+        $dateThreshold = $today->toDateString();
 
-        // iterate through each charity id
+
         foreach (Charity::all() as $charity) {
-            // extend the query to cover the current charity
-            $staleDonationsForCharity = $staleDonations->where('charityId', $charity->id);
+            // ORM object to retrieve records from before midnight of the current day
+            $staleDonationsForCharity = $charity
+                ->DonationBuffer()
+                ->whereDate('updated_at', '<', $dateThreshold)
+                ->whereTime('updated_at', '>', $timeThreshold);
+
+
             // Retrieve the sums for time and hashes that were donated
             $staleDonationTime = $staleDonationsForCharity->sum('totalTime');
             $staleDonationHashes = $staleDonationsForCharity->sum('totalHashes');
-
             // Only store data if it is complete
             if ($staleDonationTime && $staleDonationHashes) {
                 // userId = 1 is the secret, anonymous user for aggregated data
@@ -41,9 +49,8 @@ class DumpDonationBuffer extends Controller
                     ->increment('totalHashes', $staleDonationHashes);
             }
 
+            // Finally, purge these records
+            $staleDonationsForCharity->delete();
         }
-
-        // Finally, purge these records
-        $staleDonations->delete();
     }
 }
