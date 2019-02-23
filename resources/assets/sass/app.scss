@@ -201,8 +201,18 @@ a:hover h1 {
 }
 
 .vertical-center {
-  min-height: 50%; /* Fallback for browsers do NOT support vh unit */
-  min-height: 50vh; /* These two lines are counted as one 🙂       */
+  @include tablet {
+    min-height: 32.5%; /* Fallback for browsers do NOT support vh unit */
+    min-height: 32.5vh; /* These two lines are counted as one 🙂       */
+  }
+  @include desktop {
+    min-height: 50%; /* Fallback for browsers do NOT support vh unit */
+    min-height: 50vh; /* These two lines are counted as one 🙂       */
+  }
+  @include desktop-lg {
+    min-height: 50%; /* Fallback for browsers do NOT support vh unit */
+    min-height: 50vh; /* These two lines are counted as one 🙂       */
+  }
   display: flex;
   align-items: center;
   overflow: none;
@@ -400,6 +410,13 @@ a:hover h1 {
 .signup-card {
   width: 500px;
   height: 340px;
+  @include tablet {
+    height: 320px;
+  }
+  @include desktop {
+    width: 400px;
+    height: 340px;
+  }
 }
 
 .card {
@@ -472,10 +489,14 @@ a:hover h1 {
 }
 
 .left-signup {
-  border-right: 1px $primary solid;
+  @include desktop-lg {
+    border-right: 1px $primary solid;
+  }
 }
 .right-signup {
-  border-left: 1px $primary solid;
+  @include desktop-lg {
+    border-left: 1px $primary solid;
+  }
 }
 /**
  *

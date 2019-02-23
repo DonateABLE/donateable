@@ -72,7 +72,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link">/</a>
+                            <a class="nav-link">&nbsp;/&nbsp;</a>
                         </li>
 
                         <li class="nav-item">
