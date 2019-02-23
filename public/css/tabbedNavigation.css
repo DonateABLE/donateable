@@ -20,6 +20,9 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .top h1 {
@@ -28,9 +31,21 @@
   text-transform: uppercase;
 }
 
+@media (min-width: 768px) and (max-width: 1023px) {
+  .top h1 {
+    font-size: 1.8rem;
+  }
+}
+
 .top h2 {
   color: white;
   font-weight: 200;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .top h2 {
+    font-size: 1rem;
+  }
 }
 
 .logospace {
@@ -331,12 +346,12 @@ i {
       -ms-flex-pack: center;
           justify-content: center;
   min-width: 350px !important;
-  padding-bottom: 0px;
+  height: 400px;
 }
 
-@media only screen and (min-width: 1025px) {
+@media (min-width: 1440px) {
   .social-feed {
-    margin-top: 125px;
+    padding-bottom: 0px;
   }
 }
 
@@ -375,10 +390,11 @@ i {
 .social-icons-sp > li > label {
   color: white;
   text-transform: uppercase;
-  font-weight: 200;
+  font-weight: bold;
   font-size: 0.6rem;
   padding-left: 10px;
   padding-right: 20px;
+  cursor: pointer;
 }
 
 .social-icons-sp > li > a {
