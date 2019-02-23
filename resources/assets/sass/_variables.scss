@@ -1,4 +1,3 @@
-
 // Body
 $body-bg: #f8fafc;
 
@@ -11,7 +10,7 @@ $line-height-base: 1.6;
 $blue: #3490dc;
 $indigo: #6574cd;
 $purple: #9561e2;
-$pink: #f66D9b;
+$pink: #f66d9b;
 $red: #e3342f;
 $orange: #f6993f;
 $yellow: #ffed4a;
@@ -23,3 +22,25 @@ $primary: #26607d;
 $secondary: #45a6d7;
 
 $grey: #838383;
+
+$tablet-width: 768px;
+$desktop-width: 1024px;
+$desktop-lg-width: 1440px;
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) and (max-width: #{$desktop-lg-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop-lg {
+  @media (min-width: #{$desktop-lg-width}) {
+    @content;
+  }
+}

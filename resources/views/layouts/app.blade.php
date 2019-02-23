@@ -134,17 +134,17 @@
           </div>
           <div class="step-container">
               <div class="step">
-                  <img src="{{asset('img/howto/1.png')}}" style="width:125px;height: auto;"/>
+                  <img class="how-it-works-image" src="{{asset('img/howto/1.png')}}"/>
                   <h3 class="modal-h3">Select your charity</h3>
                   <p class="modal-p">The first step is the easiest, or the hardest depending on how you look at it, which is selecting the charity you would like to donate to. Simply select a charity out of our provided list that you wish to donate to and begin lending your computer's processor to solve complex algorithms. It's easy and anyone with a computer is able to donate.</p>
               </div>
               <div class="step">
-                  <img src="{{asset('img/howto/2.png')}}" style="width:125px;height: auto;"/>
+                  <img class="how-it-works-image" src="{{asset('img/howto/2.png')}}"/>
                   <h3 class="modal-h3">Set your power</h3>
                   <p class="modal-p">The second step is setting the amount of processing power you would like to donate. Basically, the more processor power you donate, the more algorithms get solved, which is then translated into digital currency that is then converted into real money to help your charity continue to do good in their community.</p>
               </div>
               <div class="step">
-                  <img src="{{asset('img/howto/3.png')}}" style="width:125px;height: auto;"/>
+                  <img class="how-it-works-image" src="{{asset('img/howto/3.png')}}"/>
                   <h3 class="modal-h3">Start donating</h3>
                   <p class="modal-p">The third step is the easiest. Now that you have selected your charity and set your processing power you are now ready to start donating. Select the start button and carry on with your day. You can browse websites, go walk the dog, or take a trip. No matter what you do just leave donateABLE on and running and we do the rest.</p>
               </div>
