@@ -19,20 +19,20 @@
                     <a href="#" class="facebook-share">
                         <i class="fab fa-facebook-f" style="padding: 0px;"></i>
                     </a>
-                    <label>Share on Facebook</label>
+                    <label class="facebook-share2">Share on Facebook</label>
                 </li>
                 <li>
                     <a href="#" class="twitter-share">
                         <i class="fab fa-twitter" style="padding: 0px;"></i>
                     </a>
-                    <label>Share on Twitter</label>
+                    <label class="twitter-share2">Share on Twitter</label>
 
                 </li>
                 <li>
-                    <a href="mailto:?subject=Check it out!&body=I'm raising money for charity using my computer!%0D%0ATake a look at https://donateable.ca">
+                    <a id="ShareMail" href="mailto:?subject=Check it out!&body=I'm raising money for charity using my computer!%0D%0ATake a look at https://donateable.ca">
                         <i class="far fa-envelope" style="padding: 0px;"></i>
                     </a>
-                    <label>Send to a friend</label>
+                    <label id="ShareMailLabel">Send to a friend</label>
                 </li>
             </ul>
         </div>
@@ -106,6 +106,16 @@
               win.opener = null; // 2
             });
 
+            var twitterBtn = document.querySelector('.twitter-share2');
+            var shareUrl = 'https://twitter.com/intent/tweet?text=Hello%20world';
+            twitterBtn.href = shareUrl; // 1
+
+            twitterBtn.addEventListener('click', function(e) {
+              e.preventDefault();
+              var win = window.open(shareUrl, 'ShareOnTwitter', getWindowOptions());
+              win.opener = null; // 2
+            });
+
         var facebookBtn = document.querySelector('.facebook-share');
         var fbShareUrl = encodeURIComponent('https://donateable.ca');
         var fbUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + fbShareUrl + '%2F&amp;src=sdkpreparse';
@@ -116,6 +126,35 @@
           var win = window.open(fbUrl, 'ShareOnFacebook', getWindowOptions());
           win.opener = null; // 2
         });
+
+        // I'm sorry :()
+        var facebookBtn = document.querySelector('.facebook-share2');
+        var fbShareUrl = encodeURIComponent('https://donateable.ca');
+        var fbUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + fbShareUrl + '%2F&amp;src=sdkpreparse';
+        facebookBtn.href = fbUrl; // 1
+
+        facebookBtn.addEventListener('click', function(e) {
+          e.preventDefault();
+          var win = window.open(fbUrl, 'ShareOnFacebook', getWindowOptions());
+          win.opener = null; // 2
+        });
+
+
+
+        var emailButton = document.querySelector('#ShareMailLabel');
+        // var emailShareUrl = encodeURIComponent('https://donateable.ca');
+        var emailUrl = "mailto:?subject=Check it out!&body=I'm raising money for charity using my computer!%0D%0ATake a look at https://donateable.ca";
+        emailButton.href = emailUrl; // 1
+
+
+        emailButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            var win = window.open(emailUrl, 'ShareOnEmail', getWindowOptions());
+            win.opener = null; // 2
+        });
+        // open the about tab
+        $('#AboutTab').click();
+
     });
     </script>
 
