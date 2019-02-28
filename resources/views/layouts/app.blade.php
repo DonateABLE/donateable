@@ -24,8 +24,18 @@
     src="https://code.jquery.com/jquery-3.3.1.min.js"
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
+    <script type="text/javascript">const donateable = '{{ url('/') }}'</script>
     <script src="{{ asset('js/app.js') }}" defer></script>
     <script src="{{ asset('js/contactUs.js') }}"></script>
+    <script type="text/javascript">
+
+    const onboard = '{{ url("/onboard") }}'
+    if (!$.cookie("hasvisisted")) {
+        window.location.href = onboard
+
+    }
+    $.cookie("hasvisisted", "true");
+    </script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
@@ -92,6 +102,7 @@
         </nav>
 
         <main class="py-4">
+
             @yield('content')
         </main>
 
@@ -103,6 +114,7 @@
                 <a href="#about" data-toggle="modal" data-target="#aboutUsModal">About</a>|
                 <a href="#howitworks" data-toggle="modal" data-target="#howItWorksModal">How It Works</a>|
                 <a href="{{ url('/charities') }}">Charities</a>|
+                <a href="{{ url('/onboard')}}">Take a tour</a>|
                 <a href="#privacypolicy" data-toggle="modal" data-target="#privacyPolicyModal">Privacy Policy</a>|
                 <a href="#contact" data-toggle="modal" data-target="#contactUsModal">Contact</a>|
                 <a href="#faq" data-toggle="modal" data-target="#faqModal">FAQ</a>
@@ -112,6 +124,7 @@
             <a href="https://www.synergenics.ca" target="_blank">Powered By <img class="bottom-brand" alt="Synergenics Inc. Logo" src="{{ asset('img/logo/Synergenics-Logo-2008-White.png') }}"/></a>
         </div>
     </div>
+
 </body>
 <!-- How it works modal -->
 <div class="modal fade" id="howItWorksModal" tabindex="-1" role="dialog" aria-labelledby="howItWorksModalTitle" aria-hidden="true">
@@ -164,4 +177,5 @@
 @include('modals.contactUs')
 @include('modals.privacyPolicy')
 @include('modals.faq')
+
 </html>
