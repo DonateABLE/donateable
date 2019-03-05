@@ -20,7 +20,7 @@ class CharitySeeder extends Seeder
                 'shortName' => 'VSW',
                 'longName' => 'Victim Services Wellington',
                 'logo' => 'Victim-Services.png',
-                'shortDesc' => 'Victim Services Wellington (VSW) believes every victim has the right to heal from crime or tragic circumstances. Our services create opportunities to heal, foster hope, and promote a safer and healthier community.',
+                'shortDesc' => 'VSW create opportunities to heal, foster hope, and promote a safer and healthier community to every victim of crime or tragic circumstances.',
                 'longDesc' => 'Anyone can be a victim. It is in times of trauma that victims need compassion, support, and assistance most. Whether an accident has occurred, a crime committed, or a loss suffered. Victim Services Wellinton (VSW) is available 24 hours a day, 7 days a week, all year round to support victims.
 
                 A non-profit organization, established in 1997, VSW has partnerships with Guelph Police Services and the Ontario Provinicial Police to deliver support to victims of crime in our area. Volunteers are available on scene to help victims and their families through difficult events and refer them to appropriate community groups and organizations.

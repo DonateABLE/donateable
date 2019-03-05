@@ -990,6 +990,11 @@ output {
   *
   **/
 
+.card-img-top {
+    align-self: center;
+    width: 75%;
+}
+
 .card-deck {
   justify-content: space-around;
   flex-flow: row wrap;
@@ -997,7 +1002,7 @@ output {
 
 @media (max-height: 1000px) {
   .card-deck {
-    margin-bottom: 50px;
+    margin-bottom: 25px;
   }
   .profile-stats {
     padding-bottom: 75px;
@@ -1037,18 +1042,15 @@ output {
   font-weight: 500;
   padding: 20px 0px 20px 0px;
   @include tablet {
-    height: 100px;
-    overflow-y: scroll;
+    // height: 75px;
     max-width: 200ch;
   }
   @include desktop {
-    height: 150px;
-    overflow-y: scroll;
+    // height: 75px;
     max-width: 200ch;
   }
   @include desktop-lg {
-    height: 200px;
-    overflow-y: scroll;
+    // height: 75px;
     max-width: 400ch;
   }
 }

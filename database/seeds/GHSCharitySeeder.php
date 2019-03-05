@@ -19,7 +19,7 @@ class GHSCharitySeeder extends Seeder
                 'shortName' => 'GHS',
                 'longName' => 'Guelph Humane Society',
                 'logo' => 'ghs.png',
-                'shortDesc' => 'The Guelph Humane Society (GHS), with your generosity, provides the hope, care and compassion that the over 3,000 animals entering our care each year so desperately need. Every day there are pets, farm animals and wildlife that come through our doors that need more than just a temporary home, they need unique and individualized care.',
+                'shortDesc' => 'GHS provides hope, care and compassion to the over 3,000 animals that enter their care each year, that need more than just a temporary home.',
                 'longDesc' => 'The Guelph Humane Society envisions a world where all animals are treated humanely, with respect and compassion. Our mission is to advocate for all animals, and in particular those animals whose lives we can influence, through care, education, community support, protection, and leadership. To achieve those goals, we provide animal sheltering, pet rehoming, adoption services, veterinary care, pet identification, a progressive spay/neuter program, and return of lost pets. We actively participate in innovative programs like Cat Healthy, Capacity for Care and Cats & Birds. We also provide care and assistance with sick, orphaned and injured wildlife.
 
 As an affiliate of the Ontario Society for the Prevention of Cruelty to Animals (OSPCA), we employ OSPCA Agents to investigate allegations of cruelty or neglect in Guelph and Wellington County under provincial and federal animal cruelty legislation, and enforce those laws when necessary.

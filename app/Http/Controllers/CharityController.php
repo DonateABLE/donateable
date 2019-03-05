@@ -22,7 +22,7 @@ class CharityController extends Controller
      */
     public function index()
     {
-        $charities = Charity::with('SocialLinks.SocialType')->get();
+        $charities = Charity::with('SocialLinks.SocialType')->orderBy('longName')->get();
 
         return View::make('charity.list')->with('charities', $charities);
     }
