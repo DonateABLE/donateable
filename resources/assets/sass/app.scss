@@ -56,7 +56,7 @@ a:hover h1 {
   height: 100vh;
   height: 100%;
   width: 100vw;
-  
+
 
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
@@ -817,6 +817,11 @@ div.modal-body p {
 #stopButtonDiv {
   padding-left: 7.5px;
   padding-right: 7.5px;
+}
+
+.hov-white:hover {
+    background-color: white;
+    color: $primary;
 }
 
 .btn-donate-mid button {

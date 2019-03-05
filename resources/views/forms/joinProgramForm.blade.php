@@ -12,7 +12,7 @@
         </span>
         @endif
     </div>
-    
+
     <div class="col-md-6 l-name-field">
         <input placeholder="{{ __('Last Name') }}" id="fromLastName" type="text" class="form-control{{ $errors->has('fromLastName') ? ' is-invalid' : '' }}" name="fromLastName" value="{{ old('fromLastName') }}" autofocus>
 
@@ -61,7 +61,7 @@
 
 <div class="form-group row">
     <div class="col-md-12">
-        <button type="submit" class="btn btn-primary btn-full modal-button-style">
+        <button type="submit" class="btn btn-primary btn-full hov-white">
             {{ __('Submit') }}
         </button>
 

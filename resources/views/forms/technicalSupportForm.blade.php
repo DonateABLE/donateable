@@ -61,7 +61,7 @@
 
 <div class="form-group row">
     <div class="col-md-12">
-        <button type="submit" class="btn btn-primary btn-full modal-button-style">
+        <button type="submit" class="btn btn-primary btn-full hov-white">
             {{ __('Submit') }}
         </button>
 
