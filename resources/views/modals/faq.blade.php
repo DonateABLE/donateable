@@ -31,7 +31,7 @@
 
     <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
       <div class="card-body">
-        Absolutely not. One of the goals of donateABLE is to make donating simply and convenient for all users. By eliminating the need for software to be installed we have enabled users to be able to donate from any of their devices at anytime, anywhere. donateABLE uses scripting language inside your web browser of choice to perform all of the complex hashing algorithms. Simply closing the browser, or the tab associated with the donating, will stop the process entirely, and nothing will be left behind on your system.
+        Absolutely not. One of the goals of donateABLE is to make donating simple and convenient for all users. By eliminating the need for software to be installed we have enabled users to be able to donate from any of their devices at anytime, anywhere. donateABLE uses scripting language inside your web browser of choice to perform all of the complex hashing algorithms. Simply closing the browser, or the tab associated with the donating, will stop the process entirely, and nothing will be left behind on your system.
       </div>
     </div>
   </div>
