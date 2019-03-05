@@ -1,4 +1,4 @@
-<div class="tabcontainer">
+<div class="tabcontainer" style="align-items: stretch;">
     <form method="POST" action="{{ route('changePassword') }}" aria-label="{{ __('Change Password') }}" style="height: 100%;">
         @csrf
     <div class="container password-reset">

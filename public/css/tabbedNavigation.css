@@ -25,10 +25,22 @@
           justify-content: center;
 }
 
+@media (max-height: 640px) {
+  .top {
+    height: 50px;
+  }
+}
+
 .top h1 {
   color: white;
   font-weight: 400;
   text-transform: uppercase;
+}
+
+@media (max-height: 640px) {
+  .top h1 {
+    font-size: 1.2rem;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -40,6 +52,12 @@
 .top h2 {
   color: white;
   font-weight: 200;
+}
+
+@media (max-height: 640px) {
+  .top h2 {
+    font-size: 0.8rem;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -63,12 +81,53 @@
       align-self: center;
 }
 
+@media (max-height: 640px) {
+  .logospace {
+    height: 50px;
+  }
+}
+
 .logospace img {
   position: absolute;
   min-width: 8%;
   max-width: 12%;
   height: auto;
   margin-top: -2%;
+}
+
+@media (max-height: 640px) {
+  .logospace img {
+    min-width: 10%;
+    max-width: 14%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .logospace img {
+    min-width: 12%;
+    max-width: 16%;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .logospace img {
+    min-width: 12%;
+    max-width: 16%;
+  }
+}
+
+@media (min-width: 1440px) and (max-width: desktop-wqhd -1px) {
+  .logospace img {
+    min-width: 8%;
+    max-width: 10%;
+  }
+}
+
+@media (min-width: desktop-wqhd) {
+  .logospace img {
+    min-width: 8%;
+    max-width: 8%;
+  }
 }
 
 .social {
@@ -97,7 +156,6 @@
   float: left;
   background-color: #45a6d7;
   width: 20%;
-  height: 500px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -138,6 +196,12 @@
   transition: 0.3s;
 }
 
+@media (max-height: 640px) {
+  .tab button {
+    padding: 18px 12px;
+  }
+}
+
 /* Change background color of buttons on hover */
 
 .tab button:hover {
@@ -160,9 +224,38 @@
   background-color: white;
   border: 2px solid #26607d;
   width: 80%;
+  height: 70%;
   border-left: none;
-  height: 424px;
-  margin-top: 38px;
+}
+
+@media (max-height: 640px) {
+  .tabcontent {
+    height: 424px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .tabcontent {
+    height: 75%;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .tabcontent {
+    height: 70%;
+  }
+}
+
+@media (min-width: 1440px) and (max-width: desktop-wqhd -1px) {
+  .tabcontent {
+    height: 70%;
+  }
+}
+
+@media (min-width: desktop-wqhd) {
+  .tabcontent {
+    height: 75%;
+  }
 }
 
 .tablinks {
@@ -189,6 +282,13 @@ i {
           justify-content: center;
   padding: 3% 6%;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .tabcontainer > .row {
@@ -349,9 +449,43 @@ i {
   height: 400px;
 }
 
-@media (min-width: 1440px) {
+@media (max-height: 640px) {
   .social-feed {
-    padding-bottom: 0px;
+    margin-bottom: 100px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .social-feed {
+    margin-bottom: 100px;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .social-feed {
+    margin-bottom: 100px;
+  }
+}
+
+@media (min-width: 1440px) and (max-width: desktop-wqhd -1px) {
+  .social-feed {
+    margin-bottom: 50px;
+  }
+}
+
+#FacebookFeed {
+  margin-bottom: 25px;
+}
+
+@media (min-width: 1440px) and (max-width: desktop-wqhd -1px) {
+  #FacebookFeed {
+    margin-bottom: 25px;
+  }
+}
+
+@media (min-width: desktop-wqhd) {
+  #FacebookFeed {
+    margin-bottom: 50px;
   }
 }
 
@@ -412,5 +546,28 @@ i {
   border-radius: 20px;
   background-color: #26607d;
   color: white;
+}
+
+.aboutHeader {
+  text-transform: uppercase;
+  padding: 0px 30px;
+  text-align: center;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .aboutHeader {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .aboutHeader {
+    font-size: 1.5rem;
+    margin: 0px;
+  }
+}
+
+.aboutSpan {
+  color: #26607d;
 }
 

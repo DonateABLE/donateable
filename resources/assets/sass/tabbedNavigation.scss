@@ -10,6 +10,9 @@
   float: right;
   width: 80%;
   height: 100px;
+  @include small {
+      height: 50px;
+  }
   background-color: $secondary;
   display: flex;
   align-items: center;
@@ -21,6 +24,9 @@
   color: white;
   font-weight: 400;
   text-transform: uppercase;
+  @include small {
+      font-size: 1.2rem;
+  }
   @include tablet {
     font-size: 1.8rem;
   }
@@ -29,6 +35,9 @@
 .top h2 {
   color: white;
   font-weight: 200;
+  @include small {
+      font-size: 0.8rem;
+  }
   @include tablet {
     font-size: 1rem;
   }
@@ -38,6 +47,9 @@
   float: left;
   width: 20%;
   height: 100px;
+  @include small {
+      height: 50px;
+  }
   background-color: $secondary;
 
   display: flex;
@@ -51,6 +63,28 @@
   max-width: 12%;
   height: auto;
   margin-top: -2%;
+  @include small {
+      min-width: 10%;
+      max-width: 14%;
+  }
+  @include tablet {
+      min-width: 12%;
+      max-width: 16%;
+  }
+  @include desktop {
+      min-width: 12%;
+      max-width: 16%;
+  }
+  @include desktop-lg {
+      min-width: 8%;
+      max-width: 10%;
+  }
+
+  @include desktop-wqhd {
+      min-width: 8%;
+      max-width: 8%;
+  }
+
 }
 
 .social {
@@ -72,7 +106,6 @@
   float: left;
   background-color: $secondary;
   width: 20%;
-  height: 500px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -86,6 +119,9 @@
   background-color: $primary;
   color: white;
   padding: 22px 16px;
+  @include small {
+      padding: 18px 12px;
+  }
   width: 100%;
   border: none;
   border-top: 1px solid $secondary;
@@ -116,9 +152,27 @@
   background-color: white;
   border: 2px solid $primary;
   width: 80%;
+  height: 70%;
+
   border-left: none;
-  height: 424px;
-  margin-top: 38px;
+  @include small {
+      height: 424px;
+  }
+  @include tablet {
+      height: 75%;
+
+  }
+  @include desktop {
+      height: 70%;
+
+  }
+  @include desktop-lg {
+      height: 70%;
+
+  }
+  @include desktop-wqhd {
+      height: 75%;
+  }
 }
 
 .tablinks {
@@ -137,6 +191,9 @@ i {
   justify-content: center;
   padding: 3% 6%;
   width: 100%;
+
+  display: flex;
+    flex-direction: column;
 }
 
 .tabcontainer > .row {
@@ -255,11 +312,33 @@ i {
   justify-content: center;
   min-width: 350px !important;
   height: 400px;
-
-  @include desktop-lg {
-    padding-bottom: 0px;
+  @include small {
+      margin-bottom: 100px;
   }
+  @include tablet {
+      margin-bottom: 100px;
+
+  }
+  @include desktop {
+      margin-bottom: 100px;
+
+  }
+  @include desktop-lg {
+    margin-bottom: 50px;
+  }
+
 }
+
+#FacebookFeed {
+    margin-bottom: 25px;
+    @include desktop-lg {
+      margin-bottom: 25px;
+    }
+    @include desktop-wqhd {
+        margin-bottom: 50px;
+    }
+}
+
 
 .social-icons-sp {
   display: flex;
@@ -305,4 +384,21 @@ i {
   border-radius: 20px;
   background-color: $primary;
   color: white;
+}
+
+.aboutHeader {
+    text-transform: uppercase;
+    padding: 0px 30px;
+    text-align: center;
+    @include tablet {
+        font-size: 1.2rem;
+    }
+    @include desktop {
+        font-size: 1.5rem;
+        margin: 0px;
+    }
+}
+
+.aboutSpan {
+    color: $primary;
 }

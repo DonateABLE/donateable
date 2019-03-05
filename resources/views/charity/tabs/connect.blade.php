@@ -1,6 +1,6 @@
 <div class="tabcontainer connect">
     <div class="connect-content social-feed">
-            <iframe src="{{ $charity->socialFeed }}" width="350" height="500" style="overflow:hidden;" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+            <iframe id="FacebookFeed" src="{{ $charity->socialFeed }}" width="350" height="500" style="overflow:hidden;" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
     </div>
         <div class="connect-content" style="order: 1">
         <h1>Connect with {{ $charity->shortName}}</h1>

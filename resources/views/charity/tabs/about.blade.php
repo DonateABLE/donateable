@@ -1,4 +1,5 @@
 <div class="tabcontainer">
+        <h1 class="aboutHeader"><span class="aboutSpan">About</span> {{ $charity->longName }}</h1>
         <p class="charity-long-description">
             <?php
             echo nl2br($charity->longDesc);

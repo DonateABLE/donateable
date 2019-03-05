@@ -15,7 +15,11 @@
         </div>
         <div class="row justify-content-center" style="padding: 0px 30px 30px 30px">
             <input type="range" class="miner-slider" min="1" max="100" value="50" class="slider" id="MinerRange">
-            <output for="MinerRange" id="MinerValue">50%</output>
+            <output for="MinerRange" id="MinerValue">50% CPU </output>
+            <div class="col-lg-1 btn-donate-right">
+
+                <button class="btn-primary btn-full btn-donate" style="padding: 0px; width: 55%; margin-top: 22px;" data-toggle="modal" data-target="#donationHelp">?</button>
+            </div>
         </div>
         <div class="row"  style="padding: 0px 30px 0px 30px">
             <div id="startButtonDiv" class="col-lg-6 btn-donate-left">

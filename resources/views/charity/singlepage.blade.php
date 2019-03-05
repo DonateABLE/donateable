@@ -65,6 +65,7 @@
 
     @include('modals.optIn')
     @include('modals.help')
+    @include('modals.donationHelp')
     @push('style')
     <link href="{{ asset('css/tabbedNavigation.css') }}" rel="stylesheet">
     @endpush
