@@ -2,8 +2,8 @@
 
 @section('content')
 
-    <div class="content">
-        <div class="site-callout" style="padding-top: 25px; padding-bottom: 25px">
+    <div class="content" style="margin-top: -1.5rem">
+        <div class="site-callout" style="padding-bottom: 25px">
                 <img src="{{asset('img/logo/D-Coloured-250x250.png')}}" style="width:200px;height: auto;"/>
 
                 <h1 style="margin-bottom: 0px;">Support Local Charities in Guelph</h1>
