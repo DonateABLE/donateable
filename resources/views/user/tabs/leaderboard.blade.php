@@ -4,10 +4,10 @@
     @if (count($donations) > 0)
         @foreach($donations as $donation)
         <div class="form-group row">
-            <div class="col-md-2 imgholder">
+            <div class="col-lg-2 col-md-3 imgholder">
                 {{ $donation->Charity->smallLogo() }}
             </div>
-            <div class="col-md-10 leaderstats">
+            <div class="col-lg-10 col-md-9 leaderstats">
                 <div class="row title">
                     <h3>{{ $donation->Charity->longName}}<h3>
                 </div>
