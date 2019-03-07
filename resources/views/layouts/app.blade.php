@@ -113,7 +113,6 @@
             <div class="bottom-nav-inner">
                 <a href="{{ url('/') }}">Home</a>|
                 <a href="#about" data-toggle="modal" data-target="#aboutUsModal">About</a>|
-                <a href="{{ url('/onboard')}}">Take a tour</a>|
                 <a href="#howitworks" data-toggle="modal" data-target="#howItWorksModal">How It Works</a>|
                 <a href="{{ url('/charities') }}">Charities</a>|
                 <a href="#privacypolicy" data-toggle="modal" data-target="#privacyPolicyModal">Privacy Policy</a>|
