@@ -103,6 +103,23 @@
       </div>
     </div>
   </div>
+  <div class="card">
+    <div class="card-header" id="headingSix">
+        <h5 class="mb-0">
+            How much processing power should I donate?
+        </h5>
+        <div class="icon">
+            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="true" aria-controls="collapseOne" aria-label="Chevron Down">
+             <i class="fas fa-angle-down fa-3x"></i>
+          </button>
+          </div>
+    </div>
+    <div id="collapseSix" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+      <div class="card-body">
+        Average computer tasks such as web browsing, word processing, and YouTube use less than 30% CPU in total. The rest of it is unused and can be put towards donations. Feel free to experiment with the amount of CPU you use to donate with, and to turn it up when you are leaving your computer for a while.
+      </div>
+    </div>
+  </div>
 </div>
 
           <div class="modal-button-wrap" style="margin-top:20px">
