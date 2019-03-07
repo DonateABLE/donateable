@@ -121,7 +121,7 @@ class User extends Authenticatable
     }
 
     public function timeDonated() {
-        return $this->secondsToTime($this->DonatedTo()->sum('totalTime'));
+        return formatSeconds($this->DonatedTo()->sum('totalTime'));
 
     }
 
