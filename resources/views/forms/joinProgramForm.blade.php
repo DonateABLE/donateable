@@ -1,4 +1,4 @@
-<form name="joinProgramForm" method="POST" action="{{ route('JoinProgram') }}" aria-label="{{ __('JoinProgram') }}" style="width: 100%;padding: 30px;">
+<form name="joinProgramForm" method="POST" action="{{ route('JoinProgram') }}" aria-label="{{ __('JoinProgram') }}" style="width: 100%;padding: 20px 30px 0px 30px;">
         @csrf
 
 <div class="form-group row">

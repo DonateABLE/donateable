@@ -19,17 +19,17 @@
           </div>
           <div class="step-container">
               <div class="step">
-                  <img src="{{asset('img/aboutus/About-Us-WHO.png')}}" alt="Who" style="width:250px;height: auto;"/>
+                  <img class="how-it-works-image" src="{{asset('img/aboutus/About-Us-WHO.png')}}" alt="Who"/>
                   <h3 class="modal-h3" style="width: 350px;height:60px;text-align:center;">Is donateABLE developed by?</h3>
                   <p class="modal-p">donateABLE is designed, developed, and managed by Synergenics, a professional IT support and solutions provider to Guelph and Southwestern Ontario. Synergenics has been a committed full service solutions  provider  for  individuals  and  businesses  alike  since  1989.  Their  30  years  of  service  has  allowed  them  to  build  relationships  with  many  companies in a variety of different industries, but some  of  their  most  cherished  relationships  are  with local Guelph charities and organizations.</p>
               </div>
               <div class="step">
-                  <img src="{{asset('img/aboutus/About-Us-WHAT.png')}}" alt="What" style="width:250px;height: auto;"/>
+                  <img class="how-it-works-image" src="{{asset('img/aboutus/About-Us-WHAT.png')}}" alt="What"/>
                   <h3 class="modal-h3" style="width: 350px;height:60px;text-align:center;">Is donateABLE?</h3>
                   <p class="modal-p">donateABLE  is  a  website  project  developed  and  managed  by  Synergenics.  This  solution  will  take  small  amounts  of  computational  power  donated  from individuals and pool it together into a larger resource to generate real monetary value for your charity. This website is going to allow anyone with a computer to make a difference no matter what their  financial  situation  is,  by  donating  unused  computer time.</p>
               </div>
               <div class="step">
-                  <img src="{{asset('img/aboutus/About-Us-WHY.png')}}" alt="Why" style="width:250px;height: auto;"/>
+                  <img class="how-it-works-image" src="{{asset('img/aboutus/About-Us-WHY.png')}}" alt="Why"/>
                   <h3 class="modal-h3" style="width: 350px;height:60px;text-align:center;">Was donateABLE developed?</h3>
                   <p class="modal-p">Synergenics  has  consistently  made  an  effort,  for  the past 30 years, to give back to their local community in any way they can. They have done this by  providing  discounted  IT  support,  sponsoring  local youth organizations, and donating and sponsoring local golf tournaments. Now they are combining  their  passion  and  knowledge  in  the  IT  world with their passion of giving back to create a solution that makes a difference.</p>
               </div>

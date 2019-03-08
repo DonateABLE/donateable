@@ -25,7 +25,7 @@
           justify-content: center;
 }
 
-@media (max-height: 640px) {
+@media (max-height: 641px) {
   .top {
     height: 50px;
   }
@@ -37,7 +37,7 @@
   text-transform: uppercase;
 }
 
-@media (max-height: 640px) {
+@media (max-height: 641px) {
   .top h1 {
     font-size: 1.2rem;
   }
@@ -54,7 +54,7 @@
   font-weight: 200;
 }
 
-@media (max-height: 640px) {
+@media (max-height: 641px) {
   .top h2 {
     font-size: 0.8rem;
   }
@@ -81,7 +81,7 @@
       align-self: center;
 }
 
-@media (max-height: 640px) {
+@media (max-height: 641px) {
   .logospace {
     height: 50px;
   }
@@ -95,7 +95,7 @@
   margin-top: -2%;
 }
 
-@media (max-height: 640px) {
+@media (max-height: 641px) {
   .logospace img {
     min-width: 10%;
     max-width: 14%;
@@ -116,14 +116,14 @@
   }
 }
 
-@media (min-width: 1440px) and (max-width: desktop-wqhd -1px) {
+@media (min-width: 1440px) and (max-width: 1920px -1px) {
   .logospace img {
     min-width: 8%;
     max-width: 10%;
   }
 }
 
-@media (min-width: desktop-wqhd) {
+@media (min-width: 2560px) {
   .logospace img {
     min-width: 8%;
     max-width: 8%;
@@ -196,7 +196,7 @@
   transition: 0.3s;
 }
 
-@media (max-height: 640px) {
+@media (max-height: 641px) {
   .tab button {
     padding: 18px 12px;
   }
@@ -228,7 +228,7 @@
   border-left: none;
 }
 
-@media (max-height: 640px) {
+@media (max-height: 641px) {
   .tabcontent {
     height: 424px;
   }
@@ -246,13 +246,13 @@
   }
 }
 
-@media (min-width: 1440px) and (max-width: desktop-wqhd -1px) {
+@media (min-width: 1440px) and (max-width: 1920px -1px) {
   .tabcontent {
     height: 70%;
   }
 }
 
-@media (min-width: desktop-wqhd) {
+@media (min-width: 2560px) {
   .tabcontent {
     height: 75%;
   }
@@ -449,7 +449,7 @@ i {
   height: 400px;
 }
 
-@media (max-height: 640px) {
+@media (max-height: 641px) {
   .social-feed {
     margin-bottom: 100px;
   }
@@ -467,7 +467,7 @@ i {
   }
 }
 
-@media (min-width: 1440px) and (max-width: desktop-wqhd -1px) {
+@media (min-width: 1440px) and (max-width: 1920px -1px) {
   .social-feed {
     margin-bottom: 50px;
   }
@@ -477,13 +477,13 @@ i {
   margin-bottom: 25px;
 }
 
-@media (min-width: 1440px) and (max-width: desktop-wqhd -1px) {
+@media (min-width: 1440px) and (max-width: 1920px -1px) {
   #FacebookFeed {
     margin-bottom: 25px;
   }
 }
 
-@media (min-width: desktop-wqhd) {
+@media (min-width: 2560px) {
   #FacebookFeed {
     margin-bottom: 50px;
   }

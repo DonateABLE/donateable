@@ -10489,22 +10489,22 @@ h1 {
   color: #45a6d7;
   font-weight: 700;
   padding-top: 10px;
-  font-family: 'Barlow', sans-serif;
+  font-family: "Barlow", sans-serif;
 }
 
 h2 {
   color: #26607d;
   font-weight: 700;
   font-size: 1.3rem;
-  font-family: 'Barlow', sans-serif;
+  font-family: "Barlow", sans-serif;
 }
 
 h3 {
-  font-family: 'Barlow', sans-serif;
+  font-family: "Barlow", sans-serif;
 }
 
 h4 {
-  font-family: 'Barlow', sans-serif;
+  font-family: "Barlow", sans-serif;
 }
 
 p {
@@ -10701,7 +10701,7 @@ a:hover h1 {
   }
 }
 
-@media (min-width: 1440px) and (max-width: desktop-wqhd -1px) {
+@media (min-width: 1440px) and (max-width: 1920px -1px) {
   .vertical-center {
     min-height: 50%;
     /* Fallback for browsers do NOT support vh unit */
@@ -11063,13 +11063,13 @@ a:hover h1 {
   font-weight: bold;
 }
 
-@media (min-width: 1440px) and (max-width: desktop-wqhd -1px) {
+@media (min-width: 1440px) and (max-width: 1920px -1px) {
   .left-signup {
     border-right: 1px #26607d solid;
   }
 }
 
-@media (min-width: 1440px) and (max-width: desktop-wqhd -1px) {
+@media (min-width: 1440px) and (max-width: 1920px -1px) {
   .right-signup {
     border-left: 1px #26607d solid;
   }
@@ -11112,6 +11112,23 @@ a:hover h1 {
           flex: 1;
   -ms-flex-item-align: center;
       align-self: center;
+}
+
+@media (max-height: 641px) {
+  .align-img {
+    margin-top: 0px;
+    padding-top: 10px;
+  }
+}
+
+.align-img > img {
+  height: auto;
+}
+
+@media (max-height: 641px) {
+  .align-img > img {
+    width: 250px !important;
+  }
 }
 
 .modal-x {
@@ -11169,6 +11186,7 @@ a:hover h1 {
           align-items: center;
   text-align: justify;
   padding: 5px;
+  width: 30%;
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -11180,6 +11198,29 @@ a:hover h1 {
 @media (min-width: 1024px) and (max-width: 1439px) {
   .step {
     width: 350px;
+  }
+}
+
+@media (min-width: 1440px) and (max-width: 1920px -1px) {
+  .step {
+    max-width: 450px;
+  }
+}
+
+@media (min-width: 1920px) and (max-width: 2560px -1px) {
+  .step {
+    max-width: 500px;
+  }
+}
+
+.step > img {
+  width: 250px;
+  height: auto;
+}
+
+@media (max-height: 641px) {
+  .step > img {
+    width: 100px;
   }
 }
 
@@ -11207,6 +11248,12 @@ a:hover h1 {
   }
 }
 
+@media (max-height: 641px) {
+  .step.form > img {
+    width: 300px;
+  }
+}
+
 .modal-button-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -11228,6 +11275,18 @@ a:hover h1 {
 @media (min-width: 1024px) and (max-width: 1439px) {
   .modal-button-wrap {
     margin-top: 10px;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .hide-on-small {
+    display: none;
+  }
+}
+
+@media (max-height: 641px) {
+  .hide-on-small {
+    display: none;
   }
 }
 
@@ -11277,10 +11336,24 @@ a:hover h1 {
   }
 }
 
-@media (min-width: 1440px) and (max-width: desktop-wqhd -1px) {
+@media (min-width: 1440px) and (max-width: 1920px -1px) {
   .modal-h1 {
     font-size: 38px !important;
     margin-top: 25px !important;
+  }
+}
+
+@media (min-width: 1920px) and (max-width: 2560px -1px) {
+  .modal-h1 {
+    font-size: 38px !important;
+    margin-top: 25px !important;
+  }
+}
+
+@media (max-height: 641px) {
+  .modal-h1 {
+    font-size: 20px !important;
+    margin-top: 0px !important;
   }
 }
 
@@ -11303,10 +11376,17 @@ a:hover h1 {
   }
 }
 
-@media (min-width: 1440px) and (max-width: desktop-wqhd -1px) {
+@media (min-width: 1440px) and (max-width: 1920px -1px) {
   .modal-h2 {
     font-size: 38px !important;
     margin-bottom: 35px;
+  }
+}
+
+@media (max-height: 641px) {
+  .modal-h2 {
+    font-size: 20px !important;
+    margin-top: 0px !important;
   }
 }
 
@@ -11322,7 +11402,13 @@ a:hover h1 {
 
 @media (min-width: 1024px) and (max-width: 1439px) {
   .how-it-works-image {
-    width: 125px;
+    width: 125px !important;
+  }
+}
+
+@media (max-height: 641px) {
+  .how-it-works-image {
+    width: 100px !important;
   }
 }
 
@@ -11345,7 +11431,7 @@ a:hover h1 {
   }
 }
 
-@media (min-width: 1440px) and (max-width: desktop-wqhd -1px) {
+@media (min-width: 1440px) and (max-width: 1920px -1px) {
   .modal-h3 {
     font-size: 24px !important;
   }
@@ -11354,6 +11440,13 @@ a:hover h1 {
 .modal-p {
   color: white;
   font-size: 14px;
+}
+
+@media (min-width: 1920px) and (max-width: 2560px -1px) {
+  .modal-p {
+    width: 500px !important;
+    background-color: blue !important;
+  }
 }
 
 .modal-body-accept {
@@ -11393,7 +11486,6 @@ div.modal-body h2 {
   padding-left: 30px;
   padding-right: 30px;
   text-transform: uppercase;
-  font-size: 21px;
   text-align: center;
 }
 
@@ -11402,6 +11494,18 @@ div.modal-body p {
   margin-bottom: 0;
   padding-bottom: 0;
   font-weight: 600;
+}
+
+.modal-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .modal-backdrop {
@@ -11749,7 +11853,7 @@ output {
   }
 }
 
-@media (min-width: 1440px) and (max-width: desktop-wqhd -1px) {
+@media (min-width: 1440px) and (max-width: 1920px -1px) {
   .charity-card p {
     max-width: 400ch;
   }
@@ -11859,7 +11963,7 @@ output {
   width: 160px;
 }
 
-@media (max-height: 640px) {
+@media (max-height: 641px) {
   .profile-img {
     height: 120px;
     width: 120px;
@@ -11945,7 +12049,7 @@ output {
   font-weight: bold;
 }
 
-@media (max-height: 640px) {
+@media (max-height: 641px) {
   .img__underlay {
     font-size: 56px;
   }

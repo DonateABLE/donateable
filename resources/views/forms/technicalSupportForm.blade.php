@@ -1,4 +1,4 @@
-<form id="technicalSupportForm" name="technicalSupportForm" method="POST" action="{{ route('TechnicalSupport') }}" aria-label="{{ __('TechnicalSupport') }}" style="width: 100%;padding: 30px;">
+<form id="technicalSupportForm" name="technicalSupportForm" method="POST" action="{{ route('TechnicalSupport') }}" aria-label="{{ __('TechnicalSupport') }}" style="width: 100%;padding: 20px 30px 0px 30px;">
         @csrf
 <div class="form-group row">
 

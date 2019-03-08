@@ -10,12 +10,12 @@
               <span class="modal-x" aria-hidden="true">X</span>
             </button>
       </div>
-      <div class="modal-body">
-          <div class="site-callout" style="margin-bottom: 10px;">
+      <div class="site-callout" style="margin-top: -10px;padding-bottom: 10px;">
 
-                  <h1 class="modal-h1">Frequently Asked Questions</h1>
+              <h1 class="modal-h1">Frequently Asked Questions</h1>
 
-          </div>
+      </div>      <div class="modal-body">
+
   <div class="accordion container" id="accordionExample">
   <div class="card">
     <div class="card-header" id="headingOne">
@@ -122,7 +122,7 @@
   </div>
 </div>
 
-          <div class="modal-button-wrap" style="margin-top:20px">
+          <div class="modal-button-wrap hide-on-small" style="margin-top:20px">
           <button style="align-self: center" data-dismiss="modal" data-toggle="modal" href="#contactUsModal" class="btn btn-primary modal-button">
               {{ __('More questions? Contact us') }}
           </button>
