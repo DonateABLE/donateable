@@ -45,7 +45,7 @@
           <img class="onboard" src="{{ asset('img/onboard/Asset-Onboard-Flow-5.png') }}">
         <h3>Select Your CPU Power</h3>
         <p>Next, set the amount of processing power you would like to donate. Basically, the more processor
-        power you donate, the more algorithms get solved, which is then translated into digital currenty
+        power you donate, the more algorithms get solved, which is then translated into digital currency
         that is then converted into real money. Helping your charity continue
         to do good in their community.</p>
       </section>
@@ -67,14 +67,16 @@
     </article>
     <footer>
       <div class="forward-actions">
-        <!-- <button class="secondary skip" :disabled="isLastStep" v-show="!isLastStep" @click="skip(2)">Skip</button> -->
-        <!-- <button class="accent save" :disabled="!isLastStep" v-show="isLastStep" @click="finish"><i class="fa fa-fw fa-lg fa-check"></i></button> -->
-        <p><button class="primary" @click="toggleModal">SKIP</button></p>
+        <p class="primary" @click="toggleModal" :disabled="isLastStep">SKIP</p>
 
       </div>
+      <div class="step-controls">
       <div class="step-dots" v-if="hasDots">
         <div class="step-dot" v-for="n in max" :class="{active: n == step}" @click="goToStep(n)"></div>
-      </div>
+        </div>
+        <button class="primary" @click="skip(1)" :disabled="isLastStep" v-show="!isLastStep">Next</button>
+        <button class="primary" @click="toggleModal" :disabled="!isLastStep" v-show="isLastStep">Finish</button>
+    </div>
       <div class="back-actions">
         <!-- <button class="secondary cancel prev" :disabled="isFirstStep" xv-show="!isFirstStep" @click="skip(-1)"><i class="fa fa-fw fa-lg" :class="backIcon"></i></button> -->
 

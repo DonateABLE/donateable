@@ -48,26 +48,26 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: var(--cross, column);
           flex-direction: var(--cross, column);
-  border-radius: .2em;
   -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2), 0 1em 2em -1em;
           box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2), 0 1em 2em -1em;
+  border: 6px solid #26607d;
 }
 
 .boardal__x {
   cursor: pointer;
   font-size: 2em;
-  line-height: .5;
-  opacity: .15;
+  line-height: 0.5;
+  opacity: 0.15;
 }
 
 .boardal__x:hover {
-  opacity: .65;
+  opacity: 0.65;
 }
 
 .boardal-enter-active,
 .boardal-leave-active {
-  -webkit-transition: opacity .25s;
-  transition: opacity .25s;
+  -webkit-transition: opacity 0.25s;
+  transition: opacity 0.25s;
 }
 
 .boardal-enter,
@@ -153,6 +153,16 @@ footer:not(:empty) {
   padding: 1em;
 }
 
+.step-controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .step-dots {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -167,7 +177,7 @@ footer:not(:empty) {
   cursor: pointer;
   width: 1em;
   height: 1em;
-  margin: .5ch;
+  margin: 0.5ch;
   border-radius: 1em;
   background: white;
   opacity: 0.5;
@@ -251,12 +261,22 @@ body {
   color: #333;
 }
 
+p[disabled] {
+  color: #45a6d7 !important;
+  cursor: default !important;
+}
+
+p.primary {
+  color: #26607d;
+  cursor: pointer;
+}
+
 button {
   outline: none;
   font: inherit;
   line-height: 1;
   cursor: pointer;
-  padding: .8em 1.5em;
+  padding: 0.8em 1.5em;
   color: white;
   background-color: #26607d;
   -webkit-transition: -webkit-transform 50ms ease-out;
@@ -264,6 +284,7 @@ button {
   transition: transform 50ms ease-out;
   transition: transform 50ms ease-out, -webkit-transform 50ms ease-out;
   will-change: transform;
+  margin-top: 5px;
 }
 
 button:active {
@@ -276,7 +297,7 @@ button:focus {
 }
 
 button[disabled] {
-  opacity: .2;
+  opacity: 0.2;
   cursor: not-allowed;
 }
 
@@ -336,7 +357,18 @@ section > img {
   justify-self: center;
   max-width: 50%;
   height: auto;
-  margin-bottom: 5%;
+}
+
+@media (max-height: 641px) {
+  section > img {
+    max-width: 40%;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+  section > img {
+    max-width: 45%;
+  }
 }
 
 .logo {

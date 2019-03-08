@@ -14,13 +14,6 @@ use Illuminate\Http\Response;
 use Illuminate\Http\Request;
 
 Route::get('/', function (Request $request) {
-    $cookie = $request->hasCookie('visited');
-    if (!$cookie) {
-        $response = new Response(view('onboarding.onboard'));
-        $response->withCookie(cookie('visited'));
-        return $response;
-    }
-
     $currentDonors = App\SiteStats::getSitewideCurrentDonors();
     $totalDonors = App\SiteStats::getSitewideTotalDonors();
     $totalHashes = App\DonatedTo::getSitewideHashes();

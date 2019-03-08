@@ -24,17 +24,18 @@
     src="https://code.jquery.com/jquery-3.3.1.min.js"
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
-    <script type="text/javascript">const donateable = '{{ url('/') }}'</script>
+    <script type="text/javascript">
+        @if(isset($newUser))
+        const donateable = '{{ url('/home') }}'
+        @else
+        const donateable = '{{ url('/') }}'
+        @endif
+    </script>
     <script src="{{ asset('js/app.js') }}" defer></script>
     <script src="{{ asset('js/contactUs.js') }}"></script>
     <script type="text/javascript">
 
     const onboard = '{{ url("/onboard") }}'
-    if (!$.cookie("hasvisisted")) {
-        window.location.href = onboard
-
-    }
-    $.cookie("hasvisisted", "true");
     </script>
 
     <!-- Fonts -->
