@@ -10,7 +10,7 @@
             <div class="modal-body modal-body-accept">
                 <h1>Not sure how much to give?</h1>
                 <h2>Try it out!</h2>
-                <p>Average computer tasks such as web browsing, word processing, and YouTube use less than 30% CPU in total. The rest of is unused and can be put towards donations. Feel free to experiment with the amount of CPU you use to mine with, and to turn it up when you are leaving your computer for a while.</p>
+                <p>Average computer tasks such as web browsing, word processing, and YouTube use less than 30% CPU in total. The rest of it is unused and can be put towards donations. Feel free to experiment with the amount of CPU you use to donate with, and to turn it up when you are leaving your computer for a while.</p>
             </div>
             <div class="modal-footer" style="border:none;margin:0px 30px 0px 30px">
                 <button type="button" class="btn btn-secondary btn-full" data-dismiss="modal">Continue</button>

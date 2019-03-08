@@ -10,7 +10,7 @@ $(document).ready(function() {
     */
   $("#MinerRange").on("propertychange input", function() {
     /** Set an element on screen to show the %age **/
-    $("#MinerValue").val(this.value + "%");
+    $("#MinerValue").val(this.value + "% CPU");
 
     // /** Update the threshold if mining **/
     if (miner.isRunning()) {
