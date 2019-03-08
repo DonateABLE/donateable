@@ -15,11 +15,6 @@
                 <img class="card-img-top" src="{{ asset('img/charity/' . $charity->logo) }}" alt="Card image cap">
                 <div class="card-body charity-card">
                     <h5>{{ $charity->longName }}</h5>
-                    @if($charity->shortName != '')
-                        <h6>({{ $charity->shortName}})</h6>
-                    @else
-                        <h6></h6>
-                    @endif
                     <p class="card-text">{{ $charity->shortDesc }}</p>
 
 

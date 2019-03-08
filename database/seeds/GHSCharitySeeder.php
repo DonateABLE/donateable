@@ -50,11 +50,6 @@ The Guelph Humane Society is contracted by the City of Guelph, the Township of C
             ],
             [
                 'charityId' => $charityId,
-                'socialTypeId' => '4', //email
-                'socialUrl' => 'mailto:info@guelphhumane.ca'
-            ],
-            [
-                'charityId' => $charityId,
                 'socialTypeId' => '5', //website
                 'socialUrl' => 'https://guelphhumane.ca/'
             ]

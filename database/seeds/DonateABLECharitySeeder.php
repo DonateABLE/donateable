@@ -44,11 +44,6 @@ class DonateABLECharitySeeder extends Seeder
             ],
             [
                 'charityId' => $charityId,
-                'socialTypeId' => '4', //email
-                'socialUrl' => 'mailto:donateable@donateable.ca'
-            ],
-            [
-                'charityId' => $charityId,
                 'socialTypeId' => '5', //website
                 'socialUrl' => 'https://donateable.ca/'
             ]

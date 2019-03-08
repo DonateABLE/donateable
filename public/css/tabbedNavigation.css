@@ -27,6 +27,12 @@
 
 @media (max-height: 641px) {
   .top {
+    height: 50px !important;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .top {
     height: 50px;
   }
 }
@@ -38,6 +44,12 @@
 }
 
 @media (max-height: 641px) {
+  .top h1 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
   .top h1 {
     font-size: 1.2rem;
   }
@@ -55,6 +67,12 @@
 }
 
 @media (max-height: 641px) {
+  .top h2 {
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
   .top h2 {
     font-size: 0.8rem;
   }
@@ -87,10 +105,16 @@
   }
 }
 
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .logospace {
+    height: 50px;
+  }
+}
+
 .logospace img {
   position: absolute;
   min-width: 8%;
-  max-width: 12%;
+  max-width: 10%;
   height: auto;
   margin-top: -2%;
 }
@@ -98,28 +122,35 @@
 @media (max-height: 641px) {
   .logospace img {
     min-width: 10%;
-    max-width: 14%;
+    max-width: 12%;
   }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
   .logospace img {
     min-width: 12%;
-    max-width: 16%;
+    max-width: 12%;
   }
 }
 
 @media (min-width: 1024px) and (max-width: 1439px) {
   .logospace img {
-    min-width: 12%;
-    max-width: 16%;
+    min-width: 8%;
+    max-width: 10%;
   }
 }
 
 @media (min-width: 1440px) and (max-width: 1920px -1px) {
   .logospace img {
     min-width: 8%;
-    max-width: 10%;
+    max-width: 18%;
+  }
+}
+
+@media (min-width: 1920px) and (max-width: 2560px -1px) {
+  .logospace img {
+    min-width: 8%;
+    max-width: 8%;
   }
 }
 
@@ -225,7 +256,6 @@
   border: 2px solid #26607d;
   width: 80%;
   height: 70%;
-  border-left: none;
 }
 
 @media (max-height: 641px) {
@@ -242,7 +272,7 @@
 
 @media (min-width: 1024px) and (max-width: 1439px) {
   .tabcontent {
-    height: 70%;
+    height: 77%;
   }
 }
 
@@ -563,7 +593,6 @@ i {
 @media (min-width: 1024px) and (max-width: 1439px) {
   .aboutHeader {
     font-size: 1.5rem;
-    margin: 0px;
   }
 }
 

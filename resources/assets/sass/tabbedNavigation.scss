@@ -11,7 +11,10 @@
   width: 80%;
   height: 100px;
   @include small {
-      height: 50px;
+    height: 50px !important;
+  }
+  @include desktop {
+    height: 50px;
   }
   background-color: $secondary;
   display: flex;
@@ -25,7 +28,10 @@
   font-weight: 400;
   text-transform: uppercase;
   @include small {
-      font-size: 1.2rem;
+    font-size: 1.2rem;
+  }
+  @include desktop {
+    font-size: 1.2rem;
   }
   @include tablet {
     font-size: 1.8rem;
@@ -36,7 +42,10 @@
   color: white;
   font-weight: 200;
   @include small {
-      font-size: 0.8rem;
+    font-size: 0.8rem;
+  }
+  @include desktop {
+    font-size: 0.8rem;
   }
   @include tablet {
     font-size: 1rem;
@@ -48,7 +57,10 @@
   width: 20%;
   height: 100px;
   @include small {
-      height: 50px;
+    height: 50px;
+  }
+  @include desktop {
+    height: 50px;
   }
   background-color: $secondary;
 
@@ -60,31 +72,33 @@
 .logospace img {
   position: absolute;
   min-width: 8%;
-  max-width: 12%;
+  max-width: 10%;
   height: auto;
   margin-top: -2%;
   @include small {
-      min-width: 10%;
-      max-width: 14%;
+    min-width: 10%;
+    max-width: 12%;
   }
   @include tablet {
-      min-width: 12%;
-      max-width: 16%;
+    min-width: 12%;
+    max-width: 12%;
   }
   @include desktop {
-      min-width: 12%;
-      max-width: 16%;
+    min-width: 8%;
+    max-width: 10%;
   }
   @include desktop-lg {
-      min-width: 8%;
-      max-width: 10%;
+    min-width: 8%;
+    max-width: 18%;
   }
-
+  @include desktop-hd {
+    min-width: 8%;
+    max-width: 8%;
+  }
   @include desktop-wqhd {
-      min-width: 8%;
-      max-width: 8%;
+    min-width: 8%;
+    max-width: 8%;
   }
-
 }
 
 .social {
@@ -120,7 +134,7 @@
   color: white;
   padding: 22px 16px;
   @include small {
-      padding: 18px 12px;
+    padding: 18px 12px;
   }
   width: 100%;
   border: none;
@@ -154,24 +168,20 @@
   width: 80%;
   height: 70%;
 
-  border-left: none;
   @include small {
-      height: 424px;
+    height: 424px;
   }
   @include tablet {
-      height: 75%;
-
+    height: 75%;
   }
   @include desktop {
-      height: 70%;
-
+    height: 77%;
   }
   @include desktop-lg {
-      height: 70%;
-
+    height: 70%;
   }
   @include desktop-wqhd {
-      height: 75%;
+    height: 75%;
   }
 }
 
@@ -193,7 +203,7 @@ i {
   width: 100%;
 
   display: flex;
-    flex-direction: column;
+  flex-direction: column;
 }
 
 .tabcontainer > .row {
@@ -313,32 +323,28 @@ i {
   min-width: 350px !important;
   height: 400px;
   @include small {
-      margin-bottom: 100px;
+    margin-bottom: 100px;
   }
   @include tablet {
-      margin-bottom: 100px;
-
+    margin-bottom: 100px;
   }
   @include desktop {
-      margin-bottom: 100px;
-
+    margin-bottom: 100px;
   }
   @include desktop-lg {
     margin-bottom: 50px;
   }
-
 }
 
 #FacebookFeed {
+  margin-bottom: 25px;
+  @include desktop-lg {
     margin-bottom: 25px;
-    @include desktop-lg {
-      margin-bottom: 25px;
-    }
-    @include desktop-wqhd {
-        margin-bottom: 50px;
-    }
+  }
+  @include desktop-wqhd {
+    margin-bottom: 50px;
+  }
 }
-
 
 .social-icons-sp {
   display: flex;
@@ -387,18 +393,18 @@ i {
 }
 
 .aboutHeader {
-    text-transform: uppercase;
-    padding: 0px 30px;
-    text-align: center;
-    @include tablet {
-        font-size: 1.2rem;
-    }
-    @include desktop {
-        font-size: 1.5rem;
-        margin: 0px;
-    }
+  text-transform: uppercase;
+  padding: 0px 30px;
+  text-align: center;
+  @include tablet {
+    font-size: 1.2rem;
+  }
+  @include desktop {
+    font-size: 1.5rem;
+    // margin: 0px;
+  }
 }
 
 .aboutSpan {
-    color: $primary;
+  color: $primary;
 }

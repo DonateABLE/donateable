@@ -49,11 +49,6 @@ class CharitySeeder extends Seeder
             ],
             [
                 'charityId' => $charityId,
-                'socialTypeId' => '4', //email
-                'socialUrl' => 'mailto:victim@vswguelph.on.ca'
-            ],
-            [
-                'charityId' => $charityId,
                 'socialTypeId' => '5', //website
                 'socialUrl' => 'http://www.vswguelph.on.ca/'
             ]
