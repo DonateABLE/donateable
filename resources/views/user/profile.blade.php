@@ -62,20 +62,20 @@ $topCharity = $user->topCharity();
                 <a href="#" class="facebook-share">
                     <i class="fab fa-facebook-f" style="padding: 0px;"></i>
                 </a>
-                <label>Share on Facebook</label>
+                <label class="facebook-share2">Share on Facebook</label>
             </li>
             <li>
                 <a href="#" class="twitter-share">
                     <i class="fab fa-twitter" style="padding: 0px;"></i>
                 </a>
-                <label>Share on Twitter</label>
+                <label class="twitter-share2">Share on Twitter</label>
 
             </li>
             <li>
-                <a href="mailto:?subject=Check it out!&body=I'm raising money for charity using my computer!%0D%0ATake a look at https://donateable.ca">
-                    <i class="far fa-envelope" style="padding: 0px;"></i>
+                <a id="Charities" href="{{ url('/charities') }}">
+                    <i class="fas fa-dollar-sign" style="padding: 0px;"></i>
                 </a>
-                <label>Send to a friend</label>
+                <label id="DonateLabel">Start Donating</label>
             </li>
         </ul>
     </div>
@@ -143,6 +143,16 @@ $(document).ready(function() {
         win.opener = null; // 2
     });
 
+    var twitterBtn = document.querySelector('.twitter-share2');
+    var shareUrl = 'https://twitter.com/intent/tweet?text=Hello%20world';
+    twitterBtn.href = shareUrl; // 1
+
+    twitterBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      var win = window.open(shareUrl, 'ShareOnTwitter', getWindowOptions());
+      win.opener = null; // 2
+    });
+
     var facebookBtn = document.querySelector('.facebook-share');
     var fbShareUrl = encodeURIComponent('https://donateable.ca');
     var fbUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + fbShareUrl + '%2F&amp;src=sdkpreparse';
@@ -153,6 +163,31 @@ $(document).ready(function() {
         var win = window.open(fbUrl, 'ShareOnFacebook', getWindowOptions());
         win.opener = null; // 2
     });
+
+    var facebookBtn = document.querySelector('.facebook-share2');
+    var fbShareUrl = encodeURIComponent('https://donateable.ca');
+    var fbUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + fbShareUrl + '%2F&amp;src=sdkpreparse';
+    facebookBtn.href = fbUrl; // 1
+
+    facebookBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      var win = window.open(fbUrl, 'ShareOnFacebook', getWindowOptions());
+      win.opener = null; // 2
+    });
+
+    // make link on start donating button
+    var donateButton = document.querySelector('#DonateLabel');
+    var charitiesUrl = "{{ url('/charities') }}";
+    donateButton.href = charitiesUrl; // 1
+
+
+    donateButton.addEventListener('click', function(e) {
+        e.preventDefault();
+        window.location.href = charitiesUrl;
+        // var win = window.open(charitiesUrl);
+        // win.focus();
+    });
+
 
     $("#imageUpload").change(function() {
         console.log("event")

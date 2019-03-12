@@ -24,6 +24,30 @@ div > label {
   display: inline;
 }
 
+.top h1 {
+  color: white;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+@media (max-height: 641px) {
+  .top h1 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .top h1 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .top h1 {
+    font-size: 1.8rem;
+  }
+}
+
 .form-control:disabled {
   background-color: #26607d;
   color: white;

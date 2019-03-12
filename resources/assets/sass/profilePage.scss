@@ -25,6 +25,21 @@ div > label {
     display: inline;
 }
 
+.top h1 {
+  color: white;
+  font-weight: 400;
+  text-transform: uppercase;
+  @include small {
+    font-size: 1.4rem;
+  }
+  @include desktop {
+    font-size: 1.6rem;
+  }
+  @include tablet {
+    font-size: 1.8rem;
+  }
+}
+
 .form-control:disabled {
   background-color: $primary;
   color: white;

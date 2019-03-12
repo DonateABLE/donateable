@@ -618,10 +618,13 @@ a:hover h1 {
 }
 
 .step > img {
-  width: 250px;
+  width: 150px;
   height: auto;
   @include small {
     width: 100px;
+  }
+  @include desktop-lg {
+
   }
 }
 
@@ -633,18 +636,37 @@ a:hover h1 {
     width: 50%;
   }
 }
-.step.form > img {
-  @include tablet {
-    width: 300px;
-  }
-  @include desktop {
-    width: 450px;
-  }
-  @include small {
-    width: 300px;
-  }
-}
 
+
+.contact-img {
+    align-self: flex-start;
+    padding-left: 22px;
+    width: auto !important;
+    @include tablet {
+      width: 300px !important;
+    }
+
+    @include desktop {
+      width: 450px !important;
+    }
+
+    @include small {
+      width: 250px !important;
+    }
+
+    @include desktop-lg {
+      width: 450px !important;
+    }
+
+    @include desktop-hd {
+      width: 500px !important;
+    }
+
+    @include desktop-wqhd {
+        width: auto !important;
+    }
+
+}
 .modal-button-wrap {
   display: flex;
   align-items: center;
@@ -712,7 +734,7 @@ a:hover h1 {
     margin-top: 25px !important;
   }
   @include small {
-    font-size: 20px !important;
+    font-size: 22px !important;
     margin-top: 0px !important;
   }
 }
@@ -733,7 +755,7 @@ a:hover h1 {
     margin-bottom: 35px;
   }
   @include small {
-    font-size: 20px !important;
+    font-size: 22px !important;
     margin-top: 0px !important;
   }
 }
@@ -1106,9 +1128,6 @@ output {
   font-weight: bold;
   text-transform: uppercase;
   margin-bottom: 0;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .charity-card h6 {
@@ -1224,13 +1243,30 @@ output {
   margin-top: -20px;
   margin-bottom: -20px;
   height: 100%;
-  @include small {
-    height: 120px;
-    width: 120px;
-  }
+
   @include tablet {
     height: 125px;
     width: 125px;
+  }
+  @include desktop {
+      height: 120px;
+      width: 120px;
+  }
+  @include small {
+      height: 120px;
+      width: 120px;
+  }
+  @include desktop-lg {
+      height: 125px;
+      width: 125px;
+  }
+  @include desktop-hd {
+      height: 125px;
+      width: 125px;
+  }
+  @include desktop-wqhd {
+      height: 160px;
+      width: 160px;
   }
   height: 160px;
   width: 160px;

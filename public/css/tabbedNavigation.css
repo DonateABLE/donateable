@@ -45,7 +45,7 @@
 
 @media (max-height: 641px) {
   .top h1 {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
 }
 
@@ -69,6 +69,7 @@
 @media (max-height: 641px) {
   .top h2 {
     font-size: 0.8rem;
+    display: none;
   }
 }
 
@@ -258,12 +259,6 @@
   height: 70%;
 }
 
-@media (max-height: 641px) {
-  .tabcontent {
-    height: 424px;
-  }
-}
-
 @media (min-width: 768px) and (max-width: 1023px) {
   .tabcontent {
     height: 75%;
@@ -273,6 +268,12 @@
 @media (min-width: 1024px) and (max-width: 1439px) {
   .tabcontent {
     height: 77%;
+  }
+}
+
+@media (max-height: 641px) {
+  .tabcontent {
+    height: 392px;
   }
 }
 

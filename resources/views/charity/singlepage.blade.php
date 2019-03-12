@@ -29,10 +29,10 @@
 
                 </li>
                 <li>
-                    <a id="ShareMail" href="mailto:?subject=Check it out!&body=I'm raising money for charity using my computer!%0D%0ATake a look at https://donateable.ca">
-                        <i class="far fa-envelope" style="padding: 0px;"></i>
+                    <a id="ShareMail" href="{{ $charity->canadaHelpsUrl }}" target="_blank">
+                        <i class="fas fa-dollar-sign" style="padding: 0px;"></i>
                     </a>
-                    <label id="ShareMailLabel">Send to a friend</label>
+                    <label id="ShareMailLabel">Make a monetary donation</label>
                 </li>
             </ul>
         </div>
@@ -75,7 +75,7 @@
         var totalTime = {{ $donated->totalTime }};
         var charityId = {{ $charity->id }};
         var donationId = {{ $donated->id }};
-        const siteKey = '{{ $charity->siteKey }}';
+        var siteKey = '{{ $charity->siteKey }}';
 
 
 
@@ -143,15 +143,14 @@
 
 
         var emailButton = document.querySelector('#ShareMailLabel');
-        // var emailShareUrl = encodeURIComponent('https://donateable.ca');
-        var emailUrl = "mailto:?subject=Check it out!&body=I'm raising money for charity using my computer!%0D%0ATake a look at https://donateable.ca";
+        var emailUrl = "{{ $charity->canadaHelpsUrl }}";
         emailButton.href = emailUrl; // 1
 
 
         emailButton.addEventListener('click', function(e) {
             e.preventDefault();
-            var win = window.open(emailUrl, 'ShareOnEmail', getWindowOptions());
-            win.opener = null; // 2
+            var win = window.open(emailUrl, '_blank');
+            win.focus();
         });
         // open the about tab
         $('#AboutTab').click();

@@ -6,7 +6,7 @@
     <div class="form-group row">
 
         <div class="col-md-6">
-            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('New Password') }}</label>
+            <label for="password" class="col-md-4 col-form-label text-md-right" style="font-weight: bold; padding-left: 0px">{{ __('New Password') }}</label>
             <input placeholder="{{ __('NEW PASSWORD') }}" id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" value="{{ old('password') }}" required autofocus>
 
             @if ($errors->has('password'))
@@ -16,7 +16,7 @@
             @endif
         </div>
         <div class="col-md-6">
-            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
+            <label for="password-confirm" class="col-md-4 col-form-label text-md-right" style="font-weight: bold; padding-left: 0px">{{ __('Confirm Password') }}</label>
             <input placeholder="{{ __('CONFIRM PASSWORD') }}" id="password-confirm" type="password" class="form-control" name="password_confirmation" required autofocus>
         </div>
     </div>

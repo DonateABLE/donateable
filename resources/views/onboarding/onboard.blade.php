@@ -11,19 +11,22 @@
   <boardal v-if="modal.isOpen" :has-mask="modal.hasMask" :can-click-mask="modal.canClickMask" :has-x="modal.hasX" @toggle="toggleModal">
     <article v-cloak>
       <section>
+          <p class="primary skip" @click="toggleModal">SKIP</p>
           <img class="logo" src="{{ asset('img/logo/donateABLE-long-white-500.png') }}">
-          <img class="onboard" src="{{ asset('img/onboard/Asset-Onboard-Flow-1.png') }}">
+      <img class="onboard" src="{{ asset('img/onboard/Asset-Onboard-Flow-1.png') }}">
         <h3>Let's get started!</h3>
         <p>How can you help your favourite charities without opening your wallet? It's simple. All you have to do is lend your computer's power to generate real value for the charity of your choice. The following tutorial will walk you through the steps to start making a difference today. It is that easy.</p>
 <!--         <p><label><input type="checkbox" v-model="xray" :true-value="'visible'" :false-value="'hidden'" /> X-ray Vision</label></p> -->
       </section>
       <section>
+          <p class="primary skip" @click="toggleModal">SKIP</p>
           <img class="logo" src="{{ asset('img/logo/donateABLE-long-white-500.png') }}">
           <img class="onboard" src="{{ asset('img/onboard/Asset-Onboard-Flow-2.png') }}">
         <h3>Login to your account</h3>
         <p>Create an account to track how much you are donating, what charities you are donating to, and what your top charities are.</p>
       </section>
       <section>
+          <p class="primary skip" @click="toggleModal">SKIP</p>
           <img class="logo" src="{{ asset('img/logo/donateABLE-long-white-500.png') }}">
           <img class="onboard" src="{{ asset('img/onboard/Asset-Onboard-Flow-3.png') }}">
         <h3>Choose your Charity</h3>
@@ -33,6 +36,7 @@
 
       </section>
       <section>
+          <p class="primary skip" @click="toggleModal">SKIP</p>
           <img class="logo" src="{{ asset('img/logo/donateABLE-long-white-500.png') }}">
           <img class="onboard" src="{{ asset('img/onboard/Asset-Onboard-Flow-4.png') }}">
         <h3>Start Donating</h3>
@@ -41,6 +45,7 @@
         You will also find links to their social media, a direct donation link and stats of how much people have donated to date.</p>
       </section>
       <section>
+          <p class="primary skip" @click="toggleModal">SKIP</p>
           <img class="logo" src="{{ asset('img/logo/donateABLE-long-white-500.png') }}">
           <img class="onboard" src="{{ asset('img/onboard/Asset-Onboard-Flow-5.png') }}">
         <h3>Select Your CPU Power</h3>
@@ -50,6 +55,7 @@
         to do good in their community.</p>
       </section>
       <section>
+          <p class="primary skip" @click="toggleModal">SKIP</p>
           <img class="logo" src="{{ asset('img/logo/donateABLE-long-white-500.png') }}">
           <img class="onboard" src="{{ asset('img/onboard/Asset-Onboard-Flow-6.png') }}">
         <h3>Accept and Get Started</h3>
@@ -67,7 +73,6 @@
     </article>
     <footer>
       <div class="forward-actions">
-        <p class="primary" @click="toggleModal" :disabled="isLastStep">SKIP</p>
 
       </div>
       <div class="step-controls">
