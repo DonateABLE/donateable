@@ -21,7 +21,7 @@
               <div class="step">
                   <img class="how-it-works-image" src="{{asset('img/aboutus/About-Us-WHO.png')}}" alt="Who"/>
                   <h3 class="modal-h3" style="width: 350px;height:60px;text-align:center;">Is donateABLE developed by?</h3>
-                  <p class="modal-p">donateABLE is designed, developed, and managed by Synergenics, a professional IT support and solutions provider to Guelph and Southwestern Ontario. Synergenics has been a committed full service solutions  provider  for  individuals  and  businesses  alike  since  1989.  Their  30  years  of  service  has  allowed  them  to  build  relationships  with  many  companies in a variety of different industries, but some  of  their  most  cherished  relationships  are  with local Guelph charities and organizations.</p>
+                  <p class="modal-p">donateABLE is a website designed, developed, and managed by Synergenics, a professional IT support and solutions provider to Guelph and Southwestern Ontario for over 30 years. Their 30 years of service has allowed them to build relationships with many companies in a variety of different industries, but some of their most cherished relationships are with local Guelph charities and organizations.</p>
               </div>
               <div class="step">
                   <img class="how-it-works-image" src="{{asset('img/aboutus/About-Us-WHAT.png')}}" alt="What"/>

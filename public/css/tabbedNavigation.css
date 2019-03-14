@@ -118,6 +118,9 @@
   max-width: 10%;
   height: auto;
   margin-top: -2%;
+  border: 1px solid #26607d;
+  border-radius: 100%;
+  background-color: white;
 }
 
 @media (max-height: 641px) {

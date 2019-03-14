@@ -52,8 +52,10 @@ div > label {
 
 
 .imgholder > img {
-    width: 100px;
+    width: 80px;
     height: auto;
+    border: 1px $primary solid;
+    border-radius: 100%;
 }
 
 .leaderstats {

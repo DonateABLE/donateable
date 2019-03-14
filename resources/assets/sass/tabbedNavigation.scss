@@ -76,6 +76,9 @@
   max-width: 10%;
   height: auto;
   margin-top: -2%;
+  border: 1px solid $primary;
+  border-radius: 100%;
+  background-color: white;
   @include small {
     min-width: 10%;
     max-width: 12%;

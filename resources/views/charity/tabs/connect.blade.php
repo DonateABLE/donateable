@@ -1,10 +1,8 @@
 <div class="tabcontainer connect">
-    <div class="connect-content social-feed">
-            <iframe id="FacebookFeed" src="{{ $charity->socialFeed }}" width="350" height="500" style="overflow:hidden;" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
-    </div>
+
         <div class="connect-content" style="order: 1">
-        <h1>Connect with {{ $charity->shortName}}</h1>
-        <ul class="social-icons-sp" style="margin-bottom: 10px">
+        <h1>Connect with<br/><span style="color: #26607D">{{ $charity->longName}}</span></h1>
+        <ul class="social-icons-sp light" style="margin-top: 15px; margin-bottom: 20px">
 
             @foreach($charity->socialLinks as $link)
                 <li>

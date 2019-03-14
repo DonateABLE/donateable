@@ -45,7 +45,7 @@ $topCharity = $user->topCharity();
                 <div id="imagePreview" class="img__underlay"><span id="placeholderAvatar">{{ substr($user->email, 0, 1)}}</span></div>
                 @else
 
-                <div id="imagePreview" class="img__underlay" style="background-image: url({{ asset('img/avatar/' . $user->avatar )}}); background-color: white"></div>
+                <div id="imagePreview" class="img__underlay" style="background-image: url({{ asset('img/avatar/' . $user->avatar )}}); background-color: white; border: 1px solid #26607d; border-radius: 100%"></div>
 
                 @endif
             </div>
@@ -73,7 +73,7 @@ $topCharity = $user->topCharity();
             </li>
             <li>
                 <a id="Charities" href="{{ url('/charities') }}">
-                    <i class="fas fa-dollar-sign" style="padding: 0px;"></i>
+                    <i class="fas fa-gift" style="padding: 0px;"></i>
                 </a>
                 <label id="DonateLabel">Start Donating</label>
             </li>
