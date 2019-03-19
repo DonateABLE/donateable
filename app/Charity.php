@@ -59,10 +59,12 @@ class Charity extends Model
         // Query donatedTo table
         $donatedToCurrent = $this->donatedTo()->whereDate('updated_at', '=', $dateThreshold)
             ->whereTime('updated_at', '>', $timeThreshold)
+            ->where('totalHashes', '>', 0)
             ->count();
 
         $donationBufferCurrent = $this->donationBuffer()->whereDate('updated_at', '=', $dateThreshold)
             ->whereTime('updated_at', '>', $timeThreshold)
+            ->where('totalHashes', '>', 0)
             ->count();
 
         $totalDonorsAtCurrent = $donatedToCurrent + $donationBufferCurrent;
@@ -76,9 +78,9 @@ class Charity extends Model
     public function getTotalDonors() {
 
         // Count all hashes in the donationBuffer table
-        $donatedToDonors = $this->DonatedTo()->count();
+        $donatedToDonors = $this->DonatedTo()->where('totalHashes', '>', 0)->count();
         // Count all donors in the donationBuffer table
-        $donationBufferDonors = $this->DonationBuffer()->count();
+        $donationBufferDonors = $this->DonationBuffer()->where('totalHashes', '>', 0)->count();
         // return the total count
         return number_format(($donatedToDonors + $donationBufferDonors), 0, ',', ' ');
     }

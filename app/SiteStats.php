@@ -29,10 +29,12 @@ class SiteStats extends Model
         $dateThreshold = $now->toDateString();
         $donatedTo = DonatedTo::whereDate('updated_at', '=', $dateThreshold)
             ->whereTime('updated_at', '>', $timeThreshold)
+            ->where('totalHashes', '>', 0)
             ->count();
 
         $donationBuffer = DonationBuffer::whereDate('updated_at', '=', $dateThreshold)
             ->whereTime('updated_at', '>', $timeThreshold)
+            ->where('totalHashes', '>', 0)
             ->count();
 
         $totalDonorsAtCurrent = $donatedTo + $donationBuffer;
