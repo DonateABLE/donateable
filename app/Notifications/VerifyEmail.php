@@ -45,9 +45,11 @@ class VerifyEmail extends Notification
     {
         return (new MailMessage)
                     ->from('donateABLE@donateABLE.ca', 'donateABLE')
-                    ->line('Please verify your email address.')
-                    ->action('Verify Email', route('verify', $this->user->email_token))
-                    ->line('Welcome to donateABLE!');
+                    ->greeting('Hello,')
+                    ->line('# Welcome to donateABLE')
+                    ->line('Please click the button below to verify your email address.')
+                    ->action('VERIFY EMAIL', route('verify', $this->user->email_token))
+                    ->line('If you did not sign up for donateABLE, please ignore this email or contact our [support team](mailto:support@donateABLE.ca)');
     }
 
     /**

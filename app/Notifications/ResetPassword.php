@@ -44,9 +44,10 @@ class ResetPassword extends Notification
         return (new MailMessage)
             ->from('donateABLE@donateABLE.ca', 'donateABLE')
             ->subject(Lang::getFromJson('Reset Password Notification'))
-            ->line(Lang::getFromJson('You are receiving this email because we received a password reset request for your account.'))
-            ->action(Lang::getFromJson('Reset Password'), url(config('app.url').route('password.reset', $this->token, false)))
-            ->line(Lang::getFromJson('If you did not request a password reset, no further action is required.'));
+            ->line(Lang::getFromJson('You are receiving this email because you recently requested to reset your password for your donateABLE account.'))
+            ->line(Lang::getFromJson('To reset, please use the button below.'))
+            ->action(Lang::getFromJson('RESET PASSWORD'), url(config('app.url').route('password.reset', $this->token, false)))
+            ->line('If you did not request a password reset, please ignore this email or contact our [support team](mailto:support@donateABLE.ca) if you have any questions.');
 
     }
 
