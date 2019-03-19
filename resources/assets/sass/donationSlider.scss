@@ -2,6 +2,10 @@
 
 .slidecontainer {
   width: 100%; /* Width of the outside container */
+  position: relative;
+  height: 25%;
+  margin: 15px 0px;
+
 }
 /* The slider itself */
 .slider {
@@ -14,8 +18,15 @@
   opacity: 0; /* Set transparency (for mouse-over effects on hover) */
   -webkit-transition: .2s; /* 0.2 seconds transition on hover */
   transition: opacity .2s;
-    margin-top: -150px;
-    margin-left: 5px;
+    // margin-left: 5px;
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 10;
+}
+
+#demo {
+    // margin-top: -50px;
 }
 
 .meter {

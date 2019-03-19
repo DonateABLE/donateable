@@ -97,7 +97,7 @@ class User extends Authenticatable
      * @return Array(App\Charity) or null
      */
     public function topDonations() {
-        return $this->DonatedTo()->orderBy('totalHashes')->take(3)->get();
+        return $this->DonatedTo()->orderBy('totalHashes', 'DESC')->take(3)->get();
     }
 
 
@@ -117,7 +117,9 @@ class User extends Authenticatable
     }
 
     public function hashesDonated() {
-        return $this->DonatedTo()->sum('totalHashes');
+        $totalHashes =  $this->DonatedTo()->sum('totalHashes');
+        return number_format(($totalHashes), 0, ',', ' ');
+
     }
 
     public function timeDonated() {

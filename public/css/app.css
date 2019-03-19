@@ -11470,7 +11470,6 @@ a:hover h1 {
 @media (min-width: 1920px) and (max-width: 2560px -1px) {
   .modal-p {
     width: 500px !important;
-    background-color: blue !important;
   }
 }
 
@@ -11984,21 +11983,22 @@ output {
   margin-top: -20px;
   margin-bottom: -20px;
   height: 100%;
-  height: 160px;
-  width: 160px;
+  height: 144px;
+  width: 144px;
+  margin-top: -20%;
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
   .profile-img {
-    height: 125px;
-    width: 125px;
+    height: 92.16px;
+    width: 92.16px;
   }
 }
 
 @media (min-width: 1024px) and (max-width: 1439px) {
   .profile-img {
-    height: 120px;
-    width: 120px;
+    height: 104px;
+    width: 104px;
   }
 }
 
@@ -12011,22 +12011,23 @@ output {
 
 @media (min-width: 1440px) and (max-width: 1920px -1px) {
   .profile-img {
-    height: 125px;
-    width: 125px;
+    height: 144px;
+    width: 144px;
   }
 }
 
 @media (min-width: 1920px) and (max-width: 2560px -1px) {
   .profile-img {
-    height: 125px;
-    width: 125px;
+    height: 144px;
+    width: 144px;
   }
 }
 
 @media (min-width: 2560px) {
   .profile-img {
-    height: 160px;
-    width: 160px;
+    height: 202px;
+    width: 202px;
+    margin-top: -26%;
   }
 }
 
@@ -12110,7 +12111,13 @@ output {
 
 @media (min-width: 768px) and (max-width: 1023px) {
   .img__underlay {
-    font-size: 56px;
+    font-size: 46px;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .img__underlay {
+    font-size: 46px !important;
   }
 }
 
