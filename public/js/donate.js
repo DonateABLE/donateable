@@ -48,6 +48,8 @@ $(document).ready(function () {
 
   // register callback on stop button clicked
   $("#stopDonate").click(function () {
+    $("#SlideMeter").removeClass("animated");
+
     if (miner.isRunning()) {
       miner.stop();
       $("#startButtonDiv").addClass("btn-donate-left");
@@ -76,6 +78,8 @@ $(document).ready(function () {
 
     // Begin mining crypto
     miner.start();
+    $("#SlideMeter").addClass("animated");
+
     $("#startButtonDiv").addClass("btn-donate-mid");
     $("#startButtonDiv").removeClass("btn-donate-left");
     $("#stopButtonDiv").addClass("btn-donate-left");
@@ -111,11 +115,8 @@ $(document).ready(function () {
         method: "POST",
         data: updatedData,
         complete: function complete() {
-          console.log("data sent to server: " + (currentHashes - previousHashes));
-          console.log("previous hashes: " + previousHashes);
-          console.log("current hashes: " + currentHashes);
+
           previousHashes = currentHashes;
-          console.log("updated hashes: " + previousHashes);
         }
       });
     }

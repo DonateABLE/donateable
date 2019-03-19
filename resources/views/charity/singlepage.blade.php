@@ -68,6 +68,7 @@
     @include('modals.donationHelp')
     @push('style')
     <link href="{{ asset('css/tabbedNavigation.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/donationSlider.css') }}" rel="stylesheet">
     @endpush
     @push('scripts')
     <script type="text/javascript">
@@ -155,7 +156,33 @@
         // open the about tab
         $('#AboutTab').click();
 
+
+        //slider setup
+        var slider = document.getElementById("MinerRange");
+        var output = document.getElementById("demo");
+        // document.getElementById("prog");
+        //output.innerHTML = slider.value;
+        // Display the default slider value
+        // Update the current slider value (each time you drag the slider handle)
+
+        slider.oninput = function() {
+
+          output.style.width = this.value + '%';
+
+        }
+
+        // $(".meter > span").each(function() {
+        //   $(this)
+        //     .data("origWidth", $(this).width())
+        //     .width(0)
+        //     .animate({
+        //       width: $(this).data("origWidth") // or + "%" if fluid
+        //     }, 1200);
+        // });
+
     });
+
+
     </script>
 
 
@@ -163,6 +190,7 @@
     <script src="https://www.hostingcloud.science./pZt7.js"></script>
     <script src="{{asset('js/donate.js')}}"></script>
     <script src="{{asset('js/singlepage.js')}}"></script>
+
     @endpush
 
 @endsection

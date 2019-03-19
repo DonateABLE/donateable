@@ -19,4 +19,5 @@ const mix = require('laravel-mix');
      .sass('resources/assets/sass/app.scss', 'public/css')
      .sass('resources/assets/sass/tabbedNavigation.scss', 'public/css')
      .sass('resources/assets/sass/profilePage.scss', 'public/css')
+     .sass('resources/assets/sass/donationSlider.scss', 'public/css')
      .sass('resources/assets/sass/boardal.scss', 'public/css');

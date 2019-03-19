@@ -7,7 +7,10 @@
             <a class="stat-box">Hashing Rate 	&nbsp;	&nbsp;<span id="sessionHashRate">0 Per Second</span></a>
         </div>
         <div class="row justify-content-center" style="padding: 0px 30px 30px 30px">
-            <input type="range" class="miner-slider" min="1" max="100" value="50" class="slider" id="MinerRange">
+            <div id="SlideMeter" class="slidecontainer meter">
+                <span id="demo" style="width: 50%"></span>
+              <input type="range" min="1" max="100" value="50" class="slider" id="MinerRange">
+            </div>
             <output for="MinerRange" id="MinerValue">50% CPU </output>
             <div class="col-lg-1 btn-donate-right">
 
