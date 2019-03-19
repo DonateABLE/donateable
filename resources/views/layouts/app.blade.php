@@ -125,6 +125,36 @@
             <a href="https://www.synergenics.ca" target="_blank">Powered By <img class="bottom-brand" alt="Synergenics Inc. Logo" src="{{ asset('img/logo/Synergenics-Logo-2008-White.png') }}"/></a>
         </div>
     </div>
+    <div id="mobile" class="parallax">
+        <main class="py-4" style="height: 100%; height: 100vh;">
+
+        <div class="content" style="justify-content: space-between">
+            <div class="site-callout">
+                    <img src="{{asset('img/donateABLE-square-colour-500.png')}}" style="width:200px;height: auto;"/>
+
+
+            </div>
+            <div style="display:flex; flex-direction: column; align-items: center">
+                <h1 style="margin-bottom: 0px; font-size: 1.2rem;">Support Local Charities in Guelph</h1>
+                <h2 style="font-size: 1.2rem;">Without opening your wallet</h2>
+            </div>
+            <div class="site-links">
+                <div class="right-link" style="padding-left: 0px; margin: auto; border-left: none;">
+                    <?php $currentDonors = App\SiteStats::getSitewideCurrentDonors();
+                    $totalDonors = App\SiteStats::getSitewideTotalDonors();
+                    $totalHashes = App\DonatedTo::getSitewideHashes(); ?>
+                    <a class="stat-box" style="width: 300px; background-color: #26607D; border-color: #26607D">Mobile Version coming soon</a>
+                    <a class="stat-box" style="width: 300px">Currently Donating 	&nbsp;	&nbsp;{{ $currentDonors }}</a>
+                    <a class="stat-box" style="width: 300px">Donators to date 	&nbsp;	&nbsp;{{ $totalDonors }}</a>
+                    <a class="stat-box" style="width: 300px">Total Hashes 	&nbsp;	&nbsp;{{ $totalHashes }}</a>
+                </div>
+            </div>
+            <div id="poweredby" style="color: white; display: flex; justify-self: flex-end; justify-content: center;">
+                Powered By &nbsp;<a href="https://www.synergenics.ca" target="_blank"><img src="{{ asset('img/logo/Synergenics-Logo-2008-White.png') }}" style="width: 100px"></a>
+            </div>
+          </div>
+      </main>
+      </div>
 
 </body>
 <!-- How it works modal -->
@@ -180,3 +210,20 @@
 @include('modals.faq')
 
 </html>
+<script type="text/javascript">
+if (window.matchMedia("(min-width: 768px)").matches) {
+             /* the view port is at least 900 pixels wide */
+             isMobile = false;
+             // document.getElementById("mobile").display = "none";
+             $("#mobile").hide();
+             console.log("desktop");
+         } else {
+             /* the view port is less than 900 pixels wide */
+             // document.getElementById("app").display = "none";
+             $("#app").hide();
+             isMobile = true;
+             // app.$el = '#mobile'
+             // app.$mount(app.$el);
+             console.log("mobile");
+         }
+</script>
