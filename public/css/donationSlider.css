@@ -27,7 +27,7 @@
   /* 0.2 seconds transition on hover */
   -webkit-transition: opacity .2s;
   transition: opacity .2s;
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   z-index: 10;
@@ -130,6 +130,12 @@ input[type=range]:focus::-ms-fill-lower {
 
 input[type=range]:focus::-ms-fill-upper {
   background: rgba(54, 126, 189, 0);
+}
+
+#demo {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .meter {

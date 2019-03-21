@@ -13,8 +13,8 @@
                 <span id="demo" style="width: 50%">
                 </span>
             </div>
-            <output for="MinerRange" id="MinerValue"  style="padding: 15px 0px 15px 0px;">50% CPU </output>
-            <div class="col-lg-1 btn-donate-right" style="margin-top:4px;">
+            <output for="MinerRange" id="MinerValue">50% CPU </output>
+            <div class="col-lg-1 btn-donate-right">
 
                 <button class="btn-primary btn-full btn-donate" style="padding: 0px; width: 28px; height: 28px; margin-top: 22px;" data-toggle="modal" data-target="#donationHelp">?</button>
             </div>
