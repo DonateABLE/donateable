@@ -146,7 +146,7 @@
                     <a class="stat-box" style="width: 300px; background-color: #26607D; border-color: #26607D">Mobile Version coming soon</a>
                     <a class="stat-box" style="width: 300px">Currently Donating 	&nbsp;	&nbsp;{{ $currentDonors }}</a>
                     <a class="stat-box" style="width: 300px">Donators to date 	&nbsp;	&nbsp;{{ $totalDonors }}</a>
-                    <a class="stat-box" style="width: 300px">Total Hashes 	&nbsp;	&nbsp;{{ $totalHashes }}</a>
+                    <a class="stat-box" style="width: 300px" id="totalHashesMobile">Total Hashes 	&nbsp;	&nbsp;{{ $totalHashes }}</a>
                 </div>
             </div>
             <div id="poweredby" style="color: white; display: flex; justify-self: flex-end; justify-content: center;">
@@ -224,6 +224,9 @@ if (window.matchMedia("(min-width: 768px)").matches) {
              isMobile = true;
              // app.$el = '#mobile'
              // app.$mount(app.$el);
+             if (window.matchMedia("(max-width: 375px)").matches) {
+                 $("#totalHashesMobile").hide();
+             }
              console.log("mobile");
          }
 </script>
