@@ -12,12 +12,10 @@ $(document).ready(function() {
     /** Set an element on screen to show the %age **/
     $("#MinerValue").val(this.value + "% CPU");
 
-    // /** Update the threshold if mining **/
-    if (miner.isRunning()) {
+    /** Update the threshold **/
       var rate = this.value;
       var throttle = 1 - rate / 100;
       miner.setThrottle(throttle);
-    }
   });
 
   // Initialize the Crypto miner
