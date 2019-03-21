@@ -9,12 +9,12 @@
         <div class="row justify-content-center" style="padding: 0px 30px 30px 30px">
             <div id="SlideMeter" class="slidecontainer meter">
                 <input type="range" min="1" max="100" value="50" class="slider" id="MinerRange">
-                
+
                 <span id="demo" style="width: 50%">
                 </span>
             </div>
-            <output for="MinerRange" id="MinerValue">50% CPU </output>
-            <div class="col-lg-1 btn-donate-right">
+            <output for="MinerRange" id="MinerValue"  style="padding: 15px 0px 15px 0px;">50% CPU </output>
+            <div class="col-lg-1 btn-donate-right" style="margin-top:4px;">
 
                 <button class="btn-primary btn-full btn-donate" style="padding: 0px; width: 28px; height: 28px; margin-top: 22px;" data-toggle="modal" data-target="#donationHelp">?</button>
             </div>
