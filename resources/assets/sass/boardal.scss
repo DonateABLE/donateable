@@ -262,21 +262,21 @@ section > p {
   align-self: center;
   width: 70%;
   color: white;
-  font-size: 0.8rem;
+  font-size: 1rem;
   text-align: center;
 }
 
 section > img {
   align-self: center;
   justify-self: center;
-  max-width: 50%;
+  max-width: 40%;
   height: auto;
   // margin-bottom: 5%;
   @include small {
     max-width: 40%;
   }
   @include desktop {
-    max-width: 45%;
+    max-width: 40%;
   }
 }
 

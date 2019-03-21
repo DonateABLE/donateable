@@ -358,7 +358,7 @@ section > p {
       align-self: center;
   width: 70%;
   color: white;
-  font-size: 0.8rem;
+  font-size: 1rem;
   text-align: center;
 }
 
@@ -366,7 +366,7 @@ section > img {
   -ms-flex-item-align: center;
       align-self: center;
   justify-self: center;
-  max-width: 50%;
+  max-width: 40%;
   height: auto;
 }
 
@@ -378,7 +378,7 @@ section > img {
 
 @media (min-width: 1024px) and (max-width: 1439px) {
   section > img {
-    max-width: 45%;
+    max-width: 40%;
   }
 }
 
