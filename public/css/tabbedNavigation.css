@@ -122,6 +122,25 @@
   max-height: 100%;
   width: 100%;
   height: auto;
+  z-index: 1;
+}
+
+@media (max-height: 641px) {
+  .logospace img {
+    height: 50px;
+    max-width: 70%;
+    max-height: 150%;
+    height: auto;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .logospace img {
+    height: 50px;
+    max-width: 70%;
+    max-height: 150%;
+    height: auto;
+  }
 }
 
 .social-left {

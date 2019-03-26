@@ -78,7 +78,19 @@
   max-height: 100%;
   width: 100%;
   height: auto;
-
+  z-index: 1;
+  @include small {
+    height: 50px;
+    max-width: 70%;
+    max-height: 150%;
+    height: auto;
+  }
+  @include desktop {
+    height: 50px;
+    max-width: 70%;
+    max-height: 150%;
+    height: auto;
+  }
 }
 
 .social-left {
