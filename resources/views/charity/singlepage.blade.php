@@ -6,13 +6,16 @@
 
         <div>
         <div class="logospace">
-            <img src="{{ asset('img/charity/small/' . $charity->logo) }}" alt="{{ $charity->longName . ' Logo'}}">
+            <img src="{{ asset('img/charity/' . $charity->logo) }}" alt="{{ $charity->longName . ' Logo'}}">
         </div>
         <div class="top">
             <h1>{{ $charity->longName}}</h1>
             <h2>{{ $charity->tagline }}</h2>
         </div>
     </div>
+        <div>
+            <div class="social-left">
+            </div>
         <div class="social">
             <ul class="social-icons-sp light small">
                 <li>
@@ -36,7 +39,7 @@
                 </li>
             </ul>
         </div>
-
+    </div>
         <div class="tab">
           <button class="tablinks" id="AboutTab" onclick="openTab(event, 'About')"><i class="fas fa-info-circle fa-3x"></i>About {{ $charity->shortName }}</button>
           <button class="tablinks" id="DonateTab" onclick="openTab(event, 'Donate')"><i class="fas fa-hand-holding-heart fa-3x"></i>Donate Now</button>

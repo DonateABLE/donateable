@@ -34,7 +34,7 @@ $topCharity = $user->topCharity();
         <div class="logospace">
             <!-- Profile Picture display or simulation -->
             <!-- <form name="ProfilePictureUpload"> -->
-            <form name="AvatarUpload" method="POST" enctype="multipart/form-data" action="{{ route('avatar') }}" aria-label="{{ __('Profile Image') }}">
+            <form name="AvatarUpload" method="POST" enctype="multipart/form-data" action="{{ route('avatar') }}" aria-label="{{ __('Profile Image') }}" style="width: 100%; margin-bottom: -50px; display: flex; justify-content: center; align-content: center">
                 @csrf
             <div class="profile-img" href="#">
                 <div class="img__overlay">EDIT
@@ -45,7 +45,7 @@ $topCharity = $user->topCharity();
                 <div id="imagePreview" class="img__underlay"><span id="placeholderAvatar">{{ substr($user->email, 0, 1)}}</span></div>
                 @else
 
-                <div id="imagePreview" class="img__underlay" style="background-image: url({{ asset('img/avatar/' . $user->avatar )}}); background-color: white; border: 1px solid #26607d; border-radius: 100%"></div>
+                <div id="imagePreview" class="img__underlay" style="background-image: url({{ asset('img/avatar/' . $user->avatar )}});"></div>
 
                 @endif
             </div>
@@ -56,6 +56,9 @@ $topCharity = $user->topCharity();
             <h1>{{ $user->name() }}</h1>
         </div>
     </div>
+    <div>
+        <div class="social-left">
+        </div>
     <div class="social">
         <ul class="social-icons-sp light small">
             <li>
@@ -79,7 +82,7 @@ $topCharity = $user->topCharity();
             </li>
         </ul>
     </div>
-
+</div>
     <div class="tab">
         <button class="tablinks" id="AccountTab" onclick="openTab(event, 'Account')"><i class="fas fa-cog fa-3x"></i>Account Settings</button>
         <button class="tablinks" id="LeaderboardTab" onclick="openTab(event, 'Leaderboard')"><i class="fas fa-trophy fa-3x"></i>Top Charities</button>

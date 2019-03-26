@@ -89,7 +89,9 @@
   float: left;
   width: 20%;
   height: 100px;
-  background-color: #45a6d7;
+  background-color: white;
+  border-top: 1px #45a6d7 solid;
+  border-left: 1px #45a6d7 solid;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -113,65 +115,37 @@
 }
 
 .logospace img {
-  position: absolute;
-  min-width: 8%;
-  max-width: 10%;
+  -ms-flex-item-align: center;
+      align-self: center;
+  margin-bottom: -50px;
+  max-width: 100%;
+  max-height: 100%;
+  width: 100%;
   height: auto;
-  margin-top: -2%;
-  border: 1px solid #26607d;
-  border-radius: 100%;
+}
+
+.social-left {
+  float: left;
+  width: 20%;
+  height: 50px;
   background-color: white;
-}
-
-@media (max-height: 641px) {
-  .logospace img {
-    min-width: 10%;
-    max-width: 12%;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1023px) {
-  .logospace img {
-    min-width: 12%;
-    max-width: 12%;
-  }
-}
-
-@media (min-width: 1024px) and (max-width: 1439px) {
-  .logospace img {
-    min-width: 8%;
-    max-width: 10%;
-  }
-}
-
-@media (min-width: 1440px) and (max-width: 1920px -1px) {
-  .logospace img {
-    min-width: 8%;
-    max-width: 18%;
-  }
-}
-
-@media (min-width: 1920px) and (max-width: 2560px -1px) {
-  .logospace img {
-    min-width: 8%;
-    max-width: 8%;
-  }
-}
-
-@media (min-width: 2560px) {
-  .logospace img {
-    min-width: 8%;
-    max-width: 8%;
-  }
+  border-left: 1px #45a6d7 solid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-item-align: center;
+      align-self: center;
 }
 
 .social {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
+  width: 80%;
   height: 50px;
-  padding-left: 20%;
   background-color: #26607d;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
