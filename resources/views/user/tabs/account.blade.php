@@ -9,18 +9,25 @@
 
                 <div class="col-md-6" style="padding-right: 7.5px">
                     <label for="fname">First Name</label>
-                    <input disabled="disabled" placeholder="{{ __('FIRST NAME') }}" id="fname" type="fname" class="form-control{{ $errors->has('fname') ? ' is-invalid' : '' }}" name="fname" value="{{ old('fname', $user->firstName) }}" autofocus>
-
+                    <div class="input-group">
+                    <input disabled="disabled" placeholder="{{ __('FIRST NAME') }}" id="fname" type="fname" class="form-control{{ $errors->has('fname') ? ' is-invalid' : '' }} has-icon" name="fname" value="{{ old('fname', $user->firstName) }}" autofocus>
+                    <span class="input-group-append">
+                       <div class="input-group-text disabled"><i class="fa fa-lock field-icon"></i></div>
+                   </span>
                     @if ($errors->has('fname'))
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $errors->first('fname') }}</strong>
                     </span>
                     @endif
                 </div>
+                </div>
                 <div class="col-md-6" style="padding-left: 7.5px">
                     <label for="lname">Last Name</label>
-                    <input disabled="disabled" placeholder="{{ __('LAST NAME') }}" id="lname" type="lname" class="form-control{{ $errors->has('lname') ? ' is-invalid' : '' }}" name="lname" value="{{ old('lname', $user->lastName) }}" autofocus>
-
+                    <div class="input-group">
+                    <input disabled="disabled" placeholder="{{ __('LAST NAME') }}" id="lname" type="lname" class="form-control{{ $errors->has('lname') ? ' is-invalid' : '' }} has-icon" name="lname" value="{{ old('lname', $user->lastName) }}" autofocus>
+                    <span class="input-group-append">
+                       <div class="input-group-text disabled"><i class="fa fa-lock field-icon"></i></div>
+                   </span>
                     @if ($errors->has('lname'))
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $errors->first('lname') }}</strong>
@@ -28,23 +35,33 @@
                     @endif
                 </div>
             </div>
+            </div>
 
             <div class="form-group row">
                 <div class="col-md-12">
                     <label for="email">Email Address</label>
-                    <input disabled="disabled" placeholder="{{ __('EMAIL') }}" id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email', $user->email) }}" required>
+                    <div class="input-group">
 
+                    <input disabled="disabled" placeholder="{{ __('EMAIL') }}" id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }} has-icon" name="email" value="{{ old('email', $user->email) }}" required>
+                    <span class="input-group-append">
+                       <div class="input-group-text disabled "><i class="fa fa-lock field-icon"></i></div>
+                   </span>
                     <span id="emailError" class="invalid-feedback" role="alert">
                         <strong>{{ $errors->first('email') }}</strong>
                     </span>
+                </div>
+
                 </div>
             </div>
 
             <div class="form-group row">
                 <div class="col-md-12">
                     <label for="username">Username</label>
-                    <input disabled="disabled" placeholder="{{ __('USERNAME') }}" id="username" type="username" class="form-control{{ $errors->has('username') ? ' is-invalid' : '' }}" name="username" value="{{ old('username', $user->username) }}">
-
+                    <div class="input-group">
+                    <input disabled="disabled" placeholder="{{ __('USERNAME') }}" id="username" type="username" class="form-control{{ $errors->has('username') ? ' is-invalid' : '' }} has-icon" name="username" value="{{ old('username', $user->username) }}">
+                    <span class="input-group-append">
+                       <div class="input-group-text disabled "><i class="fa fa-lock field-icon"></i></div>
+                   </span>
                     @if ($errors->has('username'))
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $errors->first('username') }}</strong>
@@ -53,6 +70,7 @@
                     <small id="usernameHelpBlock" class="form-text text-muted">
                       Your username will be used as an alias if you've chosen to share your contribution stats so we don't have to tell anyone your real name.
                     </small>
+                </div>
                 </div>
             </div>
 

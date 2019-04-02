@@ -3,8 +3,10 @@
 @section('content')
 
     <div class="container">
-
-        <div>
+        <!-- <div class="back-to-charities-link"> -->
+        <!-- </div> -->
+        <div style="position: relative;">
+            <a href="{{ url('/charities') }}" class="back-to-charities-link">Return to charities &nbsp;&nbsp;<i class="fas fa-angle-right"></i></a>
         <div class="logospace">
             <img src="{{ asset('img/charity/' . $charity->logo) }}" alt="{{ $charity->longName . ' Logo'}}">
         </div>
@@ -44,7 +46,7 @@
           <button class="tablinks" id="AboutTab" onclick="openTab(event, 'About')"><i class="fas fa-info-circle fa-3x"></i>About {{ $charity->shortName }}</button>
           <button class="tablinks" id="DonateTab" onclick="openTab(event, 'Donate')"><i class="fas fa-hand-holding-heart fa-3x"></i>Donate Now</button>
           <button class="tablinks" id="StatsTab" onclick="openTab(event, 'Stats')"><i class="fas fa-sliders-h fa-3x"></i>Statistics</button>
-          <button class="tablinks" id="ConnectTab" onclick="openTab(event, 'Connect')"><i class="fas fa-globe fa-3x"></i>Connect with {{ $charity->shortName }}</button>
+          <button class="tablinks" id="MilestoneTab" onclick="openTab(event, 'Milestone')"><i class="fas fa-dollar-sign fa-3x"></i>Donation Targets</button>
         </div>
 
         <div id="About" class="tabcontent">
@@ -59,8 +61,8 @@
             @include('charity.tabs.stats', ['charity' => $charity, 'donated' => $donated])
         </div>
 
-        <div id="Connect" class="tabcontent">
-            @include('charity.tabs.connect', ['charity' => $charity, 'donated' => $donated])
+        <div id="Milestone" class="tabcontent">
+            @include('charity.tabs.milestone', ['charity' => $charity, 'donated' => $donated])
         </div>
     </div>
 

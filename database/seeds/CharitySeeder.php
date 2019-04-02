@@ -57,23 +57,23 @@ class CharitySeeder extends Seeder
         DB::table('milestone')->insert([
             [
                 'charityId' => $charityId,
-                'faLink' => 'fas fa-ring',
-                'title' => '1 Project Lifesaver Bracelet',
-                'description' => 'Equal to 1,234,567 Hashes',
+                'faLink' => 'fas fa-battery-full',
+                'title' => 'Battery',
+                'description' => '$5 - Approx. 500 Million Hashes',
 
             ],
             [
                 'charityId' => $charityId,
                 'faLink' => 'fas fa-hand-holding-heart',
-                'title' => '1 Volunteers Training',
-                'description' => 'Equal to 2,345,678 Hashes',
+                'title' => 'Volunteer Training',
+                'description' => '$100 - Approx. 10 Billion Hashes',
 
             ],
             [
                 'charityId' => $charityId,
-                'faLink' => 'fas fa-phone',
-                'title' => '1 Full Time Support Staff',
-                'description' => 'Equal to 2,456,789 Hashes',
+                'faLink' => 'fas fa-ring',
+                'title' => 'Lifesaver Bracelet',
+                'description' => '$400 - Approx. 40 Billion Hashes',
 
             ],
         ]);

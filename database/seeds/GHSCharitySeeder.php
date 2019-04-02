@@ -55,6 +55,30 @@ The Guelph Humane Society is contracted by the City of Guelph, the Township of C
             ]
         ]);
 
+        DB::table('milestone')->insert([
+            [
+                'charityId' => $charityId,
+                'faLink' => 'fas fa-bone',
+                'title' => 'Bowl of Kibble',
+                'description' => '$.50 - Approx. 500 Thousand Hashes',
+
+            ],
+            [
+                'charityId' => $charityId,
+                'faLink' => 'fas fa-shopping-bag',
+                'title' => 'Bag of Food',
+                'description' => '$40 - Approx. 4 Billion Hashes',
+
+            ],
+            [
+                'charityId' => $charityId,
+                'faLink' => 'fas fa-microchip',
+                'title' => 'Micro Chip Scanner',
+                'description' => '$80 - Approx. 8 Billion Hashes',
+
+            ],
+        ]);
+
         /**
          * End Seed Data for Guelph Humane Society
         **/

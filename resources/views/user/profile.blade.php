@@ -9,26 +9,35 @@ $topCharity = $user->topCharity();
 ?>
 @endif
 
+@if (!$user->verified())
+<div class="alert alert-danger alert-dismissible fade show" role="alert" style="">
+    Your email has not been verified. <a href="{{url('/sendVerification')}}"  class="alert-link">Click here</a> to resend verification.
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+@endif
+@if (session('status'))
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+    {{ session('status') }}
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+@endif
+@if (session()->has('failures'))
+@foreach ($failures->all() as $failure)
+<div class="alert alert-danger alert-dismissible fade show" role="alert">
+    {{$failure}}
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+@endforeach
+@endif
 <div class="container">
 
-    @if (session('status'))
-    <div class="alert alert-success alert-dismissible fade show" role="alert">
-        {{ session('status') }}
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-  <span aria-hidden="true">&times;</span>
-</button>
-    </div>
-@endif
-    @if (session()->has('failures'))
-        @foreach ($failures->all() as $failure)
-            <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                {{$failure}}
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-  <span aria-hidden="true">&times;</span>
-</button>
-            </div>
-        @endforeach
-    @endif
+
 
     <div>
         <div class="logospace">
@@ -36,19 +45,19 @@ $topCharity = $user->topCharity();
             <!-- <form name="ProfilePictureUpload"> -->
             <form name="AvatarUpload" method="POST" enctype="multipart/form-data" action="{{ route('avatar') }}" aria-label="{{ __('Profile Image') }}" style="width: 100%; margin-bottom: -50px; display: flex; justify-content: center; align-content: center">
                 @csrf
-            <div class="profile-img" href="#">
-                <div class="img__overlay">EDIT
-                    <input type='file' id="imageUpload" name="avatar" accept=".png, .jpg, .jpeg"/>
-                    <label class="img__overlay clear" for="imageUpload"></label>
+                <div class="profile-img" href="#">
+                    <div class="img__overlay">EDIT
+                        <input type='file' id="imageUpload" name="avatar" accept=".png, .jpg, .jpeg"/>
+                        <label class="img__overlay clear" for="imageUpload"></label>
+                    </div>
+                    @if($user->avatar == NULL)
+                    <div id="imagePreview" class="img__underlay"><span id="placeholderAvatar">{{ substr($user->email, 0, 1)}}</span></div>
+                    @else
+
+                    <div id="imagePreview" class="img__underlay" style="background-image: url({{ asset('img/avatar/' . $user->avatar )}});"></div>
+
+                    @endif
                 </div>
-                @if($user->avatar == NULL)
-                <div id="imagePreview" class="img__underlay"><span id="placeholderAvatar">{{ substr($user->email, 0, 1)}}</span></div>
-                @else
-
-                <div id="imagePreview" class="img__underlay" style="background-image: url({{ asset('img/avatar/' . $user->avatar )}});"></div>
-
-                @endif
-            </div>
             </form>
         </div>
         <div class="top">
@@ -59,30 +68,30 @@ $topCharity = $user->topCharity();
     <div>
         <div class="social-left">
         </div>
-    <div class="social">
-        <ul class="social-icons-sp light small">
-            <li>
-                <a href="#" class="facebook-share">
-                    <i class="fab fa-facebook-f" style="padding: 0px;"></i>
-                </a>
-                <label class="facebook-share2">Share on Facebook</label>
-            </li>
-            <li>
-                <a href="#" class="twitter-share">
-                    <i class="fab fa-twitter" style="padding: 0px;"></i>
-                </a>
-                <label class="twitter-share2">Share on Twitter</label>
+        <div class="social">
+            <ul class="social-icons-sp light small">
+                <li>
+                    <a href="#" class="facebook-share">
+                        <i class="fab fa-facebook-f" style="padding: 0px;"></i>
+                    </a>
+                    <label class="facebook-share2">Share on Facebook</label>
+                </li>
+                <li>
+                    <a href="#" class="twitter-share">
+                        <i class="fab fa-twitter" style="padding: 0px;"></i>
+                    </a>
+                    <label class="twitter-share2">Share on Twitter</label>
 
-            </li>
-            <li>
-                <a id="Charities" href="{{ url('/charities') }}">
-                    <i class="fas fa-gift" style="padding: 0px;"></i>
-                </a>
-                <label id="DonateLabel">Start Donating</label>
-            </li>
-        </ul>
+                </li>
+                <li>
+                    <a id="Charities" href="{{ url('/charities') }}">
+                        <i class="fas fa-gift" style="padding: 0px;"></i>
+                    </a>
+                    <label id="DonateLabel">Start Donating</label>
+                </li>
+            </ul>
+        </div>
     </div>
-</div>
     <div class="tab">
         <button class="tablinks" id="AccountTab" onclick="openTab(event, 'Account')"><i class="fas fa-cog fa-3x"></i>Account Settings</button>
         <button class="tablinks" id="LeaderboardTab" onclick="openTab(event, 'Leaderboard')"><i class="fas fa-trophy fa-3x"></i>Top Charities</button>
@@ -151,9 +160,9 @@ $(document).ready(function() {
     twitterBtn.href = shareUrl; // 1
 
     twitterBtn.addEventListener('click', function(e) {
-      e.preventDefault();
-      var win = window.open(shareUrl, 'ShareOnTwitter', getWindowOptions());
-      win.opener = null; // 2
+        e.preventDefault();
+        var win = window.open(shareUrl, 'ShareOnTwitter', getWindowOptions());
+        win.opener = null; // 2
     });
 
     var facebookBtn = document.querySelector('.facebook-share');
@@ -173,9 +182,9 @@ $(document).ready(function() {
     facebookBtn.href = fbUrl; // 1
 
     facebookBtn.addEventListener('click', function(e) {
-      e.preventDefault();
-      var win = window.open(fbUrl, 'ShareOnFacebook', getWindowOptions());
-      win.opener = null; // 2
+        e.preventDefault();
+        var win = window.open(fbUrl, 'ShareOnFacebook', getWindowOptions());
+        win.opener = null; // 2
     });
 
     // make link on start donating button
@@ -226,7 +235,7 @@ function readURL(input) {
         reader.readAsDataURL(input.files[0]);
         $('form[name=AvatarUpload]').submit();
     }
-    }
+}
 
 
 </script>

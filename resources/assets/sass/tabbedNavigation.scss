@@ -94,14 +94,14 @@
 }
 
 .social-left {
-    float: left;
-    width: 20%;
-    height: 50px;
-    background-color: white;
-    border-left: 1px $secondary solid;
-    display: flex;
-    justify-content: center;
-    align-self: center;
+  float: left;
+  width: 20%;
+  height: 50px;
+  background-color: white;
+  border-left: 1px $secondary solid;
+  display: flex;
+  justify-content: center;
+  align-self: center;
 }
 .social {
   display: flex;
@@ -170,7 +170,6 @@
   width: 80%;
   height: 70%;
 
-
   @include tablet {
     height: 75%;
   }
@@ -179,7 +178,8 @@
   }
   @include small {
     height: 392px;
-  }  @include desktop-lg {
+  }
+  @include desktop-lg {
     height: 70%;
   }
   @include desktop-wqhd {
@@ -398,6 +398,7 @@ i {
   text-transform: uppercase;
   padding: 0px 30px;
   text-align: center;
+  margin-bottom: 5px;
   @include tablet {
     font-size: 1.2rem;
   }
@@ -409,4 +410,52 @@ i {
 
 .aboutSpan {
   color: $primary;
+}
+
+// .back-to-charities-link div {
+//
+// }
+
+.back-to-charities-link {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  position: absolute;
+  top: -25px;
+  right: 0;
+}
+
+.milestone {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  // padding: 0px 15px;
+  // width: 33%;
+}
+
+.milestone:nth-child(2) {
+  @include tablet {
+    margin: 5px 0px;
+  }
+  @include desktop {
+    margin: 5px 0px;
+  }
+}
+
+.milestone:last-child {
+  margin-bottom: 25px;
+}
+.milestone > * {
+  align-self: center;
+}
+
+.tabcontainer.milestones {
+  display: flex;
+  flex-direction: row;
+
+  @include tablet {
+    flex-direction: column;
+  }
+  @include desktop {
+    flex-direction: column;
+  }
 }

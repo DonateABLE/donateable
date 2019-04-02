@@ -1,28 +1,28 @@
 // Variables
-@import 'variables';
+@import "variables";
 
 .top {
-    justify-content: center;
+  justify-content: center;
 }
 
 .optin {
-    font-size: 0.65rem;
-    font-weight: 400;
+  font-size: 0.65rem;
+  font-weight: 400;
 }
 
 #usernameHelpBlock {
-    text-transform: uppercase;
-    font-size: 0.4rem;
+  text-transform: uppercase;
+  font-size: 0.4rem;
 }
 
 div > label {
-    color: $primary;
-    text-transform: uppercase;
-    margin-bottom: 0.25rem;
-    padding-left: 5px;
-    font-size: 0.75rem;
-    font-weight: 500;
-    display: inline;
+  color: $primary;
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+  padding-left: 5px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  display: inline;
 }
 
 .top h1 {
@@ -43,111 +43,133 @@ div > label {
 .form-control:disabled {
   background-color: $primary;
   color: white;
+  border-right: none;
+}
+
+.form-control.has-icon {
+  border-right: none;
 }
 
 .row {
-    margin: 0;
-    margin: 0px 0px 8px 0px
+  margin: 0;
+  margin: 0px 0px 8px 0px;
 }
 
-
 .imgholder > img {
-    width: 80px;
-    height: auto;
-    border: 1px $primary solid;
-    border-radius: 100%;
+  width: 80px;
+  height: auto;
+  border: 1px $primary solid;
+  border-radius: 100%;
 }
 
 .leaderstats {
-        display: flex;
-        flex-direction: column;
-        align-content: flex-start;
-        justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  justify-content: center;
 }
 
 .row.title {
-    align-self: flex-start;
+  align-self: flex-start;
 }
 
 .row.stats {
-    align-self: flex-start;
+  align-self: flex-start;
 }
 
 .row.stats > div {
-    padding-left: 0px;
-
+  padding-left: 0px;
 }
 
 h3 {
-    text-transform: uppercase;
-    font-size: 0.8rem;
-    font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: bold;
 }
 
 h4 {
-    text-transform: uppercase;
-    font-size: 0.75rem;
-    font-weight: bold;
-    color: $secondary;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: $secondary;
 }
 
 h4 > span {
-    padding-left: 5px;
-    color: $primary;
+  padding-left: 5px;
+  color: $primary;
 }
 
 .container.fill {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
-
 .profile-standin {
-    width: 200px;
-    height: 100px;
-    display: flex;
-    align-self: center;
-    align-items: center;
-    justify-content: center;
-
+  width: 200px;
+  height: 100px;
+  display: flex;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .fake-img {
-    width: 75px;
-    height: 75px;
-    border-radius: 37.5px;
-    background-color: $primary;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width: 75px;
+  height: 75px;
+  border-radius: 37.5px;
+  background-color: $primary;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-
-    text-transform: uppercase;
-    color: white;
-    font-size: 1.75rem;
+  text-transform: uppercase;
+  color: white;
+  font-size: 1.75rem;
 }
 
 .stat-container.left > img {
-    width: 75px;
-    height: 75px;
-    border-radius: 37.5px;
-    margin: 12.5px 0px;
+  width: 75px;
+  height: 75px;
+  border-radius: 37.5px;
+  margin: 12.5px 0px;
 }
 
 .no-donations {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #C9C9C9;
-    text-transform: uppercase;
-    text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #c9c9c9;
+  text-transform: uppercase;
+  text-align: center;
 }
 
 .container.password-reset {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-group-text.disabled {
+  border-radius: 0px;
+  border: 1px solid $primary;
+  border-left: none;
+  color: white;
+  background-color: $primary;
+}
+
+.input-group-text {
+  border-radius: 0px;
+  border: 1px solid $primary;
+  border-left: none;
+  color: $primary;
+  background-color: white;
+}
+
+.alert {
+  position: absolute;
+  top: 25px;
+  width: 600px;
 }

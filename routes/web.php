@@ -44,6 +44,12 @@ Route::post('/account-settings', 'UserSettings')->name('settings');
 Route::post('/account-avatar', 'HandleAvatarUpload')->name('avatar');
 Route::post('/change-password', 'Auth\ChangePasswordController@changePassword')->name('changePassword');
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/sendVerification', function() {
+    Auth::user()->sendVerificationEmail();
+    return back()->with('status', 'Verification email has been resent. Please check your spam folder.');
+});
+
 Route::post('/resendVerification', function(Request $request) {
     $this->middleware('auth');
     Auth::user()->sendVerificationEmail();
