@@ -1,7 +1,7 @@
 <div class="tabcontainer">
     <div style="display: flex; flex: 1; flex-direction: column; min-height: 0; justify-items: center">
         <h1 class="aboutHeader"><span class="aboutSpan">About</span> {{ $charity->longName }}</h1>
-        <ul class="social-icons-sp light" style="margin-top: 15px;">
+        <ul class="social-icons-sp light">
 
             @foreach($charity->socialLinks as $link)
                 <li>

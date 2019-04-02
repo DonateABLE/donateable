@@ -67,7 +67,6 @@ div > label {
   width: 80px;
   height: auto;
   border: 1px #26607d solid;
-  border-radius: 100%;
 }
 
 .leaderstats {
@@ -149,7 +148,6 @@ h4 > span {
 .fake-img {
   width: 75px;
   height: 75px;
-  border-radius: 37.5px;
   background-color: #26607d;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -168,7 +166,6 @@ h4 > span {
 .stat-container.left > img {
   width: 75px;
   height: 75px;
-  border-radius: 37.5px;
   margin: 12.5px 0px;
 }
 

@@ -12216,6 +12216,13 @@ output {
   padding: 15px 25px;
 }
 
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .accordion > .card > .card-header > h5 {
+    font-size: 0.85rem !important;
+    padding: 8px 18px;
+  }
+}
+
 .accordion > .card > .card-header > .icon {
   height: 100%;
   width: 4%;
@@ -12230,6 +12237,12 @@ output {
           justify-content: center;
   -ms-flex-item-align: center;
       align-self: center;
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .accordion > .card > .card-header > .icon {
+    padding: 0px;
+  }
 }
 
 .accordion > .card > .collapse > .card-body {

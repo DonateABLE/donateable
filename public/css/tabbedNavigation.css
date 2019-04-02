@@ -535,6 +535,7 @@ i {
 
 .social-icons-sp.light > li > a {
   background-color: #45a6d7;
+  margin-top: 15px;
 }
 
 .social-icons-sp.small > li > a {
@@ -619,22 +620,6 @@ i {
           justify-content: space-evenly;
 }
 
-@media (min-width: 768px) and (max-width: 1023px) {
-  .milestone:nth-child(2) {
-    margin: 5px 0px;
-  }
-}
-
-@media (min-width: 1024px) and (max-width: 1439px) {
-  .milestone:nth-child(2) {
-    margin: 5px 0px;
-  }
-}
-
-.milestone:last-child {
-  margin-bottom: 25px;
-}
-
 .milestone > * {
   -ms-flex-item-align: center;
       align-self: center;
@@ -651,20 +636,26 @@ i {
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
-  .tabcontainer.milestones {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+  .milestone h2 {
+    font-size: 0.6rem;
   }
 }
 
 @media (min-width: 1024px) and (max-width: 1439px) {
-  .tabcontainer.milestones {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+  .milestone h2 {
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .milestone h4 {
+    font-size: 0.6rem;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .milestone h4 {
+    font-size: 0.8rem;
   }
 }
 

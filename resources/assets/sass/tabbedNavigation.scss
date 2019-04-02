@@ -360,6 +360,7 @@ i {
 }
 .social-icons-sp.light > li > a {
   background-color: $secondary;
+  margin-top: 15px;
 }
 
 .social-icons-sp.small > li > a {
@@ -432,18 +433,6 @@ i {
   // width: 33%;
 }
 
-.milestone:nth-child(2) {
-  @include tablet {
-    margin: 5px 0px;
-  }
-  @include desktop {
-    margin: 5px 0px;
-  }
-}
-
-.milestone:last-child {
-  margin-bottom: 25px;
-}
 .milestone > * {
   align-self: center;
 }
@@ -451,11 +440,22 @@ i {
 .tabcontainer.milestones {
   display: flex;
   flex-direction: row;
+}
 
+.milestone h2 {
   @include tablet {
-    flex-direction: column;
+    font-size: 0.6rem;
   }
   @include desktop {
-    flex-direction: column;
+    font-size: 0.8rem;
+  }
+}
+
+.milestone h4 {
+  @include tablet {
+    font-size: 0.6rem;
+  }
+  @include desktop {
+    font-size: 0.8rem;
   }
 }

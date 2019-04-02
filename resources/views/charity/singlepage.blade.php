@@ -46,7 +46,7 @@
           <button class="tablinks" id="AboutTab" onclick="openTab(event, 'About')"><i class="fas fa-info-circle fa-3x"></i>About {{ $charity->shortName }}</button>
           <button class="tablinks" id="DonateTab" onclick="openTab(event, 'Donate')"><i class="fas fa-hand-holding-heart fa-3x"></i>Donate Now</button>
           <button class="tablinks" id="StatsTab" onclick="openTab(event, 'Stats')"><i class="fas fa-sliders-h fa-3x"></i>Statistics</button>
-          <button class="tablinks" id="MilestoneTab" onclick="openTab(event, 'Milestone')"><i class="fas fa-dollar-sign fa-3x"></i>Donation Targets</button>
+          <button class="tablinks" id="MilestoneTab" onclick="openTab(event, 'Milestone')"><i class="fas fa-money-bill-alt fa-3x"></i>Donation Targets</button>
         </div>
 
         <div id="About" class="tabcontent">
