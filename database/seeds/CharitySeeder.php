@@ -59,21 +59,21 @@ class CharitySeeder extends Seeder
                 'charityId' => $charityId,
                 'faLink' => 'fas fa-battery-full',
                 'title' => 'Battery',
-                'description' => '$5 - Approx. 500 Million Hashes',
+                'description' => '$5 - Approx. 500,000,000 Hashes',
 
             ],
             [
                 'charityId' => $charityId,
                 'faLink' => 'fas fa-hand-holding-heart',
                 'title' => 'Volunteer Training',
-                'description' => '$100 - Approx. 10 Billion Hashes',
+                'description' => '$100 - Approx. 10,000,000,000 Hashes',
 
             ],
             [
                 'charityId' => $charityId,
                 'faLink' => 'fas fa-ring',
                 'title' => 'Lifesaver Bracelet',
-                'description' => '$400 - Approx. 40 Billion Hashes',
+                'description' => '$400 - Approx. 40,000,000,000 Hashes',
 
             ],
         ]);
