@@ -20,9 +20,6 @@
     <title>{{ config('app.name', 'donateABLE') }}</title>
 
     <!-- Scripts -->
-    <!-- Google recaptcha scripts -->
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-
     <script
     src="https://code.jquery.com/jquery-3.3.1.min.js"
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -35,6 +32,7 @@
         @endif
     </script>
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('js/contactUs.js') }}"></script>
     <script type="text/javascript">
 
     const onboard = '{{ url("/onboard") }}'

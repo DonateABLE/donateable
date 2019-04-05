@@ -61,39 +61,10 @@
 
 <div class="form-group row">
     <div class="col-md-12">
-        <button type="submit" class="btn btn-primary btn-full hov-white g-recaptcha" data-sitekey="6LepdJwUAAAAAFI2arPC4azHuBJT27Wtrrb35ptd" data-callback="sendTechnicalSupportForm">
+        <button type="submit" class="btn btn-primary btn-full hov-white">
             {{ __('Submit') }}
         </button>
 
     </div>
 </div>
 </form>
-
-<script type="text/javascript">
-function sendTechnicalSupportForm() {
-    $.ajaxSetup({
-  headers: {
-    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-  }
-});
-
-  $.ajax({
-    type: "POST",
-    cache: false,
-    url: "/form/technicalSupportForm",
-    data: $(this).serialize(),
-    success: function(msg) {
-      $("#FormContainer").html(
-        '<h1 class="modal-h1">Thank you for submitting.</h1><h2 class="modal-h2">We will be in touch with you as soon as possible.</h2>'
-      );
-      $("#FormHeader").html("");
-    },
-    error: function(msg) {
-      $("#FormContainer").html(
-        '<h1 class="modal-h1">An error has occurred.</h1><h2 class="modal-h2">Please try again later or email us directly at <a href="mailto:support@donateable.ca">support@donateable.ca</a>.</h2>'
-      );
-      $("#FormHeader").html("");
-    }
-  });
-}
-</script>
