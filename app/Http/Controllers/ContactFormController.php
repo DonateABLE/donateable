@@ -16,6 +16,9 @@ class ContactFormController extends Controller
     }
 
     private function handleContactForm(Request $request, $messageType, $messageTo) {
+        if ($request->input('neverFill') != '') {
+            return;
+        }
         $formData = new MailData(array(
             'fromFirstName' => $request->input('fromFirstName'),
             'fromLastName' => $request->input('fromLastName'),
@@ -26,6 +29,7 @@ class ContactFormController extends Controller
             'messageTo' => $messageTo
 
         ));
+        error_log($request);
         error_log($formData->toString());
 
         // $formData->toMailMessage();

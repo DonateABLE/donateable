@@ -60,6 +60,7 @@
 </div>
 
 <div class="form-group row">
+    <input style="display: none" type="text" id="neverFill" name="neverFill"/>
     <div class="col-md-12">
         <button type="submit" class="btn btn-primary btn-full hov-white">
             {{ __('Submit') }}
