@@ -6,7 +6,7 @@
             <a class="stat-box">Total Time 	&nbsp;	&nbsp;<span id="sessionTime">0 Minutes</span></a>
             <a class="stat-box">Hashing Rate 	&nbsp;	&nbsp;<span id="sessionHashRate">0 Per Second</span></a>
         </div>
-        <div class="row justify-content-center" style="padding: 0px 30px 30px 30px">
+        <div class="row justify-content-center" id="SlideMeterContainer">
             <div id="SlideMeter" class="slidecontainer meter">
                 <input type="range" min="1" max="100" value="50" class="slider" id="MinerRange">
 

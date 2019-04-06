@@ -459,3 +459,13 @@ i {
     font-size: 0.8rem;
   }
 }
+
+#SlideMeterContainer {
+  padding: 0px 30px 30px 30px;
+  @include tablet {
+    padding: 0px 10px 10px 10px;
+  }
+  @include desktop {
+    padding: 0px 10px 10px 10px;
+  }
+}
