@@ -71,7 +71,7 @@ class CharitySeeder extends Seeder
             ],
             [
                 'charityId' => $charityId,
-                'faLink' => 'fas fa-ring',
+                'faLink' => 'fas fa-ambulance',
                 'title' => 'Lifesaver Bracelet',
                 'description' => '$400 - Approx. 40,000,000,000 Hashes',
 

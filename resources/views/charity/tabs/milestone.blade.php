@@ -5,7 +5,18 @@
             <div class="milestone" style="padding: 5px;">
                 <i class="{{ $milestone->faLink }} fa-4x"></i>
                 <h2>{{ $milestone->title }}</h2>
+                <?php
+                    $description = preg_split('/[-]/', $milestone->description);
+                ?>
+                @if(isset($description[0]))
+                <h4>{{ $description[0] }}</h4>
+                    @if(isset($description[1]))
+                    <h4>{{ $description[1] }}</h4>
+                    @endif
+                @else
                 <h4>{{ $milestone->description }}</h4>
+                @endif
+
             </div>
             @endforeach
         </div>
