@@ -6,7 +6,7 @@ $(document).ready(function () {
   var previousHashes = 0;
 
   /*
-     * React to changes in the rangeslider
+    * React to changes in the rangeslider
     */
   $("#MinerRange").on("propertychange input", function () {
     /** Set an element on screen to show the %age **/
@@ -100,22 +100,24 @@ $(document).ready(function () {
   // Push updated stats to the server
   function updateDonatedTo() {
     if (miner.isRunning()) {
+      // 1. Get the current total hashes
       var currentHashes = miner.getTotalHashes();
       var updatedData = {
         donationId: donationId,
         charityId: charityId,
+        // 2. Subtract the last known number of hashes and the current
         totalHashes: currentHashes - previousHashes,
         totalTime: 10
       };
 
+      // 3. Set the "last known" hashes to be the current temp
+      // The difference between now and next upload is the number we push to the server
+      previousHashes = currentHashes;
+
       $.ajax({
         url: "/donatedto/update",
         method: "POST",
-        data: updatedData,
-        complete: function complete() {
-
-          previousHashes = currentHashes;
-        }
+        data: updatedData
       });
     }
   }

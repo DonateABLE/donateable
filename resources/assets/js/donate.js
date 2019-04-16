@@ -6,16 +6,16 @@ $(document).ready(function() {
   var previousHashes = 0;
 
   /*
-     * React to changes in the rangeslider
+    * React to changes in the rangeslider
     */
   $("#MinerRange").on("propertychange input", function() {
     /** Set an element on screen to show the %age **/
     $("#MinerValue").val(this.value + "% CPU");
 
     /** Update the threshold **/
-      var rate = this.value;
-      var throttle = 1 - rate / 100;
-      miner.setThrottle(throttle);
+    var rate = this.value;
+    var throttle = 1 - rate / 100;
+    miner.setThrottle(throttle);
   });
 
   // Initialize the Crypto miner
@@ -46,7 +46,7 @@ $(document).ready(function() {
 
   // register callback on stop button clicked
   $("#stopDonate").click(function() {
-      $("#SlideMeter").removeClass("animated");
+    $("#SlideMeter").removeClass("animated");
 
     if (miner.isRunning()) {
       miner.stop();
@@ -100,22 +100,24 @@ $(document).ready(function() {
   // Push updated stats to the server
   function updateDonatedTo() {
     if (miner.isRunning()) {
+      // 1. Get the current total hashes
       var currentHashes = miner.getTotalHashes();
       var updatedData = {
         donationId: donationId,
         charityId: charityId,
+        // 2. Subtract the last known number of hashes and the current
         totalHashes: currentHashes - previousHashes,
         totalTime: 10
       };
 
+      // 3. Set the "last known" hashes to be the current temp
+      // The difference between now and next upload is the number we push to the server
+      previousHashes = currentHashes;
+
       $.ajax({
         url: "/donatedto/update",
         method: "POST",
-        data: updatedData,
-        complete: function() {
-
-          previousHashes = currentHashes;
-        }
+        data: updatedData
       });
     }
   }
