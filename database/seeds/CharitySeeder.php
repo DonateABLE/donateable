@@ -60,6 +60,7 @@ class CharitySeeder extends Seeder
                 'faLink' => 'fas fa-battery-full',
                 'title' => 'Lifesaver Bracelet Battery',
                 'description' => 'Cost = $5 - Approx. 500,000,000 Hashes',
+                'comment' => 'A small battery used in the Lifesaver Bracelet allowing the system to operate every day of the year.'
 
             ],
             [
@@ -67,6 +68,7 @@ class CharitySeeder extends Seeder
                 'faLink' => 'fas fa-hand-holding-heart',
                 'title' => 'Volunteer Training',
                 'description' => 'Cost = $100 - Approx. 10,000,000,000 Hashes',
+                'comment' => 'Responsible for immediate, mobile response to requests from emergency and police services within Guelph and Wellington County.'
 
             ],
             [
@@ -74,6 +76,7 @@ class CharitySeeder extends Seeder
                 'faLink' => 'fas fa-ambulance',
                 'title' => 'Lifesaver Bracelet',
                 'description' => 'Cost = $400 - Approx. 40,000,000,000 Hashes',
+                'comment' => 'A 1 ounce wrist transmitter that sends a radio signal which can be tracked up to a 2 kilometer radius.'
 
             ],
         ]);

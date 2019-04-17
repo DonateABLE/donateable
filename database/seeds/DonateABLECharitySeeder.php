@@ -20,7 +20,9 @@ class DonateABLECharitySeeder extends Seeder
                 'longName' => 'donateABLE',
                 'logo' => 'donateable-charity.png',
                 'shortDesc' => 'donateABLE allows anyone with a computer to make a difference by donating unused computer CPU and turning it into real monetary value.',
-                'longDesc' => 'This solution will take small amounts of computational power donated from individuals and pool it together into a larger resource to generate real monetary value for your charity. This website is going to allow anyone with a computer to make a difference no matter what their financial situation is, by donating unused computer time.',
+                'longDesc' => 'DonateABLE is a website project developed and managed by Synergenics. This solution will take small amounts of computational power donated from individuals and pool it together into a larger resource to generate real monetary value for your charity. This website is going to allow anyone with a computer to make a difference no matter what their financial situation is, by donating unused computer time.
+
+DonateABLE will take unused CPU power from the donators computer to help mine digital currency and donate to charities as a real monetary value. Dealing in the world of technology, we have identified a special and unique opportunity to help generate revenue for charities without any actual cash outlay from those who wish to help.',
                 'tagline' => 'Support Local Charities in Guelph Without Opening your Wallet.',
                 'socialFeed' => 'https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FdonateABLE%2F&tabs=timeline&width=400&height=420&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=571839313007975',
                 'websiteUrl' => 'https://donateable.ca/',

@@ -18,13 +18,13 @@
                 <h4>{{ $milestone->description }}</h4>
                 @endif
             </div>
+            @if ($milestone->comment != null)
             <div style="min-height: 150px; height: 150px !important;">
-                @if (isset($milestone->comment))
-                <p>
+                <p style="font-weight: 400;">
                     <?php echo nl2br($milestone->comment); ?>
                 </p>
-                @endif
             </div>
+            @endif
             </div>
             @endforeach
         </div>
