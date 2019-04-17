@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddComingSoonToCharityTable extends Migration
+class AddCommentToMilestoneTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,8 @@ class AddComingSoonToCharityTable extends Migration
      */
     public function up()
     {
-        Schema::table('charity', function (Blueprint $table) {
-            $table->boolean('comingSoon')->default(false);
+        Schema::table('milestone', function (Blueprint $table) {
+            $table->text('comment');
         });
     }
 
@@ -25,8 +25,8 @@ class AddComingSoonToCharityTable extends Migration
      */
     public function down()
     {
-        Schema::table('charity', function (Blueprint $table) {
-            $table->dropColumn('comingSoon');
+        Schema::table('milestone', function (Blueprint $table) {
+            $table->dropColumn('comment');
         });
     }
 }

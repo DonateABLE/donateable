@@ -8,7 +8,7 @@
         <div style="position: relative;">
             <a href="{{ url('/charities') }}" class="back-to-charities-link">Return to charities &nbsp;&nbsp;<i class="fas fa-angle-right"></i></a>
         <div class="logospace">
-            <img src="{{ asset('img/charity/' . $charity->logo) }}" alt="{{ $charity->longName . ' Logo'}}">
+            <img src="{{ asset('img/charity/small/' . $charity->logo) }}" alt="{{ $charity->longName . ' Logo'}}">
         </div>
         <div class="top">
             <h1>{{ $charity->longName}}</h1>

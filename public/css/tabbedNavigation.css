@@ -118,28 +118,47 @@
   -ms-flex-item-align: center;
       align-self: center;
   margin-bottom: -50px;
-  max-width: 100%;
-  max-height: 100%;
-  width: 100%;
+  width: 50%;
   height: auto;
   z-index: 1;
 }
 
 @media (max-height: 641px) {
   .logospace img {
-    height: 50px;
-    max-width: 70%;
-    max-height: 150%;
+    width: 50%;
     height: auto;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .logospace img {
+    width: 75%;
   }
 }
 
 @media (min-width: 1024px) and (max-width: 1439px) {
   .logospace img {
-    height: 50px;
-    max-width: 70%;
-    max-height: 150%;
+    width: 50%;
     height: auto;
+  }
+}
+
+@media (min-width: 1440px) and (max-width: 1919px) {
+  .logospace img {
+    width: 75%;
+    height: auto;
+  }
+}
+
+@media (min-width: 1920px) and (max-width: 2559px) {
+  .logospace img {
+    width: 75%;
+  }
+}
+
+@media (min-width: 2560px) {
+  .logospace img {
+    width: 75%;
   }
 }
 
@@ -273,7 +292,7 @@
   }
 }
 
-@media (min-width: 1440px) and (max-width: 1920px -1px) {
+@media (min-width: 1440px) and (max-width: 1919px) {
   .tabcontent {
     height: 70%;
   }
@@ -494,7 +513,7 @@ i {
   }
 }
 
-@media (min-width: 1440px) and (max-width: 1920px -1px) {
+@media (min-width: 1440px) and (max-width: 1919px) {
   .social-feed {
     margin-bottom: 50px;
   }
@@ -504,7 +523,7 @@ i {
   margin-bottom: 25px;
 }
 
-@media (min-width: 1440px) and (max-width: 1920px -1px) {
+@media (min-width: 1440px) and (max-width: 1919px) {
   #FacebookFeed {
     margin-bottom: 25px;
   }
@@ -618,6 +637,7 @@ i {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  width: 33%;
 }
 
 .milestone > * {
@@ -647,6 +667,24 @@ i {
   }
 }
 
+@media (min-width: 1440px) and (max-width: 1919px) {
+  .milestone h2 {
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 1920px) and (max-width: 2559px) {
+  .milestone h2 {
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 2560px) {
+  .milestone h2 {
+    font-size: 1.0rem;
+  }
+}
+
 @media (min-width: 768px) and (max-width: 1023px) {
   .milestone h4 {
     font-size: 0.6rem;
@@ -656,6 +694,58 @@ i {
 @media (min-width: 1024px) and (max-width: 1439px) {
   .milestone h4 {
     font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 1440px) and (max-width: 1919px) {
+  .milestone h4 {
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 1920px) and (max-width: 2559px) {
+  .milestone h4 {
+    font-size: 1.0rem;
+  }
+}
+
+@media (min-width: 2560px) {
+  .milestone h4 {
+    font-size: 1.0rem;
+  }
+}
+
+.milestone p {
+  padding: 10px;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .milestone p {
+    font-size: 0.6rem;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .milestone p {
+    font-size: 0.75rem;
+  }
+}
+
+@media (min-width: 1440px) and (max-width: 1919px) {
+  .milestone p {
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 1920px) and (max-width: 2559px) {
+  .milestone p {
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 2560px) {
+  .milestone p {
+    font-size: 1.0rem;
   }
 }
 

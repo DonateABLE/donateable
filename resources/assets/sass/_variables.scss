@@ -49,13 +49,13 @@ $desktop-wqhd: 2560px;
 }
 
 @mixin desktop-lg {
-  @media (min-width: #{$desktop-lg-width}) and (max-width: #{$desktop-hd-width -1px}) {
+  @media (min-width: #{$desktop-lg-width}) and (max-width: #{$desktop-hd-width - 1px}) {
     @content;
   }
 }
 
 @mixin desktop-hd {
-  @media (min-width: #{$desktop-hd-width}) and (max-width: #{$desktop-wqhd -1px}) {
+  @media (min-width: #{$desktop-hd-width}) and (max-width: #{$desktop-wqhd - 1px}) {
     @content;
   }
 }

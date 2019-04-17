@@ -1,8 +1,9 @@
 <div class="tabcontainer milestones">
-    <div style="display: flex; flex: 1; flex-direction: row; min-height: 0; justify-content: space-evenly; width: 100%;">
+    <div style="display: flex; width: 100%;">
 
             @foreach($charity->milestones as $milestone)
             <div class="milestone" style="padding: 5px;">
+                <div style="display: flex;flex: 1; flex-direction: column; justify-content: center; align-items: center;">
                 <i class="{{ $milestone->faLink }} fa-4x"></i>
                 <h2>{{ $milestone->title }}</h2>
                 <?php
@@ -16,7 +17,14 @@
                 @else
                 <h4>{{ $milestone->description }}</h4>
                 @endif
-
+            </div>
+            <div style="min-height: 150px; height: 150px !important;">
+                @if (isset($milestone->comment))
+                <p>
+                    <?php echo nl2br($milestone->comment); ?>
+                </p>
+                @endif
+            </div>
             </div>
             @endforeach
         </div>

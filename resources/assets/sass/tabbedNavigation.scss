@@ -74,22 +74,32 @@
 .logospace img {
   align-self: center;
   margin-bottom: -50px;
-  max-width: 100%;
-  max-height: 100%;
-  width: 100%;
+  // max-width: 100%;
+  // max-height: 100%;
+  width: 50%;
   height: auto;
   z-index: 1;
   @include small {
-    height: 50px;
-    max-width: 70%;
-    max-height: 150%;
+    width: 50%;
     height: auto;
   }
+  @include tablet {
+      width: 75%;
+  }
   @include desktop {
-    height: 50px;
-    max-width: 70%;
-    max-height: 150%;
+    width: 50%;
     height: auto;
+  }
+  @include desktop-lg {
+      width: 75%;
+      height: auto;
+
+  }
+  @include desktop-hd {
+      width: 75%;
+  }
+  @include desktop-wqhd {
+      width: 75%;
   }
 }
 
@@ -430,7 +440,7 @@ i {
   flex-direction: column;
   justify-content: space-evenly;
   // padding: 0px 15px;
-  // width: 33%;
+  width: 33%;
 }
 
 .milestone > * {
@@ -449,6 +459,15 @@ i {
   @include desktop {
     font-size: 0.8rem;
   }
+  @include desktop-lg {
+      font-size: 0.9rem;
+  }
+  @include desktop-hd {
+      font-size: 0.9rem;
+  }
+  @include desktop-wqhd {
+      font-size: 1.0rem;
+  }
 }
 
 .milestone h4 {
@@ -458,6 +477,34 @@ i {
   @include desktop {
     font-size: 0.8rem;
   }
+  @include desktop-lg {
+      font-size: 0.9rem;
+  }
+  @include desktop-hd {
+      font-size: 1.0rem;
+  }
+  @include desktop-wqhd {
+      font-size: 1.0rem;
+  }
+}
+
+.milestone p {
+    padding: 10px;
+    @include tablet {
+      font-size: 0.6rem;
+    }
+    @include desktop {
+      font-size: 0.75rem;
+    }
+    @include desktop-lg {
+        font-size: 0.8rem;
+    }
+    @include desktop-hd {
+        font-size: 0.8rem;
+    }
+    @include desktop-wqhd {
+        font-size: 1.0rem;
+    }
 }
 
 #SlideMeterContainer {

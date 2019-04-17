@@ -10701,7 +10701,7 @@ a:hover h1 {
   }
 }
 
-@media (min-width: 1440px) and (max-width: 1920px -1px) {
+@media (min-width: 1440px) and (max-width: 1919px) {
   .vertical-center {
     min-height: 50%;
     /* Fallback for browsers do NOT support vh unit */
@@ -11063,13 +11063,13 @@ a:hover h1 {
   font-weight: bold;
 }
 
-@media (min-width: 1440px) and (max-width: 1920px -1px) {
+@media (min-width: 1440px) and (max-width: 1919px) {
   .left-signup {
     border-right: 1px #26607d solid;
   }
 }
 
-@media (min-width: 1440px) and (max-width: 1920px -1px) {
+@media (min-width: 1440px) and (max-width: 1919px) {
   .right-signup {
     border-left: 1px #26607d solid;
   }
@@ -11201,13 +11201,13 @@ a:hover h1 {
   }
 }
 
-@media (min-width: 1440px) and (max-width: 1920px -1px) {
+@media (min-width: 1440px) and (max-width: 1919px) {
   .step {
     max-width: 450px;
   }
 }
 
-@media (min-width: 1920px) and (max-width: 2560px -1px) {
+@media (min-width: 1920px) and (max-width: 2559px) {
   .step {
     max-width: 500px;
   }
@@ -11261,13 +11261,13 @@ a:hover h1 {
   }
 }
 
-@media (min-width: 1440px) and (max-width: 1920px -1px) {
+@media (min-width: 1440px) and (max-width: 1919px) {
   .contact-img {
     width: 450px !important;
   }
 }
 
-@media (min-width: 1920px) and (max-width: 2560px -1px) {
+@media (min-width: 1920px) and (max-width: 2559px) {
   .contact-img {
     width: 500px !important;
   }
@@ -11361,14 +11361,14 @@ a:hover h1 {
   }
 }
 
-@media (min-width: 1440px) and (max-width: 1920px -1px) {
+@media (min-width: 1440px) and (max-width: 1919px) {
   .modal-h1 {
     font-size: 38px !important;
     margin-top: 25px !important;
   }
 }
 
-@media (min-width: 1920px) and (max-width: 2560px -1px) {
+@media (min-width: 1920px) and (max-width: 2559px) {
   .modal-h1 {
     font-size: 38px !important;
     margin-top: 25px !important;
@@ -11401,7 +11401,7 @@ a:hover h1 {
   }
 }
 
-@media (min-width: 1440px) and (max-width: 1920px -1px) {
+@media (min-width: 1440px) and (max-width: 1919px) {
   .modal-h2 {
     font-size: 38px !important;
     margin-bottom: 35px;
@@ -11456,7 +11456,7 @@ a:hover h1 {
   }
 }
 
-@media (min-width: 1440px) and (max-width: 1920px -1px) {
+@media (min-width: 1440px) and (max-width: 1919px) {
   .modal-h3 {
     font-size: 24px !important;
   }
@@ -11467,7 +11467,7 @@ a:hover h1 {
   font-size: 14px;
 }
 
-@media (min-width: 1920px) and (max-width: 2560px -1px) {
+@media (min-width: 1920px) and (max-width: 2559px) {
   .modal-p {
     width: 500px !important;
   }
@@ -11877,7 +11877,7 @@ output {
   }
 }
 
-@media (min-width: 1440px) and (max-width: 1920px -1px) {
+@media (min-width: 1440px) and (max-width: 1919px) {
   .charity-card p {
     max-width: 400ch;
   }
