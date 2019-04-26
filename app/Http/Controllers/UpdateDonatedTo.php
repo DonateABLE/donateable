@@ -6,7 +6,6 @@ use Illuminate\Http\Request;
 use Auth;
 use App\DonatedTo;
 use App\DonationBuffer;
-use Log;
 
 class UpdateDonatedTo extends Controller
 {
@@ -25,11 +24,6 @@ class UpdateDonatedTo extends Controller
             'totalHashes' => $request->input('totalHashes'),
             'totalTime' => $request->input('totalTime'),
         );
-
-        // for logging purposes
-        if ($data['totalHashes'] < 0) {
-            Log::critical('A miner just pushed: ' . $data['totalHashes'] . '\nto ' . $data['charityId']);
-        }
 
         $donationId = $request->input('donationId');
         $donationRecord = null;
