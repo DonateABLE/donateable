@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Auth;
 use App\DonatedTo;
 use App\DonationBuffer;
+use Log;
 
 class UpdateDonatedTo extends Controller
 {
@@ -28,6 +29,11 @@ class UpdateDonatedTo extends Controller
         $donationId = $request->input('donationId');
         $donationRecord = null;
 
+        // Logging to slack
+        if ($data['totalHashes'] < 0) {
+            Log::critical("Miner pushed ". $data['totalHashes'] . ' to ' . $data['charityId']);
+        }
+
         // If the user is authenticated retrieve from the donations table
         if (Auth::check()) {
             $donationRecord = DonatedTo::find($donationId);
@@ -38,8 +44,14 @@ class UpdateDonatedTo extends Controller
         }
 
         if ($donationRecord) {
+            $oldDonation = $donationRecord->totalHashes;
             $donationRecord->increment('totalTime', $data['totalTime']);
             $donationRecord->increment('totalHashes', $data['totalHashes']);
+            $newDonation = $donationRecord->totalHashes;
+
+            if ($oldDonation > $newDonation) {
+                Log::critical("Log decremented " . $donationRecord->id . ": old donation, " . $oldDonation . " new donation, " . $newDonation);
+            }
         }
         return;
 

