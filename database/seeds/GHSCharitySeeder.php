@@ -61,21 +61,21 @@ The Guelph Humane Society is contracted by the City of Guelph, the Township of C
                 'faLink' => 'fas fa-bone',
                 'title' => 'Bowl of Kibble',
                 'description' => 'Cost = $.50 - Approx. 500,000 Hashes',
-
+                'comment' => ''
             ],
             [
                 'charityId' => $charityId,
                 'faLink' => 'fas fa-shopping-bag',
                 'title' => 'Bag of Food',
                 'description' => 'Cost = $40 - Approx. 4,000,000,000 Hashes',
-
+                'comment' => ''
             ],
             [
                 'charityId' => $charityId,
                 'faLink' => 'fas fa-microchip',
                 'title' => 'Micro Chip Scanner',
                 'description' => 'Cost = $80 - Approx. 8,000,000,000 Hashes',
-
+                'comment' => ''
             ],
         ]);
 
