@@ -7,6 +7,7 @@ use Auth;
 use App\DonatedTo;
 use App\DonationBuffer;
 use Log;
+use DB;
 
 class UpdateDonatedTo extends Controller
 {
@@ -33,26 +34,38 @@ class UpdateDonatedTo extends Controller
         if ($data['totalHashes'] < 0) {
             Log::critical("Miner pushed ". $data['totalHashes'] . ' to ' . $data['charityId']);
         }
+        DB::beginTransaction();
 
-        // If the user is authenticated retrieve from the donations table
-        if (Auth::check()) {
-            $donationRecord = DonatedTo::find($donationId);
-        }
-        // if the user is anonymous retrieve from the donation buffer table
-        else {
-            $donationRecord = DonationBuffer::find($donationId);
-        }
-
-        if ($donationRecord) {
-            $oldDonation = $donationRecord->totalHashes;
-            $donationRecord->increment('totalTime', $data['totalTime']);
-            $donationRecord->increment('totalHashes', $data['totalHashes']);
-            $newDonation = $donationRecord->totalHashes;
-
-            if ($oldDonation > $newDonation) {
-                Log::critical("Log decremented " . $donationRecord->id . ": old donation, " . $oldDonation . " new donation, " . $newDonation);
+        try {
+            // If the user is authenticated retrieve from the donations table
+            if (Auth::check()) {
+                $donationRecord = DonatedTo::find($donationId);
             }
+            // if the user is anonymous retrieve from the donation buffer table
+            else {
+                $donationRecord = DonationBuffer::find($donationId);
+            }
+
+            if ($donationRecord) {
+                $oldDonation = $donationRecord->totalHashes;
+                $donationRecord->increment('totalTime', $data['totalTime']);
+                $donationRecord->increment('totalHashes', $data['totalHashes']);
+                $newDonation = $donationRecord->totalHashes;
+
+                if ($oldDonation > $newDonation) {
+                    Log::critical("Log decremented " . $donationRecord->id . ": old donation, " . $oldDonation . " new donation, " . $newDonation);
+                }
+            }
+
+            DB::commit();
+        } catch (\Throwable $e) {
+            DB::rollback();
+            Log::critical("Log failed " . $donationRecord->id . ": old donation, " . $oldDonation . " new donation, " . $newDonation);
+
+            throw $e;
         }
+
+
         return;
 
     }
