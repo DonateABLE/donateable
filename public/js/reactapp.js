@@ -63,6 +63,7 @@
 /******/ 	return __webpack_require__(__webpack_require__.s = 48);
 /******/ })
 /************************************************************************/
+<<<<<<< HEAD
 /******/ ([
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
@@ -60660,3 +60661,24 @@ exports.unstable_unsubscribe = unstable_unsubscribe;
 
 /***/ })
 /******/ ]);
+=======
+/******/ ({
+
+/***/ 48:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(49);
+
+
+/***/ }),
+
+/***/ 49:
+/***/ (function(module, __webpack_exports__) {
+
+"use strict";
+throw new Error("Module build failed: Error: ENOENT: no such file or directory, open '/Users/Jordon/Documents/Code/donateable/resources/assets/js/reactapp.js'");
+
+/***/ })
+
+/******/ });
+>>>>>>> mobile
