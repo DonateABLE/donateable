@@ -13,9 +13,7 @@
   <meta property="og:url"           content="https://donateable.ca" />
   <meta property="og:type"          content="website" />
   <meta property="og:title"         content="{{ config('app.name', 'donateABLE') }}" />
-  <meta property="og:description"   content="donateABLE description" />
-  <meta property="og:image"         content="{{ asset('img/logo/donateABLE-long-colour-250.png') }}" />
-
+  @stack('facebook')
 
     <title>{{ config('app.name', 'donateABLE') }}</title>
 
