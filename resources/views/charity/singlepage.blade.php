@@ -3,7 +3,7 @@
 @section('content')
     @push('facebook')
     <meta property="og:description"   content="I donated to {{ $charity->longName }}!" />
-    <meta property="og:image"         content="{{ asset('img/social/facebook-' . $charity->logo . '.png') }}" />
+    <meta property="og:image"         content="{{ asset('img/social/facebook-' . $charity->logo) }}" />
     <meta property="og:image:type"         content="image/png"/>
     @endpush
     <div class="container">
