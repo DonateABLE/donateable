@@ -1,11 +1,11 @@
 @extends('layouts.app')
-
+@section('facebook')
+<meta property="og:description"   content="I donated to {{ $charity->longName }}!" />
+<meta property="og:image"         content="{{ asset('img/social/facebook-' . $charity->logo) }}" />
+<meta property="og:image:type"         content="image/png"/>
+@endsection
 @section('content')
-    @push('facebook')
-    <meta property="og:description"   content="I donated to {{ $charity->longName }}!" />
-    <meta property="og:image"         content="{{ asset('img/social/facebook-' . $charity->logo) }}" />
-    <meta property="og:image:type"         content="image/png"/>
-    @endpush
+
     <div class="container">
         <!-- <div class="back-to-charities-link"> -->
         <!-- </div> -->

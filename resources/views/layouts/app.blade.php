@@ -13,7 +13,7 @@
   <meta property="og:url"           content="https://donateable.ca" />
   <meta property="og:type"          content="website" />
   <meta property="og:title"         content="{{ config('app.name', 'donateABLE') }}" />
-  @stack('facebook')
+  @yield('facebook')
 
     <title>{{ config('app.name', 'donateABLE') }}</title>
 
