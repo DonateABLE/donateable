@@ -13,7 +13,12 @@
   <meta property="og:url"           content="https://donateable.ca" />
   <meta property="og:type"          content="website" />
   <meta property="og:title"         content="{{ config('app.name', 'donateABLE') }}" />
-  @yield('facebook')
+  @if(isset($charity))
+  <meta property="og:description"   content="I donated to {{ $charity->longName }}!" />
+  <meta property="og:image"         content="{{ asset('img/social/facebook-' . $charity->logo) }}" />
+  <meta property="og:image:type"    content="image/png"/>
+  @endif
+
 
     <title>{{ config('app.name', 'donateABLE') }}</title>
 
