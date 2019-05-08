@@ -10,29 +10,9 @@
 
     <!-- You can use Open Graph tags to customize link previews.
     Learn more: https://developers.facebook.com/docs/sharing/webmasters -->
-  <meta property="og:url"           content="https://donateable.ca" />
+  <meta property="og:url"           content={{ URL::current() }} />
   <meta property="og:type"          content="website" />
   <meta property="og:title"         content="{{ config('app.name', 'donateABLE') }}" />
-
-  <?php
-    $currentUrl = URL::current();
-    $parsedUrl = urldecode($currentUrl);
-    $charityName = parse_url($parsedUrl);
-    // error_log($charityName["path"]);
-    if (isset($charityName["path"])) {
-        $charityName = substr($charityName["path"], 1);
-
-        $searchCharity = app\Charity::where('longName', $charityName)->first();
-
-        if ($searchCharity) {
-            ?>
-            <meta property="og:description"   content="I donated to {{ $searchCharity->longName }}!" />
-            <meta property="og:image"         content="{{ asset('img/social/facebook-' . $searchCharity->logo) }}" />
-            <meta property="og:image:type"    content="image/png"/>
-            <?php
-        }
-    }
-    ?>
 
 
   @yield('facebook')
