@@ -19,18 +19,21 @@
     $parsedUrl = urldecode($currentUrl);
     $charityName = parse_url($parsedUrl);
     // error_log($charityName["path"]);
-    $charityName = substr($charityName["path"], 1);
+    if (isset($charityName["path"])) {
+        $charityName = substr($charityName["path"], 1);
 
-    $searchCharity = app\Charity::where('longName', $charityName)->first();
+        $searchCharity = app\Charity::where('longName', $charityName)->first();
 
-    if ($searchCharity) {
-        ?>
-        <meta property="og:description"   content="I donated to {{ $searchCharity->longName }}!" />
-        <meta property="og:image"         content="{{ asset('img/social/facebook-' . $searchCharity->logo) }}" />
-        <meta property="og:image:type"    content="image/png"/>
-        <?php
+        if ($searchCharity) {
+            ?>
+            <meta property="og:description"   content="I donated to {{ $searchCharity->longName }}!" />
+            <meta property="og:image"         content="{{ asset('img/social/facebook-' . $searchCharity->logo) }}" />
+            <meta property="og:image:type"    content="image/png"/>
+            <?php
+        }
     }
-  ?>
+    ?>
+
 
   @yield('facebook')
 
