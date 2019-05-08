@@ -128,7 +128,7 @@
             });
 
         var facebookBtn = document.querySelector('.facebook-share');
-        var fbShareUrl = encodeURIComponent('https://donateable.ca');
+        var fbShareUrl = encodeURIComponent("{{ URL::current() }}");
         var fbUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + fbShareUrl + '%2F&amp;src=sdkpreparse';
         facebookBtn.href = fbUrl; // 1
 
@@ -140,7 +140,7 @@
 
         // I'm sorry :()
         var facebookBtn = document.querySelector('.facebook-share2');
-        var fbShareUrl = encodeURIComponent('https://donateable.ca');
+        var fbShareUrl = encodeURIComponent("{{ URL::current() }}");
         var fbUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + fbShareUrl + '%2F&amp;src=sdkpreparse';
         facebookBtn.href = fbUrl; // 1
 
