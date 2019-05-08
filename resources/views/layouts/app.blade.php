@@ -13,11 +13,26 @@
   <meta property="og:url"           content="https://donateable.ca" />
   <meta property="og:type"          content="website" />
   <meta property="og:title"         content="{{ config('app.name', 'donateABLE') }}" />
-  @if(isset($charity))
-  <meta property="og:description"   content="I donated to {{ $charity->longName }}!" />
-  <meta property="og:image"         content="{{ asset('img/social/facebook-' . $charity->logo) }}" />
-  <meta property="og:image:type"    content="image/png"/>
-  @endif
+
+  <?php
+    $currentUrl = URL::current();
+    $parsedUrl = urldecode($currentUrl);
+    $charityName = parse_url($parsedUrl);
+    // error_log($charityName["path"]);
+    $charityName = substr($charityName["path"], 1);
+
+    $searchCharity = app\Charity::where('longName', $charityName)->first();
+
+    if ($searchCharity) {
+        ?>
+        <meta property="og:description"   content="I donated to {{ $searchCharity->longName }}!" />
+        <meta property="og:image"         content="{{ asset('img/social/facebook-' . $searchCharity->logo) }}" />
+        <meta property="og:image:type"    content="image/png"/>
+        <?php
+    }
+  ?>
+
+  @yield('facebook')
 
 
     <title>{{ config('app.name', 'donateABLE') }}</title>
