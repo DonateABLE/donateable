@@ -1,34 +1,22 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import './index.css'
-import Text from './resources/assets/js/components/Text'
-import Buttons from './resources/assets/js/components/Buttons'
-import Image from './resources/assets/js/components/Image'
-import 'bootstrap'
+import React, { Component } from "react";
+import ReactDOM from "react-dom";
 
-ReactDOM.render(
-  <div class='button-holder'>
-    <style class='text/css'>
-      {`
-        .button-holder{
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-        }
-        body {
-          background-color: white;
-          background-image: url("./img/donateABLE-background1.png");
-        }
-      `}
-    </style>
-    <Image />
-    <Text />
-    <Buttons />
-  </div>,
-  document.getElementById('root'));
+/* An example React component */
+class Main extends Component {
+  render() {
+    return (
+      <div>
+        <h1>Test</h1>
+      </div>
+    );
+  }
+}
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-// serviceWorker.unregister();
+export default Main;
+
+/* The if statement is required so as to Render the component on pages that have a div with an ID of "root";
+*/
+
+if (document.getElementById("mobile")) {
+  ReactDOM.render(<Main />, document.getElementById("mobile"));
+}
