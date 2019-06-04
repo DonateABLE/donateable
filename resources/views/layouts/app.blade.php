@@ -32,7 +32,6 @@
         const donateable = '{{ url('/') }}'
         @endif
     </script>
-
     <script src="{{ asset('js/app.js') }}" defer></script>
     <script src="{{ asset('js/contactUs.js') }}"></script>
     <script type="text/javascript">
@@ -128,9 +127,35 @@
         </div>
     </div>
     <div id="mobile" class="parallax">
-        <!-- React App here -->
+        <main class="py-4" style="height: 100%; height: 100vh;">
+
+        <div class="content" style="justify-content: space-between">
+            <div class="site-callout">
+                    <img src="{{asset('img/donateABLE-square-colour-500.png')}}" style="width:200px;height: auto;"/>
+
+
+            </div>
+            <div style="display:flex; flex-direction: column; align-items: center">
+                <h1 style="margin-bottom: 0px; font-size: 1.2rem;">Support Local Charities in Guelph</h1>
+                <h2 style="font-size: 1.2rem;">Without opening your wallet</h2>
+            </div>
+            <div class="site-links">
+                <div class="right-link" style="padding-left: 0px; margin: auto; border-left: none;">
+                    <?php $currentDonors = App\SiteStats::getSitewideCurrentDonors();
+                    $totalDonors = App\SiteStats::getSitewideTotalDonors();
+                    $totalHashes = App\DonatedTo::getSitewideHashes(); ?>
+                    <a class="stat-box" style="width: 300px; background-color: #26607D; border-color: #26607D">Mobile Version coming soon</a>
+                    <a class="stat-box" style="width: 300px">Currently Donating 	&nbsp;	&nbsp;{{ $currentDonors }}</a>
+                    <a class="stat-box" style="width: 300px">Donators to date 	&nbsp;	&nbsp;{{ $totalDonors }}</a>
+                    <a class="stat-box" style="width: 300px" id="totalHashesMobile">Total Hashes 	&nbsp;	&nbsp;{{ $totalHashes }}</a>
+                </div>
+            </div>
+            <div id="poweredby" style="color: white; display: flex; justify-self: flex-end; justify-content: center;">
+                Powered By &nbsp;<a href="https://www.synergenics.ca" target="_blank"><img src="{{ asset('img/logo/Synergenics-Logo-2008-White.png') }}" style="width: 100px"></a>
+            </div>
+          </div>
+      </main>
       </div>
-      <script src="{{ asset('js/reactapp.js') }}"></script>
 
 </body>
 <!-- How it works modal -->
