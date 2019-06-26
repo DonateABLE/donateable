@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
+import Navigation from "./Navbar"
 import Buttons from "./integration/Buttons"
 import Image from "./integration/Image"
 import Text from "./Text"
@@ -8,11 +9,14 @@ import Footer from "./Footer"
 class Main extends Component {
   render () {
     return (
-      <div class='text-center'>
-        <Image />
-        <Text />
-        <Buttons />
-        <Footer />
+      <div>
+        <Navigation />
+        <div class='text-center'>
+          <Image />
+          <Text />
+          <Buttons />
+          <Footer />
+        </div>
       </div>
     );
   }
