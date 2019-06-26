@@ -1,7 +1,6 @@
 import React from 'react'
 import { Button } from 'react-bootstrap'
-import './bootstrap'
-import './App.css'
+// import './App.css'
 
 function Buttons () {
   return (
@@ -21,7 +20,7 @@ function Buttons () {
                   margin-bottom: 6px;
                   width: 305px;
                   height: 48px;
-                  font-size: 12pt;
+                  font-size: 10pt;
                 }
       
                 .btn-turqdark{
@@ -36,7 +35,7 @@ function Buttons () {
                   margin-bottom: 5px;
                   width: 305px;
                   height: 48px;
-                  font-size: 12pt;
+                  font-size: 10pt;
                 }
       
                 .btn-turqwhite{
@@ -50,16 +49,16 @@ function Buttons () {
                   margin-bottom: 5px;
                   width: 305px;
                   height: 48px;
-                  font-size: 12pt;
+                  font-size: 10pt;
                 }
         `}
       </style>
       <Button variant='turqdark' class='row' size='lg'>SELECT YOUR CHARITY</Button>
       <Button variant='turqwhite' class='row' size='lg'>HOW IT WORKS</Button>
       <Button variant='turqwhite' size='lg'>TAKE A TOUR</Button>
-      <Button variant='turq' size='lg'>CURRENTLY DONATING '#'</Button>
+      <Button variant='turq' size='lg'>CURRENTLY DONATING </Button>
       <Button variant='turq' size='lg'>DONATORS TO DATE</Button>
-      <Button variant='turq' size='lg'>TOTAL HASHES '#'</Button>
+      <Button variant='turq' size='lg'>TOTAL HASHES 193 832</Button>
     </div>
   )
 }

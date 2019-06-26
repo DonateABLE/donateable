@@ -1,12 +1,18 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
-
+import Buttons from "./integration/Buttons"
+import Image from "./integration/Image"
+import Text from "./Text"
+import Footer from "./Footer"
 /* An example React component */
 class Main extends Component {
-  render() {
+  render () {
     return (
-      <div>
-        <h1>Test</h1>
+      <div class='text-center'>
+        <Image />
+        <Text />
+        <Buttons />
+        <Footer />
       </div>
     );
   }
@@ -18,5 +24,4 @@ export default Main;
 */
 
 if (document.getElementById("mobile")) {
-  ReactDOM.render(<Main />, document.getElementById("mobile"));
-}
+  ReactDOM.render(<Main />, document.getElementById("mobile"))}
