@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from './img/donateABLE-square-colour-500.png'
+import logo from './public/img/donateABLE-square-colour-500.png'
 import '/Users/administrator/dev/donate-mobile/node_modules/bootstrap/dist/css/bootstrap.min.css'
 
 function Image () {

@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import '/Users/administrator/dev/donate-mobile/node_modules/bootstrap/dist/css/bootstrap.min.css'
+import './bootstrap' 
 
 // function App() {
 //   return (

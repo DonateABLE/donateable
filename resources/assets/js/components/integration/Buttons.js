@@ -1,6 +1,6 @@
 import React from 'react'
 import { Button } from 'react-bootstrap'
-import '/Users/administrator/dev/donate-mobile/node_modules/bootstrap/dist/css/bootstrap.css'
+import './bootstrap'
 import './App.css'
 
 function Buttons () {
