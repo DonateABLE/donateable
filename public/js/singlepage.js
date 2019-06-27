@@ -1,3 +1,5 @@
+"use strict";
+
 function openTab(evt, tabName) {
   var i, tabcontent, tablinks;
   // Hide all tabs

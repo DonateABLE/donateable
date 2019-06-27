@@ -1,3 +1,5 @@
+"use strict";
+
 $(document).ready(function () {
   console.log("donate.js loaded");
   // set User information

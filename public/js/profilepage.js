@@ -1,3 +1,5 @@
+"use strict";
+
 $(document).ready(function () {
   console.log("Profile Page Script Loaded");
 
