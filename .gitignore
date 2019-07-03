@@ -17,3 +17,4 @@ package-lock.json
 public/.DS_Store
 public/img/.DS_Store
 public/js/app.js
+public/js/reactapp.js
