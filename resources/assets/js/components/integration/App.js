@@ -27,7 +27,7 @@ import './bootstrap'
 function App () {
   return (
 
-    <div class='text-center'>
+    <div className='text-center'>
       <p> Setting the paragraph to little text
       </p>
     </div>

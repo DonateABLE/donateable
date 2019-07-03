@@ -54,8 +54,8 @@ class LoginButtons extends Component {
                   }
           `}
         </style>
-        <Button variant='turqwhite' class='row' size='lg'>LOG IN</Button>
-        <Button variant='turqdark' class='row' size='lg'>SIGN UP</Button>
+        <Button variant='turqwhite' className='row' size='lg'>LOG IN</Button>
+        <Button variant='turqdark' className='row' size='lg'>SIGN UP</Button>
       </div>
     )
   }

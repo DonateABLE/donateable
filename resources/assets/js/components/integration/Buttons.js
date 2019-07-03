@@ -52,8 +52,8 @@ function Buttons () {
                 }
         `}
       </style>
-      <Button variant='turqdark' class='row' size='lg'>SELECT YOUR CHARITY</Button>
-      <Button variant='turqwhite' class='row' size='lg'>HOW IT WORKS</Button>
+      <Button variant='turqdark' className='row' size='lg'>SELECT YOUR CHARITY</Button>
+      <Button variant='turqwhite' className='row' size='lg'>HOW IT WORKS</Button>
       <Button variant='turqwhite' size='lg'>TAKE A TOUR</Button>
       <Button variant='turq' size='lg'>CURRENTLY DONATING </Button>
       <Button variant='turq' size='lg'>DONATORS TO DATE</Button>

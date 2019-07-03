@@ -11,18 +11,18 @@ class Main extends Component {
     return (
       <div>
         <Navigation />
-        <div class='text-center'>
+        <div className='text-center'>
           <Image />
           <Text />
           <Buttons />
           <Footer />
         </div>
       </div>
-    );
+    )
   }
 }
 
-export default Main;
+export default Main
 
 /* The if statement is required so as to Render the component on pages that have a div with an ID of "root";
 */
