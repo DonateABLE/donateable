@@ -7,13 +7,12 @@ import LoginButtons from './Navigation/NavButtons'
 
 
 
-//before this was function Navigation must be a class
-// needs to extend the Component class/type from the react framework
-
-// This is the Navigation Bar that will be renderend at the top of each page
+/* Before this was function Navigation must be a class 
+   Needs to extend the Component class/type from the react framework 
+   This is the Navigation Bar that will be renderend at the top of each page */
 
 class Navigation extends Component {
-  //can but does not always need a constructor
+  /* Can but does not always need a constructor */
   constructor(props, context) {
       super(props, context);
 
@@ -22,7 +21,10 @@ class Navigation extends Component {
       }
 
   }
-  //I moved the functions from the constructor to the class (still accessible by this.myFunc)
+
+  /* I moved the functions from the constructor to the class
+   (still accessible by this.myFunc) */
+
   handleShow = () => {
       this.setState({show: true});
   };
@@ -32,8 +34,11 @@ class Navigation extends Component {
   };
 
 
-  // if a class is used the render function must be invoked (I believe this turns JSX -> html)
-  // you must return from the render method (again jsx-> html -> stored in a virtual dom node by react)
+  /* If a class is used the render function must be invoked (I
+     believe this turns JSX -> html) you must return from the 
+     render method (again jsx-> html -> stored in a virtual 
+      dom node by react) */
+
   render() {
       return (
           <div>

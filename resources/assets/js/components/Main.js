@@ -5,7 +5,9 @@ import Buttons from "./integration/Buttons"
 import Image from "./integration/Image"
 import Text from "./Text"
 import Footer from "./Footer"
-/* An example React component */
+
+/* This is the top level file that renders the entire 
+  Application*/
 class Main extends Component {
   render () {
     return (
