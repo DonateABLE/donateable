@@ -1,12 +1,11 @@
 import React from 'react'
 import { Button } from 'react-bootstrap'
-// import './App.css'
 
 function Buttons () {
   return (
     /* Custom styling for buttons, sizing and colors */
-    <div class='text-center'>
-      <style class='text/css'>
+    <div className='text-center'>
+      <style className='text/css'>
         {`
                 .btn-turq {
                   background-color: #45A6D7;

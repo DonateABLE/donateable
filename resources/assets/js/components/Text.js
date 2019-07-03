@@ -1,5 +1,7 @@
 import React from 'react'
 
+// The Following returns some basic text as a SFC to Main
+
 function Text () {
   return  (
     <div>

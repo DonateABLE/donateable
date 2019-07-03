@@ -1,5 +1,6 @@
-{   "/js/app.js": "/js/app.js",
+{
     "/js/reactapp.js": "/js/reactapp.js",
+    "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css",
     "/css/tabbedNavigation.css": "/css/tabbedNavigation.css",
     "/css/profilePage.css": "/css/profilePage.css",
