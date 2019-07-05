@@ -74,7 +74,7 @@ class ButtonGrouping extends Component {
           <Button variant='turq' size='lg'>CHARITIES</Button>
           <Button variant='turq' size='lg'>PRIVACY POLICY</Button>
           <Button variant='turq' size='lg'>CONTACT</Button>
-          <Button variant='turq' size='lg'>FAQ</Button>
+          <Button variant='turq' size='lg' onClick={this.handleShowFAQ}>FAQ</Button>
           <Button variant='turq' size='lg'>TAKE A TOUR</Button>
         </ButtonGroup>
 
@@ -146,7 +146,7 @@ class ButtonGrouping extends Component {
         <Modal 
           size='lg'
           show={this.state.showFAQ}
-          onHide={this.handleHideHIW}
+          onHide={this.handleHideFAQ}
         >
           <Modal.Header closeButton>
             <Modal.Title id="example-custom-modal-styling-title" className='text-center'>
