@@ -11,7 +11,7 @@ class ButtonGrouping extends Component {
       /* init states */
       showAbout: false,
       showHIW: false,
-      showPrivPolicy: false,
+      showPP: false,
       showFAQ: false
     }
   }
@@ -19,6 +19,7 @@ class ButtonGrouping extends Component {
 
   /* State Handling Functions */
 
+  // About
   handleShowAbout = () => {
     this.setState({showAbout: true});
   };
@@ -27,6 +28,7 @@ class ButtonGrouping extends Component {
     this.setState({showAbout: false});
   };
 
+  // How it Works
   handleShowHIW = () => {
     this.setState({showHIW: true})
   }
@@ -34,7 +36,17 @@ class ButtonGrouping extends Component {
   handleHideHIW = () => {
     this.setState({showHIW: false});
   };
-
+  
+  // Privacy Policy
+  handleShowPP = () => {
+    this.setState({showPP: true})
+  }
+  
+  handleHidePP = () => {
+    this.setState({showPP: false});
+  };
+  
+  // Frequently Asked Questions
   handleShowFAQ = () => {
     this.setState({showFAQ: true})
   }
@@ -72,7 +84,7 @@ class ButtonGrouping extends Component {
           <Button variant='turq' size='lg' onClick={this.handleShowAbout}>ABOUT</Button>
           <Button variant='turq' size='lg' onClick={this.handleShowHIW}>HOW IT WORKS</Button>
           <Button variant='turq' size='lg'>CHARITIES</Button>
-          <Button variant='turq' size='lg'>PRIVACY POLICY</Button>
+          <Button variant='turq' size='lg' onClick={this.handleShowPP}>PRIVACY POLICY</Button>
           <Button variant='turq' size='lg'>CONTACT</Button>
           <Button variant='turq' size='lg' onClick={this.handleShowFAQ}>FAQ</Button>
           <Button variant='turq' size='lg'>TAKE A TOUR</Button>
@@ -165,7 +177,84 @@ class ButtonGrouping extends Component {
            
           </Modal.Body>
         </Modal>
+
+       <Modal 
+          size='lg'
+          show={this.state.showPP}
+          onHide={this.handleHidePP}
+        >
+          <Modal.Header closeButton>
+            <Modal.Title id="example-custom-modal-styling-title" className='text-center'>
+            Privacy Policy  
+            </Modal.Title>
+          </Modal.Header>
+          <Modal.Body> 
+          
+          <h3>
+          Effective Date: January 1st, 2019 
+          </h3>
+          <p>
+          This privacy notice discloses the privacy practices for donateABLE 
+          and our website; https://www.donateable.ca. This privacy notice 
+          applies solely to information collected by this website, except 
+          where stated otherwise. 
+         
+          It will notify you of the following:
+          
+          What information we collect;
+          With whom it is shared;
+          How it can be corrected;
+          How it is secured;
+          How policy changes will be communicated; and
+          How to address concerns over misuse of personal data.
+        </p>
+
+
+        <h3> Information Collection, Use, and Sharing </h3>
+
+        <p> We are the sole owners of the information collected on this site. 
+          We only have access to/collect information that you voluntarily 
+          give us via email or other direct contact from you. We will not 
+          sell or rent this information to anyone. 
+        </p>
         
+        <p> 
+          We will use your information to respond to you, regarding the reason you contacted us. We will not share your 
+          information with any third party outside of our organization. 
+        </p>
+
+        <p> 
+          Unless you ask us not to, we may contact you via email in the future to tell you about statistics, new charities or features, 
+          or changes to this privacy policy. 
+        </p>
+
+        <h3> Your Access to and Control Over Information </h3>
+
+      <p> 
+        You may opt out of any future contacts from us at any time. You can do the following at any time by contacting us via the contact 
+        form provided on our website: 
+
+        See what data we have about you, if any.
+
+        Change/correct any data we have about you.
+
+        Have us delete any data we have about you.
+
+        Express any concern you have about our use of your data
+      </p>
+      
+      <h3> Security </h3>
+
+      <p>
+      We take precautions to protect your information. When you submit 
+      sensitive information via the website, your information is 
+      protected both online and offline. 
+      </p>
+
+
+          </Modal.Body>
+        </Modal>
+
         <Modal 
           size='lg'
           show={this.state.showFAQ}
@@ -173,7 +262,7 @@ class ButtonGrouping extends Component {
         >
           <Modal.Header closeButton>
             <Modal.Title id="example-custom-modal-styling-title" className='text-center'>
-             Title 
+             Frequently Asked Questions
             </Modal.Title>
           </Modal.Header>
           <Modal.Body> 
