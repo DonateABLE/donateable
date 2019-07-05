@@ -8,11 +8,16 @@ class ButtonGrouping extends Component {
   constructor (props, context) {
     super(props, context);
     this.state = {
+      /* init states */
       showAbout: false,
       showHIW: false,
-      showPrivPolicy: false
+      showPrivPolicy: false,
+      showFAQ: false
     }
   }
+
+
+  /* State Handling Functions */
 
   handleShowAbout = () => {
     this.setState({showAbout: true});
@@ -20,6 +25,22 @@ class ButtonGrouping extends Component {
 
   handleHideAbout = () => {
     this.setState({showAbout: false});
+  };
+
+  handleShowHIW = () => {
+    this.setState({showHIW: true})
+  }
+  
+  handleHideHIW = () => {
+    this.setState({showHIW: false});
+  };
+
+  handleShowFAQ = () => {
+    this.setState({showFAQ: true})
+  }
+  
+  handleHideFAQ = () => {
+    this.setState({showFAQ: false});
   };
 
   render () {
@@ -49,13 +70,14 @@ class ButtonGrouping extends Component {
         <ButtonGroup vertical>
           <Button variant='turq' size='lg'>HOME</Button>
           <Button variant='turq' size='lg' onClick={this.handleShowAbout}>ABOUT</Button>
-          <Button variant='turq' size='lg'>HOW IT WORKS</Button>
+          <Button variant='turq' size='lg' onClick={this.handleShowHIW}>HOW IT WORKS</Button>
           <Button variant='turq' size='lg'>CHARITIES</Button>
           <Button variant='turq' size='lg'>PRIVACY POLICY</Button>
           <Button variant='turq' size='lg'>CONTACT</Button>
           <Button variant='turq' size='lg'>FAQ</Button>
           <Button variant='turq' size='lg'>TAKE A TOUR</Button>
         </ButtonGroup>
+
         {/* This is the Beginning of the modals that will be rendered */}
         <Modal 
           size='lg'
@@ -101,6 +123,40 @@ class ButtonGrouping extends Component {
               their passion and knowledge in the IT world with their passion of giving 
               back to create a solution that makes a difference.
             </p>
+          </Modal.Body>
+        </Modal>
+        
+        <Modal 
+          size='lg'
+          show={this.state.showHIW}
+          onHide={this.handleHideHIW}
+        >
+          <Modal.Header closeButton>
+            <Modal.Title id="example-custom-modal-styling-title" className='text-center'>
+             Title 
+            </Modal.Title>
+          </Modal.Header>
+          <Modal.Body> 
+          <p>
+           This is some Generic Paragraphs
+          </p>  
+          </Modal.Body>
+        </Modal>
+        
+        <Modal 
+          size='lg'
+          show={this.state.showFAQ}
+          onHide={this.handleHideHIW}
+        >
+          <Modal.Header closeButton>
+            <Modal.Title id="example-custom-modal-styling-title" className='text-center'>
+             Title 
+            </Modal.Title>
+          </Modal.Header>
+          <Modal.Body> 
+          <p>
+           This is some Generic Paragraphs
+          </p>  
           </Modal.Body>
         </Modal>
       </div>
