@@ -12,6 +12,7 @@ class ButtonGrouping extends Component {
       showAbout: false,
       showHIW: false,
       showPP: false,
+      showContact: false,
       showFAQ: false
     }
   }
@@ -44,6 +45,15 @@ class ButtonGrouping extends Component {
   
   handleHidePP = () => {
     this.setState({showPP: false});
+  }  
+  
+  // Contact 
+  handleShowContact = () => {
+    this.setState({showContact: true})
+  }
+  
+  handleHideContact = () => {
+    this.setState({showContact: false});
   };
   
   // Frequently Asked Questions
@@ -85,7 +95,7 @@ class ButtonGrouping extends Component {
           <Button variant='turq' size='lg' onClick={this.handleShowHIW}>HOW IT WORKS</Button>
           <Button variant='turq' size='lg'>CHARITIES</Button>
           <Button variant='turq' size='lg' onClick={this.handleShowPP}>PRIVACY POLICY</Button>
-          <Button variant='turq' size='lg'>CONTACT</Button>
+          <Button variant='turq' size='lg' onClick={this.handleShowContact}>CONTACT</Button>
           <Button variant='turq' size='lg' onClick={this.handleShowFAQ}>FAQ</Button>
           <Button variant='turq' size='lg'>TAKE A TOUR</Button>
         </ButtonGroup>
@@ -98,7 +108,7 @@ class ButtonGrouping extends Component {
         >
           <Modal.Header closeButton>
             <Modal.Title id="example-custom-modal-styling-title" className='text-center'>
-              Custom Modal Styling
+            About
             </Modal.Title>
           </Modal.Header>
           {/* WHO */}
@@ -190,27 +200,28 @@ class ButtonGrouping extends Component {
           </Modal.Header>
           <Modal.Body> 
           
-          <h3>
+          <h6>
           Effective Date: January 1st, 2019 
-          </h3>
+          </h6>
           <p>
           This privacy notice discloses the privacy practices for donateABLE 
-          and our website; https://www.donateable.ca. This privacy notice 
+          and our website; donateable.ca. This privacy notice 
           applies solely to information collected by this website, except 
-          where stated otherwise. 
-         
-          It will notify you of the following:
-          
-          What information we collect;
-          With whom it is shared;
-          How it can be corrected;
-          How it is secured;
-          How policy changes will be communicated; and
-          How to address concerns over misuse of personal data.
+          where stated otherwise. <br/>
+          <br/>
+          It will notify you of the following:<br/>
+          <br/>
+          What information we collect; <br/>
+          With whom it is shared;<br/>
+          How it can be corrected;<br/>
+          How it is secured;<br/>
+          How policy changes will be communicated; and<br/>
+          How to address concerns over misuse of personal data.<br/>
         </p>
 
-
-        <h3> Information Collection, Use, and Sharing </h3>
+        
+        <br/>
+        <h6> Information Collection, Use, and Sharing </h6>
 
         <p> We are the sole owners of the information collected on this site. 
           We only have access to/collect information that you voluntarily 
@@ -227,23 +238,25 @@ class ButtonGrouping extends Component {
           Unless you ask us not to, we may contact you via email in the future to tell you about statistics, new charities or features, 
           or changes to this privacy policy. 
         </p>
-
-        <h3> Your Access to and Control Over Information </h3>
+        
+        <br/>
+        <h6> Your Access to and Control Over Information </h6>
 
       <p> 
         You may opt out of any future contacts from us at any time. You can do the following at any time by contacting us via the contact 
-        form provided on our website: 
-
-        See what data we have about you, if any.
-
-        Change/correct any data we have about you.
-
-        Have us delete any data we have about you.
-
-        Express any concern you have about our use of your data
+        form provided on our website: <br/>
+        <br/>
+        See what data we have about you, if any.<br/>
+        <br/>
+        Change/correct any data we have about you.<br/>
+        <br/>
+        Have us delete any data we have about you.<br/>
+        <br/>
+        Express any concern you have about our use of your data<br/>
       </p>
       
-      <h3> Security </h3>
+      <br/>
+      <h6> Security </h6>
 
       <p>
       We take precautions to protect your information. When you submit 
@@ -252,6 +265,33 @@ class ButtonGrouping extends Component {
       </p>
 
 
+          </Modal.Body>
+        </Modal>
+
+        <Modal 
+          size='lg'
+          show={this.state.showContact}
+          onHide={this.handleHideContact}
+        >
+          <Modal.Header closeButton>
+            <Modal.Title id="example-custom-modal-styling-title" className='text-center'>
+            Contact
+            </Modal.Title>
+          </Modal.Header>
+          <Modal.Body> 
+            {/* JOIN THE PROGRAM */}
+          <p>
+          Are you a local, Guelph and Wellington County, non-profit charity that would like 
+          to be featured on donateABLE? Simply fill out the form below and a member of our 
+          team will be in touch with the next steps.
+          </p>  
+
+          {/* Technical Support */}
+          <p>
+          If you are having any problems with the site functionality or have a technical 
+          question please fill out the form below to submit a ticket. A member of our team 
+          will get back to you within 48 business hours.
+          </p>
           </Modal.Body>
         </Modal>
 
