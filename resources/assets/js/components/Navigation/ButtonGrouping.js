@@ -83,6 +83,14 @@ class ButtonGrouping extends Component {
                     height: 48px;
                     font-size: 10pt;
                   }
+
+                  .modal-content {
+                    background-color: #45A6D7;
+                  }
+
+                  .modal-body {
+                    background-color: #45A6D7;
+                  }
           `}
         </style>
         <ButtonGroup vertical style={{width: 305, marginTop:10}}>
@@ -102,14 +110,25 @@ class ButtonGrouping extends Component {
           show={this.state.showAbout}
           onHide={this.handleHideAbout}
         >
-          <Modal.Header closeButton>
-            <Modal.Title id="example-custom-modal-styling-title" className='text-center'>
-            About
+          <Modal.Header style={{backgroundColor: '#45A6D7'}} closeButton>
+            <Modal.Title id="example-custom-modal-styling-title" className='text-center'
+             style={{color: '#FFFFFF'}}
+             >
             </Modal.Title>
           </Modal.Header>
           {/* WHO */}
-          <Modal.Body> 
-            <p>
+
+          <Modal.Body style={{
+            display: 'flex', 
+            justifyContent: 'center', 
+            alignItems: 'center', 
+            paddingTop: '0px',
+            paddingBottom:'0px'}}>
+          <img src='/img/logo/donateABLE-long-white-500.png' style={{width: '70%'}}/>
+          </Modal.Body>
+
+          <Modal.Body style={{backgroundColor: '#45A6D7'}}> 
+          <p style={{color: '#FFFFFF'}}>
               donateABLE is a website designed, developed, and managed by Synergenics,
               a professional IT support and solutions provider to Guelph and Southwestern 
               Ontario for over 30 years. Their 30 years of service has allowed them to
@@ -120,8 +139,8 @@ class ButtonGrouping extends Component {
           </Modal.Body>
 
           {/* WHAT */}
-          <Modal.Body>
-            <p>
+          <Modal.Body style={{backgroundColor: '#45A6D7'}}>
+          <p style={{color: '#FFFFFF'}}>
             donateABLE is a website project developed and managed by Synergenics. 
             This solution will take small amounts of computational power donated 
             from individuals and pool it together into a larger resource to generate 
@@ -132,8 +151,8 @@ class ButtonGrouping extends Component {
           </Modal.Body>
 
           {/* WHY */}
-          <Modal.Body>
-            <p>
+          <Modal.Body style={{backgroundColor: '#45A6D7'}}>
+          <p style={{color: '#FFFFFF'}}>
               Synergenics has consistently made an effort, for the past 30 years, to give 
               back to their local community in any way they can. They have done this by 
               providing discounted IT support, sponsoring local youth organizations, 
@@ -149,15 +168,15 @@ class ButtonGrouping extends Component {
           show={this.state.showHIW}
           onHide={this.handleHideHIW}
         >
-          <Modal.Header closeButton>
+          <Modal.Header style={{backgroundColor: '#45A6D7'}} closeButton>
             <Modal.Title id="example-custom-modal-styling-title" className='text-center'>
              Title 
             </Modal.Title>
           </Modal.Header>
-          <Modal.Body> 
+          <Modal.Body style={{backgroundColor: '#45A6D7'}}> 
           
           
-          <p>
+          <p style={{color: '#FFFFFF'}}>
           The first step is the easiest, or the hardest depending on how you look at it, 
           which is selecting the charity you would like to donate to. Simply select a 
           charity out of our provided list that you wish to donate to and begin lending 
@@ -165,7 +184,8 @@ class ButtonGrouping extends Component {
           with a computer is able to donate.          
           </p> 
 
-          <p>
+          <p style={{color: '#FFFFFF'}}>
+
           The second step is setting the amount of processing power you would like to 
           donate. Basically, the more processor power you donate, the more algorithms 
           get solved, which is then translated into digital currency that is then 
@@ -173,7 +193,7 @@ class ButtonGrouping extends Component {
           in their community.
           </p> 
           
-          <p>
+          <p style={{color: '#FFFFFF'}}>
           The third step is the easiest. Now that you have selected your charity and 
           set your processing power you are now ready to start donating. Select the 
           start button and carry on with your day. You can browse websites, go walk 
@@ -199,7 +219,7 @@ class ButtonGrouping extends Component {
           <h6>
           Effective Date: January 1st, 2019 
           </h6>
-          <p>
+          <p style={{color: '#FFFFFF'}}>
           This privacy notice discloses the privacy practices for donateABLE 
           and our website; donateable.ca. This privacy notice 
           applies solely to information collected by this website, except 
@@ -252,9 +272,9 @@ class ButtonGrouping extends Component {
       </p>
       
       <br/>
-      <h6> Security </h6>
+      <h6 style={{color: '#FFFFF'}}> Security </h6>
 
-      <p>
+      <p style={{color: '#FFFFFF'}}>
       We take precautions to protect your information. When you submit 
       sensitive information via the website, your information is 
       protected both online and offline. 
@@ -276,14 +296,14 @@ class ButtonGrouping extends Component {
           </Modal.Header>
           <Modal.Body> 
             {/* JOIN THE PROGRAM */}
-          <p>
+            <p style={{color: '#FFFFFF'}}>
           Are you a local, Guelph and Wellington County, non-profit charity that would like 
           to be featured on donateABLE? Simply fill out the form below and a member of our 
           team will be in touch with the next steps.
           </p>  
 
           {/* Technical Support */}
-          <p>
+          <p style={{color: '#FFFFFF'}}>
           If you are having any problems with the site functionality or have a technical 
           question please fill out the form below to submit a ticket. A member of our team 
           will get back to you within 48 business hours.
@@ -302,8 +322,8 @@ class ButtonGrouping extends Component {
             </Modal.Title>
           </Modal.Header>
           <Modal.Body> 
-          <p>
-           This is some Generic Paragraphs
+          <p style={{color: '#FFFFFF'}}>  
+            This is some Generic Paragraphs
           </p>  
           </Modal.Body>
         </Modal>
