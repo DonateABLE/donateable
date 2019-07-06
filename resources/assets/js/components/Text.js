@@ -2,12 +2,12 @@ import React from 'react'
 
 // The Following returns some basic text as a SFC to Main
 
-function Text () {
+const Text = (props) => {
   return  (
     <div>
       <h1 style={{marginBottom: 0, marginTop: 20,
-        fontSize: 19,}}>Support Local Charities in Guelph</h1>
-      <h2 style={{fontSize: 19, marginBottom: 20}}>Without opening your wallet</h2>
+        fontSize: 19}}>{props.text1}</h1>
+      <h2 style={{fontSize: 19, marginBottom: 20}}>{props.text2}</h2>
     </div>
   )
 }

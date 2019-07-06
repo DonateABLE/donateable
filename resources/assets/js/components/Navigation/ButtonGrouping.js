@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Button, ButtonGroup, Modal } from 'react-bootstrap'
+import ModalText from './Modals/ModalText'
 
 // This component is for the collection of buttons that pull down
 // in the hamburger menu
@@ -125,7 +126,10 @@ class ButtonGrouping extends Component {
             paddingTop: '0px',
             paddingBottom:'0px'}}>
           <img src='/img/logo/donateABLE-long-white-500.png' style={{width: '70%'}}/>
+          <ModalText text1='THE WHO, WHAT & WHYS OF DONATEABLE' text2='THE NEWEST AND EASIEST WAY TO DONATE'/>
           </Modal.Body>
+
+  
 
           <Modal.Body style={{backgroundColor: '#45A6D7'}}> 
           <p style={{color: '#FFFFFF'}}>
@@ -170,9 +174,20 @@ class ButtonGrouping extends Component {
         >
           <Modal.Header style={{backgroundColor: '#45A6D7'}} closeButton>
             <Modal.Title id="example-custom-modal-styling-title" className='text-center'>
-             Title 
+      
             </Modal.Title>
           </Modal.Header>
+          <Modal.Body style={{
+            display: 'flex', 
+            justifyContent: 'center', 
+            alignItems: 'center', 
+            paddingTop: '0px',
+            paddingBottom:'0px'}}>
+          <img src='/img/logo/donateABLE-long-white-500.png' style={{width: '70%'}}/>
+          <ModalText text1='USE YOUR COMPUTER POWER TO GENERATE' text2='MONEY FOR YOUR CHOSEN CHARITY'/>
+          </Modal.Body>
+  
+
           <Modal.Body style={{backgroundColor: '#45A6D7'}}> 
           
           
@@ -211,9 +226,18 @@ class ButtonGrouping extends Component {
         >
           <Modal.Header closeButton>
             <Modal.Title id="example-custom-modal-styling-title" className='text-center'>
-            Privacy Policy  
             </Modal.Title>
           </Modal.Header>
+
+          <Modal.Body style={{
+            display: 'flex', 
+            justifyContent: 'center', 
+            alignItems: 'center', 
+            paddingTop: '0px',
+            paddingBottom:'0px'}}>
+          <img src='/img/logo/donateABLE-long-white-500.png' style={{width: '70%'}}/>
+          </Modal.Body>
+
           <Modal.Body> 
           
           <h6>
@@ -239,18 +263,19 @@ class ButtonGrouping extends Component {
         <br/>
         <h6> Information Collection, Use, and Sharing </h6>
 
-        <p> We are the sole owners of the information collected on this site. 
+        <p style={{color: '#FFFFFF'}}>
+          We are the sole owners of the information collected on this site. 
           We only have access to/collect information that you voluntarily 
           give us via email or other direct contact from you. We will not 
           sell or rent this information to anyone. 
         </p>
         
-        <p> 
+        <p style={{color: '#FFFFFF'}}>
           We will use your information to respond to you, regarding the reason you contacted us. We will not share your 
           information with any third party outside of our organization. 
         </p>
 
-        <p> 
+        <p style={{color: '#FFFFFF'}}>
           Unless you ask us not to, we may contact you via email in the future to tell you about statistics, new charities or features, 
           or changes to this privacy policy. 
         </p>
@@ -258,7 +283,7 @@ class ButtonGrouping extends Component {
         <br/>
         <h6> Your Access to and Control Over Information </h6>
 
-      <p> 
+        <p style={{color: '#FFFFFF'}}>
         You may opt out of any future contacts from us at any time. You can do the following at any time by contacting us via the contact 
         form provided on our website: <br/>
         <br/>
@@ -291,9 +316,20 @@ class ButtonGrouping extends Component {
         >
           <Modal.Header closeButton>
             <Modal.Title id="example-custom-modal-styling-title" className='text-center'>
-            Contact
             </Modal.Title>
           </Modal.Header>
+
+          <Modal.Body style={{
+            display: 'flex', 
+            justifyContent: 'center', 
+            alignItems: 'center', 
+            paddingTop: '0px',
+            paddingBottom:'0px'}}>
+          <img src='/img/logo/donateABLE-long-white-500.png' style={{width: '70%'}}/>
+          <ModalText text1='THANK YOU FOR VISITING' text2='WE WOULD LIKE TO HEAR FROM YOU' />
+
+          </Modal.Body>
+
           <Modal.Body> 
             {/* JOIN THE PROGRAM */}
             <p style={{color: '#FFFFFF'}}>

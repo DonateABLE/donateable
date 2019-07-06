@@ -15,7 +15,7 @@ class Main extends Component {
         <Navigation />
         <div className='text-center'>
           <Image />
-          <Text />
+          <Text text1='SUPPORT LOCAL CHARITIES IN GUELPH' text2='WITHOUT OPENING YOUR WALLET' />
           <Buttons />
           <Footer />
         </div>
