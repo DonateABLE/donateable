@@ -84,12 +84,12 @@ class ButtonGrouping extends Component {
                     font-size: 10pt;
                   }
 
-                  .modal-turq {
+                  .modal-backdrop {
                     background-color: #445A6D7;
                   }
           `}
         </style>
-        <ButtonGroup vertical>
+        <ButtonGroup vertical style={{width: 305}}>
           <Button variant='turq' size='lg'>HOME</Button>
           <Button variant='turq' size='lg' onClick={this.handleShowAbout}>ABOUT</Button>
           <Button variant='turq' size='lg' onClick={this.handleShowHIW}>HOW IT WORKS</Button>

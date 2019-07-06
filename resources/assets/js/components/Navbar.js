@@ -45,7 +45,7 @@ class Navigation extends Component {
               <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
                   <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
                   <Navbar.Collapse id="responsive-navbar-nav">
-                      <Nav className="mr-auto">
+                      <Nav className='text-center' style={{paddingRight:0}}>
                           <ButtonGrouping />
                           {/*}<Nav.Link href="#Home">Home</Nav.Link>
                           <Nav.Link href="#About">About </Nav.Link>
@@ -57,7 +57,7 @@ class Navigation extends Component {
                               <NavDropdown.Divider />
                           </NavDropdown> */}
                       </Nav>
-                      <Nav>
+                      <Nav className='text-center' style={{paddingRight: 0}}>
                           {/*<Nav.Link href="#Privacy">Privacy Policy</Nav.Link>
                           <Nav.Link eventKey={2} href="#Contact">Contact</Nav.Link>
                             <Nav.Link href="#FAQ">FAQ</Nav.Link>*/}

@@ -6,7 +6,7 @@ import { Button } from 'react-bootstrap'
 class LoginButtons extends Component {
   render () {
     return (
-      <div className='text-center'>
+      <div> 
         <style className='text/css'>
           {`
                   .btn-turq {
@@ -39,7 +39,7 @@ class LoginButtons extends Component {
                     font-size: 10pt;
                   }
         
-                  .btn-turqwhite{
+                  .btn-login{
                     background-color: #FFFFFF;
                     border-color: #979797;
                     border-radius: 0;
@@ -48,14 +48,15 @@ class LoginButtons extends Component {
                     letter-spacing: 0.05em;
                     font-family: 'Montserrat-Bold', sans-serif;
                     margin-bottom: 5px;
+                    margin-top: 20px;
                     width: 305px;
                     height: 48px;
                     font-size: 10pt;
                   }
           `}
         </style>
-        <Button variant='turqwhite' className='row' size='lg'>LOG IN</Button>
-        <Button variant='turqdark' className='row' size='lg'>SIGN UP</Button>
+        <Button variant='login' size='lg'>LOG IN</Button>
+        <Button variant='turqdark' size='lg'>SIGN UP</Button>
       </div>
     )
   }
