@@ -70,7 +70,7 @@ class ButtonGrouping extends Component {
       <div className='text-center'>
         <style className='text/css'>
           {`                 
-                   .btn-turq {
+                   .btn-turqgroup {
                     background-color: #45A6D7;
                     border-color: #979797;
                     border-radius: 0;
@@ -83,21 +83,17 @@ class ButtonGrouping extends Component {
                     height: 48px;
                     font-size: 10pt;
                   }
-
-                  .modal-backdrop {
-                    background-color: #445A6D7;
-                  }
           `}
         </style>
-        <ButtonGroup vertical style={{width: 305}}>
-          <Button variant='turq' size='lg'>HOME</Button>
-          <Button variant='turq' size='lg' onClick={this.handleShowAbout}>ABOUT</Button>
-          <Button variant='turq' size='lg' onClick={this.handleShowHIW}>HOW IT WORKS</Button>
-          <Button variant='turq' size='lg'>CHARITIES</Button>
-          <Button variant='turq' size='lg' onClick={this.handleShowPP}>PRIVACY POLICY</Button>
-          <Button variant='turq' size='lg' onClick={this.handleShowContact}>CONTACT</Button>
-          <Button variant='turq' size='lg' onClick={this.handleShowFAQ}>FAQ</Button>
-          <Button variant='turq' size='lg'>TAKE A TOUR</Button>
+        <ButtonGroup vertical style={{width: 305, marginTop:10}}>
+          <Button variant='turqgroup' size='lg'>HOME</Button>
+          <Button variant='turqgroup' size='lg' onClick={this.handleShowAbout}>ABOUT</Button>
+          <Button variant='turqgroup' size='lg' onClick={this.handleShowHIW}>HOW IT WORKS</Button>
+          <Button variant='turqgroup' size='lg'>CHARITIES</Button>
+          <Button variant='turqgroup' size='lg' onClick={this.handleShowPP}>PRIVACY POLICY</Button>
+          <Button variant='turqgroup' size='lg' onClick={this.handleShowContact}>CONTACT</Button>
+          <Button variant='turqgroup' size='lg' onClick={this.handleShowFAQ}>FAQ</Button>
+          <Button variant='turqgroup' size='lg'>TAKE A TOUR</Button>
         </ButtonGroup>
 
         {/* This is the Beginning of the modals that will be rendered */}
