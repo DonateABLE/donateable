@@ -126,7 +126,7 @@ class ButtonGrouping extends Component {
             paddingTop: '0px',
             paddingBottom:'0px'}}>
           <img src='/img/logo/donateABLE-long-white-500.png' style={{width: '70%'}}/>
-          <ModalText text1='THE WHO, WHAT & WHYS OF DONATEABLE' text2='THE NEWEST AND EASIEST WAY TO DONATE'/>
+          <ModalText fontSize1={14} fontSize2={14} text1='THE WHO, WHAT & WHYS OF DONATEABLE' text2='THE NEWEST AND EASIEST WAY TO DONATE'/>
           </Modal.Body>
 
   
@@ -184,7 +184,7 @@ class ButtonGrouping extends Component {
             paddingTop: '0px',
             paddingBottom:'0px'}}>
           <img src='/img/logo/donateABLE-long-white-500.png' style={{width: '70%'}}/>
-          <ModalText text1='USE YOUR COMPUTER POWER TO GENERATE' text2='MONEY FOR YOUR CHOSEN CHARITY'/>
+          <ModalText fontSize1={14} fontSize2={14} text1='USE YOUR COMPUTER POWER TO GENERATE' text2='MONEY FOR YOUR CHOSEN CHARITY'/>
           </Modal.Body>
   
 
@@ -326,7 +326,7 @@ class ButtonGrouping extends Component {
             paddingTop: '0px',
             paddingBottom:'0px'}}>
           <img src='/img/logo/donateABLE-long-white-500.png' style={{width: '70%'}}/>
-          <ModalText text1='THANK YOU FOR VISITING' text2='WE WOULD LIKE TO HEAR FROM YOU' />
+          <ModalText fontSize1={20} fontSize2={14} text1='THANK YOU FOR VISITING' text2='WE WOULD LIKE TO HEAR FROM YOU' />
 
           </Modal.Body>
 

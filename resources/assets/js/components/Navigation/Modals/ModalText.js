@@ -6,8 +6,8 @@ const ModalText = (props) => {
   return  (
     <div>
       <h1 style={{marginBottom: 0, marginTop: 10, 
-        fontSize: 14, color: 'white'}}>{props.text1}</h1>
-      <h2 style={{fontSize: 14}}>{props.text2}</h2>
+        fontSize: props.fontSize1, color: 'white'}}>{props.text1}</h1>
+      <h2 style={{fontSize: props.fontSize2}}>{props.text2}</h2>
     </div>
   )
 }
