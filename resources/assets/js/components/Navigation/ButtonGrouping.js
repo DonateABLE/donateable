@@ -91,6 +91,11 @@ class ButtonGrouping extends Component {
 
                   .modal-body {
                     background-color: #45A6D7;
+                    display: flex;
+                    justify-content: center; 
+                    align-items: center;
+                    padding-top: 0px;
+                    padding-bottom: 0px;
                   }
           `}
         </style>
@@ -110,6 +115,7 @@ class ButtonGrouping extends Component {
           size='lg'
           show={this.state.showAbout}
           onHide={this.handleHideAbout}
+          scrollable={true}
         >
           <Modal.Header style={{backgroundColor: '#45A6D7'}} closeButton>
             <Modal.Title id="example-custom-modal-styling-title" className='text-center'
@@ -127,11 +133,19 @@ class ButtonGrouping extends Component {
             paddingBottom:'0px'}}>
           <img src='/img/logo/donateABLE-long-white-500.png' style={{width: '70%'}}/>
           <ModalText fontSize1={14} fontSize2={14} text1='THE WHO, WHAT & WHYS OF DONATEABLE' text2='THE NEWEST AND EASIEST WAY TO DONATE'/>
-          </Modal.Body>
+          
+
+          
+     
 
   
 
-          <Modal.Body style={{backgroundColor: '#45A6D7'}}> 
+
+
+          <hr width={'69%'} noshade  style={{display: 'block', height: '1px',
+              border: 0, borderTop: '1px solid #ccc',
+              marginTop: '10px', padding: 0}}/> 
+
           <p style={{color: '#FFFFFF'}}>
               donateABLE is a website designed, developed, and managed by Synergenics,
               a professional IT support and solutions provider to Guelph and Southwestern 
@@ -140,10 +154,13 @@ class ButtonGrouping extends Component {
               industries, but some of their most cherished relationships are with local
               Guelph charities and organizations.
             </p>
-          </Modal.Body>
+   
 
           {/* WHAT */}
-          <Modal.Body style={{backgroundColor: '#45A6D7'}}>
+
+          <hr width={'69%'} noshade  style={{display: 'block', height: '1px',
+              border: 0, borderTop: '1px solid #ccc',
+              marginTop: '10px', padding: 0}}/> 
           <p style={{color: '#FFFFFF'}}>
             donateABLE is a website project developed and managed by Synergenics. 
             This solution will take small amounts of computational power donated 
@@ -152,10 +169,15 @@ class ButtonGrouping extends Component {
             with a computer to make a difference no matter what their financial situation 
             is, by donating unused computer time.
             </p>
-          </Modal.Body>
+
 
           {/* WHY */}
-          <Modal.Body style={{backgroundColor: '#45A6D7'}}>
+   
+
+          <hr width={'69%'} noshade  style={{display: 'block', height: '1px',
+              border: 0, borderTop: '1px solid #ccc',
+              marginTop: '10px', padding: 0}}/> 
+
           <p style={{color: '#FFFFFF'}}>
               Synergenics has consistently made an effort, for the past 30 years, to give 
               back to their local community in any way they can. They have done this by 
@@ -164,7 +186,9 @@ class ButtonGrouping extends Component {
               their passion and knowledge in the IT world with their passion of giving 
               back to create a solution that makes a difference.
             </p>
+
           </Modal.Body>
+  
         </Modal>
         
         <Modal 
