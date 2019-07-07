@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Button, ButtonGroup, Modal } from 'react-bootstrap'
 import ModalText from './Modals/ModalText'
+import TwoItems from './Modals/TwoItems'
 
 // This component is for the collection of buttons that pull down
 // in the hamburger menu
@@ -117,10 +118,16 @@ class ButtonGrouping extends Component {
           onHide={this.handleHideAbout}
           scrollable={true}
         >
-          <Modal.Header style={{backgroundColor: '#45A6D7'}} closeButton>
+          <Modal.Header style={{backgroundColor: '#45A6D7',
+            display: 'flex', 
+            justifyContent: 'center', 
+            alignItems: 'center', 
+            paddingTop: '10px',
+            paddingBottom:'0px'}} closeButton>
             <Modal.Title id="example-custom-modal-styling-title" className='text-center'
-             style={{color: '#FFFFFF'}}
+             style={{color: '#FFFFFF', paddingLeft:'30px'}}
              >
+             <img src='/img/logo/donateABLE-long-white-500.png' style={{width: '70%'}}/>
             </Modal.Title>
           </Modal.Header>
           {/* WHO */}
@@ -129,22 +136,18 @@ class ButtonGrouping extends Component {
             display: 'flex', 
             justifyContent: 'center', 
             alignItems: 'center', 
-            paddingTop: '0px',
+            paddingTop: '10px',
             paddingBottom:'0px'}}>
-          <img src='/img/logo/donateABLE-long-white-500.png' style={{width: '70%'}}/>
+          
           <ModalText fontSize1={14} fontSize2={14} text1='THE WHO, WHAT & WHYS OF DONATEABLE' text2='THE NEWEST AND EASIEST WAY TO DONATE'/>
-          
-
-          
-     
-
-  
-
-
+            
 
           <hr width={'69%'} noshade  style={{display: 'block', height: '1px',
               border: 0, borderTop: '1px solid #ccc',
               marginTop: '10px', padding: 0}}/> 
+
+            <TwoItems imgSrc='/img/aboutus/About-Us-WHAT.png' text='IS DONATEABLE DEVELOPED BY' />  
+          
 
           <p style={{color: '#FFFFFF'}}>
               donateABLE is a website designed, developed, and managed by Synergenics,
