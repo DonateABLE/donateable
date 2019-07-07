@@ -2,6 +2,12 @@ import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import Navigation from "./Navbar"
 import Home from "./Home"
+import Charities from "./Charites"
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import { createBrowserHistory } from "history";
+
+
+const history = createBrowserHistory()
 
 /* This is the top level file that renders the entire
   Application */
@@ -9,10 +15,13 @@ class Main extends Component {
   render () {
     return (
       <div>
-        <Navigation />
-        <div className='text-center'>
-          <Home />
-        </div>
+        <Router history={history}>
+          <Navigation />
+          <div className='text-center'>
+            <Route exact path="/" component={Home}/>
+            <Route exact path="/charities" component={Charities} />
+          </div>
+        </Router>
       </div>
     )
   }

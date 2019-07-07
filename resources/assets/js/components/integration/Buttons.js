@@ -1,5 +1,6 @@
 import React from 'react'
 import { Button } from 'react-bootstrap'
+import { NavLink } from 'react-router-dom'
 
 function Buttons () {
   return (
@@ -52,7 +53,10 @@ function Buttons () {
                 }
         `}
       </style>
-      <Button variant='turqdark' className='row' size='lg'>SELECT YOUR CHARITY</Button>
+      <Button variant='turqdark' className='row' size='lg'>
+        <NavLink to='/charities' style={{ textDecoration: 'none' }}> SELECT YOUR CHARITY </NavLink>
+      </Button>
+
       <Button variant='turqwhite' className='row' size='lg'>HOW IT WORKS</Button>
       <Button variant='turqwhite' size='lg'>TAKE A TOUR</Button>
       <Button variant='turq' size='lg'>CURRENTLY DONATING </Button>
