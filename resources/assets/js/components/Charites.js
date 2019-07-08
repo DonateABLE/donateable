@@ -1,11 +1,10 @@
 import React, { Component }from 'react'
-import Buttons from "./integration/Buttons"
 
 class Charities extends Component {
   render () {
     return(
       <div>
-        <Buttons />
+        <h1>Charities Screen</h1>  
       </div>
     )
   }

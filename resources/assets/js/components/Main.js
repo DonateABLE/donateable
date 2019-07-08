@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import Navigation from "./Navbar"
 import Home from "./Home"
 import Charities from "./Charites"
+import Login from './Login'
 import Footer from "./Footer"
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import { createBrowserHistory } from "history";
@@ -21,6 +22,7 @@ class Main extends Component {
           <div className='text-center'>
             <Route exact path="/" component={Home}/>
             <Route exact path="/charities" component={Charities} />
+            <Route exact path="/login" component={Login} />
           </div>
           <Footer />
         </Router>
