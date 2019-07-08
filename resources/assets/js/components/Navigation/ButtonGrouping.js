@@ -128,7 +128,7 @@ class ButtonGrouping extends Component {
             justifyContent: 'center', 
             alignItems: 'center', 
             paddingTop: '25px',
-            paddingBottom:'0px'}} closeButton>
+            paddingBottom:'15px'}} closeButton>
             <Modal.Title id="example-custom-modal-styling-title" className='text-center'
              style={{color: '#FFFFFF', paddingLeft:'30px'}}
              >
@@ -141,7 +141,7 @@ class ButtonGrouping extends Component {
             display: 'flex', 
             justifyContent: 'center', 
             alignItems: 'center', 
-            paddingTop: '10px',
+            paddingTop: '0px',
             paddingBottom:'0px'}}>
           
           <ModalText fontSize1={14} fontSize2={14} text1='THE WHO, WHAT & WHYS OF DONATEABLE' text2='THE NEWEST AND EASIEST WAY TO DONATE'/>
@@ -154,7 +154,7 @@ class ButtonGrouping extends Component {
             <TwoItems imgSrc='/img/aboutus/About-Us-WHAT.png' text='IS DONATEABLE DEVELOPED BY' />  
           
 
-          <p style={{color: '#FFFFFF'}}>
+          <p>
               donateABLE is a website designed, developed, and managed by Synergenics,
               a professional IT support and solutions provider to Guelph and Southwestern 
               Ontario for over 30 years. Their 30 years of service has allowed them to
