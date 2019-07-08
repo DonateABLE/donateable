@@ -53,9 +53,11 @@ function Buttons () {
                 }
         `}
       </style>
-      <Button variant='turqdark' className='row' size='lg'>
-        <NavLink to='/charities' style={{ textDecoration: 'none' }}> SELECT YOUR CHARITY </NavLink>
-      </Button>
+      <NavLink to='/charities' style={{ textDecoration: 'none' }}> 
+        <Button variant='turqdark' className='row' size='lg'>
+          SELECT YOUR CHARITY
+        </Button>
+      </NavLink>
 
       <Button variant='turqwhite' className='row' size='lg'>HOW IT WORKS</Button>
       <Button variant='turqwhite' size='lg'>TAKE A TOUR</Button>
