@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Button, ButtonGroup, Modal } from 'react-bootstrap'
 import ModalText from './Modals/ModalText'
 import TwoItems from './Modals/TwoItems'
+import { NavLink } from 'react-router-dom'
 
 // This component is for the collection of buttons that pull down
 // in the hamburger menu
@@ -101,10 +102,14 @@ class ButtonGrouping extends Component {
           `}
         </style>
         <ButtonGroup vertical style={{width: 305, marginTop:10}}>
-          <Button variant='turqgroup' size='lg'>HOME</Button>
+          <NavLink to='/'>
+            <Button variant='turqgroup' size='lg'>HOME</Button>
+          </NavLink> 
           <Button variant='turqgroup' size='lg' onClick={this.handleShowAbout}>ABOUT</Button>
           <Button variant='turqgroup' size='lg' onClick={this.handleShowHIW}>HOW IT WORKS</Button>
-          <Button variant='turqgroup' size='lg'>CHARITIES</Button>
+          <NavLink to ='/charities'>
+            <Button variant='turqgroup' size='lg'>CHARITIES</Button>
+          </NavLink>
           <Button variant='turqgroup' size='lg' onClick={this.handleShowPP}>PRIVACY POLICY</Button>
           <Button variant='turqgroup' size='lg' onClick={this.handleShowContact}>CONTACT</Button>
           <Button variant='turqgroup' size='lg' onClick={this.handleShowFAQ}>FAQ</Button>
