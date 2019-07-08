@@ -122,7 +122,7 @@ class ButtonGrouping extends Component {
             display: 'flex', 
             justifyContent: 'center', 
             alignItems: 'center', 
-            paddingTop: '10px',
+            paddingTop: '25px',
             paddingBottom:'0px'}} closeButton>
             <Modal.Title id="example-custom-modal-styling-title" className='text-center'
              style={{color: '#FFFFFF', paddingLeft:'30px'}}
@@ -198,24 +198,35 @@ class ButtonGrouping extends Component {
           size='lg'
           show={this.state.showHIW}
           onHide={this.handleHideHIW}
+          scrollable={true}
         >
-          <Modal.Header style={{backgroundColor: '#45A6D7'}} closeButton>
-            <Modal.Title id="example-custom-modal-styling-title" className='text-center'>
-      
+          <Modal.Header style={{backgroundColor: '#45A6D7',
+            display: 'flex', 
+            justifyContent: 'center', 
+            alignItems: 'center', 
+            paddingTop: '25px',
+            paddingBottom:'0px'}} closeButton>
+            <Modal.Title id="example-custom-modal-styling-title" className='text-center'
+             style={{color: '#FFFFFF', paddingLeft:'30px'}}
+             >
+             <img src='/img/logo/donateABLE-long-white-500.png' style={{width: '70%'}}/>
             </Modal.Title>
           </Modal.Header>
+
+
           <Modal.Body style={{
             display: 'flex', 
             justifyContent: 'center', 
             alignItems: 'center', 
             paddingTop: '0px',
-            paddingBottom:'0px'}}>
-          <img src='/img/logo/donateABLE-long-white-500.png' style={{width: '70%'}}/>
+            paddingBottom:'10px'}}>
           <ModalText fontSize1={14} fontSize2={14} text1='USE YOUR COMPUTER POWER TO GENERATE' text2='MONEY FOR YOUR CHOSEN CHARITY'/>
-          </Modal.Body>
-  
+          
+          <hr width={'69%'} noshade  style={{display: 'block', height: '1px',
+              border: 0, borderTop: '1px solid #ccc',
+              marginTop: '10px', padding: 0}}/>
+          
 
-          <Modal.Body style={{backgroundColor: '#45A6D7'}}> 
           
           
           <p style={{color: '#FFFFFF'}}>
@@ -226,6 +237,10 @@ class ButtonGrouping extends Component {
           with a computer is able to donate.          
           </p> 
 
+          <hr width={'69%'} noshade  style={{display: 'block', height: '1px',
+              border: 0, borderTop: '1px solid #ccc',
+              marginTop: '10px', padding: 0}}/>
+
           <p style={{color: '#FFFFFF'}}>
 
           The second step is setting the amount of processing power you would like to 
@@ -234,6 +249,10 @@ class ButtonGrouping extends Component {
           converted into real money to help your charity continue to do good 
           in their community.
           </p> 
+
+          <hr width={'69%'} noshade  style={{display: 'block', height: '1px',
+              border: 0, borderTop: '1px solid #ccc',
+              marginTop: '10px', padding: 0}}/>
           
           <p style={{color: '#FFFFFF'}}>
           The third step is the easiest. Now that you have selected your charity and 
