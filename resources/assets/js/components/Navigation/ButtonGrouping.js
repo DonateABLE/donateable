@@ -101,10 +101,10 @@ class ButtonGrouping extends Component {
                   }
           `}
         </style>
-        <ButtonGroup vertical style={{width: 305, marginTop:10}}>
+        <ButtonGroup vertical style={{width: '305px', marginTop: '3%'}}>
           <NavLink to='/'>
-            <Button variant='turqgroup' size='lg'>HOME</Button>
-          </NavLink> 
+            <Button variant='turqgroup' size='lg' >HOME</Button>
+          </NavLink>
           <Button variant='turqgroup' size='lg' onClick={this.handleShowAbout}>ABOUT</Button>
           <Button variant='turqgroup' size='lg' onClick={this.handleShowHIW}>HOW IT WORKS</Button>
           <NavLink to ='/charities'>
@@ -121,16 +121,15 @@ class ButtonGrouping extends Component {
           size='lg'
           show={this.state.showAbout}
           onHide={this.handleHideAbout}
-          scrollable={true}
         >
           <Modal.Header style={{backgroundColor: '#45A6D7',
             display: 'flex', 
             justifyContent: 'center', 
             alignItems: 'center', 
-            paddingTop: '25px',
-            paddingBottom:'15px'}} closeButton>
+            paddingTop: '5%',
+            paddingBottom:'3.5%'}} closeButton>
             <Modal.Title id="example-custom-modal-styling-title" className='text-center'
-             style={{color: '#FFFFFF', paddingLeft:'30px'}}
+             style={{color: '#FFFFFF', paddingLeft:'17%'}}
              >
              <img src='/img/logo/donateABLE-long-white-500.png' style={{width: '70%'}}/>
             </Modal.Title>
@@ -141,15 +140,21 @@ class ButtonGrouping extends Component {
             display: 'flex', 
             justifyContent: 'center', 
             alignItems: 'center', 
-            paddingTop: '0px',
-            paddingBottom:'0px'}}>
+            maxHeight: 'calc(100vh-210px)',
+            overflowY: 'auto',
+            paddingBottom:'5%'}}>
           
-          <ModalText fontSize1={14} fontSize2={14} text1='THE WHO, WHAT & WHYS OF DONATEABLE' text2='THE NEWEST AND EASIEST WAY TO DONATE'/>
+          <ModalText 
+            fontSize1={14} 
+            fontSize2={14} 
+            text1='THE WHO, WHAT & WHYS OF DONATEABLE' 
+            text2='THE NEWEST AND EASIEST WAY TO DONATE'
+            style={{paddingTop: '40%'}}/>
             
 
           <hr width={'69%'} noshade  style={{display: 'block', height: '1px',
               border: 0, borderTop: '1px solid #ccc',
-              marginTop: '10px', padding: 0}}/> 
+              marginTop: '2%', padding: 0}}/> 
 
             <TwoItems imgSrc='/img/aboutus/About-Us-WHO.png' text='IS DONATEABLE DEVELOPED BY' />  
           
@@ -169,6 +174,7 @@ class ButtonGrouping extends Component {
           <hr width={'69%'} noshade  style={{display: 'block', height: '1px',
               border: 0, borderTop: '1px solid #ccc',
               marginTop: '10px', padding: 0}}/> 
+            <TwoItems imgSrc='/img/aboutus/About-Us-WHAT.png' text='IS DONATEABLE' />  
           <p style={{color: '#FFFFFF'}}>
             donateABLE is a website project developed and managed by Synergenics. 
             This solution will take small amounts of computational power donated 
@@ -186,6 +192,7 @@ class ButtonGrouping extends Component {
               border: 0, borderTop: '1px solid #ccc',
               marginTop: '10px', padding: 0}}/> 
 
+          <TwoItems imgSrc='/img/aboutus/About-Us-WHY.png' text='WAS DONATEABLE DEVELOPED' />  
           <p style={{color: '#FFFFFF'}}>
               Synergenics has consistently made an effort, for the past 30 years, to give 
               back to their local community in any way they can. They have done this by 

@@ -6,8 +6,8 @@ const TwoItems = (props) => {
     <div>
       <Container>
         <Row>
-          <img src={props.imgSrc} style={{height: 'auto'}} className='col-6'/>
-          <h2 style={{ fontSize: 18, color: '#FFFFFF'}} className="col-6">{props.text}</h2>
+          <img src={props.imgSrc} style={{height: '100%'}} className='col-6' />
+          <h2 style={{ fontSize: '18', color: '#FFFFFF', paddingTop: '8%'}} className="col-6">{props.text}</h2>
         </Row>
       </Container>
     </div>
