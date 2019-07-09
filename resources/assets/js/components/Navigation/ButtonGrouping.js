@@ -151,7 +151,7 @@ class ButtonGrouping extends Component {
               border: 0, borderTop: '1px solid #ccc',
               marginTop: '10px', padding: 0}}/> 
 
-            <TwoItems imgSrc='/img/aboutus/About-Us-WHAT.png' text='IS DONATEABLE DEVELOPED BY' />  
+            <TwoItems imgSrc='/img/aboutus/About-Us-WHO.png' text='IS DONATEABLE DEVELOPED BY' />  
           
 
           <p>
