@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Button, ButtonGroup, Modal } from 'react-bootstrap'
 import ModalText from './Modals/ModalText'
 import TwoItems from './Modals/TwoItems'
+import WhiteButton from './Modals/WhiteButton'
 import { NavLink } from 'react-router-dom'
 
 // This component is for the collection of buttons that pull down
@@ -201,7 +202,12 @@ class ButtonGrouping extends Component {
               their passion and knowledge in the IT world with their passion of giving 
               back to create a solution that makes a difference.
             </p>
-
+          
+            <hr width={'69%'} noshade  style={{display: 'block', height: '1px',
+              border: 0, borderTop: '1px solid #ccc',
+              marginTop: '10px', padding: 0}}/> 
+            
+          <WhiteButton Click={this.handleShowHIW} buttonText='LEARN HOW DONATEABLE WORKS'/>
           </Modal.Body>
   
         </Modal>
