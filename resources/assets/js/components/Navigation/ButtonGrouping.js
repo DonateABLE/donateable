@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
-import { Button, ButtonGroup, Modal } from 'react-bootstrap'
+import { Button, ButtonGroup, Modal, Container } from 'react-bootstrap'
 import ModalText from './Modals/ModalText'
 import TwoItems from './Modals/TwoItems'
 import DividerLine from './Modals/DividerLine'
 import WhiteButton from './Modals/WhiteButton'
+import PrivacyPolicy from './Modals/PrivacyPolicy'
 import { NavLink } from 'react-router-dom'
 
 // This component is for the collection of buttons that pull down
@@ -277,8 +278,10 @@ class ButtonGrouping extends Component {
           </Modal.Body>
         </Modal>
 
+        {/* PRIVACY POLICY MODAL */}
+
        <Modal 
-          size='lg'
+          size='lg' 
           show={this.state.showPP}
           onHide={this.handleHidePP}
         >
@@ -295,75 +298,11 @@ class ButtonGrouping extends Component {
             paddingBottom:'0px'}}>
           <img src='/img/logo/donateABLE-long-white-500.png' style={{width: '70%'}}/>
           </Modal.Body>
+          <Modal.Body>
 
-          <Modal.Body> 
-          
-          <h6>
-          Effective Date: January 1st, 2019 
-          </h6>
-          <p style={{color: '#FFFFFF'}}>
-          This privacy notice discloses the privacy practices for donateABLE 
-          and our website; donateable.ca. This privacy notice 
-          applies solely to information collected by this website, except 
-          where stated otherwise. <br/>
-          <br/>
-          It will notify you of the following:<br/>
-          <br/>
-          What information we collect; <br/>
-          With whom it is shared;<br/>
-          How it can be corrected;<br/>
-          How it is secured;<br/>
-          How policy changes will be communicated; and<br/>
-          How to address concerns over misuse of personal data.<br/>
-        </p>
-
-        
-        <br/>
-        <h6> Information Collection, Use, and Sharing </h6>
-
-        <p style={{color: '#FFFFFF'}}>
-          We are the sole owners of the information collected on this site. 
-          We only have access to/collect information that you voluntarily 
-          give us via email or other direct contact from you. We will not 
-          sell or rent this information to anyone. 
-        </p>
-        
-        <p style={{color: '#FFFFFF'}}>
-          We will use your information to respond to you, regarding the reason you contacted us. We will not share your 
-          information with any third party outside of our organization. 
-        </p>
-
-        <p style={{color: '#FFFFFF'}}>
-          Unless you ask us not to, we may contact you via email in the future to tell you about statistics, new charities or features, 
-          or changes to this privacy policy. 
-        </p>
-        
-        <br/>
-        <h6> Your Access to and Control Over Information </h6>
-
-        <p style={{color: '#FFFFFF'}}>
-        You may opt out of any future contacts from us at any time. You can do the following at any time by contacting us via the contact 
-        form provided on our website: <br/>
-        <br/>
-        See what data we have about you, if any.<br/>
-        <br/>
-        Change/correct any data we have about you.<br/>
-        <br/>
-        Have us delete any data we have about you.<br/>
-        <br/>
-        Express any concern you have about our use of your data<br/>
-      </p>
-      
-      <br/>
-      <h6 style={{color: '#FFFFF'}}> Security </h6>
-
-      <p style={{color: '#FFFFFF'}}>
-      We take precautions to protect your information. When you submit 
-      sensitive information via the website, your information is 
-      protected both online and offline. 
-      </p>
-
-
+          <ModalText fontSize1={25} text1='PRIVACY POLICY' />
+          <PrivacyPolicy />
+          <WhiteButton Show={this.handleShowContact} Hide={this.handleHidePP} buttonText='HAVE QUESTIONS? CONTACT US' />
           </Modal.Body>
         </Modal>
 
