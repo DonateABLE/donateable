@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Button, ButtonGroup, Modal } from 'react-bootstrap'
 import ModalText from './Modals/ModalText'
 import TwoItems from './Modals/TwoItems'
+import DividerLine from './Modals/DividerLine'
 import WhiteButton from './Modals/WhiteButton'
 import { NavLink } from 'react-router-dom'
 
@@ -135,7 +136,6 @@ class ButtonGrouping extends Component {
              <img src='/img/logo/donateABLE-long-white-500.png' style={{width: '70%'}}/>
             </Modal.Title>
           </Modal.Header>
-          {/* WHO */}
 
           <Modal.Body style={{
             display: 'flex', 
@@ -151,15 +151,12 @@ class ButtonGrouping extends Component {
             text1='THE WHO, WHAT & WHYS OF DONATEABLE' 
             text2='THE NEWEST AND EASIEST WAY TO DONATE'
             style={{paddingTop: '40%'}}/>
-            
 
+          {/* WHO */}  
           <hr width={'69%'} noshade  style={{display: 'block', height: '1px',
-              border: 0, borderTop: '1px solid #ccc',
-              marginTop: '2%', padding: 0}}/> 
-
-            <TwoItems imgSrc='/img/aboutus/About-Us-WHO.png' text='IS DONATEABLE DEVELOPED BY' />  
-          
-
+              border: 0, borderTop: '1px solid #FFFFFF',
+              marginTop: '4%', padding: 0}}/>
+          <TwoItems imgSrc='/img/aboutus/About-Us-WHO.png' text='IS DONATEABLE DEVELOPED BY' />  
           <p>
               donateABLE is a website designed, developed, and managed by Synergenics,
               a professional IT support and solutions provider to Guelph and Southwestern 
@@ -171,11 +168,10 @@ class ButtonGrouping extends Component {
    
 
           {/* WHAT */}
-
           <hr width={'69%'} noshade  style={{display: 'block', height: '1px',
-              border: 0, borderTop: '1px solid #ccc',
-              marginTop: '10px', padding: 0}}/> 
-            <TwoItems imgSrc='/img/aboutus/About-Us-WHAT.png' text='IS DONATEABLE' />  
+              border: 0, borderTop: '1px solid #FFFFFF',
+              marginTop: '4%', padding: 0}}/>
+          <TwoItems imgSrc='/img/aboutus/About-Us-WHAT.png' text='IS DONATEABLE' />  
           <p style={{color: '#FFFFFF'}}>
             donateABLE is a website project developed and managed by Synergenics. 
             This solution will take small amounts of computational power donated 
@@ -186,14 +182,10 @@ class ButtonGrouping extends Component {
             </p>
 
 
-          {/* WHY */}
-   
-
-          <hr width={'69%'} noshade  style={{display: 'block', height: '1px',
-              border: 0, borderTop: '1px solid #ccc',
-              marginTop: '10px', padding: 0}}/> 
-
-          <TwoItems imgSrc='/img/aboutus/About-Us-WHY.png' text='WAS DONATEABLE DEVELOPED' />  
+          {/* WHY */}         
+           <hr width={'69%'} noshade  style={{display: 'block', height: '1px',
+              border: 0, borderTop: '1px solid #FFFFFF',
+              marginTop: '4%', padding: 0}}/>        <TwoItems imgSrc='/img/aboutus/About-Us-WHY.png' text='WAS DONATEABLE DEVELOPED' />  
           <p style={{color: '#FFFFFF'}}>
               Synergenics has consistently made an effort, for the past 30 years, to give 
               back to their local community in any way they can. They have done this by 
@@ -202,12 +194,11 @@ class ButtonGrouping extends Component {
               their passion and knowledge in the IT world with their passion of giving 
               back to create a solution that makes a difference.
             </p>
-          
-            <hr width={'69%'} noshade  style={{display: 'block', height: '1px',
-              border: 0, borderTop: '1px solid #ccc',
-              marginTop: '10px', padding: 0}}/> 
-            
-          <WhiteButton Click={this.handleShowHIW} buttonText='LEARN HOW DONATEABLE WORKS'/>
+
+          <hr width={'69%'} noshade  style={{display: 'block', height: '1px',
+              border: 0, borderTop: '1px solid #FFFFFF',
+              marginTop: '4%', padding: 0}}/>
+          <WhiteButton Show={this.handleShowHIW}  Hide={this.handleHideAbout} buttonText='LEARN HOW DONATEABLE WORKS'/>
           </Modal.Body>
   
         </Modal>
@@ -216,7 +207,6 @@ class ButtonGrouping extends Component {
           size='lg'
           show={this.state.showHIW}
           onHide={this.handleHideHIW}
-          scrollable={true}
         >
           <Modal.Header style={{backgroundColor: '#45A6D7',
             display: 'flex', 
@@ -241,37 +231,36 @@ class ButtonGrouping extends Component {
           <ModalText fontSize1={14} fontSize2={14} text1='USE YOUR COMPUTER POWER TO GENERATE' text2='MONEY FOR YOUR CHOSEN CHARITY'/>
           
           <hr width={'69%'} noshade  style={{display: 'block', height: '1px',
-              border: 0, borderTop: '1px solid #ccc',
-              marginTop: '10px', padding: 0}}/>
-          
+              border: 0, borderTop: '1px solid #FFFFFF',
+              marginTop: '4%', padding: 0}}/>
 
-          
-          
-          <p style={{color: '#FFFFFF'}}>
-          The first step is the easiest, or the hardest depending on how you look at it, 
-          which is selecting the charity you would like to donate to. Simply select a 
-          charity out of our provided list that you wish to donate to and begin lending 
-          your computer's processor to solve complex algorithms. It's easy and anyone 
-          with a computer is able to donate.          
+          <TwoItems imgSrc='/img/howto/1.png' text='SELECT YOUR CHARITY' /> 
+          <p style={{color: '#FFFFFF'}}> 
+            The first step is the easiest, or the hardest depending on how you look at it,
+             which is selecting the charity you would like to donate to. 
+             Simply select a charity out of our provided list that you wish to donate to and 
+             begin lending your computer's processor to solve complex algorithms. It's easy and anyone with
+            a computer is able to donate.          
+           </p> 
+           
+           <hr width={'69%'} noshade  style={{display: 'block', height: '1px',
+              border: 0, borderTop: '1px solid #FFFFFF',
+              marginTop: '4%', padding: 0}}/>
+
+           <TwoItems imgSrc='/img/howto/2.png' text='SELECT YOUR POWER' /> 
+           <p style={{color: '#FFFFFF'}}> 
+            The second step is setting the amount of processing power you would like to donate. 
+            Basically, the more processor power you donate, the more algorithms get solved, 
+            which is then translated into digital currency that is then converted into real money to 
+            help your charity continue to do good 
+            in their community.
           </p> 
 
           <hr width={'69%'} noshade  style={{display: 'block', height: '1px',
-              border: 0, borderTop: '1px solid #ccc',
-              marginTop: '10px', padding: 0}}/>
+              border: 0, borderTop: '1px solid #FFFFFF',
+              marginTop: '4%', padding: 0}}/>
+          <TwoItems imgSrc='/img/howto/3.png' text='START DONATING' /> 
 
-          <p style={{color: '#FFFFFF'}}>
-
-          The second step is setting the amount of processing power you would like to 
-          donate. Basically, the more processor power you donate, the more algorithms 
-          get solved, which is then translated into digital currency that is then 
-          converted into real money to help your charity continue to do good 
-          in their community.
-          </p> 
-
-          <hr width={'69%'} noshade  style={{display: 'block', height: '1px',
-              border: 0, borderTop: '1px solid #ccc',
-              marginTop: '10px', padding: 0}}/>
-          
           <p style={{color: '#FFFFFF'}}>
           The third step is the easiest. Now that you have selected your charity and 
           set your processing power you are now ready to start donating. Select the 
@@ -279,7 +268,12 @@ class ButtonGrouping extends Component {
           the dog, or take a trip. No matter what you do just leave donateABLE on 
           and running and we do the rest.
           </p> 
-           
+          <hr width={'69%'} noshade  style={{display: 'block', height: '1px',
+              border: 0, borderTop: '1px solid #FFFFFF',
+              marginTop: '4%', padding: 0}}/>
+          <NavLink to='/charities'>
+            <WhiteButton Hide={this.handleHideHIW} buttonText='START DONATING' />
+          </NavLink>
           </Modal.Body>
         </Modal>
 
