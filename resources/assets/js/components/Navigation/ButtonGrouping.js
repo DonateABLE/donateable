@@ -275,7 +275,7 @@ class ButtonGrouping extends Component {
           <hr width={'69%'} noshade  style={{display: 'block', height: '1px',
               border: 0, borderTop: '1px solid #FFFFFF',
               marginTop: '4%', padding: 0}}/>
-          <NavLink to='/charities'>
+          <NavLink to='/charities' onClick={this.handleHideHIW}>
             <WhiteButton Hide={this.handleHideHIW} buttonText='START DONATING' />
           </NavLink>
           </Modal.Body>
