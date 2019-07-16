@@ -93,6 +93,21 @@ class ButtonGrouping extends Component {
                     font-size: 10pt;
                   }
 
+                  .btn-join{
+                    background-color: #26607D;
+                    border-color: #979797;
+                    border-radius: 0;
+                    color: white;
+                    font-weight: 200;
+                    letter-spacing: 0.05em;
+                    font-family: 'Montserrat-Bold', sans-serif;
+                    margin-bottom: 4%;
+                    padding-left: 8%;
+                    padding-right: 8%;
+                    width: 305px;
+                    font-size: 10pt;
+                  }
+
                   .modal-content {
                     background-color: #45A6D7;
                   }
@@ -344,7 +359,7 @@ class ButtonGrouping extends Component {
           team will be in touch with the next steps.
           </p>
 
-          <JoinProgram />
+          <JoinProgram variant='join' />
 
           <hr width={'69%'} noshade  style={{display: 'block', height: '1px',
               border: 0, borderTop: '1px solid #FFFFFF',
@@ -358,7 +373,7 @@ class ButtonGrouping extends Component {
           will get back to you within 48 business hours.
           </p>
 
-          <TechSupport />
+          <TechSupport variant='join' />
           
           <hr width={'69%'} noshade  style={{display: 'block', height: '1px',
               border: 0, borderTop: '1px solid #FFFFFF',

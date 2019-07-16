@@ -3,7 +3,7 @@ import { Form, Row, Col, Button } from 'react-bootstrap'
 
 const TechSupport = (props) => {
   return (
-    <Form style={{marginTop: '5%', width: '100%'}}>
+    <Form style={{marginTop: '5%', width: '85%%'}}>
       <Form.Group as={Row} controlId='formFirstName'>
         <Col sm={10}>
           <Form.Control type='text' placeholder='First Name' />
@@ -30,13 +30,13 @@ const TechSupport = (props) => {
 
       <Form.Group as={Row} controlId='formMessage'>
         <Col sm={10}>
-          <Form.Control style={{paddingBottom: '50%', paddingTop: '5%'}} type='text' placeholder='Message' />
+          <Form.Control style={{paddingBottom: '15%', paddingTop: '5%'}} type='text' placeholder='Message' />
         </Col>
       </Form.Group>
 
       <Form.Group as={Row}>
         <Col sm={{ span: 10, offset: 2 }}>
-          <Button type="submit">Submit</Button>
+          <Button variant={props.variant} type="submit">Submit</Button>
         </Col>
       </Form.Group>
     </Form>
