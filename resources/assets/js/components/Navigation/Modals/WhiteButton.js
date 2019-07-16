@@ -1,6 +1,11 @@
 import React, { Component }from 'react'
 import { Button } from 'react-bootstrap'
 
+/*  A reusable button that sits at the footer of the Modals
+  The button has props for the current modal to be hidden in Hide
+  and the next Modal to be shown in Show, and Text to render 
+  in the button */
+
 const WhiteButton = (props) => {
   return (
     <div>

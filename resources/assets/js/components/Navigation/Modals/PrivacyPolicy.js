@@ -2,6 +2,9 @@ import React from 'react'
 import { Container } from 'react-bootstrap'
 import withImportantStyle from 'react-with-important-style'
 
+/* Privacy Policy is content nested within a styled container
+  that renders to the next top level file in ButtonGrouping,js */
+
 const PrivacyPolicy = (props) => {
 
   var myPTag = withImportantStyle('p')

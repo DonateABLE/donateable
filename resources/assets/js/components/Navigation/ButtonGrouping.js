@@ -5,7 +5,10 @@ import TwoItems from './Modals/TwoItems'
 import DividerLine from './Modals/DividerLine'
 import WhiteButton from './Modals/WhiteButton'
 import PrivacyPolicy from './Modals/PrivacyPolicy'
+import FAQ from './Modals/FAQ/FAQ'
 import { NavLink } from 'react-router-dom'
+import TechSupport from './Modals/Contact/TechSupport';
+import JoinProgram from './Modals/Contact/JoinProgram';
 
 // This component is for the collection of buttons that pull down
 // in the hamburger menu
@@ -341,6 +344,8 @@ class ButtonGrouping extends Component {
           team will be in touch with the next steps.
           </p>
 
+          <JoinProgram />
+
           <hr width={'69%'} noshade  style={{display: 'block', height: '1px',
               border: 0, borderTop: '1px solid #FFFFFF',
               marginTop: '4%', padding: 0}}/>
@@ -352,6 +357,9 @@ class ButtonGrouping extends Component {
           question please fill out the form below to submit a ticket. A member of our team 
           will get back to you within 48 business hours.
           </p>
+
+          <TechSupport />
+          
           <hr width={'69%'} noshade  style={{display: 'block', height: '1px',
               border: 0, borderTop: '1px solid #FFFFFF',
               marginTop: '4%', padding: 0}}/>
@@ -371,9 +379,7 @@ class ButtonGrouping extends Component {
             </Modal.Title>
           </Modal.Header>
           <Modal.Body> 
-          <p style={{color: '#FFFFFF'}}>  
-            This is some Generic Paragraphs
-          </p>  
+            <FAQ />
           </Modal.Body>
         </Modal>
       </div>
