@@ -81,7 +81,10 @@ class ButtonGrouping extends Component {
           {`                 
                    .btn-turqgroup {
                     background-color: #45A6D7;
-                    border-color: #979797;
+                    border-top-color: white;
+                    border-bottom-color: white;
+                    border-right-color: #45A6D7;
+                    border-left-color: #45A6D7;
                     border-radius: 0;
                     color: white;
                     vertical-align: middle;
