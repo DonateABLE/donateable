@@ -22,7 +22,8 @@ class ButtonGrouping extends Component {
       showHIW: false,
       showPP: false,
       showContact: false,
-      showFAQ: false
+      showFAQ: false,
+      showTour: false
     }
   }
 
@@ -72,6 +73,15 @@ class ButtonGrouping extends Component {
   
   handleHideFAQ = () => {
     this.setState({showFAQ: false});
+  };
+
+  // Take a Tour 
+  handleShowTour = () => {
+    this.setState({showTour: true});
+  };
+
+  handleHideTour = () => {
+    this.setState({showTour: false});
   };
 
   render () {
@@ -137,7 +147,7 @@ class ButtonGrouping extends Component {
           <Button variant='turqgroup' size='lg' onClick={this.handleShowPP}>PRIVACY POLICY</Button>
           <Button variant='turqgroup' size='lg' onClick={this.handleShowContact}>CONTACT</Button>
           <Button variant='turqgroup' size='lg' onClick={this.handleShowFAQ}>FAQ</Button>
-          <Button variant='turqgroup' size='lg'>TAKE A TOUR</Button>
+          <Button variant='turqgroup' size='lg' onClick={this.handleShowTour}>TAKE A TOUR</Button>
         </ButtonGroup>
 
         {/* This is the Beginning of the modals that will be rendered */}
@@ -329,15 +339,13 @@ class ButtonGrouping extends Component {
           <WhiteButton Show={this.handleShowContact} Hide={this.handleHidePP} buttonText='HAVE QUESTIONS? CONTACT US' />
           </Modal.Body>
         </Modal>
-
-        <Modal 
-          size='lg'
-          show={this.state.showContact}
-          onHide={this.handleHideContact}
-        >
-          <Modal.Header closeButton>
-            <Modal.Title id="example-custom-modal-styling-title" className='text-center'>
-            </Modal.Title>
+        
+        {/* CONTACT US MODAL */} 
+        <Modal size='lg' show={this.state.showContact} 
+        onHide={this.handleHideContact} > 
+        <Modal.Header closeButton> 
+        <Modal.Title id="example-custom-modal-styling-title" className='text-center'> 
+        </Modal.Title>
           </Modal.Header>
 
           <Modal.Body style={{
@@ -383,6 +391,44 @@ class ButtonGrouping extends Component {
               marginTop: '4%', padding: 0}}/>
 
           <WhiteButton Show={this.handleShowFAQ} Hide={this.handleHideContact} buttonText='VIEW FREQUENTLY ASKED QUESTIONS' />
+          </Modal.Body>
+        </Modal>
+
+        <Modal 
+          size='lg'
+          show={this.state.showFAQ} 
+          onHide={this.handleHideFAQ}
+        >
+          <Modal.Header closeButton>
+            <Modal.Title id="example-custom-modal-styling-title" className='text-center'>
+             Frequently Asked Questions
+            </Modal.Title>
+          </Modal.Header>
+          <Modal.Body> 
+            <FAQ />
+          </Modal.Body>
+        </Modal>
+
+         {/* TAKE A TOUR*/} 
+        <Modal size='lg' show={this.state.showTour} 
+        onHide={this.handleHideTour} > 
+        <Modal.Header closeButton> 
+        <Modal.Title id="example-custom-modal-styling-title" className='text-center'> 
+        Take a tour
+        </Modal.Title>
+          </Modal.Header>
+
+          <Modal.Body style={{
+            display: 'flex', 
+            justifyContent: 'center', 
+            alignItems: 'center', 
+            paddingTop: '0px',
+            paddingBottom:'0px'}}>
+          <img src='/img/logo/donateABLE-long-white-500.png' style={{width: '70%'}}/>
+
+            <p>
+              Here is some example text
+            </p>
           </Modal.Body>
         </Modal>
 

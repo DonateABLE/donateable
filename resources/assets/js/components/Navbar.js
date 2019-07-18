@@ -45,9 +45,14 @@ class Navigation extends Component {
             <style>
               {`.lightblue {
                 background-color: #45A6D7 !important;
-              }`}
+                }
+
+                .navbar-toggler {
+                  border-color: white;
+                }
+              `}
             </style>
-              <Navbar collapseOnSelect expand="lg" style={{backgroundColor: '#45A6d7'}} bg="light" variant="light">
+              <Navbar collapseOnSelect expand="xl" style={{backgroundColor: '#45A6d7'}} bg="light" variant="light">
                   <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
                   <Navbar.Collapse id="responsive-navbar-nav">
                       <Nav className='text-center' style={{paddingRight:0}}>
