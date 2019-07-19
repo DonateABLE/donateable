@@ -6,6 +6,7 @@ import DividerLine from './Modals/DividerLine'
 import WhiteButton from './Modals/WhiteButton'
 import PrivacyPolicy from './Modals/PrivacyPolicy'
 import FAQ from './Modals/FAQ/FAQ'
+import Tour from './Modals/Tour/Tour'
 import { NavLink } from 'react-router-dom'
 import TechSupport from './Modals/Contact/TechSupport';
 import JoinProgram from './Modals/Contact/JoinProgram';
@@ -429,8 +430,13 @@ class ButtonGrouping extends Component {
             <p>
               Here is some example text
             </p>
+
+            <Tour />
           </Modal.Body>
         </Modal>
+
+
+        {/* FREQUENTLY ASKED QUESTIONS */}
 
         <Modal 
           size='lg'
