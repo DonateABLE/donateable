@@ -23,7 +23,7 @@ class Tour extends Component {
             }
             
             .carousel-control-prev {
-              display: false;
+              display: none;
             }
           `}
         </style>

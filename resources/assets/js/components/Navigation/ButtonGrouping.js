@@ -443,8 +443,10 @@ class ButtonGrouping extends Component {
             </Modal.Title>
           </Modal.Header>
           <Modal.Body> 
-            <FAQ />
-          </Modal.Body>
+            <Container>
+             <FAQ style={{width: '100%'}} />
+            </Container>
+           </Modal.Body>
         </Modal>
       </div>
     )

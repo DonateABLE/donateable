@@ -2,14 +2,13 @@ import React from 'react'
 import { Dropdown, DropdownButton, Container } from 'react-bootstrap'
 import WhiteButton from '../WhiteButton';
 
-const dropDown = ( props ) => {
+const DropdownBody = ( props ) => {
   return (
     <div>
       <DropdownButton
         title={props.title}
         style={{
           color: '#26607D',
-          width: '80%',
           paddingRight: '5%',
           paddingLeft: '5%'
         }}>
@@ -27,4 +26,4 @@ const dropDown = ( props ) => {
   )
 }
 
-export default dropDown
+export default DropdownBody

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Dropdown } from 'react-bootstrap'
-import dropDown from './dropDown'
+import DropdownBody from './DropdownBody'
 
 class FAQ extends Component {
   constructor (props, context) {
@@ -17,7 +17,9 @@ class FAQ extends Component {
 
   render () {
     return (
-      <dropDown title='Is there any software installed on my system to be able to donate?' bodyText='Body Text Example'/>
+      <div>
+        <DropdownBody title='Is there any software installed on my system to be able to donate?' bodyText='Body Text Example' />
+      </div>
     )
   }
 }
