@@ -6,16 +6,29 @@ class Tour extends Component {
   render () {
     return (
       <div>
-        <Carousel>
+        <style>
+          {`
+            .carousel-caption {
+              position: relative;
+              left: auto;
+              right: auto;
+              margin-top: 20%;
+              width: 80%;
+            }
+
+          `}
+        </style>
+
+        <Carousel interval={0} style={{width: '100%'}}>
           <Carousel.Item>
             <Container>
               <img
-                className="d-block img-fluid"
+                className="d-block img-fluid text-center"
                 src="/img/tour/tour1.png"
                 alt="First slide"
               />
             </Container>
-            <Carousel.Caption style={{marginTop: '10%'}}>
+            <Carousel.Caption style={{marginTop: '20%', width: '80%'}}>
               <h3>LET'S GET STARTED</h3>
               <p>How can you help your favourite charities without opening your wallet?
                 It's simple. All you have to do is lend your computer's power to generate
