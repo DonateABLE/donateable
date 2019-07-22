@@ -415,7 +415,6 @@ class ButtonGrouping extends Component {
         onHide={this.handleHideTour} > 
         <Modal.Header closeButton> 
         <Modal.Title id="example-custom-modal-styling-title" className='text-center'> 
-        Take a tour
         </Modal.Title>
           </Modal.Header>
 
@@ -426,11 +425,6 @@ class ButtonGrouping extends Component {
             paddingTop: '0px',
             paddingBottom:'0px'}}>
           <img src='/img/logo/donateABLE-long-white-500.png' style={{width: '70%'}}/>
-
-            <p>
-              Here is some example text
-            </p>
-
             <Tour />
           </Modal.Body>
         </Modal>
