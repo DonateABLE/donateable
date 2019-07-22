@@ -13,9 +13,18 @@ class Tour extends Component {
               left: auto;
               right: auto;
               margin-top: 20%;
+              margin-left: 10%;
+              padding-bottom: 5%;
               width: 80%;
             }
 
+            .container {
+              padding-top: 10%;
+            }
+            
+            .carousel-control-prev {
+              display: none;
+            }
           `}
         </style>
 
@@ -23,12 +32,12 @@ class Tour extends Component {
           <Carousel.Item>
             <Container>
               <img
-                className="d-block img-fluid text-center"
+                className="d-block mx-auto img-responsive"
                 src="/img/tour/tour1.png"
                 alt="First slide"
               />
             </Container>
-            <Carousel.Caption style={{marginTop: '20%', width: '80%'}}>
+            <Carousel.Caption style={{marginTop: '10%', width: '80%'}}>
               <h3>LET'S GET STARTED</h3>
               <p>How can you help your favourite charities without opening your wallet?
                 It's simple. All you have to do is lend your computer's power to generate
@@ -40,7 +49,7 @@ class Tour extends Component {
           <Carousel.Item>
             <Container>
               <img
-                className="d-block img-fluid"
+                className="d-block mx-auto img-responsive"
                 src="/img/tour/tour2.png"
                 alt="Second slide"
               />
@@ -56,7 +65,7 @@ class Tour extends Component {
           <Carousel.Item>
             <Container>
               <img
-                className="d-block img-fluid"
+                className="d-block mx-auto img-responsive"
                 src="/img/tour/tour3.png"
                 alt="Three slide"
               />
@@ -73,7 +82,7 @@ class Tour extends Component {
           <Carousel.Item>
             <Container>
               <img
-                className="d-block img-fluid"
+                className="d-block mx-auto img-responsive"
                 src="/img/tour/tour4.png"
                 alt="Fourth slide"
               />
@@ -92,7 +101,7 @@ class Tour extends Component {
           <Carousel.Item>
             <Container>
               <img
-                className="d-block img-fluid"
+                className="d-block mx-auto img-responsive"
                 src="/img/tour/tour5.png"
                 alt="Fifth slide"
               />
@@ -110,7 +119,7 @@ class Tour extends Component {
           <Carousel.Item>
             <Container>
               <img
-                className="d-block img-fluid"
+                className="d-block mx-auto img-responsive"
                 src="/img/tour/tour6.png"
                 alt="Sixth slide"
               />
@@ -129,7 +138,7 @@ class Tour extends Component {
           <Carousel.Item>
             <Container>
               <img
-                className="d-block img-fluid"
+                className="d-block mx-auto img-responsive"
                 src="/img/tour/tour7.png"
                 alt="Seventh slide"
               />
