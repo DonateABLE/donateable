@@ -23,12 +23,12 @@ class Tour extends Component {
             }
             
             .carousel-control-prev {
-              display: none;
+              display: false;
             }
           `}
         </style>
 
-        <Carousel interval={0} style={{width: '100%'}}>
+        <Carousel interval={0} wrap={false} style={{width: '100%'}}>
           <Carousel.Item>
             <Container>
               <img
@@ -134,7 +134,6 @@ class Tour extends Component {
                 Nothing is installed on your system during this process.</p>
             </Carousel.Caption>
           </Carousel.Item>
-          
           <Carousel.Item>
             <Container>
               <img
