@@ -7,6 +7,7 @@ const DropdownBody = ( props ) => {
     <div>
       <DropdownButton
         title={props.title}
+        className='text-left'
         style={{
           color: '#26607D',
           paddingRight: '5%',
