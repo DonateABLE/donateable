@@ -10,7 +10,8 @@ const DropdownBody = ( props ) => {
         style={{
           color: '#26607D',
           paddingRight: '5%',
-          paddingLeft: '5%'
+          paddingLeft: '5%',
+          margin: 'auto'
         }}>
         <Container
           style={{

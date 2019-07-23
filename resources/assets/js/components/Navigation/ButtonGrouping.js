@@ -439,10 +439,15 @@ class ButtonGrouping extends Component {
         >
           <Modal.Header closeButton>
             <Modal.Title id="example-custom-modal-styling-title" className='text-center'>
-             Frequently Asked Questions
             </Modal.Title>
           </Modal.Header>
-          <Modal.Body> 
+          <Modal.Body style={{
+            display: 'flex', 
+            justifyContent: 'center', 
+            alignItems: 'center', 
+            paddingTop: '0px',
+            paddingBottom:'0px'}}>
+          <img src='/img/logo/donateABLE-long-white-500.png' style={{width: '70%'}}/>
             <Container>
              <FAQ style={{width: '100%'}} />
             </Container>
