@@ -4,9 +4,6 @@ import NavbarCollapse from 'react-bootstrap/NavbarCollapse'
 import ButtonGrouping from './Navigation/ButtonGrouping'
 import LoginButtons from './Navigation/NavButtons'
 
-
-
-
 /* Before this was function Navigation must be a class 
    Needs to extend the Component class/type from the react framework 
    This is the Navigation Bar that will be renderend at the top of each page */
@@ -66,7 +63,6 @@ class Navigation extends Component {
           </div>
       );
   }
-
 }
 
 export default Navigation
