@@ -442,27 +442,25 @@ class ButtonGrouping extends Component {
             </Modal.Title>
           </Modal.Header>
 
-          <Modal.Body style={{
+          <Modal.Body style={{ 
             display: 'flex', 
             justifyContent: 'center', 
             alignItems: 'center', 
+            marginBottom: '15%',
             paddingTop: '0px',
             paddingBottom:'0px'}}>
           
           <img src='/img/logo/donateABLE-long-white-500.png' style={{width: '70%'}}/>
-            
-            <Container style={{marginTop: '10%', marginBottom: '10%'}}>
+          <ModalText fontSize1={20} text1='FREQUENTLY ASKED QUESTIONS' />
+            <Container style={{marginTop: '15%', marginBottom: '10%'}}>
              <FAQ style={{width: '100%'}} />
+              <br />
             </Container>
-            
-            <Container style={{marginBottom: '20%'}}>
-              <WhiteButton
+            <WhiteButton
                 Show={this.handleShowContact} 
                 Hide={this.handleHideFAQ} 
                 buttonText='MORE QUESTIONS? CONTACT US'
               />
-            </Container>
-
            </Modal.Body>
         </Modal>
       </div>

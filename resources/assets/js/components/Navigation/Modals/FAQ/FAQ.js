@@ -16,31 +16,21 @@ let titleText4 = 'Why is my browser not letting me donate?         '
 let titleText5 = 'How does the charity receive the donated money?  '
 let titleText6 = 'How much processing power should I donate?       '
 class FAQ extends Component {
-  constructor (props, context) {
-    super(props, context)
-    this.state = {
-      dropDown1: false,
-      dropDown2: false,
-      dropDown3: false,
-      dropDown4: false,
-      dropDown5: false,
-      dropDown6: false
-    }
-  }
-
   render () {
     return (
 
       <div>
         <style>
           {`
-            .btn{
-              font-weight: 100;
-              font-size: 0.5rem;
+            .btn {
+              font-weight: 600;
+              font-size: 0.75rem;
               padding-left: 10px;
               padding-right: 10px;
               text-transform: none;
               width: 100%;
+              white-space: normal;
+              text-align: left;
             }
           `}
         </style>
