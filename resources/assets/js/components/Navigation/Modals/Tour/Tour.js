@@ -19,7 +19,7 @@ class Tour extends Component {
             }
 
             .container {
-              padding-top: 10%;
+              margin-top: 20%;
             }
             
             .carousel-control-prev {
@@ -37,10 +37,8 @@ class Tour extends Component {
                 alt="First slide"
               />
             </Container>
-            <Carousel.Caption style={{marginTop: '20%', width: '80%', marginBottom: '15%'}}>
+            <Carousel.Caption style={{marginTop: '30%', width: '80%', marginBottom: '15%'}}>
               <h3>LET'S GET STARTED</h3>
-              <br />
-              <br />
               <br />
               <p>How can you help your favourite charities without opening your wallet?
                 It's simple. All you have to do is lend your computer's power to generate
@@ -57,10 +55,8 @@ class Tour extends Component {
                 alt="Second slide"
               />
             </Container>
-            <Carousel.Caption style={{marginTop: '20%', marginBottom: '15%'}}>
+            <Carousel.Caption style={{marginTop: '30%', marginBottom: '15%'}}>
               <h3>LOGIN TO YOUR ACCOUNT</h3>
-              <br />
-              <br />
               <br />
               <p> Create an account to track how much you are donating,
                  what charities you are donating to, and
@@ -76,10 +72,8 @@ class Tour extends Component {
                 alt="Three slide"
               />
             </Container>
-            <Carousel.Caption style={{marginTop: '20%', marginBottom: '15%'}}>
+            <Carousel.Caption style={{marginTop: '30%', marginBottom: '15%'}}>
               <h3>CHOOSE YOUR CHARITY</h3>
-              <br />
-              <br />
               <br />
               <p>Choose from a number of charities that do amazing work in
                  Guelph and Wellington County each and everyday. You will
@@ -96,10 +90,8 @@ class Tour extends Component {
                 alt="Fourth slide"
               />
             </Container>
-            <Carousel.Caption style={{marginTop: '20%', marginBottom: '15%'}}>
+            <Carousel.Caption style={{marginTop: '30%', marginBottom: '15%'}}>
               <h3> START DONATING </h3>
-              <br />
-              <br />
               <br />
               <p>You've now selected your charity and are ready to start
                  giving back. On the charity page you will find a brief write-up
@@ -118,10 +110,8 @@ class Tour extends Component {
                 alt="Fifth slide"
               />
             </Container>
-            <Carousel.Caption style={{marginTop: '20%', marginBottom: '15%'}}>
+            <Carousel.Caption style={{marginTop: '30%', marginBottom: '15%'}}>
               <h3>SELECT YOUR CPU POWER</h3>
-              <br />
-              <br />
               <br />
               <p>Next, set the amount of processing power you would like to donate.
                  Basically, the more processor power you donate, the more algorithms
@@ -139,10 +129,8 @@ class Tour extends Component {
                 alt="Sixth slide"
               />
             </Container>
-            <Carousel.Caption style={{marginTop: '20%', marginBottom: '15%'}}>
+            <Carousel.Caption style={{marginTop: '30%', marginBottom: '15%'}}>
               <h3>ACCEPT AND GET STARTED</h3>
-              <br />
-              <br />
               <br />
               <p>We want to make sure you fully understand the
                 full process donateABLE uses. To do this after
@@ -160,10 +148,8 @@ class Tour extends Component {
                 alt="Seventh slide"
               />
             </Container>
-            <Carousel.Caption style={{marginTop: '20%', marginBottom: '15%'}}>
+            <Carousel.Caption style={{marginTop: '30%', marginBottom: '15%'}}>
               <h3>LEAVE TAB OPEN AND <br /> KEEP BROWSING</h3>
-              <br />
-              <br />
               <br />
               <p>As long as you keep the donateABLE tab running in your browser you will 
                 be able to continue on with your computer usage as normal. As soon as the
