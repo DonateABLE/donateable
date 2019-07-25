@@ -452,7 +452,7 @@ class ButtonGrouping extends Component {
           
           <img src='/img/logo/donateABLE-long-white-500.png' style={{width: '70%'}}/>
           <ModalText fontSize1={20} text1='FREQUENTLY ASKED QUESTIONS' />
-            <Container style={{marginTop: '15%', marginBottom: '10%'}}>
+            <Container style={{marginTop: '10%', marginBottom: '10%'}}>
              <FAQ style={{width: '100%'}} />
               <br />
             </Container>

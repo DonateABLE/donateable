@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import Buttons from "./integration/Buttons"
-import Image from "./integration/Image"
+import Buttons from "./Home/Buttons"
+import Image from "./Home/Image"
 import Text from "./Text"
 
 class Home extends Component {

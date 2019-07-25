@@ -44,7 +44,11 @@ class Login extends Component {
           border: 0, borderTop: '1px solid #26607D',
           marginTop: '4%', padding: 0 } }/>
 
-        <h1>LOGIN</h1>
+        <h1 style={{margin: 'auto',
+          marginBottom: '4%',
+          width: '70%',
+          fontSize: '20',
+          fontWeight: '300' }}>LOGIN</h1>
 
         <LoginForm variant='turqdark' />
 
@@ -52,7 +56,11 @@ class Login extends Component {
           border: 0, borderTop: '1px solid #26607D',
           marginTop: '4%', padding: 0 } }/>
 
-        <h1>SIGN UP</h1>
+        <h1 style={{margin: 'auto',
+          marginBottom: '4%',
+          width: '70%',
+          fontSize: '20',
+          fontWeight: '300' }}>SIGN UP</h1>
         <SignupForm variant='turqdark'  />
       </div>
     )
