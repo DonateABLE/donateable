@@ -3,7 +3,7 @@ import { Form, Row, Col, Button } from 'react-bootstrap'
 
 const LoginForm = ( props ) => {
   return (
-    <Form style={{marginTop: '5%', width: '85%'}}>
+    <Form>
       <Form.Group as={Row} controlId='loginEmail'>
         <Col sm={10}>
           <Form.Control type='email' placeholder='Email' />
