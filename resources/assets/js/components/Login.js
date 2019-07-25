@@ -22,7 +22,9 @@ class Login extends Component {
           border: 0, borderTop: '1px solid #26607D',
           marginTop: '4%', padding: 0 } }/>
 
-        <h1 style={{margin: 'auto', width: '70%'}}> LOGIN</h1>
+        <h1 style={{margin: 'auto', width: '70%', fontWeight: 'normal'}}> LOGIN</h1>
+
+        <LoginForm variant='turqdark' />
       </div>
     )
   }
