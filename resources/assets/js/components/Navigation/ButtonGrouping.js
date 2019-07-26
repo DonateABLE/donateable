@@ -133,6 +133,7 @@ class ButtonGrouping extends Component {
                     align-items: center;
                     padding-top: 0px;
                     padding-bottom: 0px;
+                    height: 100%;
                   }
           `}
         </style>

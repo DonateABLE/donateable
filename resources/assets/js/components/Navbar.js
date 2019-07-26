@@ -44,8 +44,20 @@ class Navigation extends Component {
                 background-color: #45A6D7 !important;
                 }
 
-                .navbar-toggler {
+                button.navbar-toggler {
+                  border-color: white !important;
+                }
+
+                button.navbar-toggler.collapsed {
                   border-color: white;
+                }
+
+                .navbar-toggler {
+                  border-color: white !important;
+                }
+
+                .navbar-toggler-icon {
+                  background-image: url('img/burger.png') !important;
                 }
               `}
             </style>

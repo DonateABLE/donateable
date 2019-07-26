@@ -4,7 +4,7 @@ import { Form, Row, Col, Button } from 'react-bootstrap'
 const JoinProgram = (props) => {
   return (
 
-    <Form style={{marginTop: '5%', width: '85%'}}>
+    <Form style={{marginTop: '5%'}}>
       <Form.Group as={Row} controlId='formFirstName'>
         <Col sm={10}>
           <Form.Control type='text' placeholder='First Name' />
