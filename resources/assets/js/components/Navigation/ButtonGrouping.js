@@ -181,11 +181,13 @@ class ButtonGrouping extends Component {
           <img src='/img/logo/donateABLE-long-white-500.png' style={{width: '70%'}}/>
 
           <ModalText 
-            fontSize1={14} 
-            fontSize2={14} 
+            fontSize1={16} 
+            fontSize2={16} 
             text1='THE WHO, WHAT & WHYS OF DONATEABLE' 
             text2='THE NEWEST AND EASIEST WAY TO DONATE'
-            style={{paddingTop: '40%'}}/>
+            style={{paddingTop: '40%', width: '100%', fontWeight: '250', paddingLeft: '2%',
+                paddingRight: '2%'}}
+            />
 
           {/* WHO */}  
           <hr width={'69%'} noshade  style={{display: 'block', height: '1px',
@@ -264,7 +266,14 @@ class ButtonGrouping extends Component {
             paddingTop: '0px',
             paddingBottom:'10px'}}>
             <img src='/img/logo/donateABLE-long-white-500.png' style={{width: '70%'}}/>
-          <ModalText fontSize1={14} fontSize2={14} text1='USE YOUR COMPUTER POWER TO GENERATE' text2='MONEY FOR YOUR CHOSEN CHARITY'/>
+          
+          <ModalText 
+            fontSize1={16} 
+            fontSize2={16}
+            text1='USE YOUR COMPUTER POWER TO GENERATE' 
+            text2='MONEY FOR YOUR CHOSEN CHARITY'
+            style={{width: '100%', fontWeight: '250'}}
+            />
           
           <hr width={'69%'} noshade  style={{display: 'block', height: '1px',
               border: 0, borderTop: '1px solid #FFFFFF',
