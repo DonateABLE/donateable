@@ -16,7 +16,7 @@ const WhiteButton = (props) => {
                 border-color: #979797;
                 border-radius: 0;
                 color: #45A6D7;
-                font-weight: 200;
+                font-weight: 500;
                 letter-spacing: 0.05em;
                 font-family: 'Montserrat-Bold', sans-serif;
                 margin-bottom: 4%;
