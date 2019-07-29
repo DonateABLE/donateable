@@ -25,14 +25,14 @@ class Login extends Component {
               margin-bottom: 4%;
               width: 70%;
               font-size: 20;
-              font-weight: 300;
+              font-weight: 500;
             }
           `}
         </style>
         <img src='/img/logo/donateABLE-long-colour-500.png' style={{width: '60%'}} />
         <br />
 
-        <p style={{color: '#26607D', fontWeight: '700', width: '80%', margin: 'auto'}}>
+        <p style={{color: '#26607D', fontWeight: '500', width: '80%', margin: 'auto'}}>
           Simply lend your computer’s power to generate
           real value for the charity of your choice. Donate
           to your favourite charities without opening your
@@ -48,7 +48,7 @@ class Login extends Component {
           marginBottom: '4%',
           width: '70%',
           fontSize: '20',
-          fontWeight: '300' }}>LOGIN</h1>
+          fontWeight: '500' }}>LOGIN</h1>
 
         <LoginForm variant='turqdark' />
 
@@ -60,7 +60,7 @@ class Login extends Component {
           marginBottom: '4%',
           width: '70%',
           fontSize: '20',
-          fontWeight: '300' }}>SIGN UP</h1>
+          fontWeight: '500' }}>SIGN UP</h1>
         <SignupForm variant='turqdark'  />
       </div>
     )

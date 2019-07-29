@@ -99,7 +99,7 @@ class ButtonGrouping extends Component {
                     border-radius: 0;
                     color: white;
                     vertical-align: middle;
-                    font-weight: 100;
+                    font-weight: 500;
                     letter-spacing: 0.05em;
                     font-family: 'Montserrat-Bold', sans-serif;
                     width: 305px;
@@ -112,7 +112,7 @@ class ButtonGrouping extends Component {
                     border-color: #979797;
                     border-radius: 0;
                     color: white;
-                    font-weight: 200;
+                    font-weight: 500;
                     letter-spacing: 0.05em;
                     font-family: 'Montserrat-Bold', sans-serif;
                     margin-bottom: 4%;
@@ -186,7 +186,7 @@ class ButtonGrouping extends Component {
             fontSize2={16} 
             text1='THE WHO, WHAT & WHYS OF DONATEABLE' 
             text2='THE NEWEST AND EASIEST WAY TO DONATE'
-            style={{paddingTop: '40%', width: '100%', fontWeight: '250', paddingLeft: '2%',
+            style={{paddingTop: '40%', width: '100%', fontWeight: '500', paddingLeft: '2%',
                 paddingRight: '2%'}}
             />
 
@@ -273,7 +273,7 @@ class ButtonGrouping extends Component {
             fontSize2={16}
             text1='USE YOUR COMPUTER POWER TO GENERATE' 
             text2='MONEY FOR YOUR CHOSEN CHARITY'
-            style={{width: '100%', fontWeight: '250'}}
+            style={{width: '100%', fontWeight: '500'}}
             />
           
           <hr width={'69%'} noshade  style={{display: 'block', height: '1px',

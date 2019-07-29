@@ -25,6 +25,14 @@ class Tour extends Component {
             .carousel-control-prev {
               display: none;
             }
+
+            .carousel-control-next {
+              align-items: flex-end;
+            }
+
+            .carousel-control-button {
+
+            }
           `}
         </style>
 
@@ -44,6 +52,7 @@ class Tour extends Component {
                 It's simple. All you have to do is lend your computer's power to generate
                 real value for the charity of your choice. The following tutorial will walk
                 you through the steps to start making a difference today. It is that easy.</p>
+              {/* USE STYLING TO MOVE THE CAROUSEL BUTTON */}
             </Carousel.Caption>
           </Carousel.Item>
           

@@ -11,7 +11,7 @@ const PrivacyPolicy = (props) => {
 
   return (
     <div>
-      <Container style={{backgroundColor: '#FFFFFF', color:'black', fontWeight: 200, marginBottom: '3%'}}>
+      <Container style={{backgroundColor: '#FFFFFF', color:'black', fontWeight: '500', marginBottom: '3%'}}>
         <strong> Effective Date: January 1st, 2019</strong>
         <br />
         <br />
