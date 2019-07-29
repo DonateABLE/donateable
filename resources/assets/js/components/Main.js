@@ -4,7 +4,6 @@ import Navigation from "./Navbar"
 import Home from "./Home"
 import Charities from "./Charites"
 import Login from './Login'
-import Animation from './Animation'
 import Footer from "./Footer"
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import { createBrowserHistory } from "history";

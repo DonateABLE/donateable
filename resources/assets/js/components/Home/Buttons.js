@@ -1,7 +1,6 @@
 import React from 'react'
 import { Button } from 'react-bootstrap'
 import { NavLink } from 'react-router-dom'
-import ButtonGrouping from '/Users/administrator/dev/OLD donateable/donateable/resources/assets/js/components/Navigation/ButtonGrouping'
 
 function Buttons () {
   return (
@@ -60,8 +59,8 @@ function Buttons () {
         </Button>
       </NavLink>
 
-      <Button variant='turqwhite' onClick={ButtonGrouping.handleShowTour} size='lg'>HOW IT WORKS</Button>
-      <Button variant='turqwhite' onClick={ButtonGrouping.handleShowTour} size='lg'>TAKE A TOUR</Button>
+      <Button variant='turqwhite' size='lg'>HOW IT WORKS</Button>
+      <Button variant='turqwhite' size='lg'>TAKE A TOUR</Button>
       <Button variant='turq' size='lg'>CURRENTLY DONATING </Button>
       <Button variant='turq' size='lg'>DONATORS TO DATE</Button>
       <Button variant='turq' size='lg'>TOTAL HASHES 193 832</Button>
