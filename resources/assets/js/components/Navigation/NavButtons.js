@@ -16,7 +16,7 @@ class LoginButtons extends Component {
                     border-radius: 0;
                     color: white;
                     vertical-align: middle;
-                    font-weight: 100;
+                    font-weight: 500;
                     letter-spacing: 0.05em;
                     font-family: 'Montserrat-Bold', sans-serif;
                     margin-bottom: 6px;
@@ -31,7 +31,7 @@ class LoginButtons extends Component {
                     border-radius: 0;
                     color: white;
                     vertical-align: middle;
-                    font-weight: 200;
+                    font-weight: 500;
                     letter-spacing: 0.05em;
                     font-family: 'Montserrat-Bold', sans-serif;
                     margin-bottom: 5px;
@@ -45,7 +45,7 @@ class LoginButtons extends Component {
                     border-color: #979797;
                     border-radius: 0;
                     color: #26607D;
-                    font-weight: 200;
+                    font-weight: 500;
                     letter-spacing: 0.05em;
                     font-family: 'Montserrat-Bold', sans-serif;
                     margin-bottom: 5px;
