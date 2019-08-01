@@ -1,10 +1,11 @@
 import React, { Component }from 'react'
+import CharityCards from './Charities/CharityCards'
 
 class Charities extends Component {
   render () {
     return(
       <div>
-        <h1>Charities Screen</h1>  
+        <CharityCards /> 
       </div>
     )
   }
