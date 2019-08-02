@@ -38,6 +38,10 @@ const CharityCards = (props) => {
             font-size: 18px;
             width: 100%;
           }
+
+          .card {
+            margin-bottom: 5%;
+          }
         `}
       </style>
       <Card className="text-center">
