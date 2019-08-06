@@ -1,17 +1,21 @@
-import React, { Component }from 'react'
+import React, { Component } from 'react'
 import CharityCards from './Charities/CharityCards'
-import { Container } from 'react-bootstrap';
+import CharityText from './Charities/CharityText'
+import { Container } from 'react-bootstrap'
 
 class Charities extends Component {
   render () {
-    return(
+    return (
       <div>
-        <Container style={{background: 'white', paddingBottom: '5%'}}>
+        <Container style={{ background: 'white', paddingBottom: '5%' }}>
+          <CharityText
+            text1='SUPPORT LOCAL CHARITIES IN GUELPH'
+            text2='WITHOUT OPENING YOUR WALLET' />
           <CharityCards
-            charityName='DONATEABLE' 
+            charityName='DONATEABLE'
             image='/img/charity/donateable-charity.png' />
           <CharityCards
-            charityName='VICTIM SERVICES WELLINGTON' 
+            charityName='VICTIM SERVICES WELLINGTON'
             image='/img/charity/Victim-Services.png' />
           <CharityCards
             charityName='COMING SOON' />

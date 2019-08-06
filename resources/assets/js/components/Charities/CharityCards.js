@@ -14,8 +14,8 @@ const CharityCards = (props) => {
             background-color: #45a6d7;
             border-color: #45a6d7;
             width: 100%;
-            margin-bottom: 3%;
-          }    
+            margin-top: 8%;
+          }
 
           .btn-donators {
             color: #fff;
@@ -29,8 +29,6 @@ const CharityCards = (props) => {
             background-color: #45a6d7;
             border-color: #45a6d7;
             width: 100%;
-            margin-bottom: 3%;
-            height:
           }
           
           .btn-donatehere {
@@ -47,8 +45,8 @@ const CharityCards = (props) => {
           }
 
           .floating-social-icons{
-            margin-block-start: 0.5em;
-            margin-block-end: 0.5em;
+            margin-block-start: 0.25em;
+            margin-block-end: 0.25em;
             margin-inline-start: 0px;
             margin-inline-end: 0px;
             padding-inline-start: 40px;
@@ -59,21 +57,18 @@ const CharityCards = (props) => {
         <img src={props.image} className='img-fluid' />
         <Card.Header>{props.charityName}</Card.Header>
         <Card.Body>
-          <Card.Text>
-            With supporting text below as a natural lead-in to additional content.
-          </Card.Text>
           <Button variant='donating'>Currently Donating</Button>
           <Button variant='donators'>Donators to Date</Button>
           <Button variant='social'>
             <ul className='floating-social-icons'>
               <li>
-                <FontAwesomeIcon icon={faFacebookF} />
+                <FontAwesomeIcon icon={faFacebookF} onClick={props.facebookLink} />
               </li>
               <li>
-                <FontAwesomeIcon icon={faTwitter} />
+                <FontAwesomeIcon icon={faTwitter} onClick={props.twitterLink} />
               </li>
               <li>
-                <FontAwesomeIcon icon={faGlobe} />
+                <FontAwesomeIcon icon={faGlobe} onClick={props.siteLink} />
               </li>
             </ul>
           </Button>
