@@ -1,5 +1,5 @@
 import React from 'react'
-import {Container, Card, Button} from 'react-bootstrap'
+import { Card, Button } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebookF, faTwitter } from '@fortawesome/free-brands-svg-icons'
 import { faGlobe } from '@fortawesome/free-solid-svg-icons'
@@ -45,8 +45,8 @@ const CharityCards = (props) => {
           }
 
           .floating-social-icons{
-            margin-block-start: 0.25em;
-            margin-block-end: 0.25em;
+            margin-block-start: 0.1em;
+            margin-block-end: 0.1em;
             margin-inline-start: 0px;
             margin-inline-end: 0px;
             padding-inline-start: 40px;
@@ -62,13 +62,22 @@ const CharityCards = (props) => {
           <Button variant='social'>
             <ul className='floating-social-icons'>
               <li>
-                <FontAwesomeIcon icon={faFacebookF} onClick={props.facebookLink} />
+                <a href={props.facebookLink}>
+                  <FontAwesomeIcon icon={faFacebookF}
+                    style={{ color: 'white' }} />
+                </a>
               </li>
               <li>
-                <FontAwesomeIcon icon={faTwitter} onClick={props.twitterLink} />
+                <a href={props.twitterLink}>
+                  <FontAwesomeIcon icon={faTwitter}
+                    style={{ color: 'white' }} />
+                </a>
               </li>
               <li>
-                <FontAwesomeIcon icon={faGlobe} onClick={props.siteLink} />
+                <a href={props.siteLink}>
+                  <FontAwesomeIcon icon={faGlobe}
+                    style={{ color: 'white' }} />
+                </a>
               </li>
             </ul>
           </Button>
