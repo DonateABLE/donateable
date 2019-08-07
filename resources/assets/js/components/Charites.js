@@ -19,7 +19,8 @@ class Charities extends Component {
             image='/img/charity/Victim-Services.png'
             facebookLink='https://www.facebook.com/www.vswguelph.on.ca/'
             twitterLink='https://twitter.com/VS_Wellington'
-            siteLink='https://www.vswguelph.on.ca/' />
+            siteLink='https://www.vswguelph.on.ca/'
+            donateLink='/charities/wvs' />
           <CharityCards
             charityName='COMING SOON' />
         </Container>

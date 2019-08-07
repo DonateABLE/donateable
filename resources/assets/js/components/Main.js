@@ -20,9 +20,10 @@ class Main extends Component {
         <Router history={history}>
           <Navigation />
           <div className='text-center'>
-            <Route exact path="/" component={Home} />
-            <Route exact path="/charities" component={Charities} />
-            <Route exact path="/login" component={Login} />
+            <Route exact path='/' component={Home} />
+            <Route exact path='/charities' component={Charities} />
+            <Route exact path='/login' component={Login} />
+            <Route exact path='/charities/wvs' component={WVS} />
           </div>
           <Footer />
         </Router>
@@ -36,5 +37,6 @@ export default Main
 /* The if statement is required so as to Render the component on pages that have a div with an ID of "root";
 */
 
-if (document.getElementById("mobile")) {
-  ReactDOM.render(<Main />, document.getElementById("mobile"))}
+if (document.getElementById('mobile')) {
+  ReactDOM.render(<Main />, document.getElementById('mobile'))
+}

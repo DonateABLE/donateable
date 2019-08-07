@@ -59,7 +59,7 @@ const CharityCards = (props) => {
         <Card.Body>
           <Button variant='donating'>Currently Donating</Button>
           <Button variant='donators'>Donators to Date</Button>
-          <Button variant='social'>
+          <Button variant='social' style={{ paddingTop: '0', paddingBottom: '0' }}>
             <ul className='floating-social-icons'>
               <li>
                 <a href={props.facebookLink}>
@@ -81,7 +81,7 @@ const CharityCards = (props) => {
               </li>
             </ul>
           </Button>
-          <Button variant='donatehere'>Donate Here</Button>
+          <Button variant='donatehere' onClick={props.donateLink}>Donate Here</Button>
         </Card.Body>
       </Card>
     </div>
