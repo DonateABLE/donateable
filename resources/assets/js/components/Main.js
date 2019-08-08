@@ -5,9 +5,8 @@ import Home from "./Home"
 import Charities from "./Charites"
 import Login from './Login'
 import Footer from "./Footer"
-import { BrowserRouter as Router, Route } from "react-router-dom";
-import { createBrowserHistory } from "history";
-
+import { BrowserRouter as Router, Route } from "react-router-dom"
+import { createBrowserHistory } from "history"
 
 const history = createBrowserHistory()
 
@@ -23,7 +22,7 @@ class Main extends Component {
             <Route exact path='/' component={Home} />
             <Route exact path='/charities' component={Charities} />
             <Route exact path='/login' component={Login} />
-            <Route exact path='/charities/wvs' component={WVS} />
+            {/*<Route exact path='/charities/wvs' component={WVS} />*/}
           </div>
           <Footer />
         </Router>
