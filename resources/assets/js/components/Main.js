@@ -8,7 +8,7 @@ import Footer from "./Footer";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import { createBrowserHistory } from "history";
 import WVS from "./Charities/WVS";
-import Stuff from "./Stuff";
+
 
 const history = createBrowserHistory();
 

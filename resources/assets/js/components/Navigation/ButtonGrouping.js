@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { Button, ButtonGroup, Modal, Container } from "react-bootstrap";
 import ModalText from "./Modals/ModalText";
 import TwoItems from "./Modals/TwoItems";
-import DividerLine from "./Modals/DividerLine";
 import WhiteButton from "./Modals/WhiteButton";
 import PrivacyPolicy from "./Modals/PrivacyPolicy";
 import FAQ from "./Modals/FAQ/FAQ";
