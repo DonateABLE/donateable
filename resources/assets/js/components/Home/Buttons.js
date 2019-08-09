@@ -63,7 +63,9 @@ function Buttons () {
       <Button variant='turqwhite' size='lg'>TAKE A TOUR</Button>
       <Button variant='turq' size='lg'>CURRENTLY DONATING </Button>
       <Button variant='turq' size='lg'>DONATORS TO DATE</Button>
-      <Button variant='turq' size='lg'>TOTAL HASHES 193 832</Button>
+      <NavLink to='/wvs' style={{textDecoration: 'none'}}>
+        <Button variant='turq' size='lg'>TOTAL HASHES 193 832</Button>
+      </NavLink>
     </div>
   )
 }

@@ -12,14 +12,18 @@ const CharityTemplate = (props) => {
           .container{
             font-weight: 400;
             width: 100%;
+            text-align: right;
+          }
+
+          .nav-link {
+            color: white !important;
           }
         `}
       </style>
-      <Container style={{color: 'white'}}>
+      <Container style={{backgroundColor: '#26607D'}}>
         <NavLink to='/charities'>
-        Return to Charities
+          Return to Charities
         </NavLink>
-        Hello World this is some example text that I am using.
       </Container>
 {/*
       <Container> 
