@@ -1,8 +1,7 @@
-import React, { Component } from 'react';
-import { Carousel, Container } from 'react-bootstrap'
+import React, { Component } from 'react'
+import { Carousel, Container, Button } from 'react-bootstrap'
 
 class Tour extends Component {
-
   render () {
     return (
       <div>
@@ -26,8 +25,27 @@ class Tour extends Component {
               display: none;
             }
 
+            .carousel-control-next {
+            }
+
             .carousel-control-button {
 
+            }
+
+            .nxt-button {
+              display: -webkit-box;
+              display: -ms-flexbox;
+              display: flex;
+              -webkit-box-align: center;
+                  -ms-flex-align: center;
+                      align-items: center;
+              -webkit-box-pack: center;
+                  -ms-flex-pack: center;
+                      justify-content: center;
+              text-align: center;
+              opacity: 0.5;
+              -webkit-transition: opacity 0.15s ease;
+              transition: opacity 0.15s ease;
             }
           `}
         </style>
@@ -48,7 +66,10 @@ class Tour extends Component {
                 It's simple. All you have to do is lend your computer's power to generate
                 real value for the charity of your choice. The following tutorial will walk
                 you through the steps to start making a difference today. It is that easy.</p>
-              {/* USE STYLING TO MOVE THE CAROUSEL BUTTON */}
+              {/* USE STYLING TO MOVE THE CAROUSEL BUTTON 
+              <a className='nxt-button' role='button' href='#'>
+                <Button variant='turqdark'>Next</Button>
+              </a> */}
             </Carousel.Caption>
           </Carousel.Item>
           
@@ -134,7 +155,7 @@ class Tour extends Component {
                 alt="Sixth slide"
               />
             </Container>
-            <Carousel.Caption style={{marginTop: '30%', marginBottom: '15%'}}>
+            <Carousel.Caption style={{ marginTop: '30%', marginBottom: '15%' }}>
               <h3>ACCEPT AND GET STARTED</h3>
               <br />
               <p>We want to make sure you fully understand the
@@ -148,19 +169,23 @@ class Tour extends Component {
           <Carousel.Item>
             <Container>
               <img
-                className="d-block mx-auto img-responsive"
-                src="/img/tour/tour7.png"
-                alt="Seventh slide"
+                className='d-block mx-auto img-responsive'
+                src='/img/tour/tour7.png'
+                alt='Seventh slide'
               />
             </Container>
-            <Carousel.Caption style={{marginTop: '30%', marginBottom: '15%'}}>
+            <Carousel.Caption style={{ marginTop: '30%', marginBottom: '15%' }}>
               <h3>LEAVE TAB OPEN AND <br /> KEEP BROWSING</h3>
               <br />
-              <p>As long as you keep the donateABLE tab running in your browser you will 
+              <p>As long as you keep the donateABLE tab running in your browser you will
                 be able to continue on with your computer usage as normal. As soon as the
                 tab is closed your donation will end. Going away or not using your computer?
                 Turn the CPU usage up and donate all day, everyday. Every second of your
                 donation makes a difference.</p>
+              <Button
+                variant='turqdark'
+                style={{ marginTop: '15%' }}
+                onClick={this.props.click}>CLOSE</Button>
             </Carousel.Caption>
           </Carousel.Item>
         </Carousel>

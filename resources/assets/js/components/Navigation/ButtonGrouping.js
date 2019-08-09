@@ -435,7 +435,7 @@ class ButtonGrouping extends Component {
             paddingTop: '0px',
             paddingBottom:'0px'}}>
           <img src='/img/logo/donateABLE-long-white-500.png' style={{width: '70%'}}/>
-            <Tour />
+            <Tour click={this.handleHideTour}/>
           </Modal.Body>
         </Modal>
 
