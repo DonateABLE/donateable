@@ -1,5 +1,6 @@
 import React from 'react'
 import { Card, Button } from 'react-bootstrap'
+import NavLink from 'react-bootstrap/NavLink'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebookF, faTwitter } from '@fortawesome/free-brands-svg-icons'
 import { faGlobe } from '@fortawesome/free-solid-svg-icons'
@@ -81,7 +82,9 @@ const CharityCards = (props) => {
               </li>
             </ul>
           </Button>
-          <Button variant='donatehere' onClick={props.donateLink}>Donate Here</Button>
+          <NavLink to={props.donateLink}>
+            <Button variant='donatehere'>Donate Here</Button>
+          </NavLink>
         </Card.Body>
       </Card>
     </div>

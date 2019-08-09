@@ -20,7 +20,7 @@ class Charities extends Component {
             facebookLink='https://www.facebook.com/www.vswguelph.on.ca/'
             twitterLink='https://twitter.com/VS_Wellington'
             siteLink='https://www.vswguelph.on.ca/'
-            donateLink='/charities/wvs' />
+            donateLink='/wvs' />
           <CharityCards
             charityName='COMING SOON' />
         </Container>

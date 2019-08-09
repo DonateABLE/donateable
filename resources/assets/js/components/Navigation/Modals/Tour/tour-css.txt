@@ -1,0 +1,8 @@
+            carousel-control-next {
+              align-items: flex-end;
+              left: 0px;
+              top: 400px;
+              margin: auto;
+              width: 280px;
+              height: 55px;
+            }

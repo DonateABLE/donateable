@@ -9,23 +9,21 @@ const CharityTemplate = (props) => {
     <div>
       <style>
         {`
-          .conatiner{
-            color: #26607D;
-            font-size: 14;
+          .container{
             font-weight: 400;
             width: 100%;
-            height: 50px;
           }
         `}
       </style>
-      <Container>
+      <Container style={{color: 'white'}}>
         <NavLink to='/charities'>
         Return to Charities
         </NavLink>
+        Hello World this is some example text that I am using.
       </Container>
-
+{/*
       <Container> 
-        {/* DO GRID STUFF HERE,  could be its own component*/}
+      
         {props.charityImage}
         {props.charityText}
       </Container>
@@ -36,9 +34,9 @@ const CharityTemplate = (props) => {
         {props.siteLink}
       </Container>
 
-      <Container> {/* BIG WHITE CONTAINER */}
+      <Container> 
           
-      </Container>
+      </Container> */}
     </div>
   )
 }

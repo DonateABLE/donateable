@@ -1,2 +1,12 @@
-// THE INSTANTION OF CHARITY TEMPLATE FOR WELLINGTON
-// VICTIM SERVICES WILL BE HERE 
+import React, { Component } from 'react'
+import CharityTemplate from './Charity Content/CharityTemplate'
+
+class WVS extends Component {
+  render () {
+    return (
+      <CharityTemplate />
+    )
+  }
+}
+
+export default WVS

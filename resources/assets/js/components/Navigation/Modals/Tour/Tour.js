@@ -26,10 +26,6 @@ class Tour extends Component {
               display: none;
             }
 
-            .carousel-control-next {
-              align-items: flex-end;
-            }
-
             .carousel-control-button {
 
             }
