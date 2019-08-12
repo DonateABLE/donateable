@@ -1,48 +1,68 @@
-import React from 'react'
-import { Container } from 'react-bootstrap'
-import NavLink from 'react-bootstrap/NavLink'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCaretRight } from '@fortawesome/free-solid-svg-icons'
+import React from "react";
+import { Container } from "react-bootstrap";
+import NavLink from "react-bootstrap/NavLink";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlay, faGlobe } from "@fortawesome/free-solid-svg-icons";
+import { faFacebookF, faTwitter } from "@fortawesome/free-brands-svg-icons";
 
-const CharityTemplate = (props) => {
-  return (
-    <div>
-      <style>
-        {`
+const CharityTemplate = props => {
+    return (
+        <div>
+            <style>
+                {`
           .container{
             font-weight: 400;
             width: 100%;
-            text-align: right;
+          }
+
+          .fa {
+            transform: translateY(-4%);
           }
 
           .nav-link {
             color: white !important;
           }
         `}
-      </style>
-      <Container style={{backgroundColor: '#26607D'}}>
-        <NavLink to='/charities'>
-          Return to Charities
-        </NavLink>
-      </Container>
-{/*
-      <Container> 
-      
-        {props.charityImage}
-        {props.charityText}
-      </Container>
+            </style>
+            <Container
+                style={{ backgroundColor: "#26607D", textAlign: "right" }}
+            >
+                <NavLink to="/charities">
+                    Return to Charities
+                    <FontAwesomeIcon
+                        icon={faPlay}
+                        style={{ color: "white", marginLeft: "13px" }}
+                    />
+                </NavLink>
+            </Container>
+            {/* BE SURE TO CHECK VW UNITS IN FONT SIZE */}
+            <Container
+                className="text-center"
+                style={{ backgroundColor: "#45A6D7", fontSize: "5vw" }}
+            >
+                <a href="https://www.facebook.com/www.vswguelph.on.ca/">
+                    <FontAwesomeIcon
+                        icon={faFacebookF}
+                        style={{ color: "white"}}
+                    />
+                </a>
+                &nbsp; &nbsp;
+                <a href="https://www.facebook.com/www.vswguelph.on.ca/">
+                    <FontAwesomeIcon
+                        icon={faTwitter}
+                        style={{ color: "white"}}
+                    />
+                </a>
+                &nbsp; &nbsp;
+                <a href="https://www.facebook.com/www.vswguelph.on.ca/">
+                    <FontAwesomeIcon
+                        icon={faGlobe}
+                        style={{ color: "white"}
+                    />
+                </a>
+            </Container>
+        </div>
+    );
+};
 
-      <Container>
-        {props.twitterLink}
-        {props.facebookLink}
-        {props.siteLink}
-      </Container>
-
-      <Container> 
-          
-      </Container> */}
-    </div>
-  )
-}
-
-export default CharityTemplate
+export default CharityTemplate;
