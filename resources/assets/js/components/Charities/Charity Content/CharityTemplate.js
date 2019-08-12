@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Col } from "react-bootstrap";
+import { Container, Col, Row, Button } from "react-bootstrap";
 import NavLink from "react-bootstrap/NavLink";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay, faGlobe } from "@fortawesome/free-solid-svg-icons";
@@ -41,14 +41,15 @@ const CharityTemplate = props => {
                     />
                 </NavLink>
             </Container>
-            {/* BE SURE TO CHECK VW UNITS IN FONT SIZE */}
             <Container
                 style={{
                     backgroundColor: "#45A6D7",
                     color: "white",
                     display: "flex",
                     paddingLeft: "0",
-                    paddingRight: "0"
+                    paddingRight: "0",
+                    paddingTop: "3%",
+                    paddingBottom: "3%"
                 }}
             >
                 <Col md="auto" style={{ paddingLeft: "0", paddingRight: "0" }}>
@@ -60,7 +61,7 @@ const CharityTemplate = props => {
                     </div>
                 </Col>
 
-                <Col xs={7} style={{ paddingLeft: "0", paddingRight: "0" }}>
+                <Col xs={8} style={{ paddingLeft: "0", paddingRight: "0" }}>
                     <div style={{ textAlign: "left" }}>
                         <p
                             style={{
@@ -76,7 +77,7 @@ const CharityTemplate = props => {
                         <p
                             style={{
                                 fontWeight: "300",
-                                fontSize: "1.6vh",
+                                fontSize: "1.4vh",
                                 color: "white",
                                 padding: "0px 0px 0px 0px",
                                 margin: "0px 0px 0px 0px"
@@ -104,7 +105,12 @@ const CharityTemplate = props => {
             {/* SOCIAL MEDIA BUTTON CONTAINER */}
             <Container
                 className="text-center"
-                style={{ backgroundColor: "#26607D", fontSize: "5vw" }}
+                style={{
+                    backgroundColor: "#26607D",
+                    fontSize: "5vw",
+                    paddingTop: "2%",
+                    paddingBottom: "2%"
+                }}
             >
                 <a href="https://www.facebook.com/www.vswguelph.on.ca/">
                     <FontAwesomeIcon
@@ -112,20 +118,39 @@ const CharityTemplate = props => {
                         style={{ color: "white" }}
                     />
                 </a>
-                &nbsp; &nbsp;
+                &nbsp; &nbsp; &nbsp;
                 <a href="https://www.facebook.com/www.vswguelph.on.ca/">
                     <FontAwesomeIcon
                         icon={faTwitter}
                         style={{ color: "white" }}
                     />
                 </a>
-                &nbsp; &nbsp;
+                &nbsp; &nbsp; &nbsp;
                 <a href="https://www.facebook.com/www.vswguelph.on.ca/">
                     <FontAwesomeIcon
                         icon={faGlobe}
                         style={{ color: "white" }}
                     />
                 </a>
+            </Container>
+
+            <Container
+                style={{
+                    backgroundColor: "white",
+                    color: "white",
+                    display: "flex",
+                    paddingLeft: "0",
+                    paddingRight: "0",
+                    paddingTop: "3%",
+                    paddingBottom: "3%",
+                    justifyContent: "center"
+                }}
+            >
+
+            <Row>
+                <Button variant="turqdark">MONETARY DONATION</Button>
+            </Row>
+
             </Container>
         </div>
     );
