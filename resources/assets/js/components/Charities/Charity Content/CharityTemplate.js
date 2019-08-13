@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Col, Row, Button } from "react-bootstrap";
+import { Container, Col, Row, Button, Tab, Tabs } from "react-bootstrap";
 import NavLink from "react-bootstrap/NavLink";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay, faGlobe } from "@fortawesome/free-solid-svg-icons";
@@ -17,6 +17,10 @@ const CharityTemplate = props => {
 
           .fa {
             transform: translateY(-4%);
+          }
+
+          .row {
+            justify-content: center;
           }
 
           .nav-link {
@@ -137,20 +141,39 @@ const CharityTemplate = props => {
             <Container
                 style={{
                     backgroundColor: "white",
-                    color: "white",
+                    color: "blue",
                     display: "flex",
+                    flexDirection: "column",
+                    flexWrap: "wrap",
                     paddingLeft: "0",
                     paddingRight: "0",
                     paddingTop: "3%",
                     paddingBottom: "3%",
+                    marginLeft: "0",
+                    marginRight: "0",
                     justifyContent: "center"
                 }}
             >
-
-            <Row>
-                <Button variant="turqdark">MONETARY DONATION</Button>
-            </Row>
-
+                <Row style={{width: '100%'}}>
+                    <Button variant="turqdark"> MONETARY DONATION</Button>
+                </Row>
+ 
+                <Row style={{width: '100%', color: "black"}}>
+                    <Tabs defaultActiveKey="about" id="charity-tabs">
+                        <Tab eventKey="about" title="About">
+                            Placeholder Text
+                        </Tab>
+                        <Tab eventKey="statistics" title="Statistics">
+                            Placeholder Text
+                        </Tab>
+                        <Tab eventKey="targets" title="Targets">
+                            Placeholder Text
+                        </Tab>
+                        <Tab eventKey="donate-now" title="Donate Now">
+                            Placeholder Text
+                        </Tab>
+                    </Tabs>
+                </Row>
             </Container>
         </div>
     );
