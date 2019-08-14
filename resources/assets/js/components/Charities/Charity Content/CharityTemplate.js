@@ -4,6 +4,7 @@ import NavLink from "react-bootstrap/NavLink";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay, faGlobe } from "@fortawesome/free-solid-svg-icons";
 import { faFacebookF, faTwitter } from "@fortawesome/free-brands-svg-icons";
+import TabbedContainer from "./TabbedContainer";
 
 const CharityTemplate = props => {
     return (
@@ -23,9 +24,6 @@ const CharityTemplate = props => {
             justify-content: center;
           }
 
-          .nav-link {
-            color: white !important;
-          }
           .p {
             padding: 0px 0px 0px 0px !important;
             margin: 0px 0px 0px 0px !important;
@@ -34,10 +32,12 @@ const CharityTemplate = props => {
           }
         `}
             </style>
+            {/* Return to Charities Container */}
             <Container
-                style={{ backgroundColor: "#26607D", textAlign: "right" }}
-            >
-                <NavLink to="/charities">
+                style={{ backgroundColor: "#26607D", textAlign: "right", color: "white" }}
+            >   
+            {/* TO BE FIXED FOR COLORING TEXT*/}
+                    <NavLink to="/charities" style={{color: 'white'}}>
                     Return to Charities
                     <FontAwesomeIcon
                         icon={faPlay}
@@ -45,6 +45,7 @@ const CharityTemplate = props => {
                     />
                 </NavLink>
             </Container>
+            {/* Charity Info Container*/}
             <Container
                 style={{
                     backgroundColor: "#45A6D7",
@@ -138,43 +139,7 @@ const CharityTemplate = props => {
                 </a>
             </Container>
 
-            <Container
-                style={{
-                    backgroundColor: "white",
-                    color: "blue",
-                    display: "flex",
-                    flexDirection: "column",
-                    flexWrap: "wrap",
-                    paddingLeft: "0",
-                    paddingRight: "0",
-                    paddingTop: "3%",
-                    paddingBottom: "3%",
-                    marginLeft: "0",
-                    marginRight: "0",
-                    justifyContent: "center"
-                }}
-            >
-                <Row style={{width: '100%'}}>
-                    <Button variant="turqdark"> MONETARY DONATION</Button>
-                </Row>
- 
-                <Row style={{width: '100%', color: "black"}}>
-                    <Tabs defaultActiveKey="about" id="charity-tabs">
-                        <Tab eventKey="about" title="About">
-                            Placeholder Text
-                        </Tab>
-                        <Tab eventKey="statistics" title="Statistics">
-                            Placeholder Text
-                        </Tab>
-                        <Tab eventKey="targets" title="Targets">
-                            Placeholder Text
-                        </Tab>
-                        <Tab eventKey="donate-now" title="Donate Now">
-                            Placeholder Text
-                        </Tab>
-                    </Tabs>
-                </Row>
-            </Container>
+          <TabbedContainer /> 
         </div>
     );
 };

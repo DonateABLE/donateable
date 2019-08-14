@@ -249,7 +249,6 @@ class ButtonGrouping extends Component {
                         {/* WHO */}
                         <hr
                             width={"69%"}
-                            noshade
                             style={{
                                 display: "block",
                                 height: "1px",
@@ -277,7 +276,6 @@ class ButtonGrouping extends Component {
                         {/* WHAT */}
                         <hr
                             width={"69%"}
-                            noshade
                             style={{
                                 display: "block",
                                 height: "1px",
@@ -306,7 +304,6 @@ class ButtonGrouping extends Component {
                         {/* WHY */}
                         <hr
                             width={"69%"}
-                            noshade
                             style={{
                                 display: "block",
                                 height: "1px",
@@ -334,7 +331,6 @@ class ButtonGrouping extends Component {
 
                         <hr
                             width={"69%"}
-                            noshade
                             style={{
                                 display: "block",
                                 height: "1px",
@@ -401,7 +397,6 @@ class ButtonGrouping extends Component {
 
                         <hr
                             width={"69%"}
-                            noshade
                             style={{
                                 display: "block",
                                 height: "1px",
@@ -428,7 +423,6 @@ class ButtonGrouping extends Component {
 
                         <hr
                             width={"69%"}
-                            noshade
                             style={{
                                 display: "block",
                                 height: "1px",
@@ -455,7 +449,6 @@ class ButtonGrouping extends Component {
 
                         <hr
                             width={"69%"}
-                            noshade
                             style={{
                                 display: "block",
                                 height: "1px",
@@ -481,7 +474,6 @@ class ButtonGrouping extends Component {
                         </p>
                         <hr
                             width={"69%"}
-                            noshade
                             style={{
                                 display: "block",
                                 height: "1px",
@@ -575,7 +567,6 @@ class ButtonGrouping extends Component {
 
                         <hr
                             width={"69%"}
-                            noshade
                             style={{
                                 display: "block",
                                 height: "1px",
@@ -604,7 +595,6 @@ class ButtonGrouping extends Component {
 
                         <hr
                             width={"69%"}
-                            noshade
                             style={{
                                 display: "block",
                                 height: "1px",
@@ -632,7 +622,6 @@ class ButtonGrouping extends Component {
 
                         <hr
                             width={"69%"}
-                            noshade
                             style={{
                                 display: "block",
                                 height: "1px",
