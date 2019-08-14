@@ -9,7 +9,11 @@ const TabbedContainer = props => {
             <style>
                 {`
                 .nav-link {
-                    padding: 10px;
+                  padding: 1%;
+                }
+
+                .h2 {
+                    text-align: center;
                 }
             `}
             </style>
@@ -24,8 +28,8 @@ const TabbedContainer = props => {
                     paddingRight: "0",
                     paddingTop: "3%",
                     paddingBottom: "3%",
-                    marginLeft: "0",
-                    marginRight: "0",
+                    margin: "auto",
+                    width: "100%",
                     justifyContent: "center"
                 }}
             >
@@ -35,8 +39,8 @@ const TabbedContainer = props => {
 
                 <Row style={{ width: "100%", color: "black" }}>
                     <Tabs defaultActiveKey="about" id="charity-tabs">
-                        <Tab eventKey="about" title=" &nbsp;About&nbsp; ">
-                            <h2>ABOUT VICTIM SERVICES WELLINGTON (VSW)</h2>
+                        <Tab eventKey="about" title="About">
+                            <h2 style={{marginTop: "3%"}}>ABOUT VICTIM SERVICES WELLINGTON (VSW)</h2>
                             <p>
                                 Anyone can be a victim. It is in times of trauma
                                 that victims need compassion, support, and
@@ -93,26 +97,18 @@ const TabbedContainer = props => {
                         </Tab>
                         <Tab
                             eventKey="statistics"
-                            title=" &nbsp;Statistics&nbsp; "
+                            title="Statistics"
                         >
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit, sed do eiusmod tempor incididunt ut labore et
-                            dolore magna aliqua. Dolor sed viverra ipsum nunc
-                            aliquet bibendum enim. In massa tempor nec feugiat.
-                            Nunc aliquet bibendum enim facilisis gravida. Nisl
-                            nunc mi ipsum faucibus vitae aliquet nec
-                            ullamcorper. Amet luctus venenatis lectus magna
-                            fringilla. Volutpat maecenas volutpat blandit
-                            aliquam etiam erat velit scelerisque in. Egestas
-                            egestas fringilla phasellus faucibus scelerisque
-                            eleifend. Sagittis orci a scelerisque purus semper
-                            eget duis. Nulla pharetra diam sit amet nisl
-                            suscipit. Sed adipiscing diam donec adipiscing
-                            tristique risus nec feugiat in. Fusce ut placerat
-                            orci nulla. Pharetra vel turpis nunc eget lorem
-                            dolor. Tristique senectus et netus et malesuada.
+                            <h2 style={{marginTop: "3%", textAlign: "center"}}>CHARITY AND DONATEABLE STATISTICS</h2>
+                            <img
+                            src="/img/charity/Victim-Services.png"
+                            style={{ width: "100%", margin: "auto" }}
+                        />
+                            <h2> VICTIM SERVICES WELLINGTON </h2>
+                            <p style={{textAlign: "center"}}></p>
+
                         </Tab>
-                        <Tab eventKey="targets" title="  &nbsp;Targets&nbsp;  ">
+                        <Tab eventKey="targets" title="Targets">
                             Lorem ipsum dolor sit amet, consectetur adipiscing
                             elit, sed do eiusmod tempor incididunt ut labore et
                             dolore magna aliqua. Dolor sed viverra ipsum nunc
@@ -132,7 +128,7 @@ const TabbedContainer = props => {
                         </Tab>
                         <Tab
                             eventKey="donate-now"
-                            title="  &nbsp;Donate Now&nbsp;  "
+                            title="Donate Now"
                         >
                             Lorem ipsum dolor sit amet, consectetur adipiscing
                             elit, sed do eiusmod tempor incididunt ut labore et
