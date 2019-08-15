@@ -1,6 +1,7 @@
 import React from "react";
 import { Tabs, Tab, Container, Row, Col, Button } from "react-bootstrap";
 import LineBreak from "./LineBreak";
+import ImageAndText from "./ImageAndText";
 
 // Tabbed Content Container
 const TabbedContainer = props => {
@@ -14,6 +15,11 @@ const TabbedContainer = props => {
 
                 .h2 {
                     text-align: center;
+                }
+
+                .p {
+                    padding: 2%;
+                    margin: auto;
                 }
             `}
             </style>
@@ -111,54 +117,21 @@ const TabbedContainer = props => {
                             <p style={{ textAlign: "center", margin: "auto" }}>
                                 Statistics
                             </p>
-
-                            <Container
-                                style={{
-                                    backgroundColor: "white",
-                                    color: "#26607D",
-                                    display: "flex",
-                                    paddingLeft: "0",
-                                    paddingRight: "0",
-                                    paddingTop: "3%",
-                                    paddingBottom: "3%"
-                                }}
-                            >
-                                <Col
-                                    md="auto"
-                                    style={{
-                                        paddingLeft: "0",
-                                        paddingRight: "0"
-                                    }}
-                                >
-                                    <div>
-                                        <img
-                                            src="/img/charity/Victim-Services.png"
-                                            style={{
-                                                width: "100%",
-                                                height: "100%"
-                                            }}
-                                        />
-                                    </div>
-                                </Col>
-
-                                <Col
-                                    xs={8}
-                                    style={{
-                                        paddingLeft: "0",
-                                        paddingRight: "0"
-                                    }}
-                                >
-                                    <div style={{ textAlign: "left" }}>
-                                        <p>
-                                            {" "}
-                                            This is some text to go beside this
-                                            image right here and right now. I
-                                            wanna see what it looks like all put
-                                            together.
-                                        </p>
-                                    </div>
-                                </Col>
-                            </Container>
+                            <ImageAndText
+                                image="/img/charity/Victim-Services.png"
+                                bodytext="This is some body text to fill up a bunch of space for the component"
+                                num={1}
+                            />
+                            <ImageAndText
+                                image="/img/charity/Victim-Services.png"
+                                bodytext="This is some body text to fill up a bunch of space for the component"
+                                num={2}
+                            />
+                            <ImageAndText
+                                image="/img/charity/Victim-Services.png"
+                                bodytext="This is some body text to fill up a bunch of space for the component"
+                                num={3}
+                            />
                         </Tab>
                         <Tab eventKey="targets" title="Targets">
                             Lorem ipsum dolor sit amet, consectetur adipiscing
