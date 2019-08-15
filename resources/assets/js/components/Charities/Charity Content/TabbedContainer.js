@@ -1,5 +1,5 @@
 import React from "react";
-import { Tabs, Tab, Container, Row, Button } from "react-bootstrap";
+import { Tabs, Tab, Container, Row, Col, Button } from "react-bootstrap";
 import LineBreak from "./LineBreak";
 
 // Tabbed Content Container
@@ -40,7 +40,9 @@ const TabbedContainer = props => {
                 <Row style={{ width: "100%", color: "black" }}>
                     <Tabs defaultActiveKey="about" id="charity-tabs">
                         <Tab eventKey="about" title="About">
-                            <h2 style={{marginTop: "3%"}}>ABOUT VICTIM SERVICES WELLINGTON (VSW)</h2>
+                            <h2 style={{ marginTop: "3%" }}>
+                                ABOUT VICTIM SERVICES WELLINGTON (VSW)
+                            </h2>
                             <p>
                                 Anyone can be a victim. It is in times of trauma
                                 that victims need compassion, support, and
@@ -72,7 +74,7 @@ const TabbedContainer = props => {
 
                             <h2>CONTACT VICTIM SERVICES WELLINGTON (VSW)</h2>
 
-                            <p style={{textAlign: "center"}}>
+                            <p style={{ textAlign: "center" }}>
                                 15 Wyndam Street South
                                 <br />
                                 Guelph, Ontario
@@ -81,13 +83,13 @@ const TabbedContainer = props => {
                             </p>
 
                             <LineBreak />
-                            <p style={{textAlign: "center"}}>
+                            <p style={{ textAlign: "center" }}>
                                 <strong>Phone:</strong> (519) 824-1212 ext 7304
                                 <br />
                                 <strong>Email:</strong> victim@vswguelph.on.ca
                             </p>
                             <LineBreak />
-                            <p style={{textAlign:"center"}}>
+                            <p style={{ textAlign: "center" }}>
                                 <strong>Office Hours</strong>
                                 <br />
                                 Monday to Friday from
@@ -95,18 +97,68 @@ const TabbedContainer = props => {
                                 9am to 5pm
                             </p>
                         </Tab>
-                        <Tab
-                            eventKey="statistics"
-                            title="Statistics"
-                        >
-                            <h2 style={{marginTop: "3%", textAlign: "center"}}>CHARITY AND DONATEABLE STATISTICS</h2>
+                        <Tab eventKey="statistics" title="Statistics">
+                            <h2
+                                style={{ marginTop: "3%", textAlign: "center" }}
+                            >
+                                CHARITY AND DONATEABLE STATISTICS
+                            </h2>
                             <img
-                            src="/img/charity/Victim-Services.png"
-                            style={{ width: "100%", margin: "auto" }}
-                        />
+                                src="/img/charity/Victim-Services.png"
+                                style={{ width: "50%", margin: "auto" }}
+                            />
                             <h2> VICTIM SERVICES WELLINGTON </h2>
-                            <p style={{textAlign: "center"}}></p>
+                            <p style={{ textAlign: "center", margin: "auto" }}>
+                                Statistics
+                            </p>
 
+                            <Container
+                                style={{
+                                    backgroundColor: "white",
+                                    color: "#26607D",
+                                    display: "flex",
+                                    paddingLeft: "0",
+                                    paddingRight: "0",
+                                    paddingTop: "3%",
+                                    paddingBottom: "3%"
+                                }}
+                            >
+                                <Col
+                                    md="auto"
+                                    style={{
+                                        paddingLeft: "0",
+                                        paddingRight: "0"
+                                    }}
+                                >
+                                    <div>
+                                        <img
+                                            src="/img/charity/Victim-Services.png"
+                                            style={{
+                                                width: "100%",
+                                                height: "100%"
+                                            }}
+                                        />
+                                    </div>
+                                </Col>
+
+                                <Col
+                                    xs={8}
+                                    style={{
+                                        paddingLeft: "0",
+                                        paddingRight: "0"
+                                    }}
+                                >
+                                    <div style={{ textAlign: "left" }}>
+                                        <p>
+                                            {" "}
+                                            This is some text to go beside this
+                                            image right here and right now. I
+                                            wanna see what it looks like all put
+                                            together.
+                                        </p>
+                                    </div>
+                                </Col>
+                            </Container>
                         </Tab>
                         <Tab eventKey="targets" title="Targets">
                             Lorem ipsum dolor sit amet, consectetur adipiscing
@@ -126,10 +178,7 @@ const TabbedContainer = props => {
                             orci nulla. Pharetra vel turpis nunc eget lorem
                             dolor. Tristique senectus et netus et malesuada.
                         </Tab>
-                        <Tab
-                            eventKey="donate-now"
-                            title="Donate Now"
-                        >
+                        <Tab eventKey="donate-now" title="Donate Now">
                             Lorem ipsum dolor sit amet, consectetur adipiscing
                             elit, sed do eiusmod tempor incididunt ut labore et
                             dolore magna aliqua. Dolor sed viverra ipsum nunc
