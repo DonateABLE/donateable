@@ -2,6 +2,12 @@ import React from "react";
 import { Tabs, Tab, Container, Row, Col, Button } from "react-bootstrap";
 import LineBreak from "./LineBreak";
 import ImageAndText from "./ImageAndText";
+import IconAndText from "./IconAndText";
+import {
+    faBatteryHalf,
+    faAmbulance,
+    faHandHoldingHeart
+} from "@fortawesome/free-solid-svg-icons";
 
 // Tabbed Content Container
 const TabbedContainer = props => {
@@ -134,22 +140,28 @@ const TabbedContainer = props => {
                             />
                         </Tab>
                         <Tab eventKey="targets" title="Targets">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit, sed do eiusmod tempor incididunt ut labore et
-                            dolore magna aliqua. Dolor sed viverra ipsum nunc
-                            aliquet bibendum enim. In massa tempor nec feugiat.
-                            Nunc aliquet bibendum enim facilisis gravida. Nisl
-                            nunc mi ipsum faucibus vitae aliquet nec
-                            ullamcorper. Amet luctus venenatis lectus magna
-                            fringilla. Volutpat maecenas volutpat blandit
-                            aliquam etiam erat velit scelerisque in. Egestas
-                            egestas fringilla phasellus faucibus scelerisque
-                            eleifend. Sagittis orci a scelerisque purus semper
-                            eget duis. Nulla pharetra diam sit amet nisl
-                            suscipit. Sed adipiscing diam donec adipiscing
-                            tristique risus nec feugiat in. Fusce ut placerat
-                            orci nulla. Pharetra vel turpis nunc eget lorem
-                            dolor. Tristique senectus et netus et malesuada.
+                            <h2>Donation Targets</h2>
+                            <IconAndText
+                                icon={faBatteryHalf}
+                                size="5x"
+                                rotation={270}
+                                num={1}
+                                bodytext="LIFE SAVER BRACLET. A small battery used in the Lifesaver Bracelet allowing the system to operate everyday of the year."
+                            />
+                            <LineBreak />
+                            <IconAndText
+                                icon={faHandHoldingHeart}
+                                size="5x"
+                                num={2}
+                                bodytext="VOLUNTEER TRAINING Responsible for immediate mobile response to requests from emergency and police services within Wellington County."
+                            />
+                            <LineBreak />
+                            <IconAndText
+                                icon={faAmbulance}
+                                size="5x"
+                                num={3}
+                                bodytext="LIFESAVER BRACELET COST = $400= 40,000,000,000 HASHES. A one ounce wrist transmitter that sends a radio signal which can be tracked up to a 2 kilometer radius."
+                            />
                         </Tab>
                         <Tab eventKey="donate-now" title="Donate Now">
                             Lorem ipsum dolor sit amet, consectetur adipiscing
