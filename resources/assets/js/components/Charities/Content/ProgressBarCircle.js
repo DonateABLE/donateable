@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { CircularProgressBar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 
-const ProgressBarCircle = props => {
+const ProgressBarCircle = (props) => {
     return (
         <div>
             <Container

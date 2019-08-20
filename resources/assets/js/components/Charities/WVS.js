@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import CharityTemplate from './Charity Content/CharityTemplate'
+import CharityTemplate from './Content/CharityTemplate'
 
 class WVS extends Component {
   render () {

@@ -9,7 +9,8 @@ import {
     faHandHoldingHeart
 } from "@fortawesome/free-solid-svg-icons";
 import ProgressBarCircle from "./ProgressBarCircle";
-
+import { CircularProgressBar, buildStyles } from "react-circular-progressbar";
+ 
 // Tabbed Content Container
 const TabbedContainer = props => {
     return (
@@ -129,13 +130,13 @@ const TabbedContainer = props => {
                             <p style={{ textAlign: "center", margin: "auto" }}>
                                 Statistics
                             </p>
-                            
+{/*
                             <ProgressBarCircle
                                 percentage="43"
                                 barText="2"
                                 title="CURRENTLY DONATING"
                             />
-                            <ProgressBarCircle
+                              <ProgressBarCircle
                                 percentage="54"
                                 barText="34"
                                 title="DONATORS TO DATE"
@@ -145,7 +146,16 @@ const TabbedContainer = props => {
                                 barText="0"
                                 title="HASHING RATE"
                                 details="62 406 321"
-                            />
+                            />*/}
+
+                    <CircularProgressBar
+                        value={38}
+                        text="1"
+                        style={buildStyles({
+                            pathColor: "#45A6D7",
+                            trailColor: "#26607D"
+                        })}
+                    />
 
                         </Tab>
 
@@ -180,7 +190,7 @@ const TabbedContainer = props => {
 
                         <Tab eventKey="donate-now" title="Donate Now">
                             <h2>DONATE NOW</h2>
-
+{/* 
                             <ProgressBarCircle
                                 percentage="0"
                                 barText="0"
@@ -198,7 +208,7 @@ const TabbedContainer = props => {
                                 barText="0"
                                 title="TOTAL HASHES"
                                 details="# 0"
-                            />
+/> */}
                         </Tab>
                     </Tabs>
                 </Row>

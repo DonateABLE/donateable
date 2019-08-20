@@ -1,13 +1,13 @@
-import React from 'react'
-import { Button } from 'react-bootstrap'
-import { NavLink } from 'react-router-dom'
+import React from "react";
+import { Button } from "react-bootstrap";
+import { NavLink } from "react-router-dom";
 
-function Buttons () {
-  return (
-    /* Custom styling for buttons, sizing and colors */
-    <div className='text-center'>
-      <style className='text/css'>
-        {`
+function Buttons() {
+    return (
+        /* Custom styling for buttons, sizing and colors */
+        <div className="text-center">
+            <style className="text/css">
+                {`
                 .btn-turq {
                   background-color: #45A6D7;
                   border-color: #979797;
@@ -52,22 +52,32 @@ function Buttons () {
                   font-size: 10pt;
                 }
         `}
-      </style>
-      <NavLink to='/charities' style={{ textDecoration: 'none' }}> 
-        <Button variant='turqdark' className='row' size='lg'>
-          SELECT YOUR CHARITY
-        </Button>
-      </NavLink>
+            </style>
+            <NavLink to="/charities" style={{ textDecoration: "none" }}>
+                <Button variant="turqdark" className="row" size="lg">
+                    SELECT YOUR CHARITY
+                </Button>
+            </NavLink>
 
-      <Button variant='turqwhite' size='lg'>HOW IT WORKS</Button>
-      <Button variant='turqwhite' size='lg'>TAKE A TOUR</Button>
-      <Button variant='turq' size='lg'>CURRENTLY DONATING </Button>
-      <Button variant='turq' size='lg'>DONATORS TO DATE</Button>
-      <NavLink to='/wvs' style={{textDecoration: 'none'}}>
-        <Button variant='turq' size='lg'>TOTAL HASHES 193 832</Button>
-      </NavLink>
-    </div>
-  )
+            <Button variant="turqwhite" size="lg">
+                HOW IT WORKS
+            </Button>
+            <Button variant="turqwhite" size="lg">
+                TAKE A TOUR
+            </Button>
+            <Button variant="turq" size="lg">
+                CURRENTLY DONATING{" "}
+            </Button>
+            <Button variant="turq" size="lg">
+                DONATORS TO DATE
+            </Button>
+            <NavLink to="/wvs" style={{ textDecoration: "none" }}>
+                <Button variant="turq" size="lg">
+                    TOTAL HASHES 193 832
+                </Button>
+            </NavLink>
+        </div>
+    );
 }
 
-export default Buttons
+export default Buttons;
