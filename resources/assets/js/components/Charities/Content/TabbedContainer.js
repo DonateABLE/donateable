@@ -8,6 +8,7 @@ import {
     faAmbulance,
     faHandHoldingHeart
 } from "@fortawesome/free-solid-svg-icons";
+import ProgressBarCircle from "./ProgressBarCircle";
 
 // Tabbed Content Container
 const TabbedContainer = props => {
@@ -50,6 +51,8 @@ const TabbedContainer = props => {
                 </Row>
 
                 <Row style={{ width: "100%", color: "black" }}>
+                    {/* ABOUT TAB */}
+
                     <Tabs defaultActiveKey="about" id="charity-tabs">
                         <Tab eventKey="about" title="About">
                             <h2 style={{ marginTop: "3%" }}>
@@ -109,6 +112,9 @@ const TabbedContainer = props => {
                                 9am to 5pm
                             </p>
                         </Tab>
+
+                        {/* CHARITY STATS TAB */}
+
                         <Tab eventKey="statistics" title="Statistics">
                             <h2
                                 style={{ marginTop: "3%", textAlign: "center" }}
@@ -123,22 +129,28 @@ const TabbedContainer = props => {
                             <p style={{ textAlign: "center", margin: "auto" }}>
                                 Statistics
                             </p>
-                            <ImageAndText
-                                image="/img/charity/Victim-Services.png"
-                                bodytext="This is some body text to fill up a bunch of space for the component"
-                                num={1}
+                            
+                            <ProgressBarCircle
+                                percentage="43"
+                                barText="2"
+                                title="CURRENTLY DONATING"
                             />
-                            <ImageAndText
-                                image="/img/charity/Victim-Services.png"
-                                bodytext="This is some body text to fill up a bunch of space for the component"
-                                num={2}
+                            <ProgressBarCircle
+                                percentage="54"
+                                barText="34"
+                                title="DONATORS TO DATE"
                             />
-                            <ImageAndText
-                                image="/img/charity/Victim-Services.png"
-                                bodytext="This is some body text to fill up a bunch of space for the component"
-                                num={3}
+                            <ProgressBarCircle
+                                percentage="78"
+                                barText="0"
+                                title="HASHING RATE"
+                                details="62 406 321"
                             />
+
                         </Tab>
+
+                        {/* DONATION TARGETS TAB */}
+
                         <Tab eventKey="targets" title="Targets">
                             <h2>Donation Targets</h2>
                             <IconAndText
@@ -163,23 +175,30 @@ const TabbedContainer = props => {
                                 bodytext="LIFESAVER BRACELET COST = $400= 40,000,000,000 HASHES. A one ounce wrist transmitter that sends a radio signal which can be tracked up to a 2 kilometer radius."
                             />
                         </Tab>
+
+                        {/* DONATE NOW TAB */}
+
                         <Tab eventKey="donate-now" title="Donate Now">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit, sed do eiusmod tempor incididunt ut labore et
-                            dolore magna aliqua. Dolor sed viverra ipsum nunc
-                            aliquet bibendum enim. In massa tempor nec feugiat.
-                            Nunc aliquet bibendum enim facilisis gravida. Nisl
-                            nunc mi ipsum faucibus vitae aliquet nec
-                            ullamcorper. Amet luctus venenatis lectus magna
-                            fringilla. Volutpat maecenas volutpat blandit
-                            aliquam etiam erat velit scelerisque in. Egestas
-                            egestas fringilla phasellus faucibus scelerisque
-                            eleifend. Sagittis orci a scelerisque purus semper
-                            eget duis. Nulla pharetra diam sit amet nisl
-                            suscipit. Sed adipiscing diam donec adipiscing
-                            tristique risus nec feugiat in. Fusce ut placerat
-                            orci nulla. Pharetra vel turpis nunc eget lorem
-                            dolor. Tristique senectus et netus et malesuada.
+                            <h2>DONATE NOW</h2>
+
+                            <ProgressBarCircle
+                                percentage="0"
+                                barText="0"
+                                title="HASHING RATE"
+                                details="0 PER SECOND"
+                            />
+                            <ProgressBarCircle
+                                percentage="0"
+                                barText="0"
+                                title="TOTAL TIME"
+                                details="0 SECONDS"
+                            />
+                            <ProgressBarCircle
+                                percentage="0"
+                                barText="0"
+                                title="TOTAL HASHES"
+                                details="# 0"
+                            />
                         </Tab>
                     </Tabs>
                 </Row>
