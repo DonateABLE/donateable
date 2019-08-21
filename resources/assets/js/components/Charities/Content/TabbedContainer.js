@@ -147,7 +147,7 @@ const TabbedContainer = props => {
                                 title="HASHING RATE"
                                 details="62 406 321"
                             />*/}
-
+                    {/* 
                     <CircularProgressBar
                         value={38}
                         text="1"
@@ -155,7 +155,7 @@ const TabbedContainer = props => {
                             pathColor: "#45A6D7",
                             trailColor: "#26607D"
                         })}
-                    />
+                    /> */}
 
                         </Tab>
 
