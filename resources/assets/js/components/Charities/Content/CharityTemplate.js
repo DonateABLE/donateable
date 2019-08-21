@@ -36,7 +36,6 @@ const CharityTemplate = props => {
             <Container
                 style={{ backgroundColor: "#26607D", textAlign: "right", color: "white" }}
             >   
-            {/* TO BE FIXED FOR COLORING TEXT*/}
                     <NavLink to="/charities" style={{color: 'white'}}>
                     Return to Charities
                     <FontAwesomeIcon
