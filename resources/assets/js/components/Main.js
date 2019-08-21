@@ -8,7 +8,7 @@ import Footer from "./Footer";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import { createBrowserHistory } from "history";
 import WVS from "./Charities/WVS";
-
+import Account from "./Account";
 
 const history = createBrowserHistory();
 
@@ -25,6 +25,7 @@ class Main extends Component {
                         <Route exact path="/charities" component={Charities} />
                         <Route exact path="/login" component={Login} />
                         <Route exact path="/wvs" component={WVS} />
+                        <Route exact path="/account" component={Account} />
                     </div>
                     <Footer />
                 </Router>

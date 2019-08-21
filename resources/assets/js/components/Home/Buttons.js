@@ -71,7 +71,7 @@ function Buttons() {
             <Button variant="turq" size="lg">
                 DONATORS TO DATE
             </Button>
-            <NavLink to="/wvs" style={{ textDecoration: "none" }}>
+            <NavLink to="/account" style={{ textDecoration: "none" }}>
                 <Button variant="turq" size="lg">
                     TOTAL HASHES 193 832
                 </Button>
