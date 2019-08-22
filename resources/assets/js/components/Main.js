@@ -19,7 +19,6 @@ class Main extends Component {
         return (
             <div>
                 <Router history={history}>
-                    <Navigation />
                     <div className="text-center">
                         <Route exact path="/" component={Home} />
                         <Route exact path="/charities" component={Charities} />

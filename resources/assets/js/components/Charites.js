@@ -1,12 +1,14 @@
 import React, { Component } from "react";
 import CharityCards from "./Charities/CharityCards";
 import CharityText from "./Charities/CharityText";
+import Navigation from "./Navbar";
 import { Container } from "react-bootstrap";
 
 class Charities extends Component {
     render() {
         return (
             <div>
+                <Navigation />
                 <Container style={{ background: "white", paddingBottom: "5%" }}>
                     <CharityText
                         text1="SUPPORT LOCAL CHARITIES IN GUELPH"
