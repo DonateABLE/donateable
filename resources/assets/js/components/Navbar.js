@@ -59,6 +59,11 @@ class Navigation extends Component {
                 .navbar-toggler-icon {
                   background-image: url('img/burger.png') !important;
                 }
+
+                .navbar-brand {
+                    margin-left: 6rem;
+                    padding-left: 0;
+                }
               `}
                 </style>
                 <Navbar
@@ -68,6 +73,14 @@ class Navigation extends Component {
                     bg="light"
                     variant="light"
                 >
+                    <Navbar.Brand>
+                        <img
+                            src="/img/donateABLE-long-colour-250.png"
+                            width="100%"
+                            height="100%"
+                            style={{ justifyContent: "center" }}
+                        />
+                    </Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav
