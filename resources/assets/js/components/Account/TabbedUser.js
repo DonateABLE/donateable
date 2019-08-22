@@ -30,6 +30,7 @@ const TabbedUser = props => {
                 .row {
                     margin-left: 2%;
                     margin-right: 2%;
+                    justify-content: center;
                 }
             `}
             </style>
@@ -50,8 +51,10 @@ const TabbedUser = props => {
                     textAlign: "center"
                 }}
             >
-                <Row style={{ width: "100%", justifyContent: "center"}}>
-                    <Button variant="turqdark" style={{margin: "auto"}}>START DONATING</Button>
+                <Row style={{ width: "100%", justifyContent: "center" }}>
+                    <Button variant="turqdark" style={{ margin: "auto" }}>
+                        START DONATING
+                    </Button>
                 </Row>
 
                 <Row style={{ width: "100%", color: "black" }}>

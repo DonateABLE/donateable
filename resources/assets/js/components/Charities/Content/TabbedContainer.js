@@ -10,7 +10,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import ProgressBarCircle from "./ProgressBarCircle";
 import { CircularProgressBar, buildStyles } from "react-circular-progressbar";
- 
+
 // Tabbed Content Container
 const TabbedContainer = props => {
     return (
@@ -135,7 +135,7 @@ const TabbedContainer = props => {
                             <p style={{ textAlign: "center", margin: "auto" }}>
                                 Statistics
                             </p>
-{/*
+                            {/*
                             <ProgressBarCircle
                                 percentage="43"
                                 barText="2"
@@ -152,7 +152,7 @@ const TabbedContainer = props => {
                                 title="HASHING RATE"
                                 details="62 406 321"
                             />*/}
-                    {/* 
+                            {/* 
                     <CircularProgressBar
                         value={38}
                         text="1"
@@ -161,7 +161,6 @@ const TabbedContainer = props => {
                             trailColor: "#26607D"
                         })}
                     /> */}
-
                         </Tab>
 
                         {/* DONATION TARGETS TAB */}
@@ -195,7 +194,7 @@ const TabbedContainer = props => {
 
                         <Tab eventKey="donate-now" title="Donate Now">
                             <h2>DONATE NOW</h2>
-{/* 
+                            {/* 
                             <ProgressBarCircle
                                 percentage="0"
                                 barText="0"
