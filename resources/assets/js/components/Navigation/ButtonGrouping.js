@@ -5,13 +5,14 @@ import TwoItems from "./Modals/TwoItems";
 import WhiteButton from "./Modals/WhiteButton";
 import PrivacyPolicy from "./Modals/PrivacyPolicy";
 import FAQ from "./Modals/FAQ/FAQ";
-import Tour from "./Modals/Tour/Tour";
+import TourModal from "./Modals/Tour/TourModal";
 import { NavLink } from "react-router-dom";
 import TechSupport from "./Modals/Contact/TechSupport";
 import JoinProgram from "./Modals/Contact/JoinProgram";
 
 // This component is for the collection of buttons that pull down
 // in the hamburger menu
+// Sorry if this is a terribly written component
 
 class ButtonGrouping extends Component {
     constructor(props, context) {
@@ -659,34 +660,10 @@ class ButtonGrouping extends Component {
                 </Modal>
 
                 {/* TAKE A TOUR*/}
-                <Modal
-                    size="lg"
+                <TourModal
                     show={this.state.showTour}
-                    onHide={this.handleHideTour}
-                >
-                    <Modal.Header closeButton>
-                        <Modal.Title
-                            id="example-custom-modal-styling-title"
-                            className="text-center"
-                        />
-                    </Modal.Header>
-
-                    <Modal.Body
-                        style={{
-                            display: "flex",
-                            justifyContent: "center",
-                            alignItems: "center",
-                            paddingTop: "0px",
-                            paddingBottom: "0px"
-                        }}
-                    >
-                        <img
-                            src="/img/logo/donateABLE-long-white-500.png"
-                            style={{ width: "70%" }}
-                        />
-                        <Tour click={this.handleHideTour} />
-                    </Modal.Body>
-                </Modal>
+                    hide={this.handleHideTour}
+                />
 
                 {/* FREQUENTLY ASKED QUESTIONS */}
 

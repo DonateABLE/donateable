@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Carousel, Container, Button } from "react-bootstrap";
 
-class Tour extends Component {
+class TourCarousel extends Component {
     render() {
         return (
             <div>
@@ -77,10 +77,6 @@ class Tour extends Component {
                                 through the steps to start making a difference
                                 today. It is that easy.
                             </p>
-                            {/* USE STYLING TO MOVE THE CAROUSEL BUTTON 
-              <a className='nxt-button' role='button' href='#'>
-                <Button variant='turqdark'>Next</Button>
-              </a> */}
                         </Carousel.Caption>
                     </Carousel.Item>
 
@@ -243,4 +239,4 @@ class Tour extends Component {
     }
 }
 
-export default Tour;
+export default TourCarousel;

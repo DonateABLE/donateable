@@ -10,25 +10,26 @@ class Login extends Component {
         return (
             <div className="text-center">
                 <style>
-                    {`.form {
-              margin: auto;
-              width: 80%;
-            }
-            
-            .form-group{
-              margin: auto;
-              margin-bottom: 5%;
-              width: 100%;
-            }
+                    {`
+                        .form {
+                            margin: auto;
+                            width: 80%;
+                        }
 
-            .h1 {
-              margin: auto; 
-              margin-bottom: 4%;
-              width: 70%;
-              font-size: 20;
-              font-weight: 500;
-            }
-          `}
+                        .form-group{
+                            margin: auto;
+                            margin-bottom: 5%;
+                            width: 100%;
+                        }
+
+                        .h1 {
+                            margin: auto; 
+                            margin-bottom: 4%;
+                            width: 70%;
+                            font-size: 20;
+                            font-weight: 500;
+                        }
+                    `}
                 </style>
                 <Navigation />
                 {/* <img
