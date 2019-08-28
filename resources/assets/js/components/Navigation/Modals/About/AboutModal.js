@@ -136,7 +136,8 @@ class AboutModal extends Component {
                         knowledge in the IT world with their passion of giving
                         back to create a solution that makes a difference.
                     </p>
-
+                    
+                    {/* These components are the divider lines */}
                     <hr
                         width={"69%"}
                         style={{

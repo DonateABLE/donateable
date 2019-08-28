@@ -3,7 +3,7 @@ import { Button, ButtonGroup, Modal, Container } from "react-bootstrap";
 import ModalText from "./Modals/ModalText";
 import TwoItems from "./Modals/TwoItems";
 import WhiteButton from "./Modals/WhiteButton";
-import PrivacyPolicy from "./Modals/PrivacyPolicy";
+import PrivacyPolicy from "./Modals/Privacy Policy/PrivacyPolicy";
 import FAQ from "./Modals/FAQ/FAQ";
 import TourModal from "./Modals/Tour/TourModal";
 import { NavLink } from "react-router-dom";
@@ -12,6 +12,7 @@ import JoinProgram from "./Modals/Contact/JoinProgram";
 import HowItWorksModal from "./Modals/HowItWorks/HowItWorksModal";
 import ContactUSModal from "./Modals/Contact/ContactUsModal";
 import AboutModal from "./Modals/About/AboutModal";
+import PrivacyPolicyModal from "./Modals/Privacy Policy/PrivacyPolicyModal";
 
 // This component is for the collection of buttons that pull down
 // in the hamburger menu
@@ -211,43 +212,11 @@ class ButtonGrouping extends Component {
                 />
 
                 {/* PRIVACY POLICY MODAL */}
-
-                <Modal
-                    size="lg"
+                <PrivacyPolicyModal
                     show={this.state.showPP}
-                    onHide={this.handleHidePP}
-                >
-                    <Modal.Header closeButton>
-                        <Modal.Title
-                            id="example-custom-modal-styling-title"
-                            className="text-center"
-                        />
-                    </Modal.Header>
-
-                    <Modal.Body
-                        style={{
-                            display: "flex",
-                            justifyContent: "center",
-                            alignItems: "center",
-                            paddingTop: "0px",
-                            paddingBottom: "0px"
-                        }}
-                    >
-                        <img
-                            src="/img/logo/donateABLE-long-white-500.png"
-                            style={{ width: "70%" }}
-                        />
-                    </Modal.Body>
-                    <Modal.Body>
-                        <ModalText fontSize1={25} text1="PRIVACY POLICY" />
-                        <PrivacyPolicy />
-                        <WhiteButton
-                            Show={this.handleShowContact}
-                            Hide={this.handleHidePP}
-                            buttonText="HAVE QUESTIONS? CONTACT US"
-                        />
-                    </Modal.Body>
-                </Modal>
+                    hide={this.handleHidePP}
+                    showNext={this.handleShowContact}
+                />
 
                 {/* CONTACT US MODAL */}
                 <ContactUSModal
