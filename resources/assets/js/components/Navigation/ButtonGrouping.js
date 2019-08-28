@@ -13,6 +13,7 @@ import HowItWorksModal from "./Modals/HowItWorks/HowItWorksModal";
 import ContactUSModal from "./Modals/Contact/ContactUsModal";
 import AboutModal from "./Modals/About/AboutModal";
 import PrivacyPolicyModal from "./Modals/Privacy Policy/PrivacyPolicyModal";
+import FAQModal from "./Modals/FAQ/FAQModal";
 
 // This component is for the collection of buttons that pull down
 // in the hamburger menu
@@ -201,8 +202,8 @@ class ButtonGrouping extends Component {
                 {/* This is the Beginning of the modals that will be rendered */}
                 <AboutModal
                     show={this.state.showAbout}
-                    showNext={this.handleShowHIW}
                     hide={this.handleHideAbout}
+                    showNext={this.handleShowHIW}
                 />
 
                 {/* HOW IT WORKS MODAL*/}
@@ -220,28 +221,10 @@ class ButtonGrouping extends Component {
 
                 {/* CONTACT US MODAL */}
                 <ContactUSModal
-                    showNext={this.handleShowFAQ}
                     show={this.state.showContact}
                     hide={this.handleHideContact}
+                    showNext={this.handleShowFAQ}
                 />
-
-                <Modal
-                    size="lg"
-                    show={this.state.showFAQ}
-                    onHide={this.handleHideFAQ}
-                >
-                    <Modal.Header closeButton>
-                        <Modal.Title
-                            id="example-custom-modal-styling-title"
-                            className="text-center"
-                        >
-                            Frequently Asked Questions
-                        </Modal.Title>
-                    </Modal.Header>
-                    <Modal.Body>
-                        <FAQ />
-                    </Modal.Body>
-                </Modal>
 
                 {/* TAKE A TOUR*/}
                 <TourModal
@@ -250,50 +233,11 @@ class ButtonGrouping extends Component {
                 />
 
                 {/* FREQUENTLY ASKED QUESTIONS */}
-
-                <Modal
-                    size="lg"
+                <FAQModal
                     show={this.state.showFAQ}
-                    onHide={this.handleHideFAQ}
-                >
-                    <Modal.Header closeButton>
-                        <Modal.Title
-                            id="example-custom-modal-styling-title"
-                            className="text-center"
-                        />
-                    </Modal.Header>
-
-                    <Modal.Body
-                        style={{
-                            display: "flex",
-                            justifyContent: "center",
-                            alignItems: "center",
-                            marginBottom: "15%",
-                            paddingTop: "0px",
-                            paddingBottom: "0px"
-                        }}
-                    >
-                        <img
-                            src="/img/logo/donateABLE-long-white-500.png"
-                            style={{ width: "70%" }}
-                        />
-                        <ModalText
-                            fontSize1={20}
-                            text1="FREQUENTLY ASKED QUESTIONS"
-                        />
-                        <Container
-                            style={{ marginTop: "10%", marginBottom: "10%" }}
-                        >
-                            <FAQ style={{ width: "100%" }} />
-                            <br />
-                        </Container>
-                        <WhiteButton
-                            Show={this.handleShowContact}
-                            Hide={this.handleHideFAQ}
-                            buttonText="MORE QUESTIONS? CONTACT US"
-                        />
-                    </Modal.Body>
-                </Modal>
+                    hide={this.handleHideFAQ}
+                    showNext={this.handleShowContact}
+                />
             </div>
         );
     }
