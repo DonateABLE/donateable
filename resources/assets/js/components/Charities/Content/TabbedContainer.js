@@ -8,8 +8,8 @@ import {
     faAmbulance,
     faHandHoldingHeart
 } from "@fortawesome/free-solid-svg-icons";
-import ProgressBarCircle from "./ProgressBarCircle";
-import { CircularProgressBar, buildStyles } from "react-circular-progressbar";
+import { CircularProgressbar } from "react-circular-progressbar";
+import "react-circular-progressbar/dist/styles.css"
 
 // Tabbed Content Container
 const TabbedContainer = props => {
@@ -92,6 +92,7 @@ const TabbedContainer = props => {
                                 can be highly emotional, stressful, and
                                 overwhelming circumstances.
                             </p>
+                            
 
                             <h2>CONTACT VICTIM SERVICES WELLINGTON (VSW)</h2>
 
@@ -135,12 +136,16 @@ const TabbedContainer = props => {
                             <p style={{ textAlign: "center", margin: "auto" }}>
                                 Statistics
                             </p>
-                            {/*
+
+                            <CircularProgressbar text="22%" strokeWidth={5} value={22} />
+                        
+
+{/* 
                             <ProgressBarCircle
                                 percentage="43"
                                 barText="2"
                                 title="CURRENTLY DONATING"
-                            />
+                            /> 
                               <ProgressBarCircle
                                 percentage="54"
                                 barText="34"
@@ -151,7 +156,7 @@ const TabbedContainer = props => {
                                 barText="0"
                                 title="HASHING RATE"
                                 details="62 406 321"
-                            />*/}
+/> */}
                             {/* 
                     <CircularProgressBar
                         value={38}
