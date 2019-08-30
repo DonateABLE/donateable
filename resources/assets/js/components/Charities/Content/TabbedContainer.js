@@ -185,7 +185,6 @@ const TabbedContainer = props => {
                                 title="TOTAL HASHES"
                                 details="3 916 406 532"
                             />
-
                         </Tab>
 
                         {/* DONATION TARGETS TAB */}
@@ -196,22 +195,28 @@ const TabbedContainer = props => {
                                 icon={faBatteryHalf}
                                 size="5x"
                                 rotation={270}
-                                num={1}
-                                bodytext="LIFE SAVER BRACLET. A small battery used in the Lifesaver Bracelet allowing the system to operate everyday of the year."
+                                title="LIFESAVER BRACELET BATTERY"
+                                cost="COST = $5"
+                                hashes="= 500,000,000 HASHES"
+                                bodytext="A small battery used in the Lifesaver Bracelet allowing the system to operate everyday of the year."
                             />
                             <LineBreak />
                             <IconAndText
                                 icon={faHandHoldingHeart}
                                 size="5x"
-                                num={2}
-                                bodytext="VOLUNTEER TRAINING Responsible for immediate mobile response to requests from emergency and police services within Wellington County."
+                                title="VOLUNTEER TRAINING"
+                                cost="COST = $100"
+                                hashes="= 10,000,000,000 HASHES"
+                                bodytext="Responsible for immediate mobile response to requests from emergency and police services within Wellington County."
                             />
                             <LineBreak />
                             <IconAndText
                                 icon={faAmbulance}
                                 size="5x"
-                                num={3}
-                                bodytext="LIFESAVER BRACELET COST = $400= 40,000,000,000 HASHES. A one ounce wrist transmitter that sends a radio signal which can be tracked up to a 2 kilometer radius."
+                                title="LIFESAVER BRACELET"
+                                cost="COST = $400"
+                                hashes="= 40,000,000,000 HASHES"
+                                bodytext="A one ounce wrist transmitter that sends a radio signal which can be tracked up to a 2 kilometer radius."
                             />
                         </Tab>
 
@@ -219,25 +224,6 @@ const TabbedContainer = props => {
 
                         <Tab eventKey="donate-now" title="Donate Now">
                             <h2>DONATE NOW</h2>
-                            {/* 
-                            <ProgressBarCircle
-                                percentage="0"
-                                barText="0"
-                                title="HASHING RATE"
-                                details="0 PER SECOND"
-                            />
-                            <ProgressBarCircle
-                                percentage="0"
-                                barText="0"
-                                title="TOTAL TIME"
-                                details="0 SECONDS"
-                            />
-                            <ProgressBarCircle
-                                percentage="0"
-                                barText="0"
-                                title="TOTAL HASHES"
-                                details="# 0"
-/> */}
                         </Tab>
                     </Tabs>
                 </Row>
