@@ -11,6 +11,7 @@ import {
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 import ProgressBar from "./ProgressBar";
+import TwoColorHeader from "./TwoColorHeader";
 
 // Tabbed Content Container
 const TabbedContainer = props => {
@@ -70,9 +71,10 @@ const TabbedContainer = props => {
 
                     <Tabs defaultActiveKey="about" id="charity-tabs">
                         <Tab eventKey="about" title="About">
-                            <h2 style={{ marginTop: "3%" }}>
-                                ABOUT VICTIM SERVICES WELLINGTON (VSW)
-                            </h2>
+                            <TwoColorHeader
+                                darkText="ABOUT"
+                                lightText="VICTIM SERVICES WELLINGTON (VSW)"
+                            />
                             <p>
                                 Anyone can be a victim. It is in times of trauma
                                 that victims need compassion, support, and
@@ -102,7 +104,10 @@ const TabbedContainer = props => {
                                 overwhelming circumstances.
                             </p>
 
-                            <h2>CONTACT VICTIM SERVICES WELLINGTON (VSW)</h2>
+                            <TwoColorHeader
+                                darkText="CONTACT"
+                                lightText="VICTIM SERVICES WELLINGTON (VSW)"
+                            />
 
                             <p style={{ textAlign: "center" }}>
                                 15 Wyndam Street South
@@ -131,17 +136,19 @@ const TabbedContainer = props => {
                         {/* CHARITY STATS TAB */}
 
                         <Tab eventKey="statistics" title="Statistics">
-                            <h2
-                                style={{ marginTop: "3%", textAlign: "center" }}
-                            >
-                                CHARITY AND DONATEABLE STATISTICS
-                            </h2>
+                            <TwoColorHeader
+                                darkText="CHARITY AND DONATEABLE"
+                                lightText="STATISTICS"
+                            />
                             <img
                                 src="/img/charity/Victim-Services.png"
                                 style={{ width: "50%", margin: "auto" }}
                             />
                             <h2> VICTIM SERVICES WELLINGTON </h2>
-                            <h2> STATISTICS </h2>
+                            <h2 style={{ fontWeight: "400", fontSize: "16px" }}>
+                                {" "}
+                                STATISTICS{" "}
+                            </h2>
 
                             <ProgressBar
                                 label="2"
@@ -190,7 +197,10 @@ const TabbedContainer = props => {
                         {/* DONATION TARGETS TAB */}
 
                         <Tab eventKey="targets" title="Targets">
-                            <h2>Donation Targets</h2>
+                            <TwoColorHeader
+                                darkText="DONATION"
+                                lightText="TARGETS"
+                            />
                             <IconAndText
                                 icon={faBatteryHalf}
                                 size="5x"
@@ -223,7 +233,8 @@ const TabbedContainer = props => {
                         {/* DONATE NOW TAB */}
 
                         <Tab eventKey="donate-now" title="Donate Now">
-                            <h2>DONATE NOW</h2>
+                            <br />
+                            <TwoColorHeader darkText="DONATE" lightText="NOW" />
                         </Tab>
                     </Tabs>
                 </Row>
