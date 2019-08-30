@@ -75,7 +75,7 @@ const TabbedContainer = props => {
                                 darkText="ABOUT"
                                 lightText="VICTIM SERVICES WELLINGTON (VSW)"
                             />
-                            <p>
+                            <p style={{ color: "#26607D" }}>
                                 Anyone can be a victim. It is in times of trauma
                                 that victims need compassion, support, and
                                 assistance most. Whether an accident has
@@ -85,7 +85,7 @@ const TabbedContainer = props => {
                                 support victims.
                             </p>
 
-                            <p>
+                            <p style={{ color: "#26607D" }}>
                                 A non-profit organization, established in 1997,
                                 VSW has partnerships with Guelph Police Services
                                 and the Ontario Provinicial Police to deliver
@@ -95,7 +95,7 @@ const TabbedContainer = props => {
                                 events and refer them to appropriate community
                                 groups and organizations.
                             </p>
-                            <p>
+                            <p style={{ color: "#26607D" }}>
                                 VSW volunteers are trained extensively to help
                                 meet the short-term needs of victims. They are
                                 backed with widespread knowledge and experience
@@ -109,7 +109,12 @@ const TabbedContainer = props => {
                                 lightText="VICTIM SERVICES WELLINGTON (VSW)"
                             />
 
-                            <p style={{ textAlign: "center" }}>
+                            <p
+                                style={{
+                                    textAlign: "center",
+                                    color: "#26607D"
+                                }}
+                            >
                                 15 Wyndam Street South
                                 <br />
                                 Guelph, Ontario
@@ -118,13 +123,23 @@ const TabbedContainer = props => {
                             </p>
 
                             <LineBreak />
-                            <p style={{ textAlign: "center" }}>
+                            <p
+                                style={{
+                                    textAlign: "center",
+                                    color: "#26607D"
+                                }}
+                            >
                                 <strong>Phone:</strong> (519) 824-1212 ext 7304
                                 <br />
                                 <strong>Email:</strong> victim@vswguelph.on.ca
                             </p>
                             <LineBreak />
-                            <p style={{ textAlign: "center" }}>
+                            <p
+                                style={{
+                                    textAlign: "center",
+                                    color: "#26607D"
+                                }}
+                            >
                                 <strong>Office Hours</strong>
                                 <br />
                                 Monday to Friday from
@@ -233,8 +248,30 @@ const TabbedContainer = props => {
                         {/* DONATE NOW TAB */}
 
                         <Tab eventKey="donate-now" title="Donate Now">
-                            <br />
-                            <TwoColorHeader darkText="DONATE" lightText="NOW" />
+                            <TwoColorHeader
+                                style={{ paddingTop: "3%" }}
+                                darkText="DONATE"
+                                lightText="NOW"
+                            />
+                            {/* THESE BARS WILL NEED TO BE ANIMATED AT ONE POINT */}
+                            <ProgressBar
+                                label="0"
+                                percentage={0}
+                                title="HASHING RATE"
+                                details="0 PER SECOND"
+                            />
+                            <ProgressBar
+                                label="0"
+                                percentage={0}
+                                title="TOTAL TIME"
+                                details="0 SECONDS"
+                            />
+                            <ProgressBar
+                                label="0"
+                                percentage={0}
+                                title="TOTAL HASHES"
+                                details="# 0"
+                            />
                         </Tab>
                     </Tabs>
                 </Row>
