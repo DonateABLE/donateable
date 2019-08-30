@@ -8,8 +8,9 @@ import {
     faAmbulance,
     faHandHoldingHeart
 } from "@fortawesome/free-solid-svg-icons";
-import { CircularProgressbar } from "react-circular-progressbar";
-import "react-circular-progressbar/dist/styles.css"
+import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
+import "react-circular-progressbar/dist/styles.css";
+import ProgressBar from "./ProgressBar";
 
 // Tabbed Content Container
 const TabbedContainer = props => {
@@ -33,6 +34,14 @@ const TabbedContainer = props => {
                 .row {
                     margin-left: 2%;
                     margin-right: 2%;
+                }
+
+                .CircularProgressbar-path {
+                    stroke: rgb(69, 166, 215) !important;
+                }
+
+                .CircularProgressbar-trail {
+                    stroke: #26607D !important;
                 }
             `}
             </style>
@@ -92,7 +101,6 @@ const TabbedContainer = props => {
                                 can be highly emotional, stressful, and
                                 overwhelming circumstances.
                             </p>
-                            
 
                             <h2>CONTACT VICTIM SERVICES WELLINGTON (VSW)</h2>
 
@@ -133,39 +141,51 @@ const TabbedContainer = props => {
                                 style={{ width: "50%", margin: "auto" }}
                             />
                             <h2> VICTIM SERVICES WELLINGTON </h2>
-                            <p style={{ textAlign: "center", margin: "auto" }}>
-                                Statistics
-                            </p>
+                            <h2> STATISTICS </h2>
 
-                            <CircularProgressbar text="22%" strokeWidth={5} value={22} />
-                        
-
-{/* 
-                            <ProgressBarCircle
-                                percentage="43"
-                                barText="2"
+                            <ProgressBar
+                                label="2"
+                                percentage={22}
                                 title="CURRENTLY DONATING"
-                            /> 
-                              <ProgressBarCircle
-                                percentage="54"
-                                barText="34"
+                            />
+                            <ProgressBar
+                                label="34"
+                                percentage={56}
                                 title="DONATORS TO DATE"
                             />
-                            <ProgressBarCircle
-                                percentage="78"
-                                barText="0"
-                                title="HASHING RATE"
-                                details="62 406 321"
-/> */}
-                            {/* 
-                    <CircularProgressBar
-                        value={38}
-                        text="1"
-                        style={buildStyles({
-                            pathColor: "#45A6D7",
-                            trailColor: "#26607D"
-                        })}
-                    /> */}
+                            <ProgressBar
+                                label="62M"
+                                percentage={70}
+                                title="TOTAL HASHES"
+                                details="62 406 532"
+                            />
+
+                            <LineBreak />
+
+                            <img
+                                src="/img/logo/D-Coloured-250x250.png"
+                                style={{ width: "25%", margin: "auto" }}
+                            />
+                            <h2> DONATEABLE </h2>
+                            <h2> STATISTICS </h2>
+
+                            <ProgressBar
+                                label="15"
+                                percentage={34}
+                                title="CURRENTLY DONATING"
+                            />
+                            <ProgressBar
+                                label="66"
+                                percentage={363}
+                                title="DONATORS TO DATE"
+                            />
+                            <ProgressBar
+                                label="3B"
+                                percentage={82}
+                                title="TOTAL HASHES"
+                                details="3 916 406 532"
+                            />
+
                         </Tab>
 
                         {/* DONATION TARGETS TAB */}
