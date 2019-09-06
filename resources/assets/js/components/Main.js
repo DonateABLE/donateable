@@ -4,7 +4,7 @@ import Navigation from "./Navbar";
 import Home from "./Home";
 import Charities from "./Charites";
 import Login from "./Login";
-import Footer from "./Footer";
+import Footer from "./Redesign Components/BlueFooter";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import { createBrowserHistory } from "history";
 import WVS from "./Charities/WVS";
@@ -18,7 +18,7 @@ const history = createBrowserHistory();
 class Main extends Component {
     render() {
         return (
-            <div>
+            <div style={{backgroundColor: "white"}}>
                 <Router history={history}>
                     <div className="text-center">
                         <Route exact path="/" component={Home} />

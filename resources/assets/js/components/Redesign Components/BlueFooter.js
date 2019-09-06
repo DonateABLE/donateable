@@ -7,7 +7,8 @@ function Footer() {
             <Container
                 style={{
                     backgroundColor: "#26607D",
-                    width: "100%"
+                    width: "100%",
+                    height: "100%"
                 }}
             >
                 <div
@@ -16,7 +17,8 @@ function Footer() {
                         display: "flex",
                         justifyContent: "center",
                         fontSize: "1rem",
-                        marginTop: "7%"
+                        margin: "auto",
+                        height: "150px"
                     }}
                 >
                     Powered By &nbsp;

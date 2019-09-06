@@ -1,11 +1,13 @@
 import React from "react";
-import { Tabs, Tab, Container, Row, Col, Button } from "react-bootstrap";
+import { Tabs, Tab, Container, Row, Col, Button, Form, Image} from "react-bootstrap";
 import LineBreak from "./LineBreak";
 import {
     faBatteryHalf,
     faAmbulance,
     faHandHoldingHeart
 } from "@fortawesome/free-solid-svg-icons";
+import TwoColorHeader from "../Charities/Content/TwoColorHeader";
+import ProgressBar from "../Charities/Content/ProgressBar";
 
 // Tabbed User Content Container
 const TabbedUser = props => {
@@ -61,9 +63,12 @@ const TabbedUser = props => {
                     {/* ABOUT TAB */}
 
                     <Tabs defaultActiveKey="accountsettings" id="account-tabs">
-                        <Tab eventKey="acountsettings" title="Settings">
+                        <Tab eventKey="accountsettings" title="Settings">
                             <h2 style={{ marginTop: "3%" }}>
-                                Account Settings
+                                <TwoColorHeader
+                                    darkText="ACCOUNT"
+                                    lightText="SETTINGS"
+                                />
                             </h2>
                         </Tab>
 
@@ -73,20 +78,90 @@ const TabbedUser = props => {
                             <h2
                                 style={{ marginTop: "3%", textAlign: "center" }}
                             >
-                                Top Charities
+                                <TwoColorHeader
+                                    darkText="YOUR TOP DONATED"
+                                    lightText="CHARITIES"
+                                />
                             </h2>
                         </Tab>
 
-                        {/* DONATION TARGETS TAB */}
+                        {/* DONATION STATS TAB */}
 
                         <Tab eventKey="Your Statistics" title="Statistics">
-                            <h2>Your Statistics</h2>
+                            <TwoColorHeader
+                                darkText="YOUR"
+                                lightText="STATISTICS"
+                            />
+
+                            <Image
+                                src="/img/profilepix.jpeg"
+                                roundedCircle
+                                style={{
+                                    margin: "auto",
+                                    height: "25%",
+                                    width: "25%"
+                                }}
+                            />
+                            <h2>LUKE PRITCHARD</h2>
+                            <h2 style={{fontWeight: "300", fontSize:"16px"}}> STATISTICS</h2>
+
+                            <ProgressBar
+                                label="3"
+                                percentage={40}
+                                title="CHARITIES DONATED TO"
+                                details="3 CHARITIES"
+                            />
+                            <ProgressBar
+                                label="19M"
+                                percentage={62}
+                                title="TOTAL TIME DONATED TO"
+                                details="19:00:00"
+                            />
+                            <ProgressBar
+                                label="5K"
+                                percentage={79}
+                                title="TOTAL HASHES"
+                                details="5 888"
+                            />
                         </Tab>
 
                         {/* DONATE NOW TAB */}
 
                         <Tab eventKey="resetpassword" title="Reset Password">
-                            <h2>Reset Password</h2>
+                            <TwoColorHeader
+                                darkText="RESET"
+                                lightText="PASSWORD"
+                            />
+                            <Form style={{ paddingTop: "5%" }}>
+                                <Form.Group as={Row} controlId="reset-password">
+                                    <Col sm={10}>
+                                        <Form.Control
+                                            type="password"
+                                            placeholder="New Password"
+                                        />
+                                    </Col>
+                                </Form.Group>
+
+                                <Form.Group as={Row} controlId="loginPassword">
+                                    <Col sm={10}>
+                                        <Form.Control
+                                            type="password"
+                                            placeholder="Confirm Password"
+                                        />
+                                    </Col>
+                                </Form.Group>
+
+                                <Form.Group as={Row}>
+                                    <Col sm={{ span: 10, offset: 2 }}>
+                                        <Button
+                                            variant="turqdark"
+                                            type="submit"
+                                        >
+                                            Submit
+                                        </Button>
+                                    </Col>
+                                </Form.Group>
+                            </Form>
                         </Tab>
                     </Tabs>
                 </Row>
