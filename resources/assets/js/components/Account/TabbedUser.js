@@ -9,6 +9,7 @@ import {
 import TwoColorHeader from "../Charities/Content/TwoColorHeader";
 import ProgressBar from "../Charities/Content/ProgressBar";
 
+
 // Tabbed User Content Container
 const TabbedUser = props => {
     return (
@@ -33,6 +34,14 @@ const TabbedUser = props => {
                     margin-left: 2%;
                     margin-right: 2%;
                     justify-content: center;
+                }
+
+                .CircularProgressbar-path {
+                    stroke: rgb(69, 166, 215) !important;
+                }
+
+                .CircularProgressbar-trail {
+                    stroke: #26607D !important;
                 }
             `}
             </style>
@@ -60,7 +69,7 @@ const TabbedUser = props => {
                 </Row>
 
                 <Row style={{ width: "100%", color: "black" }}>
-                    {/* ABOUT TAB */}
+                    {/* ACCOUNT SETTINGS TAB */}
 
                     <Tabs defaultActiveKey="accountsettings" id="account-tabs">
                         <Tab eventKey="accountsettings" title="Settings">
@@ -72,7 +81,7 @@ const TabbedUser = props => {
                             </h2>
                         </Tab>
 
-                        {/* CHARITY STATS TAB */}
+                        {/* TOP CHARITY TAB */}
 
                         <Tab eventKey="topcharities" title="Charities">
                             <h2
@@ -85,7 +94,7 @@ const TabbedUser = props => {
                             </h2>
                         </Tab>
 
-                        {/* DONATION STATS TAB */}
+                        {/* YOUR STATS TAB */}
 
                         <Tab eventKey="Your Statistics" title="Statistics">
                             <TwoColorHeader
@@ -125,7 +134,7 @@ const TabbedUser = props => {
                             />
                         </Tab>
 
-                        {/* DONATE NOW TAB */}
+                        {/* RESET PASSWORD TAB */}
 
                         <Tab eventKey="resetpassword" title="Reset Password">
                             <TwoColorHeader

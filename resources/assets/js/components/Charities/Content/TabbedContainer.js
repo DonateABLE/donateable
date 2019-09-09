@@ -9,9 +9,9 @@ import {
     faHandHoldingHeart
 } from "@fortawesome/free-solid-svg-icons";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
-import "react-circular-progressbar/dist/styles.css";
 import ProgressBar from "./ProgressBar";
 import TwoColorHeader from "./TwoColorHeader";
+import DonateSlider from "./DonateSlider";
 
 // Tabbed Content Container
 const TabbedContainer = props => {
@@ -44,6 +44,20 @@ const TabbedContainer = props => {
                 .CircularProgressbar-trail {
                     stroke: #26607D !important;
                 }
+
+                .btn-turqwhite{
+                    background-color: #FFFFFF;
+                    border-color: #979797;
+                    border-radius: 0;
+                    color: #26607D;
+                    font-weight: 500;
+                    letter-spacing: 0.05em;
+                    font-family: 'Montserrat-Bold', sans-serif;
+                    margin-bottom: 5px;
+                    width: 305px;
+                    height: 48px;
+                    font-size: 10pt;
+                  }
             `}
             </style>
             <Container
@@ -272,6 +286,12 @@ const TabbedContainer = props => {
                                 title="TOTAL HASHES"
                                 details="# 0"
                             />
+
+                            <div style={{ alignContent: "center" }}>
+                                <DonateSlider />
+                                <Button variant="turqdark">START</Button>
+                                <Button variant="turqwhite">STOP</Button>
+                            </div>
                         </Tab>
                     </Tabs>
                 </Row>
