@@ -1,6 +1,6 @@
 import React from "react";
 import { Card, Button } from "react-bootstrap";
-import NavLink from "react-bootstrap/NavLink";
+import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebookF, faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { faGlobe } from "@fortawesome/free-solid-svg-icons";

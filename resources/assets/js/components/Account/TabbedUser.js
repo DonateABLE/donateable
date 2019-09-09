@@ -43,6 +43,13 @@ const TabbedUser = props => {
                 .CircularProgressbar-trail {
                     stroke: #26607D !important;
                 }
+
+                .CircularProgressbar-text {
+                    fill: #3e98c7;
+                    font-size: 20px;
+                    dominant-baseline: middle;
+                    text-anchor: middle;
+                }
             `}
             </style>
             <Container

@@ -45,6 +45,13 @@ const TabbedContainer = props => {
                     stroke: #26607D !important;
                 }
 
+                .CircularProgressbar-text {
+                    fill: #3e98c7;
+                    font-size: 20px;
+                    dominant-baseline: middle;
+                    text-anchor: middle;
+                }
+
                 .btn-turqwhite{
                     background-color: #FFFFFF;
                     border-color: #979797;
@@ -165,10 +172,13 @@ const TabbedContainer = props => {
                         {/* CHARITY STATS TAB */}
 
                         <Tab eventKey="statistics" title="Statistics">
-                            <TwoColorHeader
-                                darkText="CHARITY AND DONATEABLE"
-                                lightText="STATISTICS"
-                            />
+                            <div style={{ alignContent: "left" }}>
+                                <TwoColorHeader
+                                    darkText="CHARITY AND DONATEABLE"
+                                    lightText="STATISTICS"
+                                />
+                            </div>
+
                             <img
                                 src="/img/charity/Victim-Services.png"
                                 style={{ width: "50%", margin: "auto" }}
