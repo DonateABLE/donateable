@@ -8,6 +8,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import TwoColorHeader from "../Charities/Content/TwoColorHeader";
 import ProgressBar from "../Charities/Content/ProgressBar";
+import AccountSetting from "./AccountSettings";
 
 
 // Tabbed User Content Container
@@ -86,6 +87,8 @@ const TabbedUser = props => {
                                     lightText="SETTINGS"
                                 />
                             </h2>
+
+                            <AccountSetting />
                         </Tab>
 
                         {/* TOP CHARITY TAB */}
