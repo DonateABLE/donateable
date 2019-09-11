@@ -50,7 +50,8 @@ class Buttons extends Component {
                       letter-spacing: 0.05em;
                       font-family: 'Montserrat-Bold', sans-serif;
                       margin-bottom: 6px;
-                      width: 305px;
+                      max-width: 305px;
+                      width: 90%;
                       height: 48px;
                       font-size: 10pt;
                     }
@@ -65,7 +66,8 @@ class Buttons extends Component {
                       letter-spacing: 0.05em;
                       font-family: 'Montserrat-Bold', sans-serif;
                       margin-bottom: 5px;
-                      width: 305px;
+                      max-width: 305px;
+                      width: 90%;
                       height: 48px;
                       font-size: 10pt;
                     }
@@ -79,7 +81,8 @@ class Buttons extends Component {
                       letter-spacing: 0.05em;
                       font-family: 'Montserrat-Bold', sans-serif;
                       margin-bottom: 5px;
-                      width: 305px;
+                      max-width: 305px;
+                      width: 90%;
                       height: 48px;
                       font-size: 10pt;
                     }

@@ -1,5 +1,14 @@
 import React from "react";
-import { Tabs, Tab, Container, Row, Col, Button, Form, Image} from "react-bootstrap";
+import {
+    Tabs,
+    Tab,
+    Container,
+    Row,
+    Col,
+    Button,
+    Form,
+    Image
+} from "react-bootstrap";
 import LineBreak from "./LineBreak";
 import {
     faBatteryHalf,
@@ -9,7 +18,7 @@ import {
 import TwoColorHeader from "../Charities/Content/TwoColorHeader";
 import ProgressBar from "../Charities/Content/ProgressBar";
 import AccountSetting from "./AccountSettings";
-
+import TopCharities from "./TopCharities";
 
 // Tabbed User Content Container
 const TabbedUser = props => {
@@ -102,6 +111,13 @@ const TabbedUser = props => {
                                     lightText="CHARITIES"
                                 />
                             </h2>
+
+                            <TopCharities
+                                charityNum={1}
+                                src="/img/charity/ghs.png"
+                                hashesNum={813231}
+                                totalTime="0:0:39"
+                            />
                         </Tab>
 
                         {/* YOUR STATS TAB */}
@@ -122,7 +138,10 @@ const TabbedUser = props => {
                                 }}
                             />
                             <h2>LUKE PRITCHARD</h2>
-                            <h2 style={{fontWeight: "300", fontSize:"16px"}}> STATISTICS</h2>
+                            <h2 style={{ fontWeight: "300", fontSize: "16px" }}>
+                                {" "}
+                                STATISTICS
+                            </h2>
 
                             <ProgressBar
                                 label="3"
