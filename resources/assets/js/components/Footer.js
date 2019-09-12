@@ -8,21 +8,23 @@ function Footer() {
                 style={{
                     backgroundColor: "#26607D",
                     color: "white",
-                    fontSize: "1.1rem",
+                    fontSize: "0.95rem",
                     fontWeight: "500",
                     width: "100%",
-                    height: "54px",
+                    height: "70px"
                 }}
             >
-                <Row>
-                    <Col xs={5} style={{ margin: "auto" }}>
-                        Powered By &nbsp; 
+                <Row style={{paddingTop: "3%"}}>
+                    <Col className="text-center">
+                        Powered By &nbsp;
                     </Col>
-                    <Col xs={7} style={{ margin: "auto" }}>
+                </Row>
+                <Row>
+                    <Col className="text-center">
                         <a href="https://www.synergenics.ca" target="_blank">
                             <img
                                 src="/img/logo/Synergenics-Logo-2008-White.png"
-                                style={{ width: "70%" }}
+                                style={{ width: "60%", maxWidth: "134px" }}
                             />
                         </a>
                     </Col>
