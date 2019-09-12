@@ -31,6 +31,10 @@ const TabbedUser = props => {
                     padding: 1%;
                 }
 
+                .btn:disabled {
+                    opacity: 1 !important; 
+                }
+
                 .h2 {
                     text-align: center;
                 }
@@ -118,6 +122,20 @@ const TabbedUser = props => {
                                 hashesNum={813231}
                                 totalTime="0:0:39"
                             />
+
+                            <TopCharities
+                                charityNum={2}
+                                src="/img/charity/VSW-Logo.png"
+                                hashesNum={123456}
+                                totalTime="12:34:00"
+                            />
+                            <TopCharities
+                                charityNum={3}
+                                src="/img/charity/donateable-charity.png"
+                                hashesNum={423453429}
+                                totalTime="18:54:44"
+                            />
+                        
                         </Tab>
 
                         {/* YOUR STATS TAB */}

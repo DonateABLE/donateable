@@ -18,6 +18,10 @@ const CharityCards = props => {
             margin-top: 8%;
           }
 
+          .btn:disabled {
+            opacity: 1 !important; 
+          }
+
           .btn-donators {
             color: #fff;
             background-color: #26607d;

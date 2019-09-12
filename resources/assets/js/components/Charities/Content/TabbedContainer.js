@@ -23,6 +23,10 @@ const TabbedContainer = props => {
                   padding: 1%;
                 }
 
+                .btn:disabled {
+                    opacity: 1 !important; 
+                }
+
                 .h2 {
                     text-align: center;
                 }
