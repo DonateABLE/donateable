@@ -8,7 +8,7 @@ import Navigation from "./Navbar";
 class Login extends Component {
     render() {
         return (
-            <div className="text-center">
+            <div className="text-center" style={{ height: "100vh" }}>
                 <style>
                     {`
                         .form {

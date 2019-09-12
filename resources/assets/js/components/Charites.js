@@ -7,7 +7,13 @@ import { Container } from "react-bootstrap";
 class Charities extends Component {
     render() {
         return (
-            <div>
+            <div
+                style={{
+                    minHeight: "100vh",
+                    maxHeight: "100%",
+                    overflow: "auto"
+                }}
+            >
                 <Navigation />
                 <Container style={{ background: "white", paddingBottom: "5%" }}>
                     <CharityText
