@@ -35,6 +35,7 @@ class TopCharities extends Component {
                     <Col xs={2}>{/* EMPTY */}</Col>
                     <Col xs={10} style={{ margin: "auto" }}>
                         <Button
+                            disabled
                             variant="turq"
                             style={{
                                 backgroundColor: "#45A6D7",
@@ -47,15 +48,16 @@ class TopCharities extends Component {
                                 height: "48px",
                                 letterSpacing: "0.05em",
                                 marginBottom: "6px",
-                                maxWidth: "200px",
+                                maxWidth: "300px",
                                 width: "90%",
-                                padding: "10px 30px"
+                                padding: "7px 18px"
                             }}
                         >
-                            TOTAL HASHES DONATED
+                            TOTAL HASHES DONATED &nbsp;
                             <strong>{this.props.hashesNum}</strong>
                         </Button>
                         <Button
+                            disabled
                             style={{
                                 backgroundColor: "#45A6D7",
                                 borderColor: "#979797",
@@ -67,12 +69,12 @@ class TopCharities extends Component {
                                 height: "48px",
                                 letterSpacing: "0.05em",
                                 marginBottom: "6px",
-                                maxWidth: "200px",
+                                maxWidth: "300px",
                                 width: "90%",
-                                padding: "10px 30px"
+                                padding: "7px 18px"
                             }}
                         >
-                            TOTAL TIME DONATED{" "}
+                            TOTAL TIME DONATED &nbsp;
                             <strong>{this.props.totalTime}</strong>
                         </Button>
                     </Col>

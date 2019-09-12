@@ -36,10 +36,16 @@ class Buttons extends Component {
     /* Render Method for this Component */
     render() {
         return (
-            /* Custom styling for buttons, sizing and colors */
+            /* Custom styling for buttons, sizing and colors 
+            Button Opacity is 1 for creating non clickable stat buttons
+            */
             <div className="text-center">
                 <style className="text/css">
                     {`
+                    .btn:disabled {
+                        opacity: 1 !important; 
+                    }
+                    
                     .btn-turq {
                       background-color: #45A6D7;
                       border-color: #979797;
@@ -107,7 +113,7 @@ class Buttons extends Component {
                 >
                     TAKE A TOUR
                 </Button>
-                <Button variant="turq" size="lg">
+                <Button disabled variant="turq" size="lg">
                     CURRENTLY DONATING
                 </Button>
                 <NavLink to="/wvs" style={{ textDecoration: "none" }}>

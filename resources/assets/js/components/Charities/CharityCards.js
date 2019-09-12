@@ -58,8 +58,12 @@ const CharityCards = props => {
                 <img src={props.image} className="img-fluid" />
                 <Card.Header>{props.charityName}</Card.Header>
                 <Card.Body>
-                    <Button variant="donating">Currently Donating</Button>
-                    <Button variant="donators">Donators to Date</Button>
+                    <Button variant="donating" disabled>
+                        Currently Donating
+                    </Button>
+                    <Button variant="donators" disabled>
+                        Donators to Date
+                    </Button>
                     <Button
                         variant="social"
                         style={{ paddingTop: "0", paddingBottom: "0" }}
