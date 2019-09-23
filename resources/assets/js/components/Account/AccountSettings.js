@@ -58,24 +58,17 @@ class AccountSettings extends Component {
                                         style={formStyle}
                                     />
                                     <InputGroup.Append>
-                                        <InputGroup.Text>
+                                        <InputGroup.Text style={{backgroundColor: "#26607D", border: '0px'}}>
                                             <FontAwesomeIcon
                                                 icon={faLock}
                                                 size="1x"
                                                 style={{
-                                                    color: "#26607D"
+                                                    color: "white"
                                                 }}
                                             />
                                         </InputGroup.Text>
                                     </InputGroup.Append>
                                 </InputGroup>
-                                {/* <FontAwesomeIcon
-                                        icon={faLock}
-                                        size="1x"
-                                        style={{
-                                            color: "#26607D"
-                                        }}
-                                    /> */}
                             </Col>
                         </Form.Row>
                         <Form.Row>
@@ -88,12 +81,12 @@ class AccountSettings extends Component {
                                         placeholder="LAST NAME"
                                     />
                                     <InputGroup.Append>
-                                        <InputGroup.Text>
+                                        <InputGroup.Text style={{backgroundColor: "#26607D", border: "0px"}}>
                                             <FontAwesomeIcon
                                                 icon={faLock}
                                                 size="1x"
                                                 style={{
-                                                    color: "#26607D"
+                                                    color: "white"
                                                 }}
                                             />
                                         </InputGroup.Text>
@@ -113,12 +106,12 @@ class AccountSettings extends Component {
                                         disabled
                                     />
                                     <InputGroup.Append>
-                                        <InputGroup.Text>
+                                        <InputGroup.Text  style={{backgroundColor: "#26607D", border: "0px"}}>
                                             <FontAwesomeIcon
                                                 icon={faLock}
                                                 size="1x"
                                                 style={{
-                                                    color: "#26607D"
+                                                    color: "white"
                                                 }}
                                             />
                                         </InputGroup.Text>
@@ -136,12 +129,12 @@ class AccountSettings extends Component {
                                         placeholder="USER NAME"
                                     />
                                     <InputGroup.Append>
-                                        <InputGroup.Text>
+                                        <InputGroup.Text style={{backgroundColor: "#26607D", border: "0px"}}>
                                             <FontAwesomeIcon
                                                 icon={faLock}
                                                 size="1x"
                                                 style={{
-                                                    color: "#26607D"
+                                                    color: "white"
                                                 }}
                                             />
                                         </InputGroup.Text>
