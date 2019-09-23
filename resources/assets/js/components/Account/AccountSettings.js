@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Container, Form, Col, Button } from "react-bootstrap";
 import { faLock, faLockOpen } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import InputGroup, { InputGroupAppend } from "react-bootstrap/InputGroup";
 
 class AccountSettings extends Component {
     render() {
@@ -23,6 +24,14 @@ class AccountSettings extends Component {
                         border-radius: 0px;
                         color: #26607d;
                     }
+
+                    .form-control-locked {
+                        background-color: #26607d;
+                        border: 1px white solid;
+                        border-radius: 0px;
+                        color: white;
+                    }
+
                     .form-control::-webkit-input-placeholder { /* Chrome/Opera/Safari */
                         color: white;
                       }
@@ -41,53 +50,103 @@ class AccountSettings extends Component {
                     <Form>
                         <Form.Row>
                             <Col style={{ padding: "2% 0" }}>
-                                <Form.Control
-                                    type="text"
-                                    placeholder="FIRST NAME"
-                                    disabled
-                                    style={formStyle}
-                                />
+                                <InputGroup>
+                                    <Form.Control
+                                        type="text"
+                                        placeholder="FIRST NAME"
+                                        disabled
+                                        style={formStyle}
+                                    />
+                                    <InputGroup.Append>
+                                        <InputGroup.Text>
+                                            <FontAwesomeIcon
+                                                icon={faLock}
+                                                size="1x"
+                                                style={{
+                                                    color: "#26607D"
+                                                }}
+                                            />
+                                        </InputGroup.Text>
+                                    </InputGroup.Append>
+                                </InputGroup>
                                 {/* <FontAwesomeIcon
-                                icon={faLock}
-                                size="2x"
-                                style={{
-                                    width: "50%",
-                                    margin: "auto",
-                                    color: "#26607D"
-                                }}
-                            /> */}
+                                        icon={faLock}
+                                        size="1x"
+                                        style={{
+                                            color: "#26607D"
+                                        }}
+                                    /> */}
                             </Col>
                         </Form.Row>
                         <Form.Row>
                             <Col style={{ padding: "2% 0" }}>
-                                <Form.Control
-                                    disabled
-                                    style={formStyle}
-                                    type="text"
-                                    placeholder="LAST NAME"
-                                />
+                                <InputGroup>
+                                    <Form.Control
+                                        disabled
+                                        style={formStyle}
+                                        type="text"
+                                        placeholder="LAST NAME"
+                                    />
+                                    <InputGroup.Append>
+                                        <InputGroup.Text>
+                                            <FontAwesomeIcon
+                                                icon={faLock}
+                                                size="1x"
+                                                style={{
+                                                    color: "#26607D"
+                                                }}
+                                            />
+                                        </InputGroup.Text>
+                                    </InputGroup.Append>
+                                </InputGroup>
                             </Col>
                         </Form.Row>
                         <Form.Row>
                             <Col style={{ padding: "2% 0" }}>
-                                <Form.Control
-                                    style={formStyle}
-                                    required
-                                    feedback="An email address is required"
-                                    type="email"
-                                    placeholder="EMAIL ADDRESS"
-                                    disabled
-                                />
+                                <InputGroup>
+                                    <Form.Control
+                                        style={formStyle}
+                                        required
+                                        feedback="An email address is required"
+                                        type="email"
+                                        placeholder="EMAIL ADDRESS"
+                                        disabled
+                                    />
+                                    <InputGroup.Append>
+                                        <InputGroup.Text>
+                                            <FontAwesomeIcon
+                                                icon={faLock}
+                                                size="1x"
+                                                style={{
+                                                    color: "#26607D"
+                                                }}
+                                            />
+                                        </InputGroup.Text>
+                                    </InputGroup.Append>
+                                </InputGroup>
                             </Col>
                         </Form.Row>
                         <Form.Row>
                             <Col style={{ padding: "2% 0" }}>
-                                <Form.Control
-                                    disabled
-                                    style={formStyle}
-                                    type="text"
-                                    placeholder="USER NAME"
-                                />
+                                <InputGroup>
+                                    <Form.Control
+                                        disabled
+                                        style={formStyle}
+                                        type="text"
+                                        placeholder="USER NAME"
+                                    />
+                                    <InputGroup.Append>
+                                        <InputGroup.Text>
+                                            <FontAwesomeIcon
+                                                icon={faLock}
+                                                size="1x"
+                                                style={{
+                                                    color: "#26607D"
+                                                }}
+                                            />
+                                        </InputGroup.Text>
+                                    </InputGroup.Append>
+                                </InputGroup>
                             </Col>
                         </Form.Row>
                         <Form.Check
