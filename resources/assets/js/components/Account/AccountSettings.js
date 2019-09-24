@@ -5,8 +5,15 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import InputGroup, { InputGroupAppend } from "react-bootstrap/InputGroup";
 
 class AccountSettings extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            isLocked: true // Default locked state
+        };
+    }
+
     render() {
-        let formStyle = {
+        const lockedStyle = {
             backgroundColor: `#26607d`,
             border: `1px #26607d solid`,
             borderRadius: `0px`,
@@ -14,25 +21,38 @@ class AccountSettings extends Component {
             fontColor: `#ffffff`
         };
 
+        const unlockedStyle = {
+            backgroundColor: "#ffffff",
+            border: "1 px #26607d solid",
+            borderRadius: "0px",
+            color: "#26607d",
+            fontColor: "#26607d"
+        };
+
+        let formStyle = lockedStyle;
+
+        const swap = event => {
+            // Function for handling the state change
+            event.preventDefault(); // Stop default form submission
+            if (this.state.isLocked) {
+                formStyle = unlockedStyle;
+                console.log("Unlocking Account Settings");
+                console.log(formStyle);
+                this.setState({ isLocked: false });
+            } else {
+                formStyle = lockedStyle;
+                console.log("Locking Account Settings");
+                this.setState({ isLocked: true });
+                console.log(formStyle);
+                // Add in logic to drive the submission of form data
+            }
+        };
+
         return (
             <div>
                 <style>
                     {`
-                    .form-control-unlocked {
-                        background-color: #fffff;
-                        border: 1px #26607d solid;
-                        border-radius: 0px;
-                        color: #26607d;
-                    }
-
-                    .form-control-locked {
-                        background-color: #26607d;
-                        border: 1px white solid;
-                        border-radius: 0px;
-                        color: white;
-                    }
-
-                    .form-control::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+                      .form-control::-webkit-input-placeholder { /* Chrome/Opera/Safari */
                         color: white;
                       }
                       .form-control::-moz-placeholder { /* Firefox 19+ */
@@ -47,7 +67,7 @@ class AccountSettings extends Component {
                 `}
                 </style>
                 <Container>
-                    <Form>
+                    <Form onSubmit={swap}>
                         <Form.Row>
                             <Col style={{ padding: "2% 0" }}>
                                 <InputGroup>
@@ -58,7 +78,12 @@ class AccountSettings extends Component {
                                         style={formStyle}
                                     />
                                     <InputGroup.Append>
-                                        <InputGroup.Text style={{backgroundColor: "#26607D", border: '0px'}}>
+                                        <InputGroup.Text
+                                            style={{
+                                                backgroundColor: "#26607D",
+                                                border: "0px"
+                                            }}
+                                        >
                                             <FontAwesomeIcon
                                                 icon={faLock}
                                                 size="1x"
@@ -81,7 +106,12 @@ class AccountSettings extends Component {
                                         placeholder="LAST NAME"
                                     />
                                     <InputGroup.Append>
-                                        <InputGroup.Text style={{backgroundColor: "#26607D", border: "0px"}}>
+                                        <InputGroup.Text
+                                            style={{
+                                                backgroundColor: "#26607D",
+                                                border: "0px"
+                                            }}
+                                        >
                                             <FontAwesomeIcon
                                                 icon={faLock}
                                                 size="1x"
@@ -106,7 +136,12 @@ class AccountSettings extends Component {
                                         disabled
                                     />
                                     <InputGroup.Append>
-                                        <InputGroup.Text  style={{backgroundColor: "#26607D", border: "0px"}}>
+                                        <InputGroup.Text
+                                            style={{
+                                                backgroundColor: "#26607D",
+                                                border: "0px"
+                                            }}
+                                        >
                                             <FontAwesomeIcon
                                                 icon={faLock}
                                                 size="1x"
@@ -129,7 +164,12 @@ class AccountSettings extends Component {
                                         placeholder="USER NAME"
                                     />
                                     <InputGroup.Append>
-                                        <InputGroup.Text style={{backgroundColor: "#26607D", border: "0px"}}>
+                                        <InputGroup.Text
+                                            style={{
+                                                backgroundColor: "#26607D",
+                                                border: "0px"
+                                            }}
+                                        >
                                             <FontAwesomeIcon
                                                 icon={faLock}
                                                 size="1x"
@@ -160,7 +200,6 @@ class AccountSettings extends Component {
                             label="I AGREE TO ALLOW DONATEABLE TO POST MY STATISTICS AND KEEP TRACK OF MY DONATIONS, HASHES, AND TIME SPENT."
                         />
                         <Button
-                            onSu
                             variant="turqdark"
                             style={{ padding: "4% 8%" }}
                             type="submit"
