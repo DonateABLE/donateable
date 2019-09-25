@@ -4,62 +4,78 @@ import { faLock, faLockOpen } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import InputGroup, { InputGroupAppend } from "react-bootstrap/InputGroup";
 
+const lockedStyle = {
+    // Form Input stylings
+    backgroundColor: `#26607d`,
+    border: `1px #26607d solid`,
+    borderRadius: `0px`,
+    color: `#C0C0C0`,
+    fontColor: `#ffffff`
+};
+
+const unlockedStyle = {
+    backgroundColor: "#C0C0C0",
+    border: "1 px #26607d solid",
+    borderRadius: "0px",
+    color: "#26607d",
+    fontColor: "#26607d"
+};
+
+const iconLockedStyle = { color: "white" }; // Icon Colors
+const iconUnlockedStyle = { color: "#26607d" };
+const appendLockedStyle = { backgroundColor: "#26607d", border: "0px" }; // Icon background colors
+const appendUnlockedStyle = { backgroundColor: "#C0C0C0", border: "0px" };
+
 class AccountSettings extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            isLocked: true // Default locked state
+            isLocked: true,
+            formStyle: lockedStyle,
+            currentIcon: faLock,
+            currentIconStyle: iconLockedStyle,
+            appendStyle: appendLockedStyle
         };
+        this.swap = this.swap.bind(this); // Good Practice to bind event handlers, for other Components
     }
 
+    swap = event => {
+        event.preventDefault(); // Stop default form submission
+        this.setState(prevState => {
+            return {
+                // Change form style
+                formStyle:
+                    prevState.formStyle == lockedStyle // If prev is lockedstyle swap to unlockstyle
+                        ? unlockedStyle
+                        : lockedStyle, // else change to lockedstyle
+                currentIcon:
+                    prevState.currentIcon == faLock ? faLockOpen : faLock,
+                currentIconStyle:
+                    prevState.currentIconStyle == iconLockedStyle
+                        ? iconUnlockedStyle
+                        : iconLockedStyle,
+                appendStyle:
+                    prevState.appendStyle == appendLockedStyle
+                        ? appendUnlockedStyle
+                        : appendLockedStyle,
+                isLocked: prevState.isLocked == true ? false : true
+            };
+        });
+    };
+
     render() {
-        const lockedStyle = {
-            backgroundColor: `#26607d`,
-            border: `1px #26607d solid`,
-            borderRadius: `0px`,
-            color: `#ffffff`,
-            fontColor: `#ffffff`
-        };
-
-        const unlockedStyle = {
-            backgroundColor: "#ffffff",
-            border: "1 px #26607d solid",
-            borderRadius: "0px",
-            color: "#26607d",
-            fontColor: "#26607d"
-        };
-
-        let formStyle = lockedStyle;
-
-        const swap = event => {
-            // Function for handling the state change
-            event.preventDefault(); // Stop default form submission
-            if (this.state.isLocked) {
-                formStyle = unlockedStyle;
-                console.log("Unlocking Account Settings");
-                console.log(formStyle);
-                this.setState({ isLocked: false });
-            } else {
-                formStyle = lockedStyle;
-                console.log("Locking Account Settings");
-                this.setState({ isLocked: true });
-                console.log(formStyle);
-                // Add in logic to drive the submission of form data
-            }
-        };
-
         return (
             <div>
                 <style>
                     {`
                       .form-control::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-                        color: white;
+                        color: white ;
                       }
                       .form-control::-moz-placeholder { /* Firefox 19+ */
-                        color: white;
+                        color: white ;
                       }
                       .form-control:-ms-input-placeholder { /* IE 10+ */
-                        color: white;
+                        color: white ;
                       }
                       .form-control:-moz-placeholder { /* Firefox 18- */
                         color: white;
@@ -67,29 +83,26 @@ class AccountSettings extends Component {
                 `}
                 </style>
                 <Container>
-                    <Form onSubmit={swap}>
+                    <Form onSubmit={this.swap}>
                         <Form.Row>
                             <Col style={{ padding: "2% 0" }}>
                                 <InputGroup>
                                     <Form.Control
                                         type="text"
                                         placeholder="FIRST NAME"
-                                        disabled
-                                        style={formStyle}
+                                        disabled={this.state.isLocked}
+                                        style={this.state.formStyle}
                                     />
                                     <InputGroup.Append>
                                         <InputGroup.Text
-                                            style={{
-                                                backgroundColor: "#26607D",
-                                                border: "0px"
-                                            }}
+                                            style={this.state.appendStyle}
                                         >
                                             <FontAwesomeIcon
-                                                icon={faLock}
+                                                icon={this.state.currentIcon}
                                                 size="1x"
-                                                style={{
-                                                    color: "white"
-                                                }}
+                                                style={
+                                                    this.state.currentIconStyle
+                                                }
                                             />
                                         </InputGroup.Text>
                                     </InputGroup.Append>
@@ -100,24 +113,21 @@ class AccountSettings extends Component {
                             <Col style={{ padding: "2% 0" }}>
                                 <InputGroup>
                                     <Form.Control
-                                        disabled
-                                        style={formStyle}
+                                        disabled={this.state.isLocked}
+                                        style={this.state.formStyle}
                                         type="text"
                                         placeholder="LAST NAME"
                                     />
                                     <InputGroup.Append>
                                         <InputGroup.Text
-                                            style={{
-                                                backgroundColor: "#26607D",
-                                                border: "0px"
-                                            }}
+                                            style={this.state.appendStyle}
                                         >
                                             <FontAwesomeIcon
-                                                icon={faLock}
+                                                icon={this.state.currentIcon}
                                                 size="1x"
-                                                style={{
-                                                    color: "white"
-                                                }}
+                                                style={
+                                                    this.state.currentIconStyle
+                                                }
                                             />
                                         </InputGroup.Text>
                                     </InputGroup.Append>
@@ -128,26 +138,23 @@ class AccountSettings extends Component {
                             <Col style={{ padding: "2% 0" }}>
                                 <InputGroup>
                                     <Form.Control
-                                        style={formStyle}
+                                        style={this.state.formStyle}
+                                        disabled={this.state.isLocked}
                                         required
                                         feedback="An email address is required"
                                         type="email"
                                         placeholder="EMAIL ADDRESS"
-                                        disabled
                                     />
                                     <InputGroup.Append>
                                         <InputGroup.Text
-                                            style={{
-                                                backgroundColor: "#26607D",
-                                                border: "0px"
-                                            }}
+                                            style={this.state.appendStyle}
                                         >
                                             <FontAwesomeIcon
-                                                icon={faLock}
+                                                icon={this.state.currentIcon}
                                                 size="1x"
-                                                style={{
-                                                    color: "white"
-                                                }}
+                                                style={
+                                                    this.state.currentIconStyle
+                                                }
                                             />
                                         </InputGroup.Text>
                                     </InputGroup.Append>
@@ -158,30 +165,32 @@ class AccountSettings extends Component {
                             <Col style={{ padding: "2% 0" }}>
                                 <InputGroup>
                                     <Form.Control
-                                        disabled
-                                        style={formStyle}
+                                        disabled={this.state.isLocked}
+                                        style={this.state.formStyle}
                                         type="text"
                                         placeholder="USER NAME"
                                     />
                                     <InputGroup.Append>
                                         <InputGroup.Text
-                                            style={{
-                                                backgroundColor: "#26607D",
-                                                border: "0px"
-                                            }}
+                                            style={this.state.appendStyle}
                                         >
                                             <FontAwesomeIcon
-                                                icon={faLock}
+                                                icon={this.state.currentIcon}
                                                 size="1x"
-                                                style={{
-                                                    color: "white"
-                                                }}
+                                                style={
+                                                    this.state.currentIconStyle
+                                                }
                                             />
                                         </InputGroup.Text>
                                     </InputGroup.Append>
                                 </InputGroup>
                             </Col>
                         </Form.Row>
+                        <small className="form-text text-muted">
+                            Your username will be used as an alias if you've
+                            chosen to share your contribution stats so we don't
+                            have to tell anyone your real name.
+                        </small>
                         <Form.Check
                             style={{
                                 color: "#26607D",

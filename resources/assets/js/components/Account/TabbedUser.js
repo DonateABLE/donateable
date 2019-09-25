@@ -26,7 +26,20 @@ const TabbedUser = props => {
         <div>
             <style>
                 {`
-                
+
+                .form-control::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+                    color: #26607d;
+                }
+                .form-control::-moz-placeholder { /* Firefox 19+ */
+                    color: #26607d;
+                }
+                .form-control:-ms-input-placeholder { /* IE 10+ */
+                    color: #26607d;
+                }
+                .form-control:-moz-placeholder { /* Firefox 18- */
+                    color: #26607d;
+                }
+                                
                 .nav-link {
                     padding: 1%;
                 }
