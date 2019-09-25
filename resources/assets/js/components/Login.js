@@ -39,12 +39,6 @@ class Login extends Component {
                     `}
                 </style>
                 <Navigation />
-                {/* <img
-                    src="/img/logo/donateABLE-long-colour-500.png"
-                    style={{ width: "60%" }}
-                />
-                <br /> */}
-
                 <p
                     style={{
                         color: "#26607D",

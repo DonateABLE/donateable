@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Col, Row, Button, Tab, Tabs } from "react-bootstrap";
-import NavLink from "react-bootstrap/NavLink";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { NavLink } from "react-router-dom";
+ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay, faGlobe } from "@fortawesome/free-solid-svg-icons";
 import { faFacebookF, faTwitter } from "@fortawesome/free-brands-svg-icons";
 import TabbedContainer from "./TabbedContainer";
@@ -34,9 +34,16 @@ const CharityTemplate = props => {
             </style>
             {/* Return to Charities Container */}
             <Container
-                style={{ backgroundColor: "#26607D", textAlign: "right", color: "white" }}
-            >   
-                    <NavLink to="/charities" style={{color: 'white'}}>
+                style={{
+                    backgroundColor: "#26607D",
+                    textAlign: "right",
+                    color: "white"
+                }}
+            >
+                <NavLink
+                    to="/charities"
+                    style={{ color: "white", textDecoration: "none" }}
+                >
                     Return to Charities
                     <FontAwesomeIcon
                         icon={faPlay}
@@ -137,8 +144,7 @@ const CharityTemplate = props => {
                     />
                 </a>
             </Container>
-
-          <TabbedContainer /> 
+            <TabbedContainer />
         </div>
     );
 };

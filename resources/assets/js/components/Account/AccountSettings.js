@@ -10,12 +10,15 @@ const lockedStyle = {
     border: `1px #26607d solid`,
     borderRadius: `0px`,
     color: `#C0C0C0`,
-    fontColor: `#ffffff`
+    fontColor: `#ffffff`,
+    borderRight: "none"
 };
+
 
 const unlockedStyle = {
     backgroundColor: "#C0C0C0",
     border: "1 px #26607d solid",
+    borderRight: "none",
     borderRadius: "0px",
     color: "#26607d",
     fontColor: "#26607d"
