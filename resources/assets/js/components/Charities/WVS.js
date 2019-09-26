@@ -3,6 +3,11 @@ import CharityTemplate from "./Content/CharityTemplate";
 import Navigation from "../Navbar";
 
 class WVS extends Component {
+
+    componentDidMount() {
+        window.scrollTo(0, 0); // Scroll to the top when routing 
+    }
+    
     render() {
         return (
             <div

@@ -5,6 +5,10 @@ import Navigation from "./Navbar";
 import { Container } from "react-bootstrap";
 
 class Charities extends Component {
+    componentDidMount() {
+        window.scrollTo(0, 0); // Scroll to the top when routing 
+    }
+    
     render() {
         return (
             <div

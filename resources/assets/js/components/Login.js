@@ -6,6 +6,10 @@ import SignupForm from "./Login/SignupForm";
 import Navigation from "./Navbar";
 
 class Login extends Component {
+    componentDidMount() {
+        window.scrollTo(0, 0); // Scroll to the top when routing 
+    }
+    
     render() {
         return (
             <div
