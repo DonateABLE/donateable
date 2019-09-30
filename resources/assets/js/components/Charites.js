@@ -5,9 +5,19 @@ import Navigation from "./Navbar";
 import { Container } from "react-bootstrap";
 
 class Charities extends Component {
+    componentDidMount() {
+        window.scrollTo(0, 0); // Scroll to the top when routing 
+    }
+    
     render() {
         return (
-            <div>
+            <div
+                style={{
+                    minHeight: "100vh",
+                    maxHeight: "100%",
+                    overflow: "auto"
+                }}
+            >
                 <Navigation />
                 <Container style={{ background: "white", paddingBottom: "5%" }}>
                     <CharityText

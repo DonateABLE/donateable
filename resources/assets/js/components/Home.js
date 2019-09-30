@@ -7,7 +7,13 @@ import Navigation from "./NoLogoNavbar";
 class Home extends Component {
     render() {
         return (
-            <div>
+            <div
+                style={{
+                    minHeight: "100vh",
+                    maxHeight: "100%",
+                    overflow: "auto"
+                }}
+            >
                 <Navigation />
                 <Image />
                 <Text

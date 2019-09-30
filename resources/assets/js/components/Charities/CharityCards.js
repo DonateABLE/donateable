@@ -1,6 +1,6 @@
 import React from "react";
 import { Card, Button } from "react-bootstrap";
-import NavLink from "react-bootstrap/NavLink";
+import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebookF, faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { faGlobe } from "@fortawesome/free-solid-svg-icons";
@@ -16,6 +16,10 @@ const CharityCards = props => {
             border-color: #45a6d7;
             width: 100%;
             margin-top: 8%;
+          }
+
+          .btn:disabled {
+            opacity: 1 !important; 
           }
 
           .btn-donators {
@@ -58,8 +62,12 @@ const CharityCards = props => {
                 <img src={props.image} className="img-fluid" />
                 <Card.Header>{props.charityName}</Card.Header>
                 <Card.Body>
-                    <Button variant="donating">Currently Donating</Button>
-                    <Button variant="donators">Donators to Date</Button>
+                    <Button variant="donating" disabled>
+                        Currently Donating
+                    </Button>
+                    <Button variant="donators" disabled>
+                        Donators to Date
+                    </Button>
                     <Button
                         variant="social"
                         style={{ paddingTop: "0", paddingBottom: "0" }}

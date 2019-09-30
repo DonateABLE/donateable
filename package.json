@@ -38,6 +38,7 @@
         "@fortawesome/react-fontawesome": "^0.1.4",
         "concurrently": "^4.1.0",
         "history": "^4.9.0",
+        "rc-slider": "^8.7.1",
         "react": "^16.8.6",
         "react-circular-progressbar": "^2.0.2",
         "react-dom": "^16.8.6",

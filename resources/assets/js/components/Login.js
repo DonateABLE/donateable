@@ -6,9 +6,20 @@ import SignupForm from "./Login/SignupForm";
 import Navigation from "./Navbar";
 
 class Login extends Component {
+    componentDidMount() {
+        window.scrollTo(0, 0); // Scroll to the top when routing 
+    }
+    
     render() {
         return (
-            <div className="text-center">
+            <div
+                className="text-center"
+                style={{
+                    minHeight: "100vh",
+                    maxHeight: "100%",
+                    overflow: "auto"
+                }}
+            >
                 <style>
                     {`
                         .form {
@@ -32,12 +43,6 @@ class Login extends Component {
                     `}
                 </style>
                 <Navigation />
-                {/* <img
-                    src="/img/logo/donateABLE-long-colour-500.png"
-                    style={{ width: "60%" }}
-                />
-                <br /> */}
-
                 <p
                     style={{
                         color: "#26607D",

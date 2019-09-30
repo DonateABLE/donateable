@@ -46,7 +46,7 @@ class ProgressBar extends Component {
                             }}
                         >
                             <h2>{this.props.title}</h2>
-                            <h2>{this.props.details}</h2>
+                            <h2 style={{color:"#45A6D7"}}>{this.props.details}</h2>
                         </div>
                     </Col>
                 </Row>
