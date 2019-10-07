@@ -3,13 +3,15 @@ import { Button } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import TourModal from "../Navigation/Modals/Tour/TourModal";
 import HowItWorksModal from "../Navigation/Modals/HowItWorks/HowItWorksModal";
+import axios from "axios";
 
 class Buttons extends Component {
     constructor(props, context) {
         super(props, context);
         this.state = {
             showHIW: false,
-            showTour: false
+            showTour: false,
+            totalHashes: 0
         };
     }
 
@@ -32,6 +34,21 @@ class Buttons extends Component {
     handleHideTour = () => {
         this.setState({ showTour: false });
     };
+
+    /* Handling of API calls for current Site Stats */
+
+    componentDidMount() {
+        try {
+            axios.get(`https://donateable.ca/sitestats`)
+            .then(res => {
+                const totalHashes = res.data;
+                this.setState({ totalHashes });
+            });
+            console.log(`GET request suceeeded`);
+        } catch (error) {
+            console.log(`GET request failed: ${error}`);
+        }
+    }
 
     /* Render Method for this Component */
     render() {
@@ -123,7 +140,7 @@ class Buttons extends Component {
                 </NavLink>
                 <NavLink to="/account" style={{ textDecoration: "none" }}>
                     <Button variant="turq" size="lg">
-                        TOTAL HASHES 193 832
+                        TOTAL HASHES {this.state.totalHashes}
                     </Button>
                 </NavLink>
 
