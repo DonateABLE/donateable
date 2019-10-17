@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Button } from 'react-bootstrap'
-import { NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 /* This the component for the Buttons that will be renedered in the Nav bar */
 
@@ -56,12 +56,12 @@ class LoginButtons extends Component {
                   }
           `}
         </style>
-        <NavLink to='/login'>
+        <Link to='/login'>
           <Button variant='login' size='lg'>LOG IN</Button>
-        </NavLink>
-        <NavLink to='/login'>
+        </Link>
+        <Link to='/login'>
           <Button variant='turqdark' size='lg'>SIGN UP</Button>
-        </NavLink>
+        </Link>
       </div>
     )
   }

@@ -36,7 +36,7 @@ class Navigation extends Component {
 
     render() {
         return (
-            <div>
+            <div id="navbar">
                 <style>
                     {`     
                 .bg-light {

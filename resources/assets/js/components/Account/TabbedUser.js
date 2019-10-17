@@ -9,12 +9,6 @@ import {
     Form,
     Image
 } from "react-bootstrap";
-import LineBreak from "./LineBreak";
-import {
-    faBatteryHalf,
-    faAmbulance,
-    faHandHoldingHeart
-} from "@fortawesome/free-solid-svg-icons";
 import TwoColorHeader from "../Charities/Content/TwoColorHeader";
 import ProgressBar from "../Charities/Content/ProgressBar";
 import AccountSettings from "./AccountSettings";

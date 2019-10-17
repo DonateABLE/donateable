@@ -11737,9 +11737,7 @@ a:hover h1 {
 }
 
 .nav-link {
-  color: #26607d !important;
-  padding-left: 0 !important;
-  padding-right: 0 !important;
+  color: #26607d;
 }
 
 .nav-link-light {
@@ -11881,7 +11879,7 @@ a:hover h1 {
     min-height: 50%;
     /* Fallback for browsers do NOT support vh unit */
     min-height: 50vh;
-    /* These two lines are counted as one 🙂       */
+    /* These two lines are counted as one 🙂    */
   }
 }
 
@@ -12690,9 +12688,10 @@ div.modal-body h2 {
 
 div.modal-body p {
   font-size: 12px;
+  color: #ffffff;
   margin-bottom: 0;
   padding-bottom: 0;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .modal-body {

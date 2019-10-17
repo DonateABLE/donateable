@@ -8,6 +8,7 @@ class Home extends Component {
     render() {
         return (
             <div
+                id="home"
                 style={{
                     minHeight: "100vh",
                     maxHeight: "100%",

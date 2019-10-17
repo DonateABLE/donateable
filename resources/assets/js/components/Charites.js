@@ -12,6 +12,7 @@ class Charities extends Component {
     render() {
         return (
             <div
+                id="charities"
                 style={{
                     minHeight: "100vh",
                     maxHeight: "100%",
@@ -27,6 +28,9 @@ class Charities extends Component {
                     <CharityCards
                         charityName="DONATEABLE"
                         image="/img/charity/donateable-charity.png"
+                        facebookLink="https://www.facebook.com"
+                        twitterLink="https://twitter.com"
+                        siteLink="https://www.donateable.ca"
                     />
                     <CharityCards
                         charityName="VICTIM SERVICES WELLINGTON"

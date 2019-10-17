@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Container, Col, Row, Button, Tab, Tabs } from "react-bootstrap";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay, faGlobe } from "@fortawesome/free-solid-svg-icons";
 import { faFacebookF, faTwitter } from "@fortawesome/free-brands-svg-icons";
@@ -45,7 +45,7 @@ class CharityTemplate extends Component {
                         color: "white"
                     }}
                 >
-                    <NavLink
+                    <Link
                         to="/charities"
                         style={{ color: "white", textDecoration: "none" }}
                     >
@@ -54,7 +54,7 @@ class CharityTemplate extends Component {
                             icon={faPlay}
                             style={{ color: "white", marginLeft: "13px" }}
                         />
-                    </NavLink>
+                    </Link>
                 </Container>
                 {/* Charity Info Container*/}
                 <Container

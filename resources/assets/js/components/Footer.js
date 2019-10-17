@@ -3,7 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 
 function Footer() {
     return (
-        <div style={{paddingTop: "10%"}}>
+        <div id="footer" style={{paddingTop: "10%"}}>
             <Container
                 style={{
                     backgroundColor: "#26607D",

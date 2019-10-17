@@ -12,6 +12,7 @@ class Account extends Component {
     render() {
         return (
             <div
+                id="account"
                 style={{
                     minHeight: "100vh",
                     maxHeight: "100%",

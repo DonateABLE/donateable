@@ -1,6 +1,6 @@
 import React from "react";
 import { Card, Button } from "react-bootstrap";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebookF, faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { faGlobe } from "@fortawesome/free-solid-svg-icons";
@@ -99,9 +99,9 @@ const CharityCards = props => {
                             </li>
                         </ul>
                     </Button>
-                    <NavLink to={props.donateLink}>
+                    <Link to={props.donateLink}>
                         <Button variant="donatehere">Donate Here</Button>
-                    </NavLink>
+                    </Link>
                 </Card.Body>
             </Card>
         </div>

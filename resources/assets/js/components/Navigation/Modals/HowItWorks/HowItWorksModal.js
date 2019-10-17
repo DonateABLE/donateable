@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Modal } from "react-bootstrap";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import TwoItems from "../TwoItems";
 import ModalText from "../ModalText";
 import WhiteButton from "../WhiteButton";
@@ -136,12 +136,12 @@ class HowItWorksModal extends Component {
                             padding: 0
                         }}
                     />
-                    <NavLink to="/charities" onClick={this.props.hide}>
+                    <Link to="/charities" onClick={this.props.hide}>
                         <WhiteButton
                             Hide={this.props.hide}
                             buttonText="START DONATING"
                         />
-                    </NavLink>
+                    </Link>
                 </Modal.Body>
             </Modal>
         );

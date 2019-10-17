@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Button } from "react-bootstrap";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import TourModal from "../Navigation/Modals/Tour/TourModal";
 import HowItWorksModal from "../Navigation/Modals/HowItWorks/HowItWorksModal";
 
@@ -94,11 +94,11 @@ class Buttons extends Component {
                     }
             `}
                 </style>
-                <NavLink to="/charities" style={{ textDecoration: "none" }}>
+                <Link to="/charities" style={{ textDecoration: "none" }}>
                     <Button variant="turqdark" className="row" size="lg">
                         SELECT YOUR CHARITY
                     </Button>
-                </NavLink>
+                </Link>
                 <Button
                     variant="turqwhite"
                     size="lg"
@@ -116,16 +116,16 @@ class Buttons extends Component {
                 <Button disabled variant="turq" size="lg">
                     CURRENTLY DONATING
                 </Button>
-                <NavLink to="/wvs" style={{ textDecoration: "none" }}>
+                <Link to="/wvs" style={{ textDecoration: "none" }}>
                     <Button variant="turq" size="lg">
                         DONATORS TO DATE
                     </Button>
-                </NavLink>
-                <NavLink to="/account" style={{ textDecoration: "none" }}>
+                </Link>
+                <Link to="/account" style={{ textDecoration: "none" }}>
                     <Button variant="turq" size="lg">
                         TOTAL HASHES 193 832
                     </Button>
-                </NavLink>
+                </Link>
 
                 <HowItWorksModal
                     show={this.state.showHIW}

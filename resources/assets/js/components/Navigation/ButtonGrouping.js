@@ -6,7 +6,7 @@ import WhiteButton from "./Modals/WhiteButton";
 import PrivacyPolicy from "./Modals/Privacy Policy/PrivacyPolicy";
 import FAQ from "./Modals/FAQ/FAQ";
 import TourModal from "./Modals/Tour/TourModal";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import TechSupport from "./Modals/Contact/TechSupport";
 import JoinProgram from "./Modals/Contact/JoinProgram";
 import HowItWorksModal from "./Modals/HowItWorks/HowItWorksModal";
@@ -145,11 +145,11 @@ class ButtonGrouping extends Component {
                     vertical
                     style={{ width: "305px", marginTop: "3%" }}
                 >
-                    <NavLink to="/">
+                    <Link to="/">
                         <Button variant="turqgroup" size="lg">
                             HOME
                         </Button>
-                    </NavLink>
+                    </Link>
                     <Button
                         variant="turqgroup"
                         size="lg"
@@ -164,11 +164,11 @@ class ButtonGrouping extends Component {
                     >
                         HOW IT WORKS
                     </Button>
-                    <NavLink to="/charities">
+                    <Link to="/charities">
                         <Button variant="turqgroup" size="lg">
                             CHARITIES
                         </Button>
-                    </NavLink>
+                    </Link>
                     <Button
                         variant="turqgroup"
                         size="lg"
