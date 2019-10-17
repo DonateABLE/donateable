@@ -164,18 +164,18 @@ class ButtonGrouping extends Component {
                     >
                         HOW IT WORKS
                     </Button>
+                    <Button
+                        variant="turqgroup"
+                        size="lg"
+                        onClick={this.handleShowTour}
+                    >
+                        TAKE A TOUR
+                    </Button>
                     <Link to="/charities">
                         <Button variant="turqgroup" size="lg">
                             CHARITIES
                         </Button>
                     </Link>
-                    <Button
-                        variant="turqgroup"
-                        size="lg"
-                        onClick={this.handleShowPP}
-                    >
-                        PRIVACY POLICY
-                    </Button>
                     <Button
                         variant="turqgroup"
                         size="lg"
@@ -193,9 +193,9 @@ class ButtonGrouping extends Component {
                     <Button
                         variant="turqgroup"
                         size="lg"
-                        onClick={this.handleShowTour}
+                        onClick={this.handleShowPP}
                     >
-                        TAKE A TOUR
+                        PRIVACY POLICY
                     </Button>
                 </ButtonGroup>
 
