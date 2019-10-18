@@ -16,10 +16,11 @@ const CharityCards = props => {
             border-color: #45a6d7;
             width: 100%;
             margin-top: 8%;
+            font-family: Montserrat-Medium, Barlow;
           }
 
           .btn:disabled {
-            opacity: 1 !important; 
+            opacity: 1 !important;
           }
 
           .btn-donators {
@@ -27,6 +28,7 @@ const CharityCards = props => {
             background-color: #26607d;
             border-color: #26607d;
             width: 100%;
+            font-family: Montserrat-Medium, Barlow;
           }
           
           .btn-social {
@@ -34,6 +36,7 @@ const CharityCards = props => {
             background-color: #45a6d7;
             border-color: #45a6d7;
             width: 100%;
+            font-family: Montserrat-Medium, Barlow;
           }
           
           .btn-donatehere {
@@ -43,6 +46,7 @@ const CharityCards = props => {
             height: 60px;
             font-size: 18px;
             width: 100%;
+            font-family: Montserrat-Medium, Barlow;
           }
 
           .card {

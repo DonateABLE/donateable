@@ -25,10 +25,6 @@ class TourCarousel extends Component {
                         display: none;
                         }
 
-                        .h3 {
-                            font-family: Montserrat-Bold, sans-serif;
-                        }
-
                         .nxt-button {
                         display: -webkit-box;
                         display: -ms-flexbox;
@@ -63,7 +59,9 @@ class TourCarousel extends Component {
                                 marginBottom: "15%"
                             }}
                         >
-                            <h3>LET'S GET STARTED</h3>
+                            <h3 style={{ fontFamily: "Montserrat-Bold" }}>
+                                LET'S GET STARTED
+                            </h3>
                             <br />
                             <p>
                                 How can you help your favourite charities
@@ -88,7 +86,9 @@ class TourCarousel extends Component {
                         <Carousel.Caption
                             style={{ marginTop: "30%", marginBottom: "15%" }}
                         >
-                            <h3>LOGIN TO YOUR ACCOUNT</h3>
+                            <h3 style={{ fontFamily: "Montserrat-Bold" }}>
+                                LOGIN TO YOUR ACCOUNT
+                            </h3>
                             <br />
                             <p>
                                 {" "}
@@ -110,7 +110,9 @@ class TourCarousel extends Component {
                         <Carousel.Caption
                             style={{ marginTop: "30%", marginBottom: "15%" }}
                         >
-                            <h3>CHOOSE YOUR CHARITY</h3>
+                            <h3 style={{ fontFamily: "Montserrat-Bold" }}>
+                                CHOOSE YOUR CHARITY
+                            </h3>
                             <br />
                             <p>
                                 Choose from a number of charities that do
@@ -133,7 +135,9 @@ class TourCarousel extends Component {
                         <Carousel.Caption
                             style={{ marginTop: "30%", marginBottom: "15%" }}
                         >
-                            <h3> START DONATING </h3>
+                            <h3 style={{ fontFamily: "Montserrat-Bold" }}>
+                                START DONATING
+                            </h3>
                             <br />
                             <p>
                                 You've now selected your charity and are ready
@@ -158,7 +162,9 @@ class TourCarousel extends Component {
                         <Carousel.Caption
                             style={{ marginTop: "30%", marginBottom: "15%" }}
                         >
-                            <h3>SELECT YOUR CPU POWER</h3>
+                            <h3 style={{ fontFamily: "Montserrat-Bold" }}>
+                                SELECT YOUR CPU POWER
+                            </h3>
                             <br />
                             <p>
                                 Next, set the amount of processing power you
@@ -183,7 +189,9 @@ class TourCarousel extends Component {
                         <Carousel.Caption
                             style={{ marginTop: "30%", marginBottom: "15%" }}
                         >
-                            <h3>ACCEPT AND GET STARTED</h3>
+                            <h3 style={{ fontFamily: "Montserrat-Bold" }}>
+                                ACCEPT AND GET STARTED
+                            </h3>
                             <br />
                             <p>
                                 We want to make sure you fully understand the
@@ -208,7 +216,7 @@ class TourCarousel extends Component {
                         <Carousel.Caption
                             style={{ marginTop: "30%", marginBottom: "15%" }}
                         >
-                            <h3>
+                            <h3 style={{ fontFamily: "Montserrat-Bold" }}>
                                 LEAVE TAB OPEN AND <br /> KEEP BROWSING
                             </h3>
                             <br />

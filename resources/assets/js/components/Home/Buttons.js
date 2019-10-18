@@ -39,7 +39,7 @@ class Buttons extends Component {
             /* Custom styling for buttons, sizing and colors 
             Button Opacity is 1 for creating non clickable stat buttons
             */
-            <div className="text-center">
+            <div className="text-center" id="home-buttons">
                 <style className="text/css">
                     {`
                     .btn:disabled {

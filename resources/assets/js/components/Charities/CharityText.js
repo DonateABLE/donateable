@@ -10,7 +10,8 @@ const CharityText = props => {
                     marginBottom: "0",
                     marginTop: "5%",
                     fontSize: 20,
-                    color: "#45A6D7"
+                    color: "#45A6D7",
+                    fontFamily: "Montserrat-Bold"
                 }}
             >
                 {props.text1}
@@ -18,7 +19,8 @@ const CharityText = props => {
             <h2
                 style={{
                     fontSize: 20,
-                    color: "#26607D"
+                    color: "#26607D",
+                    fontFamily: "Montserrat-Bold"
                 }}
             >
                 {props.text2}
