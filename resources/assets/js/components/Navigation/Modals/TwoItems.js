@@ -18,6 +18,7 @@ const TwoItems = props => {
                     <h2
                         style={{
                             fontSize: "1.2em",
+                            fontFamily: "Montserrat-Bold",
                             color: "#FFFFFF",
                             paddingTop: "8%",
                             margin: "auto"

@@ -11,7 +11,7 @@ const PrivacyPolicy = props => {
                 style={{
                     backgroundColor: "#FFFFFF",
                     color: "black",
-                    fontWeight: "500",
+                    fontFamily: "Montserrat-Regular",
                     marginBottom: "3%"
                 }}
             >

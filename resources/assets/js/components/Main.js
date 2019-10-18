@@ -17,6 +17,7 @@ class Main extends Component {
     render() {
         return (
             <div
+                id="main"
                 style={{
                     backgroundColor: "white"
                 }}

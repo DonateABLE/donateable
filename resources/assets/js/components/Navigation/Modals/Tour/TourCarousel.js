@@ -7,47 +7,44 @@ class TourCarousel extends Component {
             <div>
                 <style>
                     {`
-            .carousel-caption {
-              position: relative;
-              left: auto;
-              right: auto;
-              margin-top: 20%;
-              margin-left: 10%;
-              padding-bottom: 5%;
-              width: 80%;
-            }
+                        .carousel-caption {
+                        position: relative;
+                        left: auto;
+                        right: auto;
+                        margin-top: 20%;
+                        margin-left: 10%;
+                        padding-bottom: 5%;
+                        width: 80%;
+                        }
 
-            .container {
-              margin-top: 20%;
-            }
-            
-            .carousel-control-prev {
-              display: none;
-            }
+                        .container {
+                        margin-top: 20%;
+                        }
+                        
+                        .carousel-control-prev {
+                        display: none;
+                        }
 
-            .carousel-control-next {
-            }
+                        .h3 {
+                            font-family: Montserrat-Bold, sans-serif;
+                        }
 
-            .carousel-control-button {
-
-            }
-
-            .nxt-button {
-              display: -webkit-box;
-              display: -ms-flexbox;
-              display: flex;
-              -webkit-box-align: center;
-                  -ms-flex-align: center;
-                      align-items: center;
-              -webkit-box-pack: center;
-                  -ms-flex-pack: center;
-                      justify-content: center;
-              text-align: center;
-              opacity: 0.5;
-              -webkit-transition: opacity 0.15s ease;
-              transition: opacity 0.15s ease;
-            }
-          `}
+                        .nxt-button {
+                        display: -webkit-box;
+                        display: -ms-flexbox;
+                        display: flex;
+                        -webkit-box-align: center;
+                        -ms-flex-align: center;
+                        align-items: center;
+                        -webkit-box-pack: center;
+                        -ms-flex-pack: center;
+                        justify-content: center;
+                        text-align: center;
+                        opacity: 0.5;
+                        -webkit-transition: opacity 0.15s ease;
+                        transition: opacity 0.15s ease;
+                        }
+                    `}
                 </style>
 
                 <Carousel interval={0} wrap={false} style={{ width: "100%" }}>

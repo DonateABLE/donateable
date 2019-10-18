@@ -3,7 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 
 function Footer() {
     return (
-        <div id="footer">
+        <div id="footer" style={{ marginTop: "7%" }}>
             <Container
                 style={{
                     backgroundColor: "white",

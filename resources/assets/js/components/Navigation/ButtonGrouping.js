@@ -91,7 +91,7 @@ class ButtonGrouping extends Component {
 
     render() {
         return (
-            <div className="text-center">
+            <div id="button-group" className="text-center">
                 <style className="text/css">
                     {`                 
                    .btn-turqgroup {
@@ -103,9 +103,8 @@ class ButtonGrouping extends Component {
                     border-radius: 0;
                     color: white;
                     vertical-align: middle;
-                    font-weight: 500;
                     letter-spacing: 0.05em;
-                    font-family: 'Montserrat-Bold', sans-serif;
+                    font-family: 'Montserrat-Medium', sans-serif;
                     width: 305px;
                     height: 48px;
                     font-size: 10pt;
@@ -116,9 +115,8 @@ class ButtonGrouping extends Component {
                     border-color: #979797;
                     border-radius: 0;
                     color: white;
-                    font-weight: 500;
                     letter-spacing: 0.05em;
-                    font-family: 'Montserrat-Bold', sans-serif;
+                    font-family: 'Montserrat-Medium', sans-serif;
                     margin-bottom: 4%;
                     padding-left: 8%;
                     padding-right: 8%;

@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Text from "./Text";
 import { Container } from "react-bootstrap";
 import LoginForm from "./Login/LoginForm";
 import SignupForm from "./Login/SignupForm";
@@ -7,9 +6,9 @@ import Navigation from "./Navbar";
 
 class Login extends Component {
     componentDidMount() {
-        window.scrollTo(0, 0); // Scroll to the top when routing 
+        window.scrollTo(0, 0); // Scroll to the top when routing
     }
-    
+
     render() {
         return (
             <div
@@ -39,7 +38,7 @@ class Login extends Component {
                             margin-bottom: 4%;
                             width: 70%;
                             font-size: 20;
-                            font-weight: 500;
+                            font-family: Montserrat-Bold, sans-serif;
                         }
                     `}
                 </style>
@@ -76,8 +75,7 @@ class Login extends Component {
                         margin: "auto",
                         marginBottom: "4%",
                         width: "70%",
-                        fontSize: "20",
-                        fontWeight: "500"
+                        fontSize: "20"
                     }}
                 >
                     LOGIN
@@ -102,8 +100,7 @@ class Login extends Component {
                         margin: "auto",
                         marginBottom: "4%",
                         width: "70%",
-                        fontSize: "20",
-                        fontWeight: "500"
+                        fontSize: "20"
                     }}
                 >
                     SIGN UP
