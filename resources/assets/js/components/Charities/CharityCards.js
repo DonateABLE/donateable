@@ -65,7 +65,7 @@ const CharityCards = props => {
             <Card className="text-center">
                 <img src={props.image} className="img-fluid" />
                 <Card.Header>{props.charityName}</Card.Header>
-                <Card.Body>
+                <Card.Body style={{ padding: "20px 0px 0px 0px" }}>
                     <Button variant="donating" disabled>
                         Currently Donating
                     </Button>

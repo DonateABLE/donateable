@@ -20,7 +20,9 @@ const CharityText = props => {
                 style={{
                     fontSize: 20,
                     color: "#26607D",
-                    fontFamily: "Montserrat-Bold"
+                    fontFamily: "Montserrat-Bold",
+                    marginBottom: "5%",
+                    paddingBottom: "10px"
                 }}
             >
                 {props.text2}
