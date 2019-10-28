@@ -8,12 +8,12 @@ import TabbedContainer from "./TabbedContainer";
 
 class CharityTemplate extends Component {
     componentDidMount() {
-        window.scrollTo(0, 0); // Scroll to the top when routing 
+        window.scrollTo(0, 0); // Scroll to the top when routing
     }
 
     render() {
         return (
-            <div >
+            <div>
                 <style>
                     {`
               .container{
@@ -62,6 +62,7 @@ class CharityTemplate extends Component {
                         backgroundColor: "#45A6D7",
                         color: "white",
                         display: "flex",
+                        fontFamily: "Montserrat, Barlow",
                         paddingLeft: "0",
                         paddingRight: "0",
                         paddingTop: "3%",

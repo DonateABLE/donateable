@@ -56,6 +56,7 @@ class Buttons extends Component {
                       font-family: 'Montserrat-Medium', sans-serif;
                       margin-bottom: 6px;
                       max-width: 305px;
+                      padding: 10px 50px;
                       width: 90%;
                       height: 48px;
                       font-size: 10pt;
@@ -71,6 +72,7 @@ class Buttons extends Component {
                       font-family: 'Montserrat-Medium', sans-serif;
                       margin-bottom: 5px;
                       max-width: 305px;
+                      padding: 10px 50px;
                       width: 90%;
                       height: 48px;
                       font-size: 10pt;
@@ -86,6 +88,7 @@ class Buttons extends Component {
                       margin-bottom: 5px;
                       max-width: 305px;
                       width: 90%;
+                      padding: 10px 50px;
                       height: 48px;
                       font-size: 10pt;
                     }
@@ -111,16 +114,16 @@ class Buttons extends Component {
                     TAKE A TOUR
                 </Button>
                 <Button disabled variant="turq" size="lg">
-                    CURRENTLY DONATING
+                    CURRENTLY DONATING <b>{this.props.currentDonators}11</b>
                 </Button>
                 <Link to="/wvs" style={{ textDecoration: "none" }}>
                     <Button variant="turq" size="lg">
-                        DONATORS TO DATE
+                        DONATORS TO DATE <b>{this.props.donators}183</b>
                     </Button>
                 </Link>
                 <Link to="/account" style={{ textDecoration: "none" }}>
                     <Button variant="turq" size="lg">
-                        TOTAL HASHES 193 832
+                        TOTAL HASHES <b>{this.props.totalHashes}193 832</b>
                     </Button>
                 </Link>
 

@@ -13,6 +13,7 @@ class TwoColorHeader extends Component {
                 <h2
                     style={{
                         display: "inline",
+                        fontFamily: "Montserrat, Barlow, sans-serif",
                         fontWeight: "700",
                         fontSize: "18px",
                         color: "#26607D"
@@ -23,6 +24,8 @@ class TwoColorHeader extends Component {
                 <h2
                     style={{
                         display: "inline",
+                        fontFamily: "Montserrat, Barlow, sans-serif",
+                        fontWeight: "700",
                         fontWeight: "700",
                         fontSize: "18px",
                         color: "#45A6D7"

@@ -5,7 +5,12 @@ import { CircularProgressbar } from "react-circular-progressbar";
 class ProgressBar extends Component {
     render() {
         return (
-            <Container style={{marginTop: "5%"}}>
+            <Container
+                style={{
+                    marginTop: "5%",
+                    fontFamily: "Montserrat, Barlow, sans-serif"
+                }}
+            >
                 <Row>
                     <Col
                         xs={3}
@@ -45,8 +50,21 @@ class ProgressBar extends Component {
                                 margin: "auto"
                             }}
                         >
-                            <h2>{this.props.title}</h2>
-                            <h2 style={{color:"#45A6D7"}}>{this.props.details}</h2>
+                            <h2
+                                style={{
+                                    fontFamily: "Montserrat, Barlow, sans-serif"
+                                }}
+                            >
+                                {this.props.title}
+                            </h2>
+                            <h2
+                                style={{
+                                    color: "#45A6D7",
+                                    fontFamily: "Montserrat, Barlow, sans-serif"
+                                }}
+                            >
+                                {this.props.details}
+                            </h2>
                         </div>
                     </Col>
                 </Row>

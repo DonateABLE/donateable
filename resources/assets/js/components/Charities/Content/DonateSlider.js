@@ -21,6 +21,7 @@ class DonateSlider extends Component {
                         borderColor: "#45A6D7",
                         height: 28,
                         width: 28,
+                        fontFamily: "Montserrat, Barlow, sans-serif",
                         backgroundColor: "white",
                         alignContent: "center"
                     }}

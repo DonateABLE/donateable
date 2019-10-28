@@ -79,6 +79,7 @@ const TabbedContainer = props => {
                     display: "flex",
                     flexDirection: "column",
                     flexWrap: "wrap",
+                    fontFamily: "Montserrat, Barlow, sans-serif",
                     paddingLeft: "0",
                     paddingRight: "0",
                     paddingTop: "3%",
@@ -177,12 +178,6 @@ const TabbedContainer = props => {
                         {/* CHARITY STATS TAB */}
 
                         <Tab eventKey="statistics" title="Statistics">
-                            <div style={{ alignContent: "left" }}>
-                                <TwoColorHeader
-                                    darkText="CHARITY AND DONATEABLE"
-                                    lightText="STATISTICS"
-                                />
-                            </div>
                             <Stats />
                         </Tab>
 

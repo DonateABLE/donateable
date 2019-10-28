@@ -16,6 +16,7 @@ const IconAndText = props => {
                     backgroundColor: "white",
                     color: "#26607D",
                     display: "flex",
+                    fontFamily: "Montserrat, Barlow, sans-serif",
                     paddingLeft: "0",
                     paddingRight: "0",
                     paddingTop: "3%",
@@ -56,10 +57,21 @@ const IconAndText = props => {
                     }}
                 >
                     <div style={{ textAlign: "center" }}>
-                        <h2 style={{ color: "#45A6D7" }}>
+                        <h2
+                            style={{
+                                color: "#45A6D7",
+                                fontFamily: "Montserrat, Barlow, sans-serif"
+                            }}
+                        >
                             {props.title}
                         </h2>
-                        <h4 style={{ color: "#26607D", fontWeight: "200" }}>
+                        <h4
+                            style={{
+                                color: "#26607D",
+                                fontWeight: "200",
+                                fontFamily: "Montserrat, Barlow, sans-serif"
+                            }}
+                        >
                             {props.cost} <br /> {props.hashes}
                         </h4>
                         <br />
@@ -68,6 +80,7 @@ const IconAndText = props => {
                                 padding: "0 0 2% 0",
                                 color: "#26607D",
                                 fontWeight: "200",
+                                fontFamily: "Montserrat, Barlow, sans-serif",
                                 width: "90%"
                             }}
                         >
