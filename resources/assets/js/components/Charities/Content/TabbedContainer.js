@@ -12,12 +12,11 @@ import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import ProgressBar from "./ProgressBar";
 import TwoColorHeader from "./TwoColorHeader";
 import DonateSlider from "./DonateSlider";
-import Stats from "./Stats";
 
 // Tabbed Content Container
 const TabbedContainer = props => {
     return (
-        <div>
+        <div id="about-charity">
             <style>
                 {`
                 .nav-link {
@@ -31,12 +30,7 @@ const TabbedContainer = props => {
                 .h2 {
                     text-align: center;
                 }
-
-                .p {
-                    padding: 2%;
-                    margin: auto;
-                }
-
+                
                 .row {
                     margin-left: 2%;
                     margin-right: 2%;
@@ -98,11 +92,8 @@ const TabbedContainer = props => {
 
                     <Tabs defaultActiveKey="about" id="charity-tabs">
                         <Tab eventKey="about" title="About">
-                            <TwoColorHeader
-                                darkText="ABOUT"
-                                lightText="VICTIM SERVICES WELLINGTON (VSW)"
-                            />
-                            <p style={{ color: "#26607D" }}>
+                            <TwoColorHeader darkText="ABOUT" lightText="VSW" />
+                            <p style={{ color: "#26607D", textAlign: "left" }}>
                                 Anyone can be a victim. It is in times of trauma
                                 that victims need compassion, support, and
                                 assistance most. Whether an accident has
@@ -112,7 +103,7 @@ const TabbedContainer = props => {
                                 support victims.
                             </p>
 
-                            <p style={{ color: "#26607D" }}>
+                            <p style={{ color: "#26607D", textAlign: "left" }}>
                                 A non-profit organization, established in 1997,
                                 VSW has partnerships with Guelph Police Services
                                 and the Ontario Provinicial Police to deliver
@@ -122,7 +113,7 @@ const TabbedContainer = props => {
                                 events and refer them to appropriate community
                                 groups and organizations.
                             </p>
-                            <p style={{ color: "#26607D" }}>
+                            <p style={{ color: "#26607D", textAlign: "left" }}>
                                 VSW volunteers are trained extensively to help
                                 meet the short-term needs of victims. They are
                                 backed with widespread knowledge and experience
@@ -133,7 +124,7 @@ const TabbedContainer = props => {
 
                             <TwoColorHeader
                                 darkText="CONTACT"
-                                lightText="VICTIM SERVICES WELLINGTON (VSW)"
+                                lightText="VSW"
                             />
 
                             <p
@@ -177,8 +168,39 @@ const TabbedContainer = props => {
 
                         {/* CHARITY STATS TAB */}
 
-                        <Tab eventKey="statistics" title="Statistics">
-                            <Stats />
+                        <Tab
+                            eventKey="statistics"
+                            title="Statistics"
+                            style={{ width: "100vw" }}
+                        >
+                            <TwoColorHeader
+                                darkText="VSW"
+                                lightText="STATISTICS"
+                            />
+                            <ProgressBar
+                                label="2"
+                                percentage={22}
+                                title="CURRENTLY DONATING"
+                                details="15"
+                            />
+                            <ProgressBar
+                                label="34"
+                                percentage={56}
+                                title="DONATORS TO DATE"
+                                details="150"
+                            />
+                            <ProgressBar
+                                label="62M"
+                                percentage={70}
+                                title="TOTAL HASHES"
+                                details="62 406 532"
+                            />
+                            <ProgressBar
+                                label="1"
+                                percentage={80}
+                                title="RANK"
+                                details="62 406 532"
+                            />
                         </Tab>
 
                         {/* DONATION TARGETS TAB */}

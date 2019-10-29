@@ -62,7 +62,7 @@ class CharityTemplate extends Component {
                         backgroundColor: "#45A6D7",
                         color: "white",
                         display: "flex",
-                        fontFamily: "Montserrat, Barlow",
+                        fontFamily: "Montserrat, Barlow, sans-serif",
                         paddingLeft: "0",
                         paddingRight: "0",
                         paddingTop: "3%",

@@ -60,7 +60,8 @@ const IconAndText = props => {
                         <h2
                             style={{
                                 color: "#45A6D7",
-                                fontFamily: "Montserrat, Barlow, sans-serif"
+                                fontFamily: "Montserrat, Barlow, sans-serif",
+                                fontSize: "18px"
                             }}
                         >
                             {props.title}
@@ -69,7 +70,8 @@ const IconAndText = props => {
                             style={{
                                 color: "#26607D",
                                 fontWeight: "200",
-                                fontFamily: "Montserrat, Barlow, sans-serif"
+                                fontFamily: "Montserrat, Barlow, sans-serif",
+                                fontSize: "16px"
                             }}
                         >
                             {props.cost} <br /> {props.hashes}
@@ -81,7 +83,9 @@ const IconAndText = props => {
                                 color: "#26607D",
                                 fontWeight: "200",
                                 fontFamily: "Montserrat, Barlow, sans-serif",
-                                width: "90%"
+                                fontSize: "13px",
+                                width: "90%",
+                                textAlign: "left"
                             }}
                         >
                             {props.bodytext}

@@ -5,9 +5,10 @@ class TwoColorHeader extends Component {
         return (
             <div
                 style={{
-                    marginTop: "3%",
+                    marginTop: "20px",
+                    marginBottom: "20px",
                     clear: "both",
-                    textAlign: "left"
+                    textAlign: "center"
                 }}
             >
                 <h2
