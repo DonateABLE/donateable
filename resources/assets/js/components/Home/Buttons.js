@@ -114,16 +114,16 @@ class Buttons extends Component {
                     TAKE A TOUR
                 </Button>
                 <Button disabled variant="turq" size="lg">
-                    CURRENTLY DONATING <b>{this.props.currentDonators}11</b>
+                    CURRENTLY DONATING: <b>{this.props.currentDonators}11</b>
                 </Button>
                 <Link to="/wvs" style={{ textDecoration: "none" }}>
                     <Button variant="turq" size="lg">
-                        DONATORS TO DATE <b>{this.props.donators}183</b>
+                        DONATORS TO DATE: <b>{this.props.donators}183</b>
                     </Button>
                 </Link>
                 <Link to="/account" style={{ textDecoration: "none" }}>
                     <Button variant="turq" size="lg">
-                        TOTAL HASHES <b>{this.props.totalHashes}193 832</b>
+                        TOTAL HASHES: <b>{this.props.totalHashes}193 832</b>
                     </Button>
                 </Link>
 

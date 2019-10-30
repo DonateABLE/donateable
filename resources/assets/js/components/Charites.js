@@ -3,12 +3,17 @@ import CharityCards from "./Charities/CharityCards";
 import CharityText from "./Charities/CharityText";
 import Navigation from "./Navbar";
 import { Container } from "react-bootstrap";
+import {
+    faGlobe,
+    faBriefcaseMedical,
+    faGlobeAmericas
+} from "@fortawesome/free-solid-svg-icons";
 
 class Charities extends Component {
     componentDidMount() {
-        window.scrollTo(0, 0); // Scroll to the top when routing 
+        window.scrollTo(0, 0); // Scroll to the top when routing
     }
-    
+
     render() {
         return (
             <div
@@ -31,6 +36,7 @@ class Charities extends Component {
                         facebookLink="https://www.facebook.com"
                         twitterLink="https://twitter.com"
                         siteLink="https://www.donateable.ca"
+                        charityIcon={faGlobeAmericas}
                     />
                     <CharityCards
                         charityName="VICTIM SERVICES WELLINGTON"
@@ -39,6 +45,7 @@ class Charities extends Component {
                         twitterLink="https://twitter.com/VS_Wellington"
                         siteLink="https://www.vswguelph.on.ca/"
                         donateLink="/wvs"
+                        charityIcon={faBriefcaseMedical}
                     />
                     <CharityCards charityName="COMING SOON" />
                 </Container>

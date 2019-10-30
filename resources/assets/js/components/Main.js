@@ -23,7 +23,11 @@ class Main extends Component {
                 }}
             >
                 <Router history={history}>
-                    <div className="text-center">
+                    <div
+                        className="text-center"
+                        id="content"
+                        style={{ width: "100vw" }}
+                    >
                         <Route exact path="/" component={Home} />
                         <Route exact path="/charities" component={Charities} />
                         <Route exact path="/login" component={Login} />
