@@ -3,7 +3,10 @@ import { Container, Col, Row, Button, Tab, Tabs } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay, faGlobe } from "@fortawesome/free-solid-svg-icons";
-import { faFacebookF, faTwitter } from "@fortawesome/free-brands-svg-icons";
+import {
+    faFacebookSquare,
+    faTwitterSquare
+} from "@fortawesome/free-brands-svg-icons";
 import TabbedContainer from "./TabbedContainer";
 
 class CharityTemplate extends Component {
@@ -42,12 +45,16 @@ class CharityTemplate extends Component {
                     style={{
                         backgroundColor: "#26607D",
                         textAlign: "right",
-                        color: "white"
+                        color: "white",
+                        padding: "17px 0px 7px 0px"
                     }}
                 >
                     <Link
                         to="/charities"
-                        style={{ color: "white", textDecoration: "none" }}
+                        style={{
+                            color: "white",
+                            textDecoration: "none"
+                        }}
                     >
                         Return to Charities
                         <FontAwesomeIcon
@@ -85,7 +92,7 @@ class CharityTemplate extends Component {
                         <div style={{ textAlign: "left" }}>
                             <p
                                 style={{
-                                    fontWeight: "700",
+                                    fontWeight: "550",
                                     fontSize: "1.6vh",
                                     color: "white",
                                     padding: "0px 0px 0px 0px",
@@ -107,7 +114,7 @@ class CharityTemplate extends Component {
                             </p>
                             <p
                                 style={{
-                                    fontWeight: "700",
+                                    fontWeight: "550",
                                     fontSize: "1.1vh",
                                     color: "white",
                                     padding: "0px 0px 0px 0px",
@@ -130,28 +137,31 @@ class CharityTemplate extends Component {
                         backgroundColor: "#26607D",
                         fontSize: "5vw",
                         paddingTop: "2%",
-                        paddingBottom: "2%"
+                        paddingBottom: "2%",
+                        display: "inline-block",
+                        verticalAlign: "middle"
                     }}
                 >
                     <a href="https://www.facebook.com/www.vswguelph.on.ca/">
                         <FontAwesomeIcon
-                            icon={faFacebookF}
-                            style={{ color: "white" }}
+                            icon={faFacebookSquare}
+                            style={{ color: "white", fontSize: "22px" }}
                         />
                     </a>
                     &nbsp; &nbsp; &nbsp;
                     <a href="https://www.facebook.com/www.vswguelph.on.ca/">
                         <FontAwesomeIcon
-                            icon={faTwitter}
-                            style={{ color: "white" }}
+                            icon={faTwitterSquare}
+                            style={{ color: "white", fontSize: "22px" }}
                         />
                     </a>
                     &nbsp; &nbsp; &nbsp;
                     <a href="https://www.facebook.com/www.vswguelph.on.ca/">
-                        <FontAwesomeIcon
+                        {/* <FontAwesomeIcon
                             icon={faGlobe}
                             style={{ color: "white" }}
-                        />
+                        /> */}
+                        <img src="/img/globe-square.svg" />
                     </a>
                 </Container>
                 <TabbedContainer />
