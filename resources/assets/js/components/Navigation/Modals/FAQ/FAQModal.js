@@ -34,7 +34,11 @@ class FAQModal extends Component {
                         text1="FREQUENTLY ASKED QUESTIONS"
                     />
                     <Container
-                        style={{ marginTop: "10%", marginBottom: "10%" }}
+                        style={{
+                            marginTop: "10%",
+                            marginBottom: "10%",
+                            padding: "0px"
+                        }}
                     >
                         <FAQ style={{ width: "100%" }} />
                         <br />
