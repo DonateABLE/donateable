@@ -10,6 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+
 use Illuminate\Http\Response;
 use Illuminate\Http\Request;
 
@@ -24,7 +25,7 @@ Route::get('/', function (Request $request) {
         ->with('totalHashes', $totalHashes);
 });
 
-Route::get('/onboard', function(Request $request) {
+Route::get('/onboard', function (Request $request) {
     $response = new Response(view('onboarding.onboard'));
     $response->withCookie(cookie('visited'));
     return $response;
@@ -36,6 +37,7 @@ Route::get('/verify/{token}', 'VerifyController@verify')->name('verify');
 Auth::routes();
 Route::post('/sitestats/join', 'SiteStatsController@join');
 Route::post('/sitestats/leave', 'SiteStatsController@leave');
+Route::resource('/sitestats', 'SiteStatsController');
 Route::post('/form/joinProgramForm', 'ContactFormController@handleJoinProgramForm')->name('JoinProgram');
 Route::post('/form/technicalSupportForm', 'ContactFormController@handleTechnicalSupportForm')->name('TechnicalSupport');
 
@@ -45,12 +47,12 @@ Route::post('/account-avatar', 'HandleAvatarUpload')->name('avatar');
 Route::post('/change-password', 'Auth\ChangePasswordController@changePassword')->name('changePassword');
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/sendVerification', function() {
+Route::get('/sendVerification', function () {
     Auth::user()->sendVerificationEmail();
     return back()->with('status', 'Verification email has been resent. Please check your spam folder.');
 });
 
-Route::post('/resendVerification', function(Request $request) {
+Route::post('/resendVerification', function (Request $request) {
     $this->middleware('auth');
     Auth::user()->sendVerificationEmail();
     return redirect('/home');

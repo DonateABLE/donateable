@@ -3,14 +3,21 @@ import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import TourModal from "../Navigation/Modals/Tour/TourModal";
 import HowItWorksModal from "../Navigation/Modals/HowItWorks/HowItWorksModal";
+import Axios from "axios";
 
 class Buttons extends Component {
     constructor(props, context) {
         super(props, context);
         this.state = {
             showHIW: false,
-            showTour: false
+            showTour: false,
+            siteStats: []
         };
+    }
+
+    async componentDidMount() {
+        const siteStats = await Axios.get("/sitestats");
+        this.setState({ siteStats: siteStats.data });
     }
 
     /* State Handling Functions */
@@ -123,7 +130,12 @@ class Buttons extends Component {
                 </Link>
                 <Link to="/account" style={{ textDecoration: "none" }}>
                     <Button variant="turq" size="lg">
-                        TOTAL HASHES: <b>{this.props.totalHashes}193 832</b>
+                        TOTAL HASHES:{" "}
+                        <b>
+                            {this.state.siteStats
+                                .map(siteStat => siteStat.totalDonors)
+                                .join(" ")}
+                        </b>
                     </Button>
                 </Link>
 

@@ -37,10 +37,11 @@ class FAQModal extends Component {
                         style={{
                             marginTop: "10%",
                             marginBottom: "10%",
-                            padding: "0px"
+                            padding: "0px",
+                            width: "100%"
                         }}
                     >
-                        <FAQ style={{ width: "100%" }} />
+                        <FAQ style={{ width: "90%" }} />
                         <br />
                     </Container>
                     <WhiteButton

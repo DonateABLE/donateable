@@ -22,7 +22,8 @@ class SiteStats extends Model
      * This is achieved by counting both logged in and anonymous donation
      * records that have occurred within the past 10 minutes
      */
-    public static function getSitewideCurrentDonors() {
+    public static function getSitewideCurrentDonors()
+    {
 
         $now = Carbon::now()->subMinutes(10);
         $timeThreshold = $now->format('H:i:s');
@@ -39,12 +40,11 @@ class SiteStats extends Model
 
         $totalDonorsAtCurrent = $donatedTo + $donationBuffer;
         return number_format($totalDonorsAtCurrent, 0, ',', ' ');
-
-
     }
 
     /* Utility method to return a count of all total donors stored in the db */
-    public static function getSitewideTotalDonors() {
+    public static function getSitewideTotalDonors()
+    {
         // Proposed future algo:
         // Tally all DonatedTo records
         // Each record is worth one donor (+ the anonymous donor)
@@ -57,7 +57,5 @@ class SiteStats extends Model
         // current is just a count that is not necessarily dependable
         $totalDonorsLifetime = SiteStats::all()->sum('totalDonors');
         return number_format($totalDonorsLifetime, 0, ',', ' ');
-
-
     }
 }
