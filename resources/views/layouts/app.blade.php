@@ -126,6 +126,7 @@
             <a href="https://www.synergenics.ca" target="_blank">Powered By <img class="bottom-brand" alt="Synergenics Inc. Logo" src="{{ asset('img/logo/Synergenics-Logo-2008-White.png') }}"/></a>
         </div>
     </div>
+    <!-- Entry point for the react application -->
     <div id="mobile" class="parallax">
       </div>
       <script src="{{ asset('js/reactapp.js') }}"></script>
