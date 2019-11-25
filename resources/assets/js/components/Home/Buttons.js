@@ -64,7 +64,7 @@ class Buttons extends Component {
                       margin-bottom: 6px;
                       max-width: 305px;
                       padding: 10px 50px;
-                      width: 90%;
+                      width: 95vw;
                       height: 48px;
                       font-size: 10pt;
                     }

@@ -21,7 +21,8 @@ const WhiteButton = props => {
                 margin-bottom: 4%;
                 padding-left: 8%;
                 padding-right: 8%;
-                width: 305px;
+                width: 90vw;
+                max-width: 305px;
                 font-size: 10pt;
               }
           `}
