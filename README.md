@@ -64,6 +64,50 @@ Run the database seeder
 
     php artisan migrate:refresh
 
+## Deploying to Production
+
+If changes to the database have been made its reccomended to reseed the database on the production DigitalOcean box. This can be done with the steps above. 
+
+To deploy new changes, begin by taking the server offline.
+
+    php artisan down
+
+This will give a 503 HTTP response and Laravel will display a down for maintence page. 
+
+To update from the master branch simply
+
+    git pull
+
+Then to put the server pack online and that is it.
+
+    php artisan up
+### Optional steps
+
+Depending on additional changes made you made need to do any of the following:
+
+    composer install 
+For changes to packages in composer.json
+
+    php artistan migrate
+
+To update the database with any changes in *database/migrations*
+
+    php artisan queue:restart
+For restarting queues.
+
+**TL;DR**
+
+    cd /var/www/http/donateable/
+    php artisan down
+    git pull origin master
+    composer install 
+    php artisan migrate
+    php artisan cache:clear
+    php artisan queue:restart
+    php artisan up
+
+
+
 ----------
 
 # Code overview

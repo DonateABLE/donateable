@@ -1,6 +1,6 @@
 "use strict";
 
-$(document).ready(function () {
+$(document).ready(function() {
     console.log("donate.js loaded");
     // set User information
 
@@ -10,7 +10,7 @@ $(document).ready(function () {
     /*
      * React to changes in the rangeslider
      */
-    $("#MinerRange").on("propertychange input", function () {
+    $("#MinerRange").on("propertychange input", function() {
         /** Set an element on screen to show the %age **/
         $("#MinerValue").val(this.value + "% CPU");
 
@@ -28,11 +28,11 @@ $(document).ready(function () {
     });
 
     // Register callback on mining operation start
-    miner.on("open", function () {
+    miner.on("open", function() {
         var d = new Date();
         minerStartTime = d.getTime();
 
-        $(window).bind("beforeunload", function () {
+        $(window).bind("beforeunload", function() {
             $.ajax({
                 url: "/sitestats/leave",
                 method: "POST",
@@ -47,7 +47,7 @@ $(document).ready(function () {
     });
 
     // register callback on stop button clicked
-    $("#stopDonate").click(function () {
+    $("#stopDonate").click(function() {
         $("#SlideMeter").removeClass("animated");
 
         if (miner.isRunning()) {
@@ -73,7 +73,7 @@ $(document).ready(function () {
     });
 
     // Register callback on opt-in dialogue acceptance
-    $("#optedIn").click(function () {
+    $("#optedIn").click(function() {
         $("#optIn").modal("hide");
 
         // Begin mining crypto
@@ -125,7 +125,7 @@ $(document).ready(function () {
     }
 
     // Update stats once per second
-    setInterval(function () {
+    setInterval(function() {
         var sessionHashRate = 0;
         var sessionHashes = 0;
         var sessionTime = 0;
@@ -139,8 +139,11 @@ $(document).ready(function () {
             if (minerStartTime === 0) sessionTime = 0;
         }
         // Output to HTML elements...
-        document.getElementById("sessionHashes").innerHTML = "# " + sessionHashes;
-        document.getElementById("sessionTime").innerHTML = sessionTime + " Seconds";
-        document.getElementById("sessionHashRate").innerHTML = sessionHashRate + " Per Second";
+        document.getElementById("sessionHashes").innerHTML =
+            "# " + sessionHashes;
+        document.getElementById("sessionTime").innerHTML =
+            sessionTime + " Seconds";
+        document.getElementById("sessionHashRate").innerHTML =
+            sessionHashRate + " Per Second";
     }, 1000);
 });
