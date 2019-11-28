@@ -72,7 +72,7 @@ To deploy new changes, begin by taking the server offline.
 
     php artisan down
 
-This will give a 503 HTTP response and Laravel will display a down for maintence page. 
+This will give a 503 HTTP response and Laravel will display a down for maintenance page. 
 
 To update from the master branch simply
 
@@ -97,7 +97,7 @@ For restarting queues.
 
 **TL;DR**
 
-    cd /var/www/http/donateable/
+    cd /var/www/html/donateable/
     php artisan down
     git pull origin master
     composer install 
