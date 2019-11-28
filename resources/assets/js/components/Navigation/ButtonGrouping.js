@@ -17,7 +17,6 @@ import FAQModal from "./Modals/FAQ/FAQModal";
 
 // This component is for the collection of buttons that pull down
 // in the hamburger menu
-// Sorry if this is a terribly written component
 
 class ButtonGrouping extends Component {
     constructor(props, context) {
@@ -105,7 +104,8 @@ class ButtonGrouping extends Component {
                     vertical-align: middle;
                     letter-spacing: 0.05em;
                     font-family: 'Montserrat-Medium', sans-serif;
-                    width: 305px;
+                    width: 95vw;
+                    max-width: 305px;
                     height: 48px;
                     font-size: 10pt;
                   }
@@ -120,7 +120,8 @@ class ButtonGrouping extends Component {
                     margin-bottom: 4%;
                     padding-left: 8%;
                     padding-right: 8%;
-                    width: 305px;
+                    width: 95vw;
+                    max-width: 305px;
                     font-size: 10pt;
                   }
 
