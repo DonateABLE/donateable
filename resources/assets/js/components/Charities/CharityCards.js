@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Button } from "react-bootstrap";
+import { Card, Button, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebookF, faTwitter } from "@fortawesome/free-brands-svg-icons";
@@ -41,6 +41,15 @@ const CharityCards = props => {
                         width: 100%;
                         font-family: Montserrat-Medium, Barlow;
                     }
+                    .social-container {
+                        color: #fff;
+                        background-color: #45a6d7;
+                        border-color: #45a6d7;
+                        width: 100%;
+                        height: 45px;
+                        font-family: Montserrat-Medium, Barlow;
+                        padding: 0% 3%;
+                    }
                     
                     .btn-donatehere {
                         color: #fff;
@@ -61,7 +70,7 @@ const CharityCards = props => {
                         margin-block-end: 0.1em;
                         margin-inline-start: 0px;
                         margin-inline-end: 0px;
-                        padding-inline-start: 40px;
+                        margin: auto;
                     }
                 `}
             </style>
@@ -97,10 +106,7 @@ const CharityCards = props => {
                     <Button variant="donators" disabled>
                         Donators to Date: <b>{props.donators}</b>
                     </Button>
-                    <Button
-                        variant="social"
-                        style={{ paddingTop: "0", paddingBottom: "0" }}
-                    >
+                    <Container className="social-container">
                         <ul className="floating-social-icons">
                             <li>
                                 <a href={props.facebookLink}>
@@ -127,7 +133,7 @@ const CharityCards = props => {
                                 </a>
                             </li>
                         </ul>
-                    </Button>
+                    </Container>
                     <Link to={props.donateLink}>
                         <Button variant="donatehere">DONATE</Button>
                     </Link>
