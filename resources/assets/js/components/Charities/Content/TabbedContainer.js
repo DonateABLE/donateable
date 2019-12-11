@@ -51,7 +51,7 @@ const TabbedContainer = props => {
                     text-anchor: middle;
                 }
 
-                .btn-turqwhite{
+                .btn-turqwhite {
                     background-color: #FFFFFF;
                     border-color: #979797;
                     border-radius: 0;
@@ -64,6 +64,10 @@ const TabbedContainer = props => {
                     height: 48px;
                     font-size: 10pt;
                   }
+                
+                .nav-tabs{
+                    margin: auto;
+                }
             `}
             </style>
             <Container
@@ -88,82 +92,43 @@ const TabbedContainer = props => {
                 </Row>
 
                 <Row style={{ width: "100%", color: "black" }}>
-                    {/* ABOUT TAB */}
+                    <Tabs
+                        defaultActiveKey="donate-now"
+                        id="charity-tabs"
+                        style={{ margin: "auto" }}
+                    >
+                        {/* DONATE NOW TAB */}
 
-                    <Tabs defaultActiveKey="about" id="charity-tabs">
-                        <Tab eventKey="about" title="About">
-                            <TwoColorHeader darkText="ABOUT" lightText="VSW" />
-                            <p style={{ color: "#26607D", textAlign: "left" }}>
-                                Anyone can be a victim. It is in times of trauma
-                                that victims need compassion, support, and
-                                assistance most. Whether an accident has
-                                occurred, a crime committed, or a loss suffered.
-                                Victim Services Wellinton (VSW) is available 24
-                                hours a day, 7 days a week, all year round to
-                                support victims.
-                            </p>
-
-                            <p style={{ color: "#26607D", textAlign: "left" }}>
-                                A non-profit organization, established in 1997,
-                                VSW has partnerships with Guelph Police Services
-                                and the Ontario Provinicial Police to deliver
-                                support to victims of crime in our area.
-                                Volunteers are available on scene to help
-                                victims and their families through difficult
-                                events and refer them to appropriate community
-                                groups and organizations.
-                            </p>
-                            <p style={{ color: "#26607D", textAlign: "left" }}>
-                                VSW volunteers are trained extensively to help
-                                meet the short-term needs of victims. They are
-                                backed with widespread knowledge and experience
-                                in communication, crisis interpresence to what
-                                can be highly emotional, stressful, and
-                                overwhelming circumstances.
-                            </p>
-
+                        <Tab eventKey="donate-now" title="Donate">
                             <TwoColorHeader
-                                darkText="CONTACT"
-                                lightText="VSW"
+                                style={{ paddingTop: "3%" }}
+                                darkText="DONATE"
+                                lightText="NOW"
+                            />
+                            <ProgressBar
+                                label="0"
+                                percentage={0}
+                                title="HASHING RATE"
+                                details="0 PER SECOND"
+                            />
+                            <ProgressBar
+                                label="0"
+                                percentage={0}
+                                title="TOTAL TIME"
+                                details="0 SECONDS"
+                            />
+                            <ProgressBar
+                                label="0"
+                                percentage={0}
+                                title="TOTAL HASHES"
+                                details="# 0"
                             />
 
-                            <p
-                                style={{
-                                    textAlign: "center",
-                                    color: "#26607D"
-                                }}
-                            >
-                                15 Wyndam Street South
-                                <br />
-                                Guelph, Ontario
-                                <br />
-                                N1H 4C6
-                            </p>
-
-                            <LineBreak />
-                            <p
-                                style={{
-                                    textAlign: "center",
-                                    color: "#26607D"
-                                }}
-                            >
-                                <strong>Phone:</strong> (519) 824-1212 ext 7304
-                                <br />
-                                <strong>Email:</strong> victim@vswguelph.on.ca
-                            </p>
-                            <LineBreak />
-                            <p
-                                style={{
-                                    textAlign: "center",
-                                    color: "#26607D"
-                                }}
-                            >
-                                <strong>Office Hours</strong>
-                                <br />
-                                Monday to Friday from
-                                <br />
-                                9am to 5pm
-                            </p>
+                            <div style={{ alignContent: "center" }}>
+                                <DonateSlider />
+                                <Button variant="turqdark">START</Button>
+                                <Button variant="turqwhite">STOP</Button>
+                            </div>
                         </Tab>
 
                         {/* CHARITY STATS TAB */}
@@ -239,38 +204,80 @@ const TabbedContainer = props => {
                             />
                         </Tab>
 
-                        {/* DONATE NOW TAB */}
+                        {/* ABOUT TAB */}
+                        <Tab eventKey="about" title="About">
+                            <TwoColorHeader darkText="ABOUT" lightText="VSW" />
+                            <p style={{ color: "#26607D", textAlign: "left" }}>
+                                Anyone can be a victim. It is in times of trauma
+                                that victims need compassion, support, and
+                                assistance most. Whether an accident has
+                                occurred, a crime committed, or a loss suffered.
+                                Victim Services Wellington (VSW) is available 24
+                                hours a day, 7 days a week, all year round to
+                                support victims.
+                            </p>
 
-                        <Tab eventKey="donate-now" title="Donate Now">
+                            <p style={{ color: "#26607D", textAlign: "left" }}>
+                                A non-profit organization, established in 1997,
+                                VSW has partnerships with Guelph Police Services
+                                and the Ontario Provinicial Police to deliver
+                                support to victims of crime in our area.
+                                Volunteers are available on scene to help
+                                victims and their families through difficult
+                                events and refer them to appropriate community
+                                groups and organizations.
+                            </p>
+                            <p style={{ color: "#26607D", textAlign: "left" }}>
+                                VSW volunteers are trained extensively to help
+                                meet the short-term needs of victims. They are
+                                backed with widespread knowledge and experience
+                                in communication, crisis interpresence to what
+                                can be highly emotional, stressful, and
+                                overwhelming circumstances.
+                            </p>
+
                             <TwoColorHeader
-                                style={{ paddingTop: "3%" }}
-                                darkText="DONATE"
-                                lightText="NOW"
-                            />
-                            <ProgressBar
-                                label="0"
-                                percentage={0}
-                                title="HASHING RATE"
-                                details="0 PER SECOND"
-                            />
-                            <ProgressBar
-                                label="0"
-                                percentage={0}
-                                title="TOTAL TIME"
-                                details="0 SECONDS"
-                            />
-                            <ProgressBar
-                                label="0"
-                                percentage={0}
-                                title="TOTAL HASHES"
-                                details="# 0"
+                                darkText="CONTACT"
+                                lightText="VSW"
                             />
 
-                            <div style={{ alignContent: "center" }}>
-                                <DonateSlider />
-                                <Button variant="turqdark">START</Button>
-                                <Button variant="turqwhite">STOP</Button>
-                            </div>
+                            <p
+                                style={{
+                                    textAlign: "center",
+                                    color: "#26607D"
+                                }}
+                            >
+                                15 Wyndam Street South
+                                <br />
+                                Guelph, Ontario
+                                <br />
+                                N1H 4C6
+                            </p>
+
+                            <LineBreak />
+                            <p
+                                style={{
+                                    textAlign: "center",
+                                    color: "#26607D"
+                                }}
+                            >
+                                <strong>Phone:</strong> (519) 824-1212 ext 7304
+                                <br />
+                                <strong>Email:</strong> victim@vswguelph.on.ca
+                            </p>
+                            <LineBreak />
+                            <p
+                                style={{
+                                    textAlign: "center",
+                                    color: "#26607D"
+                                }}
+                            >
+                                <strong>Office Hours</strong>
+                                <br />
+                                Monday to Friday from
+                                <br />
+                                9am to 5pm
+                            </p>
                         </Tab>
                     </Tabs>
                 </Row>
