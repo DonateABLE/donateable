@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Button, Col, Row, Container } from "react-bootstrap";
 import { CircularProgressbar } from "react-circular-progressbar";
-import AnimateProgressProvider from "../Animation/AnimatedProgressProvider";
 
 // A 2x2 component to contain the User's top charity stats
 

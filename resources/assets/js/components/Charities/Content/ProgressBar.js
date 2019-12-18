@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import { Row, Col, Container } from "react-bootstrap";
-import { CircularProgressbar } from "react-circular-progressbar";
+import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
+import { easeQuadInOut } from "d3-ease";
+import ChangingProgressProvider from "../Animation/ChangingProgressProvider";
+import AnimatedProgressProvider from "../Animation/AnimatedProgressProvider";
 
 class ProgressBar extends Component {
     render() {
@@ -19,22 +22,32 @@ class ProgressBar extends Component {
                         paddingRight: "0"
                     }}
                 >
-                    <CircularProgressbar
-                        text={this.props.label}
-                        strokeWidth={10}
-                        value={this.props.percentage}
-                        style={{
-                            path: {
-                                stroke: "#45A6D7"
-                            },
-                            trail: {
-                                stroke: "#26607D"
-                            },
-                            text: {
-                                fontSize: "16px"
-                            }
-                        }}
-                    />
+                    <AnimatedProgressProvider
+                        valueStart={0}
+                        valueEnd={this.props.percentage}
+                        duration={4}
+                        easingFunction={easeQuadInOut}
+                    >
+                        {value => (
+                            <CircularProgressbar
+                                text={this.props.label}
+                                strokeWidth={10}
+                                value={value}
+                                styles={buildStyles({ pathTransition: "none" })}
+                                style={{
+                                    path: {
+                                        stroke: "#45A6D7"
+                                    },
+                                    trail: {
+                                        stroke: "#26607D"
+                                    },
+                                    text: {
+                                        fontSize: "16px"
+                                    }
+                                }}
+                            />
+                        )}
+                    </AnimatedProgressProvider>
                 </Col>
                 <Col
                     xs={9}
