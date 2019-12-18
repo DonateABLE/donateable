@@ -58,11 +58,11 @@ const TabbedUser = props => {
                 }
 
                 .CircularProgressbar-path {
-                    stroke: rgb(69, 166, 215) !important;
+                    stroke: rgb(38,96,125) !important;
                 }
 
                 .CircularProgressbar-trail {
-                    stroke: #26607D !important;
+                    stroke: rgb(69, 166, 215) !important;
                 }
 
                 .CircularProgressbar-text {
@@ -142,7 +142,6 @@ const TabbedUser = props => {
                                 hashesNum={423453429}
                                 totalTime="18:54:44"
                             />
-                        
                         </Tab>
 
                         {/* YOUR STATS TAB */}

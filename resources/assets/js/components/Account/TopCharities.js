@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Button, Col, Row, Container } from "react-bootstrap";
 import { CircularProgressbar } from "react-circular-progressbar";
+import AnimateProgressProvider from "../Animation/AnimatedProgressProvider";
 
 // A 2x2 component to contain the User's top charity stats
 
@@ -16,13 +17,13 @@ class TopCharities extends Component {
                             value={100}
                             style={{
                                 path: {
-                                    stroke: "#45A6D7"
-                                },
-                                trail: {
                                     stroke: "#26607D"
                                 },
+                                trail: {
+                                    stroke: "#45A6D7"
+                                },
                                 text: {
-                                    fontSize: "16px"
+                                    fontSize: "30px"
                                 }
                             }}
                         />
